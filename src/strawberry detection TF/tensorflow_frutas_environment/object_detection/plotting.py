@@ -25,6 +25,6 @@ def plot_accuracy(history, output_dir):
     plt.legend(loc="lower right")
     plt.savefig(os.path.join(output_dir, 'accuracy.png'))
 
-history = model.fit(x_train, y_train, epochs=1, callbacks=[tensorboard, history])
+history = model.fit(x_train, y_train, epochs=10, callbacks=[tensorboard, history])
 plot_accuracy(history, 'output_dir')
 
