@@ -50,7 +50,6 @@ from google.protobuf import text_format
 
 from object_detection import trainer_frutas
 from object_detection.builders import input_reader_builder
-from object_detection.builders import model_builder
 from object_detection.protos import input_reader_pb2
 from object_detection.protos import model_pb2
 from object_detection.protos import pipeline_pb2
