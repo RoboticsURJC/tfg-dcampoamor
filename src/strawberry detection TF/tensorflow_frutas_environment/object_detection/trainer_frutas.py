@@ -30,10 +30,9 @@ from object_detection.core import preprocessor
 from object_detection.core import standard_fields as fields
 from object_detection.utils import ops as util_ops
 from object_detection.utils import variables_helper
-from deployment import model_deploy
+from slim.deployment import model_deploy
 
 slim = tf.contrib.slim
-
 
 def _create_input_queue(batch_size_per_clone, create_tensor_dict_fn,
                         batch_queue_capacity, num_batch_queue_threads,

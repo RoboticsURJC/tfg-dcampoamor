@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+from tensorflow.keras.models import Sequential
+
 
 def plot_loss(history, output_dir):
     loss = history.history['loss']
@@ -12,9 +14,6 @@ def plot_loss(history, output_dir):
     plt.legend(loc="upper right")
     plt.savefig(os.path.join(output_dir, 'loss.png'))
 
-history = model.fit(x_train, y_train, epochs=10, callbacks=[tensorboard, history])
-plot_loss(history, 'output_dir')
-
 def plot_accuracy(history, output_dir):
     accuracy = history.history['accuracy']
     steps = np.arange(len(accuracy))
@@ -25,6 +24,5 @@ def plot_accuracy(history, output_dir):
     plt.legend(loc="lower right")
     plt.savefig(os.path.join(output_dir, 'accuracy.png'))
 
-history = model.fit(x_train, y_train, epochs=10, callbacks=[tensorboard, history])
-plot_accuracy(history, 'output_dir')
+
 
