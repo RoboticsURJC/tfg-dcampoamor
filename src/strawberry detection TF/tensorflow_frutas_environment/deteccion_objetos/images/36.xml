@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>36.jpg</filename>
+	<path>/home/dcampoamor/tensorflow_frutas_environment/deteccion_objetos/images/36.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>168</width>
+		<height>180</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Fresa</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>31</xmin>
+			<ymin>61</ymin>
+			<xmax>143</xmax>
+			<ymax>146</ymax>
+		</bndbox>
+	</object>
+</annotation>
