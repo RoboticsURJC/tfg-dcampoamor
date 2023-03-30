@@ -44,33 +44,17 @@ Example usage:
 import functools
 import json
 import os
-import sys
-import plotting
 import tensorflow as tf
 
 from google.protobuf import text_format
 
-from object_detection import trainer_frutas
+from object_detection import trainer
 from object_detection.builders import input_reader_builder
 from object_detection.builders import model_builder
 from object_detection.protos import input_reader_pb2
 from object_detection.protos import model_pb2
 from object_detection.protos import pipeline_pb2
 from object_detection.protos import train_pb2
-from tensorflow.keras.models import Sequential
-from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD
-
-model = Sequential()
-model.add(Dense(2, init='uniform', input_dim=64))
-model.add(Activation('softmax'))
-
-model.compile(optimizer='sgd', loss='mse')
-
-# Agrega la ruta del directorio 'object_detection' a la variable de entorno PYTHONPATH
-sys.path.append(os.path.abspath("./object_detection"))
-sys.path.append("/usr/local/lib/python3.10/dist-packages")
-
 
 tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -102,8 +86,6 @@ flags.DEFINE_string('model_config_path', '',
                     'Path to a model_pb2.DetectionModel config file.')
 
 FLAGS = flags.FLAGS
-
-
 
 
 def get_configs_from_pipeline_file():
@@ -210,11 +192,6 @@ def main(_):
   trainer.train(create_input_dict_fn, model_fn, train_config, master, task,
                 FLAGS.num_clones, worker_replicas, FLAGS.clone_on_cpu, ps_tasks,
                 worker_job_name, is_chief, FLAGS.train_dir)
-                
-history = model_fn.fit(x_train, y_train, epochs=10, batch_size=1, validation_data=(x_val, y_val))
-
-plotting.plot_accuracy(history, 'output_dir')
-plotting.plot_loss(history, 'output_dir')
 
 
 if __name__ == '__main__':
