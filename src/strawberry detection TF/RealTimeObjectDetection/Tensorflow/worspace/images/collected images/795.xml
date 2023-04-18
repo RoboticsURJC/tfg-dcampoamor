@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>795.jpg</filename>
+	<path>/home/dcampoamor/tensorflow_frutas_environment/deteccion_objetos/images/795.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>239</width>
+		<height>179</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Fresa</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>60</xmin>
+			<ymin>30</ymin>
+			<xmax>188</xmax>
+			<ymax>150</ymax>
+		</bndbox>
+	</object>
+</annotation>
