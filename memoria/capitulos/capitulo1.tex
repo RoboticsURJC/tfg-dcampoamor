@@ -22,15 +22,65 @@ La industria agrícola no es una excepción, ya que ha contemplado históricamen
 
 En las siguientes secciones describiremos brevemente algunas de las aplicaciones más importantes de la robótica en la sociedad actual, así como los distintos conceptos en los cuales se basa la investigación y el desarrollo llevado a cabo.\\
 
-\section{Robótica}
-\label{sec:miseccion} % etiqueta para luego referenciar esta sección
+\section{Robots y robótica}
+\label{sec:robótica} % etiqueta para luego referenciar esta sección
 
-Según la Federación Internacional de Robots (IFR) se define \textit{robot} según el vocabulario establecido por la International Organization for Standardization (ISO), y esto es como "un mecanismo accionado programado con cierto grado de autonomía para realizar tareas de locomoción, manipulación o posicionamiento" \cite{ISO8373}.\\  
+Según la Federación Internacional de Robots (IFR) se define robot según el vocabulario establecido por la International Organization for Standardization (ISO), y esto es como \textit{"mecanismo accionado programado con cierto grado de autonomía para realizar tareas de locomoción, manipulación o posicionamiento"} \cite{ISO8373}.\\  
 
-Estos robots se pueden clasificar en tres grandes grupos: \textit{robots industriales},\textit{robots de servicio} y \textit{robots médicos}.\\
+El término \textit{“robot”} fue utilizado por primera vez por Karel Capek (en su obra de teatro “Rossum’s Universal Robots” publicada en 1920. Esta palabra viene del vocablo checo \textit{“robota”} que significa “trabajo”, en el sentido de la obligatoriedad, entendido como servidumbre, trabajo forzado o esclavitud \cite{Sanchez07a}.
 
-Se define \textit{robot industrial} como un "manipulador polivalente, reprogramable y controlado automáticamente, programable en tres o más ejes, que puede ser fijo o móvil para su uso en aplicaciones de automatización industrial" \cite{ISO8373}, \textit{robot de servicio} como un robot que realiza tareas útiles para las personas o los equipos, incluyendo en esta la manipulación o el servicio de artículos, el transporte, el apoyo físico, la orientación o información, el aseo personal, la cocina y la manipulación de alimentos y la limpieza en el ámbito personal, y la inspección, vigilancia, manipulación de objetos, transporte de personas, orientación o información, cocina y manipulación de alimentos y limpieza en el ámbito profesional \cite{ISO8373}, y \textit{robot médico} a aquellos dispositivos electromecánicos que desempeñan parcial o totalmente algunas funciones de los seres humanos o de sus órganos al resolver problemas médicos, ayudando a mejorar la asistencia al paciente y los resultados, a la vez que aumenta la eficiencia operativa \cite{Kraevsky10}.
+Aunque esta definición es un punto de partida, es cierto que es posible diferir en aspectos como si un robot debe controlarse automáticamente o podría ser autónomo o si un robot debe ser reprogramable. A un nivel más amplio, cualquier máquina que pueda utilizarse para llevar a cabo acciones o tareas complejas de forma automática puede considerarse un robot \cite{Raj19}.\\
 
+Históricamente, las civilizaciones antiguas, como la egipcia y la griega, dieron los primeros pasos en lo que se puede denominar \textit{robótica clásica}, construyendo autómatas y mecanismos diseñados para imitar acciones humanas, con características mecánicas rudimentarias. 
+Con el paso del tiempo, la ciencia y la ingeniería avanzaron, y los conceptos de la robótica comenzaron a tomar forma más definida hasta que, en el siglo XX, con el desarrollo de la ingeniería en sus diferentes ramas (mecánica, electrónica, informática, telecomunicaciones), \textbf{\emph{Isaac Asimov}} (1920-1992) utilizó por primera vez el término \textit{“robótica”} y postuló las tres leyes de la robótica en su libro \textit{I Robot} publicado en 1950, coincidiendo con el apogeo de la \textit{robótica moderna} \cite{Sanchez07b}.\\
+
+\begin{table} [h!]
+  \begin{center}
+    \begin{tabular}{p{15cm}} % Ajustar el ancho según necesidades
+      \hline
+      1. Un robot no debe dañar a un ser humano ni, por su pasividad, dejar que un ser humano sufra daño.\\\\
+    
+      2. Un robot no debe obedecer las órdenes que le son dadas por un ser humano, excepto cuando estas órdenes están en oposición con la primera Ley.\\\\
+    
+      3. Un robot debe proteger su propia existencia, hasta donde esta protección no esté en conflicto con la primera o segunda Ley. \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Las tres leyes de la robótica según Asimov.}
+  \label{cuadro:leyesrobotica_Asimov}
+\end{table}
+
+Asimov consideró necesario añadir una cuarta ley, antepuesta a las demás, la número cero, que afirma que un robot no debe actuar simplemente para satisfacer intereses individuales, sino que sus acciones deben preservar el beneficio común de toda la humanidad \cite{Sanchez07b}.\\
+
+Es también en 1950, cuando \textbf{\emph{Alan Mathison Turing}} publica \textit{“Computing Machinery and Intelligence”} y propone una prueba (test o máquina de Touring), en forma de entidad matemática abstracta, que demuestra la existencia de problemas computacionales irresolubles que ninguna máquina es capaz de solventar. Se puede afirmar que un programa de ordenador no llegará nunca a ser tan inteligente como un ser humano y que un robot no podrá suplir al ser humano de forma completa, \cite{Sanchez07b} preocupación sobre el potencial de sustitución de la mano de obra, que históricamente, ha atenuado el entusiasmo en torno a las nuevas tecnologías \cite{Mokyr15}. 
+
+\begin{figure} [h!]
+  \begin{center}
+    \includegraphics[width=8cm]{figs/Alan_Turing.jpg}
+  \end{center}
+  \caption{El matemático Alan Turing.}
+  \label{fig:alanturing}
+\end{figure}
+
+En definitiva, la robótica se puede enmarcar como una rama de la ciencia y la ingeniería que se encarga del estudio, diseño, construcción y programación de robots. Atendiendo al propósito y al contexto en el que se utilicen estos robots, se pueden clasificar en tres grandes grupos en función de una serie de criterios generales: \textit{robots industriales},\textit{robots de servicio} y \textit{robots médicos}.\\
+
+\subsection{Robot Industrial}
+\label{sec:robot_industrial}
+
+Se define \textit{robot industrial} como un "manipulador polivalente, reprogramable y controlado automáticamente, programable en tres o más ejes, que puede ser fijo o móvil para su uso en aplicaciones de automatización industrial" \cite{ISO8373}.
+
+
+
+\subsection{Robot de Servicio}
+\label{sec:robot_servicio}
+
+Se define \textit{robot de servicio} como un robot que realiza tareas útiles para las personas o los equipos, incluyendo en esta la manipulación o el servicio de artículos, el transporte, el apoyo físico, la orientación o información, el aseo personal, la cocina y la manipulación de alimentos y la limpieza en el ámbito personal, y la inspección, vigilancia, manipulación de objetos, transporte de personas, orientación o información, cocina y manipulación de alimentos y limpieza en el ámbito profesional \cite{ISO8373}.
+ 
+
+\subsection{Robot Médico}
+\label{sec:robotica_industrial} 
+
+Se define \textit{robot médico} a aquellos dispositivos electromecánicos que desempeñan parcial o totalmente algunas funciones de los seres humanos o de sus órganos al resolver problemas médicos, ayudando a mejorar la asistencia al paciente y los resultados, a la vez que aumenta la eficiencia operativa \cite{Kraevsky10}.
 
 En los textos puedes poner palabras en \textit{cursiva}, para aquellas expresiones en sentido \textit{figurado}, palabras como \textit{robota}, que está fuera del diccionario castellano, o bien para resaltar palabras de una colección: \textit{(a)} es la primera letra del abecedario, \textit{(b)} es la segunda, etc.\\
 
