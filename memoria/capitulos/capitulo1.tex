@@ -70,55 +70,67 @@ Partiendo de todos estos avances y del interés por automatizar las tareas de pr
 
 Se define \textit{robot industrial} como un "manipulador polivalente, reprogramable y controlado automáticamente, programable en tres o más ejes, que puede ser fijo o móvil para su uso en aplicaciones de automatización industrial" \cite{ISO8373}.\\
 
-El inicio de la "Robótica Industrial", tal como la definimos actualmente, puede datarse en la década de 1950, aunque algunos tipos de automatización en el entorno industrial empezaron a aparecer desde los tiempos de la Revolución Industrial. La evolución de los robots industriales puede subdividirse en cuatro categorías: las tres primeras abarcan el período comprendido entre los años cincuenta y finales de los noventa, mientras que la cuarta generación abarca desde 2000 hasta nuestros días \cite{Gasparetto19}.\\
+El inicio de la Robótica Industrial, tal como la definimos actualmente, puede datarse en la década de 1950, aunque algunos tipos de automatización en el entorno industrial empezaron a aparecer desde los tiempos de la Revolución Industrial. La evolución de los robots industriales puede subdividirse en cuatro categorías: las tres primeras abarcan el período comprendido entre los años cincuenta y finales de los noventa, mientras que la cuarta generación abarca desde 2000 hasta nuestros días \cite{Gasparetto19}.
 
-Los robots de la \textbf{primera generación} (1950-1967) o \textbf{primeros manipuladores}, eran básicamente máquinas programables que no tenían comunicación con el entorno externo y con algoritmos de control sencillos (punto a punto). En cuanto al hardware, contaban con equipos de baja tecnología, sin servocontroladores. Sin embargo, en 1954, \textbf{\emph{George Devol}} y \textbf{\emph{Joseph Engelberger}} formaron la empresa \emph{Unimation}, empresa que desarrollaría \textbf{\emph{Unimate}}, considerado el primer "verdadero" robot industrial de la historia, fabricado en 1961 \cite{Zamalloa17}.\\
+\begin{itemize}
+  \item \textit{Primera generación (1950-1967) o primeros manipuladores:} Estos robots eran básicamente máquinas programables que no tenían comunicación con el entorno externo y con algoritmos de control sencillos (punto a punto). En cuanto al hardware, contaban con equipos de baja tecnología, sin servocontroladores. Sin embargo, en 1954, \textbf{\emph{George Devol}} y \textbf{\emph{Joseph Engelberger}} formaron la empresa \emph{Unimation}, empresa que desarrollaría \textbf{\emph{Unimate}}, considerado el primer robot industrial de la historia, fabricado en 1961 \cite{Zamalloa17}.
+  
+  \pagebreak
+  
+  \begin{figure}[h!]
+    \begin{center}
+      \subcapcentertrue
+      \subfigure[Joseph Engelberger y George Devol]{\includegraphics[width=62mm]{figs/Engelberger_Devol.png}}
+      \hspace{2mm}
+      \subfigure[Robot Unimate]{\includegraphics[width=73mm]{figs/Unimate robot.png}}
+    \end{center}
+    \caption{Primer robot industrial.}
+    \label{fig:primer_robot_industrial}
+  \end{figure}
 
-\begin{figure}[h!]
-  \begin{center}
-    \subcapcentertrue
-    \subfigure[Joseph Engelberger y George Devol]{\includegraphics[width=62mm]{figs/Engelberger_Devol.png}}
-    \hspace{2mm}
-    \subfigure[Robot Unimate]{\includegraphics[width=73mm]{figs/Unimate robot.png}}
-  \end{center}
-\caption{Primer robot industrial.}
-\label{fig:primer_robot_industrial}
-\end{figure}
-
-\pagebreak
-
-Empresas como \emph{Ford} y \emph{General Motors} empezaron a plantearse la automatización de sus plantas productivas, por lo que, en 1962, la empresa \emph{AMF Corporation} fabricó un nuevo robot llamado \textit{Versatan}, un robot cilíndrico que \emph{Ford} encargó para sus fábricas.
+  Empresas como \emph{Ford} y \emph{General Motors} empezaron a plantearse la automatización de sus plantas productivas, por lo que, en 1962, la empresa \emph{AMF Corporation} fabricó un nuevo robot llamado \textit{Versatan}, un robot cilíndrico que \emph{Ford} encargó para sus fábricas.
 Este robot, fue también el primero que se instaló en un centro productivo en Japón \cite{Gasparetto19}. \\
 
-\begin{figure} [h!]
-  \begin{center}
-    \includegraphics[width=65mm]{figs/Versatran_robot.png}
-  \end{center}
-  \caption{Robot Versatran.}
-  \label{fig:Versatran}
-\end{figure}
+  \begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=65mm]{figs/Versatran_robot.png}
+    \end{center}
+    \caption{Robot Versatran.}
+    \label{fig:Versatran}
+  \end{figure}
 
-Más tarde, en 1969, \emph{Unimation} concendió a \emph{Kawasaki Heavy Industries Ltd.} la licencia para producir robots para el mercado japonés y asiático, conduciendo al desarrollo del Kawasaki-Unimate 2000, el primer robot industrial construido en Japón \cite{Gasparetto19}.
+  \pagebreak
 
-\pagebreak
+  \item \textit{Segunda generación (1968-1977) o robots sensorizados:} eran máquinas programables básicas con posibilidades limitadas de comportamiento autoadaptativo y capacidades elementales para reconocer el entorno externo, poseían sistemas sensoriales avanzados y eran robots de gran volumen que se utilizaban principalmente en automoción \cite{Zamalloa17}.
 
-Los robots industriales de la \textbf{segunda generación} (1968-1977) o \textbf{robots sensorizados} eran máquinas programables básicas con posibilidades limitadas de comportamiento autoadaptativo y capacidades elementales para reconocer el entorno externo, poseían sistemas sensoriales avanzados y eran robots de gran volumen que se utilizaban principalmente en automoción \cite{Zamalloa17}.\\
+  En 1968, en el Stanford Artificial Inteligente Laboratory (SRI) se confecciona el WAVE, el primer lenguaje de programación para robots. También en el mismo centro surge \emph{Shakey}, provisto de múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b}.
 
-En 1969, \textbf{\emph{Víctor Scheinman}}, un estudiante de ingeniería mecánica de la Universidad de Standford, diseñó y construyó el primer prototipo de brazo robótico, cuya cinemática inversa podía resolverse de manera analíticamente cerrada, permitiendo una rápida ejecución de la trayectoria \cite{Gasparetto19}. \\
+  Shakey podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno \cite{sri}.
 
-\begin{figure}[h!]
-  \begin{center}
-    \subcapcentertrue
-    \subfigure[Victor Scheinman con el Standford Arm]{\includegraphics[width=62mm]{figs/Victor_Scheinman.png}}
-    \hspace{2mm}
-    \subfigure[Standford Arm]{\includegraphics[width=71mm]{figs/Standford_arm.jpeg}}
-  \end{center}
-\caption{Standford Arm.}
-\label{fig:standford_arm}
-\end{figure}
+  En 1969, \emph{Unimation} concendió a \emph{Kawasaki Heavy Industries Ltd.} la licencia para producir robots para el mercado japonés y asiático,    		conduciendo al desarrollo del Kawasaki-Unimate 2000, el primer robot industrial construido en Japón. Es también en este año cuando \textbf{\emph{Víctor Scheinman}}, un estudiante de ingeniería mecánica de la Universidad de Standford, diseñó y construyó el primer prototipo de brazo robótico, cuya cinemática inversa podía resolverse de manera analíticamente cerrada, permitiendo una rápida ejecución de la trayectoria \cite{Gasparetto19}. \\
 
+  \begin{figure}[h!]
+    \begin{center}
+      \subcapcentertrue
+      \subfigure[Victor Scheinman con el Standford Arm]{\includegraphics[width=62mm]{figs/Victor_Scheinman.png}}
+      \hspace{2mm}
+      \subfigure[Standford Arm]{\includegraphics[width=71mm]{figs/Standford_arm.jpeg}}
+    \end{center}
+    \caption{Standford Arm.}
+    \label{fig:standford_arm}
+  \end{figure}
 
+  El ingeniero de la compañía \emph{Yaskawa}, \textbf{\emph{T Mori}}, en 1969 acuña el término \emph{mecatrónica} que integra, el conjunto de mecanismos de control automático imprescindibles para el desarrollo de cualquier máquina inteligente \cite{Sanchez07b}.
+  
+  \begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=75mm]{figs/meca.png}
+    \end{center}
+    \caption{Diagrama mecatrónico de construcción de máquinas inteligentes.}
+    \label{fig:Mecatrónica}
+  \end{figure}
 
+\end{itemize}\
 
 \subsection{Robot de Servicio}
 \label{sec:robot_servicio}
