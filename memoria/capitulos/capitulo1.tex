@@ -76,19 +76,7 @@ Este robot, fue también el primero que se instaló en un centro productivo en J
 
   \item \textit{Segunda generación o robots sensorizados (1968-1977):} eran máquinas programables básicas con posibilidades limitadas de comportamiento autoadaptativo y capacidades elementales para reconocer el entorno externo, poseían sistemas sensoriales avanzados y eran robots de gran volumen que se utilizaban principalmente en automoción \cite{Zamalloa17}.
 
-  En 1968, en el Stanford Artificial Intelligence Laboratory (SAIL) se confecciona el WAVE, el primer lenguaje de programación para robots. También en ese mismo año, aparece en el Stanford Research Institute (SRI) \emph{Shakey}, provisto de múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b}.
-  
-  \begin{figure} [h!]
-    \begin{center}
-      \includegraphics[width=8cm]{figs/Shakey.png}
-    \end{center}
-    \caption{Robot Shakey.}
-    \label{fig:shakey}
-  \end{figure}
-
-  Shakey podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno \cite{sri}.
-  
-  \pagebreak
+  En 1968, en el Stanford Artificial Intelligence Laboratory (SAIL) se confecciona el WAVE, el primer lenguaje de programación para robots.
   
   En 1969, \emph{Unimation} concendió a Kawasaki Heavy Industries Ltd. la licencia para producir robots para el mercado japonés y asiático, conduciendo al desarrollo del Kawasaki-Unimate 2000, el primer robot industrial construido en Japón. Es también en este año cuando \textbf{\emph{Víctor Scheinman}}, un estudiante de ingeniería mecánica de la Universidad de Standford, diseñó y construyó el primer prototipo de brazo robótico, cuya cinemática inversa podía resolverse de manera analíticamente cerrada, permitiendo una rápida ejecución de la trayectoria \cite{Gasparetto19}. 
 
@@ -102,6 +90,8 @@ Este robot, fue también el primero que se instaló en un centro productivo en J
     \caption{Standford Arm.}
     \label{fig:standford_arm}
   \end{figure}
+  
+  \pagebreak
 
   El ingeniero de la compañía Yaskawa, \textbf{\emph{T Mori}}, en 1969 acuña el término \emph{mecatrónica} que integra el conjunto de mecanismos de control automático imprescindibles para el desarrollo de cualquier máquina inteligente \cite{Sanchez07b}.
   
@@ -113,8 +103,6 @@ Este robot, fue también el primero que se instaló en un centro productivo en J
     \label{fig:Mecatrónica}
   \end{figure}
   
-  \pagebreak
-
   En 1973, KUKA construyó el primer robot industrial con 6 ejes electromecánicos llamado Famulus. Un año más tarde, Cincinnati Milacron introdujo en el mercado el robot T3. Cincinnati Milacron (adquirida por ABB en 1990). El robot T3 fue el primer robot comercial controlado por un microordenador \cite{Zamalloa17}.
   
   \begin{figure} [h!]
@@ -173,6 +161,8 @@ y procesamiento de piezas de trabajo o para la manipulación de objetos de gran 
     \label{fig:MOTOMAN}
   \end{figure}
   
+  \pagebreak
+  
   Sin embargo, fue en el año 2006 cuando, tras haber estado trabajando en la búsqueda de vías para el desarrollo en serie del robot LWR3 del DLR, y tras una intensa cooperación entre KUKA y el DLR para transmitir a los desarrolladores de KUKA los conocimientos necesarios para para el desarrollo de brazos ligeros, componentes y electrónica integrada, cuando se toma la decisión de producir una primera pequeña serie del robot ligero del KUKA LWR3 \cite{Bischoff10}.
   
   \begin{figure}[h!]
@@ -186,8 +176,6 @@ y procesamiento de piezas de trabajo o para la manipulación de objetos de gran 
     \label{fig:Lightweight Robot (LWR)}
   \end{figure}
   
-  \pagebreak
-  
   A principios de 2007, dos estudiantes de doctorado de la Universidad de Standford, \textbf{\emph{Keenan Wyrobek}} y \textbf{\emph{Eric Bergerlas}}, pusieron las primeras piezas de lo que eventualmente se convertiría en el \textbf{\emph{Robot Operating System (ROS)}}. Uno de los preceptos principales que se tuvo en cuenta para la creación de este Sistema Operativo para Robots fue el de crear un sistema que permitiese al máximo posible la reutilización de código, dando soporte a distintos tipos de robots y de aplicaciones. Esto resultó en la incorporación de ROS en una sorprendentemente amplia variedad de robots, extendiéndose incluso a dominios más allá de la comunidad académica de investigación a la que se dirigió inicialmente. Los años siguientes superaron todas las expectativas debido a que los avances en el ámbito de la robótica se compartieron de manera reproducible en ROS, y la Open Source Robotics Foundation (OSRF), Fundación de Robótica de Código Abierto en inglés, se convirtió en el administrador principal de ROS en 2014. Con el objetivo de atender de manera más efectiva las demandas de una comunidad ROS más extensa y abordar sus nuevos escenarios de aplicación, la OSRF se dedicó a desarrollar ROS2 como un conjunto de paquetes paralelos que pudieran ser instalados junto a ROS1 (la versión original de ROS que nació en el año 2010) y ser compatibles entre sí. Además, la popularidad de ROS ha seguido creciendo en la industria con el apoyo de proyectos como ROS-Industrial (ROS-I), una iniciativa de código abierto que extiende las capacidades avanzadas de ROS a hardware y aplicaciones industriales relevantes. \cite{Suarez22}.
   
   \begin{figure}[h!]
@@ -197,11 +185,10 @@ y procesamiento de piezas de trabajo o para la manipulación de objetos de gran 
       \hspace{2mm}
       \subfigure[Robot PR2]{\includegraphics[width=45mm]{figs/PR2.png}}
     \end{center}
-    \caption{Robots utilizados para el desarrollo del software de código abierto ROS.}
+    \caption{Robots utilizados para el desarrollo de ROS.}
     \label{fig:PR_ROS}
   \end{figure}
   
-  \pagebreak
   
   \begin{figure} [h!]
     \begin{center}
@@ -211,8 +198,9 @@ y procesamiento de piezas de trabajo o para la manipulación de objetos de gran 
     \label{fig:ROS}
   \end{figure}
   
+  En el año 2008 se entrega el primer robot colaborativo o cobot, el UR5 de Universal Robots, considerado como uno de los logros tecnológicos más significativos de la década en la comunidad robótica. El brazo robótico es pionero en la programación 3D fácil de usar pero sofisticada, con una interfaz de usuario intuitiva que permite a cualquier persona configurarlo y utilizarlo de forma rápida. Esta empresa, fundada en el año 2005 por \textbf{\emph{Esteben Østergaard, Kasper Støy y Kristian Kassow}} tras conocerse en la Universidad de Dinamarca, surgió con el objetivo de hacer que la robótica sea accesible para las pequeñas y medianas empresas \cite{UR}.
   
-  En el año 2008 se entrega el primer robot colaborativo o cobot, el UR5 de Universal Robots, considerado como uno de los logros tecnológicos más significativos de la década en la comunidad robótica. El brazo robótico es pionero en la programación 3D fácil de usar pero sofisticada, con una interfaz de usuario intuitiva que permite a cualquier persona configurarlo y utilizarlo de forma rápida. Esta empresa, fundada en el año 2005 por \textbf{\emph{Esteben Østergaard, Kasper Støy y Kristian Kassow}} tras conocerse en la Universidad de Dinamarca, surgió con el objetivo de hacer que la robótica sea accesible para las pequeñas y medianas empresas \cite{UR}. \\
+  Esben H. Østergaard, Director de Tecnología y cofundador de Universal Robots, tomó el trabajo original de Peskhin y Colgate, dos investigadores de la empresa automovilística Ford de los años 90, que decidieron crear un nuevo robot industrial, más pequeño y ágil que los tradicionales, que saliera de su jaula para colaborar estrechamente con el ser humano en las tareas de calidad y personalización de los productos, sin embargo, no fueron capaces, puesto que el problea estaba en la relación entre seguridad y rendimiento, ya que el aumento de la primera reducía el de la segunda. Østergaard consiguió diseñar un sistema de seguridad y control para el cobot que lo bloquea en caso de colisión con el operario. Como recuerda el propio Østergaard, la seguridad era la clave con la que la robótica colaborativa podía entrar en el escenario industrial. Así se creó un robot capaz de operar en espacios confinados, en estrecho contacto con humanos, y sin instalar costosas barreras de seguridad \cite{Cusano22}.
   
   \begin{figure} [h!]
     \begin{center}
@@ -221,8 +209,6 @@ y procesamiento de piezas de trabajo o para la manipulación de objetos de gran 
     \caption{UR5 con su controladora.}
     \label{fig:UR5}
   \end{figure}
-  
-  Esben H. Østergaard, Director de Tecnología y cofundador de Universal Robots, tomó el trabajo original de Peskhin y Colgate, dos investigadores de la empresa automovilística Ford de los años 90, que decidieron crear un nuevo robot industrial, más pequeño y ágil que los tradicionales, que saliera de su jaula para colaborar estrechamente con el ser humano en las tareas de calidad y personalización de los productos, sin embargo, no fueron capaces, puesto que el problea estaba en la relación entre seguridad y rendimiento, ya que el aumento de la primera reducía el de la segunda. Østergaard consiguió diseñar un sistema de seguridad y control para el cobot que lo bloquea en caso de colisión con el operario. Como recuerda el propio Østergaard, la seguridad era la clave con la que la robótica colaborativa podía entrar en el escenario industrial. Así se creó un robot capaz de operar en espacios confinados, en estrecho contacto con humanos, y sin instalar costosas barreras de seguridad \cite{Cusano22}.
   
    
 \end{itemize}\
@@ -233,7 +219,19 @@ y procesamiento de piezas de trabajo o para la manipulación de objetos de gran 
 \label{sec:robot_servicio}
 
 Se define \textit{robot de servicio} como un robot que realiza tareas útiles para las personas o los equipos, incluyendo en esta la manipulación o el servicio de artículos, el transporte, el apoyo físico, la orientación o información, el aseo personal, la cocina y la manipulación de alimentos y la limpieza en el ámbito personal, y la inspección, vigilancia, manipulación de objetos, transporte de personas, orientación o información, cocina y manipulación de alimentos y limpieza en el ámbito profesional \cite{ISO8373}.
- 
+
+En el año 1968, aparece en el Stanford Research Institute (SRI) \emph{Shakey}, provisto de múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b}.
+  
+  \begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=8cm]{figs/Shakey.png}
+    \end{center}
+    \caption{Robot Shakey.}
+    \label{fig:shakey}
+  \end{figure}
+
+  Shakey podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno \cite{sri}.
+   
 En el año 2000, el primero considerado de la cuarta generacion industrial, Honda Robotics presentó el \emph{ASIMO (Advanced Step in Innovative Mobility)}, despues de mas de una decada de investigacion y desarrollo del mismo. Se trataba de un robot humanoide que demostró avances significativos en movilidad y coordinación, capaz de caminar, correr y realizar movimientos fluidos, lo que lo convirtió en un hito en la evolución de los robots humanoides \cite{HONDA}.\\
   
   \begin{figure} [h!]
