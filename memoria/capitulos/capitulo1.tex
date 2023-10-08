@@ -222,7 +222,19 @@ Debido a que la tecnología se encuentra en constante desarrollo y a la colabora
 
 Se define robot de servicio como un robot que realiza tareas útiles para las personas o los equipos, incluyendo en esta la manipulación o el servicio de artículos, el transporte, el apoyo físico, la orientación o información, el aseo personal, la cocina y la manipulación de alimentos y la limpieza en el ámbito personal, y la inspección, vigilancia, manipulación de objetos, transporte de personas, orientación o información, cocina y manipulación de alimentos y limpieza en el ámbito profesional \cite{ISO8373}.\\
 
-Los tres atributos de diseño de los robots de servicio que se pueden considerar especialmente relevantes en un contexto de servicio son: representación, antropomorfismo y orientación a la tarea, es decir, los robots de servicio pueden tener una representación física (por ejemplo, Pepper) o tener una representación únicamente virtual (por ejemplo, Alexa, ya que el software de IA virtual que funciona de forma autónoma y aprende con el tiempo también puede clasificarse como robot de servicio), diseñarse como humanoides (es decir, antropomorfos) simulando una apariencia humana o como no humanoides (por ejemplo, el robot de limpieza Roomba), y pueden realizar tareas cognitivo-analíticas gracias a la potencia informática subyacente o tareas emocionales-sociales (por ejemplo, robots de recepción) \cite{Wirtz18}.\\
+Su historia se remonta a la década de 1960, cuando surgieron los primeros intentos de crear robots para ayudar en tareas domésticas y de atención al cliente. Uno de los precursores de estos robots de servicio en 1968 fue el robot Shakey, desarrollado por el Laboratorio de Investigación de Inteligencia Artificial de Stanford o Stanford Research Institute (SRI). Shakey, provisto e múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b} podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno \cite{sri}. 
+
+  \begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=6cm]{figs/Shakey.png}
+    \end{center}
+    \caption{Robot Shakey.}
+    \label{fig:shakey}
+  \end{figure}
+   
+Sin embargo, fue a mediados de los años 80 cuando en los laboratorios y centros de investigación dedicados a la robótica se trató de revitalizar la importancia de los robots en nuestra sociedad, planteando las ventajas que el uso del robot podía traer en tareas en las que el ser humano asumía riesgos o en las que las capacidades de aquel estaban limitadas por factores como la fuerza o la precisión necesaria. Fue precisamente al entenderse que estas nuevas aplicaciones de la robótica no tenían un uso industrial con el objetivo de fabricar bienes, sino que se trataba de un empleo para desarrollar tareas para las personas, cuando se catalogaron como aplicaciones en el sector servicios \cite{Barrientos02}.\\
+
+En la práctica, las actuales y potenciales aplicaciones no industriales de los robots son tan variadas y diferentes que se dificulta su catalogación \cite{Barrientos02}, sin embargo, existen ciertas características especiales en estos robots de servicio que los hacen diferentes de los robots industriales \cite{Aracil08}, y los caracterizan para llevar a cabo estas tareas para las personas, siendo las principales características estos tres atributos de diseño: representación, antropomorfismo y orientación a la tarea, es decir, los robots de servicio pueden tener una representación física (por ejemplo, Pepper) o tener una representación únicamente virtual (por ejemplo, Alexa, ya que el software de IA virtual que funciona de forma autónoma y aprende con el tiempo también puede clasificarse como robot de servicio), diseñarse como humanoides (es decir, antropomorfos) simulando una apariencia humana o como no humanoides (por ejemplo, el robot de limpieza Roomba), y pueden realizar tareas cognitivo-analíticas gracias a la potencia informática subyacente o tareas emocionales-sociales (por ejemplo, robots de recepción) \cite{Wirtz18}.\\
 
  \begin{figure}[h!]
     \begin{center}
@@ -237,39 +249,61 @@ Los tres atributos de diseño de los robots de servicio que se pueden considerar
     \label{fig:Robots_servicio}
   \end{figure}
 
-Su historia se remonta a la década de 1960, cuando surgieron los primeros intentos de crear robots para ayudar en tareas domésticas y de atención al cliente. Uno de los precursores de estos robots de servicio en 1968 fue el robot Shakey, desarrollado por el Laboratorio de Investigación de Inteligencia Artificial de Stanford o Stanford Research Institute (SRI). Shakey, provisto e múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b} podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno \cite{sri}. 
-
-  \pagebreak
-
-  \begin{figure} [h!]
-    \begin{center}
-      \includegraphics[width=6cm]{figs/Shakey.png}
-    \end{center}
-    \caption{Robot Shakey.}
-    \label{fig:shakey}
-  \end{figure}
-   
-Sin embargo, fue a mediados de los años 80 cuando en los laboratorios y centros de investigación dedicados a la robótica se trató de revitalizar la importancia de los robots en nuestra sociedad, planteando las ventajas que el uso del robot podía traer en tareas en las que el ser humano asumía riesgos o en las que las capacidades de aquel estaban limitadas por factores como la fuerza o la precisión necesaria. Fue precisamente al entenderse que estas nuevas aplicaciones de la robótica no tenían un uso industrial con el objetivo de fabricar bienes, sino que se trataba de un empleo para desarrollar tareas para las personas, cuando se catalogaron como aplicaciones en el sector servicios \cite{Barrientos02}.
-
-Los robots de servicio se pueden clasificar en diferentes categorías según su función y aplicación, diferenciando dos grandes grupos principales: robots de asistencia personal y robots de atención al cliente.\\
-
-Dentro de los robots de asistencia personal podemos diferenciar entre: 
+Tratando de establecer una división de los robots de servicio, la norma ISO 8373:2012, así como la Ferderación Internacional de Robótica o IFR, propuso clasificarles en diferentes categorías según su función y aplicación en robots para uso doméstico y personal y robots de servicio destinados a un uso profesional \cite{Gonzalez21}, siendo las aplicaciones más importantes las siguientes:
 
 \begin{itemize}
- \item \textit{Robots de asistencia personal:} robot diseñado específicamente para ayudar a las personas en sus actividades diarias y mejorar su calidad de vida. Estos robots están diseñados para interactuar de manera segura y útil con humanos y generalmente se utilizan en situaciones en las que se requiere apoyo adicional, ya sea debido a la edad, la discapacidad o cualquier otra necesidad especial. 
+ \item \textit{Limpieza:} Estos robots son máquinas diseñadas específicamente para realizar tareas de limpieza en una variedad de entornos, desde hogares y oficinas hasta centros comerciales, hospitales y más. Suelen estar equipados con sensores y tecnología de navegación que les permite moverse de manera autónoma por el espacio, detectar obstáculos y llevar a cabo actividades de limpieza de manera eficiente. 
  
-\end{itemize}
-En el año 2000, el primero considerado de la cuarta generacion industrial, Honda Robotics presentó el ASIMO (Advanced Step in Innovative Mobility), despues de mas de una decada de investigacion y desarrollo del mismo. Se trataba de un robot humanoide que demostró avances significativos en movilidad y coordinación, capaz de caminar, correr y realizar movimientos fluidos, lo que lo convirtió en un hito en la evolución de los robots humanoides \cite{HONDA}.\\
-
-  \begin{figure} [h!]
+ \begin{figure} [h!]
+  \begin{center}
+    \includegraphics[width=8cm]{figs/roomba}
+  \end{center}
+  \caption{Robot aspirador Roomba de iRobot.}
+  \label{fig:roomba}
+\end{figure}\
+ 
+ \item \textit{Inspección y mantenimiento:} Los robots de servicio utilizados en inspección y mantenimiento son máquinas diseñadas para llevar a cabo tareas de supervisión, evaluación y mantenimiento en entornos de infraestructura o áreas de difícil acceso. Estos robots suele ser máquinas autónomas o teleoperadas equipadas con sensores, cámaras y herramientas especializadas que les permiten evaluar, reparar y mantener equipos, estructuras y sistemas en entornos desafiantes o peligrosos. 
+ 
+ \begin{figure}[h!]
     \begin{center}
-      \includegraphics[width=55mm]{figs/ASIMO.jpg}
+      \subcapcentertrue
+      \subfigure[Spot de Boston Dynamics]{\includegraphics[width=70mm]{figs/Spot.png}}
+      \hspace{2mm}
+      \subfigure[ROBTET, robot para el mantenimiento de líneas de alta tensión]{\includegraphics[width=65mm]{figs/ROBTET.png}}
     \end{center}
-    \caption{Robot HONDA ASIMO.}
-    \label{fig:ASIMO}
+    \caption{Robots de inspección y mantenimiento.}
+    \label{fig:Robots de inspección y mantenimiento}
   \end{figure}
+ 
+ \item \textit{Educación:} Aquellos robots utilizados en educación son robots diseñados para facilitar el aprendizaje y la enseñanza en los diferentes niveles educativos. Estos robots pueden ser utilizados en aulas, bibliotecas y entornos de aprendizaje para ayudar a los estudiantes a adquirir habilidades, fomentar la creatividad y brindar experiencias educativas interactivas.
+ 
+ \pagebreak
+ 
+ \begin{figure}[h!]
+    \begin{center}
+      \subcapcentertrue
+      \subfigure[Robot NAO]{\includegraphics[width=53mm]{figs/Robot NAO.jpg}}
+      \hspace{2mm}
+      \subfigure[Turtlebot 4]{\includegraphics[width=70mm]{figs/Turtlebot 4.png}}
+    \end{center}
+    \caption{Robots de educación.}
+    \label{fig:Robots de educación}
+  \end{figure}
+ 
+ \item \textit{Logística:} Los robots de servicio utilizados en logística son robots diseñados para llevar a cabo tareas relacionadas con la gestión y el movimiento de mercancías y productos en entornos de almacenamiento, distribución y transporte. Estos robots desempeñan un papel fundamental en la optimización de la cadena de suministro, mejorando la eficiencia y la precisión en la manipulación de productos. Dentro de los robots de logística empleados para el movimiento de mercancías, se pueden distinguir dos grandes grupos: Vehículos Guiados Automáticos (AGV) y los Robots Móviles Autónomos (AMR).
+ 
+ \item \textit{Entrenenimiento:}
+\end{itemize}
 
-A lo largo de los años, los avances tecnológicos y la miniaturización de componentes electrónicos y sensores han permitido el desarrollo de robots de servicio cada vez más sofisticados.
+\begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=17cm]{figs/Clasificacion robots de servicio.png}
+    \end{center}
+    \caption{Clasificación de los Robots Servicio según la norma ISO 8373:2012.}
+    \label{fig:clasificacion robots servicio}
+\end{figure}
+   
+
   
   
 \subsection{Robot Médico}
@@ -285,14 +319,6 @@ Al poner las dos líneas del anterior párrafo, este aparecerá separado del ant
 \label{sec:segundaseccion}
 
 No olvides incluir imágenes y referenciarlas, como la Figura \ref{fig:roomba}.
-
-\begin{figure} [h!]
-  \begin{center}
-    \includegraphics[width=8cm]{figs/roomba}
-  \end{center}
-  \caption{Robot aspirador Roomba de iRobot.}
-  \label{fig:roomba}
-\end{figure}\
 
 Ni tampoco olvides de poner las URLs como notas al pie. Por ejemplo, si hablo de la Robocup\footnote{\url{http://www.robocup.org}}.
 
