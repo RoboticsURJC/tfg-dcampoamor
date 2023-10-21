@@ -1,0 +1,54 @@
+def visionsimple():
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_gravity([0.0, 0.0, 9.82])
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  step_count_8bc87aee_d807_40ef_b872_d7b5435bde05 = 0.0
+  thread Step_Counter_Thread_1e9a2406_c633_419c_b6e2_0c27312ef4da():
+    while (True):
+      step_count_8bc87aee_d807_40ef_b872_d7b5435bde05 = step_count_8bc87aee_d807_40ef_b872_d7b5435bde05 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_1e9a2406_c633_419c_b6e2_0c27312ef4da()
+  set_safety_mode_transition_hardness(1)
+  global punto_ref_p=p[-.115755230449, -.608104231571, .633047341516, -.028750562618, 2.224872447434, -2.143508715282]
+  global punto_ref_q=[-1.5460882244741576, -1.835829803453966, -1.3966552787100062, 0.05425187699994984, 1.596467105108804, 0.02361196008044309]
+  while (True):
+    $ 1 "Robot Program"
+    $ 2 "MoveJ"
+    $ 3 "punto_ref" "breakAfter"
+    movej(get_inverse_kin(pose_trans(punto_ref_p, get_tcp_offset()), qnear=punto_ref_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 4 "Datos_Recibidos_Camara"
+    $ 5 "'Esperar la foto realizada por la camara'"
+    # 'Esperar la foto realizada por la camara'
+    $ 6 "x≔200"
+    global x=200
+    $ 7 "y≔400"
+    global y=400
+    $ 8 "rz≔30"
+    global rz=30
+    $ 9 "Calcular_Posicion_Pick"
+    $ 10 "'# Convert mm to m and deg to rad'"
+    # '# Convert mm to m and deg to rad'
+    $ 11 "pos_base_camara≔p[(x/1000), (y/1000), 0, 0, 0, d2r(rz)]"
+    global pos_base_camara=p[(x/1000), (y/1000), 0, 0, 0, d2r(rz)]
+    $ 12 "pos_pick≔pose_trans(punto_ref, pos_base_camara)"
+    global pos_pick=pose_trans(pose_trans(punto_ref_p, get_tcp_offset()), pos_base_camara)
+    $ 13 "Mover_a_pos_pick"
+    $ 14 "MoveL"
+    $ 15 "pos_pick" "breakAfter"
+    movel(pos_pick, a=1.2, v=0.25)
+  end
+end
