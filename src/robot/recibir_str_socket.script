@@ -1,0 +1,72 @@
+def recibir_str_socket():
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  step_count_a80e0dc3_bb86_4461_88d5_a49db4213474 = 0.0
+  thread Step_Counter_Thread_b8642d5d_1019_4b67_be9e_cf80d39436ee():
+    while (True):
+      step_count_a80e0dc3_bb86_4461_88d5_a49db4213474 = step_count_a80e0dc3_bb86_4461_88d5_a49db4213474 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_b8642d5d_1019_4b67_be9e_cf80d39436ee()
+  set_safety_mode_transition_hardness(1)
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_gravity([0.0, 0.0, 9.82])
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  $ 1 "BeforeStart"
+  $ 2 "conexion≔ False "
+  global conexion=  False  
+  $ 3 "datos≔[0,0,0,0]"
+  global datos=[0,0,0,0]
+  $ 4 "pos_pick≔p[0,0,0,0,0,0]"
+  global pos_pick=p[0,0,0,0,0,0]
+  while (True):
+    $ 5 "Robot Program"
+    $ 6 "Loop conexion≟ False "
+    while (conexion ==   False  ):
+      $ 7 "'Abrimos socket'"
+      # 'Abrimos socket'
+      $ 8 "conexion≔socket_open('172.16.17.10',50000)"
+      global conexion=socket_open("172.16.17.10",50000)
+      $ 9 "Wait: 0.01"
+      sleep(0.01)
+    end
+    $ 10 "'Enviamos la cadena str 'listo''"
+    # 'Enviamos la cadena str "listo"'
+    $ 11 "str≔'listo'"
+    global str="listo"
+    $ 12 "socket_send_string(str)"
+    socket_send_string(str)
+    $ 13 "Loop datos[0]≠3"
+    while (datos[0] != 3):
+      $ 14 "'Leemos las tres comas flotantes'"
+      # 'Leemos las tres comas flotantes'
+      $ 15 "datos≔socket_read_ascii_float(3)"
+      global datos=socket_read_ascii_float(3)
+      $ 16 "Wait: 0.5"
+      sleep(0.5)
+    end
+    $ 17 "'Guardamos las comas flotantes en variables'"
+    # 'Guardamos las comas flotantes en variables'
+    $ 18 "x≔datos[1]"
+    global x=datos[1]
+    $ 19 "y≔datos[2]"
+    global y=datos[2]
+    $ 20 "rz≔datos[3]"
+    global rz=datos[3]
+    $ 21 "socket_close()"
+    socket_close()
+    $ 22 "pos_pick≔p[x,y,0,0,0,rz]"
+    global pos_pick=p[x,y,0,0,0,rz]
+  end
+end
