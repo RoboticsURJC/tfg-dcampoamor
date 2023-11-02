@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: memoria.aux
+The style file: apalike.bst
+Database file #1: bibliografia.bib
+I was expecting an "="---line 243 of file bibliografia.bib
+ :   month 
+ :         "02",
+I'm skipping whatever remains of this entry
+Warning--empty booktitle in Bischoff10
+Warning--there's a number but no volume in Hardy01
+Warning--empty journal in Romero20
+You've used 30 entries,
+            1935 wiz_defined-function locations,
+            678 strings with 10289 characters,
+and the built_in function-call counts, 13004 in all, are:
+= -- 1200
+> -- 702
+< -- 23
++ -- 257
+- -- 248
+* -- 1125
+:= -- 2308
+add.period$ -- 90
+call.type$ -- 30
+change.case$ -- 267
+chr.to.int$ -- 29
+cite$ -- 33
+duplicate$ -- 464
+empty$ -- 806
+format.name$ -- 292
+if$ -- 2535
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 33
+newline$ -- 153
+num.names$ -- 90
+pop$ -- 250
+preamble$ -- 1
+purify$ -- 272
+quote$ -- 0
+skip$ -- 362
+stack$ -- 0
+substring$ -- 702
+swap$ -- 73
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 170
+warning$ -- 3
+while$ -- 88
+width$ -- 0
+write$ -- 388
+(There was 1 error message)
