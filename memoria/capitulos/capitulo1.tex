@@ -388,6 +388,7 @@ La clasificación de los modelos de IA tiene un impacto significativo en las apl
 \label{sec:VA} 
 
 La visión artificial se define como la ciencia de programar un ordenador para procesar imágenes o vídeos e incluso entenderlos \cite{Culjak12}. 
+
 En \cite{Bradski08} explica cómo es la transformación de datos desde un fotograma o vídeo cámara hasta lo que puede ser una decisión o una nueva representación \cite{Alvear17}. Para ello, la imagen percibida pasa por los procesos de obtención, caracterización e interpretación de información de imágenes, y estos procesos, pueden ser subdivididos a su vez en \cite{Santillan15}:\\
 
 \begin{table} [h!]
@@ -405,22 +406,24 @@ En \cite{Bradski08} explica cómo es la transformación de datos desde un fotogr
  
  \item \textit{Segmentación:} La segmentación consiste en dividir una imagen en regiones o componentes más pequeños (grupo de píxeles) con el objetivo de identificar y aislar objetos o áreas de interés dentro de la imagen. El propósito principal es simplificar y organizar la información visual contenida en la imagen para que sea más fácil de analizar, comprender y procesar por ordenador.
 
- \item \textit{Descripción:} 
+ \item \textit{Descripción:} Es el proceso que obtiene características relevantes para poder diferenciar un tipo de objeto de otro, pudiendo ser externas, como la forma, el perímetro o el rectángulo mínimo que contiene la región; o internas como el área o el centro de gravedad, entre otros \cite{Santillan15}. 
  
+ \item \textit{Reconocimiento (clasificación):} Esta fase se centra en identificar y asignar etiquetas o categorías a objetos o patrones previamente segmentados en una imagen o secuencia de imágenes. El proceso de reconocimiento implica el uso de algoritmos y técnicas de aprendizaje automático, como redes neuronales artificiales o métodos estadísticos, entre otros, para entrenar un modelo que pueda tomar las características extraídas y realizar predicciones sobre la clase o categoría a la que pertenecen los objetos detectados.
+ 
+ \item \textit{Interpretación:} Esta fase implica el análisis y comprensión del significado y el contexto de la información visual obtenida de las imágenes o la secuencia de imágenes capturadas. Esta etapa implica razonamiento, toma de decisiones y puede requerir el procesamiento de lenguaje natural para obtener una comprensión más profunda del contenido visual.
  
 \end{enumerate}
 
+Estas fases son las empleadas bajo el paradigma de lo que se conoce como Visión
+Artificial Clásica, enfocada a la utilización de algoritmos específicos para procesar imágenes y reconocer en ellas características básicas \cite{Martinez22}, siendo generalmente secuenciales, a pesar de que los procesos que se utilicen en la resolución de un determinado problema dependen de su complejidad y no todas pueden ser siempre necesarias \cite{Santillan15}. Sin embargo, para mejorar aún más la eficacia de los sistemas de visión artificial, se recurre al aprendizaje automático o "machine learning". A continuación, profundizaremos en el papel del machine learning en la visión artificial y su importancia en la creación de sistemas inteligentes de procesamiento de imágenes. \\
 
-En los textos puedes poner palabras en \textit{cursiva}, para aquellas expresiones en sentido \textit{figurado}, palabras como \textit{robota}, que está fuera del diccionario castellano, o bien para resaltar palabras de una colección: \textit{(a)} es la primera letra del abecedario, \textit{(b)} es la segunda, etc.\\
+\pagebreak
 
-Al poner las dos líneas del anterior párrafo, este aparecerá separado del anterior. Si no las pongo, los párrafos aparecerán pegados. Sigue el criterio que consideres más oportuno.
+\section{Machine Learning}
+\label{sec:MachineLearning} 
 
-\section{Segunda sección}
-\label{sec:segundaseccion}
 
-No olvides incluir imágenes y referenciarlas, como la Figura \ref{fig:roomba}.
 
-Ni tampoco olvides de poner las URLs como notas al pie. Por ejemplo, si hablo de la Robocup\footnote{\url{http://www.robocup.org}}.
 
 \subsection{Números}
 \label{sec:subseccion}
