@@ -422,7 +422,30 @@ Artificial Clásica, enfocada a la utilización de algoritmos específicos para 
 \section{Machine Learning}
 \label{sec:MachineLearning} 
 
-El Machine Learning (Aprendizaje Automático) es una rama en evolución de la Inteligencia Artificial, que describe la capacidad de los sistemas de aprender del entorno circundante a partir de datos de entrenamiento específicos de un problema para automatizar el proceso de construcción de modelos analíticos y resolver las tareas asociadas. Dependiendo de la tarea de aprendizaje, existen varias clases de algoritmos de ML, cada uno de ellos con múltiples especificaciones y variantes, incluidos modelos de regresión, algoritmos basados en instancias, árboles de decisión, métodos bayesianos y RNA \cite{Janiesch21}.
+El Machine Learning (Aprendizaje Automático) es una rama en evolución de la Inteligencia Artificial que se encarga de generar algoritmos que tienen la capacidad de aprender del entorno circundante y no tener que programarlos de manera explícita, teniendo en cuenta todos los escenarios posibles, a partir de la construcción de modelos analíticos \cite{Sandoval18}.\\
+
+En función del problema planteado y de los datos disponibles, se pueden distinguir tres tipos de ML:
+
+\begin{itemize}
+ \item \textit{Aprendizaje supervisado:} El aprendizaje supervisado consiste en operar a partir de una expectativa conocida, en este contexto, los conjuntos de datos de entrada también se denominan conjuntos de datos etiquetados. Los algoritmos clasificados en esta categoría se centran en establecer una relación entre los atributos de entrada y salida, y utilizan esta relación de forma especulativa para generar una salida para nuevos puntos de datos de entrada \cite{Gollapudi16}. 
+ 
+ \item \textit{Aprendizaje no supervisado:} En algunos de los problemas de aprendizaje, no tenemos en mente ningún objetivo específico que resolver. El análisis o aprendizaje no supervisado se basa en el análisis de clasificación en el que no empezamos con un objetivo específico en mente, también denominado agrupación. En este caso, el objetivo es descifrar la estructura de los datos a partir de la construcción de un mapa entre los atributos de entrada y salida y, de hecho, los atributos de salida no están definidos. Estos algoritmos de aprendizaje operan sobre un conjunto de datos no etiquetados por esta razón \cite{Gollapudi16}.
+ 
+ \item \textit{Aprendizaje por refuerzo:} Es el aprendizaje que se centra en maximizar las recompensas del resultado. En lugar de proporcionar pares de entrada y salida, se describe el estado actual del sistema, se especifica un objetivo proporcionando una lista de acciones permitidas y sus restricciones ambientales para sus resultados, y se deja que el modelo de ML experimente por sí mismo el proceso para alcalzar el objetivo utilizando el principio de ensayo y error para maximizar la recompensa \cite{Janiesch21}.
+ 
+\end{itemize}
+\pagebreak
+
+Del mismo modo, dependiendo de la tarea de aprendizaje, existen varias clases de algoritmos de ML, cada uno de ellos con múltiples especificaciones y variantes, tal y como se puede apreciar en el siguiente diagrama \cite{Janiesch21}. \\
+
+ \begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=12cm]{figs/Algoritmos de ML.png}
+    \end{center}
+    \caption{Diagrama de Venn de algoritmos de aprendizaje automático.}
+    \label{fig:AlgoritmosML}
+\end{figure}
+
 
 
 \subsection{Números}
