@@ -1,0 +1,58 @@
+def Alinear_en_base():
+  set_safety_mode_transition_hardness(1)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  step_count_1e235027_b007_48c5_bc76_80d6b7614b1d = 0.0
+  thread Step_Counter_Thread_0774ed19_77ac_4640_aa2d_9732e84a9007():
+    while (True):
+      step_count_1e235027_b007_48c5_bc76_80d6b7614b1d = step_count_1e235027_b007_48c5_bc76_80d6b7614b1d + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_0774ed19_77ac_4640_aa2d_9732e84a9007()
+  set_tool_voltage(24)
+  set_gravity([0.0, 0.0, 9.82])
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  set_payload(0.0)
+  global Base=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  $ 1 "AntesDeIniciar"
+  $ 2 "Script: alinearrobot.script"
+  def alinearRobot(pose_actual):
+  target_pose=p[0,0,0,0,0,0]
+  rotRPY = [0,0,0]
+  rotRotvec = [0,0,0]
+  rotRPY=rotvec2rpy([pose_actual[3],pose_actual[4],pose_actual[5]])
+  rotRPY[0]=d2r(0)
+  rotRPY[1]=d2r(180)
+  rotRotvec=rpy2rotvec(rotRPY)
+  target_pose[0]=pose_actual[0]
+  target_pose[1]=pose_actual[1]
+  target_pose[2]=pose_actual[2]
+  target_pose[3]=rotRotvec[0]
+  target_pose[4]=rotRotvec[1]
+  target_pose[5]=rotRotvec[2]
+  
+  return target_pose
+  end
+  $ 3 "MoverJ"
+  $ 4 "Punto_de_paso_1" "breakAfter"
+  movej(get_inverse_kin(p[-.273763980096, .389901062402, .125188754290, 1.152460996976, -1.184820754424, -.986170494499], qnear=[-1.375599209462301, -1.25537616411318, 2.0335097312927246, -1.0050295034991663, 0.0738726332783699, 0.3921043872833252]), a=1.3962634015954636, v=1.0471975511965976)
+  while (True):
+    $ 7 "Programa de robot"
+    $ 18 "target=alinearRobot(get_actual_tcp_pose())"
+    target=alinearRobot(get_actual_tcp_pose())
+    $ 19 "MoverJ"
+    $ 20 "target" "breakAfter"
+    movej(target, a=1.3962634015954636, v=1.0471975511965976)
+    $ 21 "Esperar: 2.0"
+    sleep(2.0)
+    $ 22 "MoverJ"
+    $ 23 "Punto_de_paso_1" "breakAfter"
+    movej(get_inverse_kin(p[-.273763980096, .389901062402, .125188754290, 1.152460996976, -1.184820754424, -.986170494499], qnear=[-1.375599209462301, -1.25537616411318, 2.0335097312927246, -1.0050295034991663, 0.0738726332783699, 0.3921043872833252]), a=1.3962634015954636, v=1.0471975511965976)
+  end
+end
