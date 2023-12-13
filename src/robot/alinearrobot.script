@@ -1,0 +1,17 @@
+def alinearRobot(pose_actual):
+target_pose=p[0,0,0,0,0,0]
+rotRPY = [0,0,0]
+rotRotvec = [0,0,0]
+rotRPY=rotvec2rpy([pose_actual[3],pose_actual[4],pose_actual[5]])
+rotRPY[0]=d2r(0)
+rotRPY[1]=d2r(180)
+rotRotvec=rpy2rotvec(rotRPY)
+target_pose[0]=pose_actual[0]
+target_pose[1]=pose_actual[1]
+target_pose[2]=pose_actual[2]
+target_pose[3]=rotRotvec[0]
+target_pose[4]=rotRotvec[1]
+target_pose[5]=rotRotvec[2]
+
+return target_pose
+end
