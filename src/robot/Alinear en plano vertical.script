@@ -1,0 +1,59 @@
+def Alinear_en_plano_vertical():
+  set_safety_mode_transition_hardness(1)
+  step_count_75ec29a8_8c66_4dd6_af5b_9175198084bd = 0.0
+  thread Step_Counter_Thread_2ccf23f5_5f4b_4afe_8aad_d05beb7d9d99():
+    while (True):
+      step_count_75ec29a8_8c66_4dd6_af5b_9175198084bd = step_count_75ec29a8_8c66_4dd6_af5b_9175198084bd + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_2ccf23f5_5f4b_4afe_8aad_d05beb7d9d99()
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_gravity([0.0, 0.0, 9.82])
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  global Plane_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_de_paso_1_p=p[-.173267324483, .289863885293, .340694768139, -3.016586082414, -.201625597033, .154120361241]
+  global Punto_de_paso_1_q=[-1.4692618624179286, -2.0023755827615375, 2.3164428079360913, -2.003109167278943, -1.4733093336798255, -0.026170012762049666]
+  $ 1 "BeforeStart"
+  $ 2 "Script: alinearrobot.script"
+  def alinearRobot(pose_actual):
+  target_pose=p[0,0,0,0,0,0]
+  rotRPY = [0,0,0]
+  rotRotvec = [0,0,0]
+  rotRPY=rotvec2rpy([pose_actual[3],pose_actual[4],pose_actual[5]])
+  rotRPY[0]=d2r(270)
+  rotRPY[1]=d2r(270)
+  rotRotvec=rpy2rotvec(rotRPY)
+  target_pose[0]=pose_actual[0]
+  target_pose[1]=pose_actual[1]
+  target_pose[2]=pose_actual[2]
+  target_pose[3]=rotRotvec[0]
+  target_pose[4]=rotRotvec[1]
+  target_pose[5]=rotRotvec[2]
+  
+  return target_pose
+  end
+  $ 3 "MoveJ"
+  $ 4 "Punto_de_paso_1" "breakAfter"
+  movej(get_inverse_kin(Punto_de_paso_1_p, qnear=Punto_de_paso_1_q), a=1.3962634015954636, v=1.0471975511965976)
+  $ 7 "Robot Program"
+  $ 8 "target=alinearRobot(get_actual_tcp_pose())"
+  target=alinearRobot(get_actual_tcp_pose())
+  $ 9 "MoveJ"
+  $ 10 "target" "breakAfter"
+  movej(target, a=1.3962634015954636, v=1.0471975511965976)
+  $ 11 "Wait: 2.0"
+  sleep(2.0)
+end

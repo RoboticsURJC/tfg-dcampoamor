@@ -1,0 +1,13 @@
+ Program
+   BeforeStart
+     Script: alinearrobot.script
+     MoveJ
+       Punto_de_paso_1
+       'rotacionRPY≔[0,0,0]'
+       'rotacionRotvec≔[0,0,0]'
+   Robot Program
+     target=alinearRobot(get_actual_tcp_pose())
+     MoveJ
+       target
+     Wait: 2.0
+     'MoveJ'
