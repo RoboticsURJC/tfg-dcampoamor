@@ -457,56 +457,31 @@ El Machine Learning, abarca desde enfoques más superficiales hasta técnicas m�
 
 \section{Deep Learning}
 \label{sec:DeepLearning} 
-El Deep Learning o aprendizaje profundo, constituye una rama de la inteligencia artificial (IA) cuyos modelos computacionales se inspiran en el funcionamiento del cerebro humano y se diseñan con el propósito de adquirir conocimientos y llevar a cabo tareas específicas mediante el procesamiento de datos. La etiqueta "profundo" hace referencia a la presencia de múltiples capas de neuronas artificiales en la red, lo que facilita la representación jerárquica de características y potencia la capacidad para aprender y poder diferenciar patrones complejos a partir de los datos.\\
+El Deep Learning o aprendizaje profundo, constituye una rama de la IA cuyos modelos computacionales se inspiran en el funcionamiento del cerebro humano y se diseñan con el propósito de adquirir conocimientos y llevar a cabo tareas específicas mediante el procesamiento de datos. La etiqueta \textit{profundo} hace referencia a la presencia de múltiples capas de neuronas artificiales en la red, lo que facilita la representación jerárquica de características y potencia la capacidad para aprender y poder diferenciar patrones complejos a partir de los datos.\\
 
-El término aprendizaje profundo fue introducido por primera vez en el aprendizaje automático por Rina Dechter en \cite{Dechter86}, y en las redes neuronales artificiales (ANN) mediante \cite{Aizenberg00}, haciéndose especialmente popular en el contexto de las NN profundas (DNN) \cite{Schmidhuber15}.\\
-
-Las Redes Neuronales Artificiales, ANN (Artificial Neural Networks) están inspiradas en las redes neuronales biológicas del cerebro humano, presentando características del mismo, ya que estas aprenden de la experiencia, generalizan de ejemplos previos a ejemplos nuevos y abstraen las características principales de una serie de datos. En las Redes Neuronales Artificiales, la unidad análoga a la neurona biológica es el elemento procesador, PE (process element). Un elemento procesador tiene varias entradas y las combina, normalmente con una suma básica. La suma de las entradas es modificada por una función de transferencia y el valor de la salida de esta función de transferencia se pasa directamente a la salida del elemento procesador \cite{Basogain08}. \\
+Las Redes Neuronales Artificiales (RNA) o Artificial Neural Networks (ANN) en inglés, están inspiradas en las redes neuronales biológicas del cerebro humano, presentando características del mismo, ya que estas aprenden de la experiencia, generalizan de ejemplos previos a ejemplos nuevos y abstraen las características principales de una serie de datos. En las RNA, la unidad análoga a la neurona biológica es el elemento procesador, PE (process element). Un PE tiene varias entradas y las combina, normalmente con una suma básica. La suma de las entradas es modificada por una función de transferencia y el valor de la salida de esta función de transferencia se pasa directamente a la salida del elemento procesador \cite{Basogain08}. \\
 
 \begin{figure} [h!]
     \begin{center}
-      \includegraphics[width=13cm]{figs/Modelo neurona.jpeg}
+      \includegraphics[width=15cm]{figs/Modelo neurona.jpeg}
     \end{center}
     \caption{Modelo biológico de una neurona genérica, comúnmente una neurona motora típica (izquierda) y el respectivo modelo matemático (derecha).}
     \label{fig:Modelo neurona}
 \end{figure}
 
+\pagebreak
+
+Existen dos capas con conexiones con el mundo exterior, una capa de entrada o buffer de entrada, donde se presentan los datos a la red, y una capa o buffer de salida que mantiene la respuesta de la red a una entrada, mientras que el resto de las capas reciben el nombre de capas ocultas \cite{Basogain08}.\\
+
+\begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=10cm]{figs/capas rrnn.jpeg}
+    \end{center}
+    \caption{Arquitectura de una red neuronal.}
+    \label{fig:Arquitectura red neuronal}
+\end{figure}
+
 En consecuencia, se puede construir una red neuronal artificial mediante un conjunto de neuronas artificiales, es decir, mediante un conjunto de funciones, y conectando comúnmente la salida de cada una a las entradas de otras diferentes. De esta manera, las redes neuronales artificiales no son más que redes de funciones, típicamente representadas mediante la composición de varias funciones. Esto hace que los diferentes modelos de redes neuronales difieran principalmente en las funciones de activación utilizadas, el patrón de interconexión, e inclusive el tiempo de trasmisión de la información. Es importante señalar que la característica clave de la sinapsis, el escalar las señales de entrada por factores (pesos), es la manera en la que se cree que el cerebro aprende. Por lo tanto, distintos pesos dan como resultado diferentes respuestas a una entrada. De esta manera, se puede decir que el aprendizaje es el ajuste de los pesos en respuesta a un estímulo \cite{Dinamarca18}.
 
-\subsection{Números}
-\label{sec:subseccion}
 
-En lugar de tener secciones interminables, como la Sección \ref{sec:miseccion}, divídelas en subsecciones.
 
-Para hablar de números, mételos en el entorno \textit{math} de \LaTeX, por ejemplo, $1.5Kg$. También puedes usar el símbolo del Euro como aquí: 1.500\euro.
-
-\subsection{Listas}
-
-Cuando describas una colección, usa \texttt{itemize} para ítems o \texttt{enumerate} para enumerados. Por ejemplo:
-
-\begin{itemize}
- \item \textit{Entorno de simulación.} Hemos usado dos entornos de simulación: uno en 3D y otro en 2D.
- \item \textit{Entornos reales.} Dentro del campus, hemos realizado experimentos en Biblioteca y en el edificio de Gestión.
-\end{itemize}\
-
-\begin{enumerate}
- \item Primer elemento de la colección.
- \item Segundo elemento de la colección.
-\end{enumerate}\
-
-\paragraph{Referencias bibliográficas}
-\label{sec:referencias}
-
-% Cita, sobre todo en este capítulo, referencias bibliográficas que respalden tu argumento. Para citarlas basta con poner la instrucción \verb|\cite| con el identificador de la cita. Por ejemplo: libros como \cite{vega12e}, artículos como \cite{vega19b}, URLs como \cite{vega19a}, tesis como \cite{vega18b}, congresos como \cite{vega18a}, u otros trabajos fin de grado como \cite{vega08b}.
-
-Las referencias, con todo su contenido, están recogidas en el fichero \texttt{bibliografia.bib}. El contenido de estas referencias está en formato \texttt{BibTex}. Este formato se puede obtener en muchas ocasiones directamente, desde plataformas como \texttt{Google Scholar} u otros repositorios de recursos científicos.
-
-Existen numerosos estilos para reflejar una referencia bibliográfica. El estilo establecido por defecto en este documento es APA, que es uno de los estilos más comunes, pero lo puedes modificar en el archivo \texttt{memoria.tex}; concretamente, cambiando el campo \verb|apalike| a otro en la instrucción \verb|\bibliographystyle{apalike}|. 
-
-\
-
-\
-
-\
-
-Y, para terminar este capítulo, resume brevemente qué vas a contar en los siguientes.
