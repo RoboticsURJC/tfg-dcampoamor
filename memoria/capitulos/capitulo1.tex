@@ -422,11 +422,11 @@ Artificial Clásica, enfocada a la utilización de algoritmos específicos para 
 \section{Machine Learning}
 \label{sec:MachineLearning} 
 
-El Machine Learning (Aprendizaje Automático) es una rama en evolución de la Inteligencia Artificial que se encarga de generar algoritmos que tienen la capacidad de aprender del entorno circundante y no tener que programarlos de manera explícita, teniendo en cuenta todos los escenarios posibles, a partir de la construcción de modelos analíticos \cite{Sandoval18}.\\
+El Machine Learning (Aprendizaje Automático) es una rama en evolución de la Inteligencia Artificial que se encarga de generar algoritmos que tienen la capacidad de aprender del entorno circundante y no tener que programarlos de manera explícita, teniendo en cuenta todos los escenarios posibles, a partir de la construcción de modelos analíticos \cite{Sandoval18}.
 
  \begin{figure} [h!]
     \begin{center}
-      \includegraphics[width=13cm]{figs/ML semantics.png}
+      \includegraphics[width=12cm]{figs/ML semantics.png}
     \end{center}
     \caption{Aspectos clave y semántica del Aprendizaje automático.}
     \label{fig:ML semantics}
@@ -443,45 +443,51 @@ En función del problema planteado y de los datos disponibles, se pueden disting
  
 \end{itemize}
 
-Del mismo modo, dependiendo de la tarea de aprendizaje, existen varias clases de algoritmos de ML, cada uno de ellos con múltiples especificaciones y variantes, que pueden englobarse o bien en el Shallow Machine Learning (aprendizaje superficial), que se centra en algoritmos más simples para realizar tareas esècíficas, o en Deep learning (apredizaje profundo), que utiliza la construcción y entrenamiento de Redes Neuronales Artificiales (RNA), un tipo de modelo inspirado en la estructura y funcionamiento del cerebro humano, tal y como se puede apreciar en el siguiente diagrama \cite{Janiesch21}. \\
+Del mismo modo, dependiendo de la tarea de aprendizaje, existen varias clases de algoritmos de ML, cada uno de ellos con múltiples especificaciones y variantes, que pueden englobarse o bien en el Shallow Machine Learning (aprendizaje superficial), que se centra en algoritmos más simples para realizar tareas específicas, o en Deep learning (apredizaje profundo), que utiliza la construcción y entrenamiento de Redes Neuronales Artificiales (RNA), un tipo de modelo inspirado en la estructura y funcionamiento del cerebro humano, tal y como se puede apreciar en el siguiente diagrama \cite{Janiesch21}. \\
 
  \begin{figure} [h!]
     \begin{center}
-      \includegraphics[width=12cm]{figs/Algoritmos de ML.png}
+      \includegraphics[width=10cm]{figs/Algoritmos de ML.png}
     \end{center}
-    \caption{Diagrama de Venn de algoritmos de aprendizaje automático.}
+    \caption{Diagrama de Venn de la relación entre distintas subáreas de la IA.}
     \label{fig:AlgoritmosML}
 \end{figure}
+\pagebreak
 
-El Machine Learning, abarca desde enfoques más superficiales hasta técnicas más avanzadas, tal y como se ha podido observar, sin embargo, es el Deep Learning lo que realmente potencia la capacidad de las máquinas para aprender y generalizar patrones complejos de manera excepcional. En la próxima sección, se hablará sobre el Deep Learning, centrándose en las RNA y en cómo estas posibilitan abordar tareas más complejas, como el reconocimiento de patrones en imágenes o el procesamiento de lenguaje natural.\\
+El Machine Learning, abarca desde enfoques más superficiales hasta técnicas más avanzadas, tal y como se ha podido observar, sin embargo, es el Deep Learning lo que realmente potencia la capacidad de las máquinas para aprender y generalizar patrones complejos de manera excepcional. En la próxima sección, se hablará sobre el Deep Learning, centrándose en las RNA y en cómo estas posibilitan abordar tareas más complejas, como el reconocimiento de patrones en imágenes o el procesamiento de lenguaje natural.
 
 \section{Deep Learning}
 \label{sec:DeepLearning} 
 El Deep Learning o aprendizaje profundo, constituye una rama de la IA cuyos modelos computacionales se inspiran en el funcionamiento del cerebro humano y se diseñan con el propósito de adquirir conocimientos y llevar a cabo tareas específicas mediante el procesamiento de datos. La etiqueta \textit{profundo} hace referencia a la presencia de múltiples capas de neuronas artificiales en la red, lo que facilita la representación jerárquica de características y potencia la capacidad para aprender y poder diferenciar patrones complejos a partir de los datos.\\
 
-Las Redes Neuronales Artificiales (RNA) o Artificial Neural Networks (ANN) en inglés, están inspiradas en las redes neuronales biológicas del cerebro humano, presentando características del mismo, ya que estas aprenden de la experiencia, generalizan de ejemplos previos a ejemplos nuevos y abstraen las características principales de una serie de datos. En las RNA, la unidad análoga a la neurona biológica es el elemento procesador, PE (process element). Un PE tiene varias entradas y las combina, normalmente con una suma básica. La suma de las entradas es modificada por una función de transferencia y el valor de la salida de esta función de transferencia se pasa directamente a la salida del elemento procesador \cite{Basogain08}. \\
+Las Redes Neuronales Artificiales (RNA) o Artificial Neural Networks (ANN) en inglés, están inspiradas en las redes neuronales biológicas del cerebro humano, presentando características del mismo, ya que estas aprenden de la experiencia, generalizan de ejemplos previos a ejemplos nuevos y abstraen las características principales de una serie de datos. En las RNA, la unidad análoga a la neurona biológica es el elemento procesador, PE (process element). Un PE tiene varias entradas y las combina, normalmente con una suma básica. La suma de las entradas es modificada por una función de transferencia y el valor de la salida de esta función de transferencia se pasa directamente a la salida del elemento procesador \cite{Basogain08}.
 
 \begin{figure} [h!]
     \begin{center}
-      \includegraphics[width=15cm]{figs/Modelo neurona.jpeg}
+      \includegraphics[width=13cm]{figs/Modelo neurona.jpeg}
     \end{center}
     \caption{Modelo biológico de una neurona genérica, comúnmente una neurona motora típica (izquierda) y el respectivo modelo matemático (derecha).}
     \label{fig:Modelo neurona}
 \end{figure}
-
 \pagebreak
 
 Existen dos capas con conexiones con el mundo exterior, una capa de entrada o buffer de entrada, donde se presentan los datos a la red, y una capa o buffer de salida que mantiene la respuesta de la red a una entrada, mientras que el resto de las capas reciben el nombre de capas ocultas \cite{Basogain08}.\\
 
 \begin{figure} [h!]
     \begin{center}
-      \includegraphics[width=10cm]{figs/capas rrnn.jpeg}
+      \includegraphics[width=9cm]{figs/capas rrnn.jpeg}
     \end{center}
     \caption{Arquitectura de una red neuronal.}
     \label{fig:Arquitectura red neuronal}
 \end{figure}
 
-En consecuencia, se puede construir una red neuronal artificial mediante un conjunto de neuronas artificiales, es decir, mediante un conjunto de funciones, y conectando comúnmente la salida de cada una a las entradas de otras diferentes. De esta manera, las redes neuronales artificiales no son más que redes de funciones, típicamente representadas mediante la composición de varias funciones. Esto hace que los diferentes modelos de redes neuronales difieran principalmente en las funciones de activación utilizadas, el patrón de interconexión, e inclusive el tiempo de trasmisión de la información. Es importante señalar que la característica clave de la sinapsis, el escalar las señales de entrada por factores (pesos), es la manera en la que se cree que el cerebro aprende. Por lo tanto, distintos pesos dan como resultado diferentes respuestas a una entrada. De esta manera, se puede decir que el aprendizaje es el ajuste de los pesos en respuesta a un estímulo \cite{Dinamarca18}.
+En consecuencia, se puede construir una red neuronal artificial mediante un conjunto de neuronas artificiales, es decir, mediante un conjunto de funciones, y conectando comúnmente la salida de cada una a las entradas de otras diferentes. De esta manera, las redes neuronales artificiales no son más que redes de funciones, típicamente representadas mediante la composición de varias funciones. Esto hace que los diferentes modelos de redes neuronales difieran principalmente en las funciones de activación utilizadas, el patrón de interconexión, e inclusive el tiempo de trasmisión de la información. Es importante señalar que la característica clave de la sinapsis, el escalar las señales de entrada por factores (pesos), es la manera en la que se cree que el cerebro aprende. Por lo tanto, distintos pesos dan como resultado diferentes respuestas a una entrada. De esta manera, se puede decir que el aprendizaje es el ajuste de los pesos en respuesta a un estímulo \cite{Dinamarca18}.\\
+
+
+
+La historia de las redes neuronales se remonta a la década de 1940, cuando el neurofisiólogo Warren McCulloch y el matemático Walter Pitts modelaron una red neuronal simple utilizando circuitos eléctricos. Su modelo estaba basado en la idea de lógica de umbral, que más tarde sería fundamental para el desarrollo de las redes neuronales artificiales. En 1958, el neurobiólogo Frank Rosenblatt dio un paso significativo al comenzar a trabajar en el perceptrón, un modelo computacional que representa la unidad básica de una red neuronal y realiza una suma ponderada de varias entradas, al tratarse de una unidad de procesamiento, llevando a cabo una combinación lineal de esas entradas, y luego aplica una función de activación para producir una salida. Este trabajo marcó el inicio de la investigación en redes neuronales artificiales \cite{Abeliuk21}.\\
+
+Saltando a la década de 2010, dos factores contribuirían a la revolución de aplicaciones de redes neuronales y algoritmos de aprendizaje profundo. En primer lugar, los avances en hardware especializado aceleraron drásticamente el entrenamiento y el rendimiento de las redes neuronales, reduciendo su consumo de energía, mientras que, en segundo lugar, el aumento de datos abiertos disponibles en línea y servicios de bajo costo para etiquetar datos impulsaron el desarrollo de la inteligencia artificial \cite{Abeliuk21}.
 
 
 
