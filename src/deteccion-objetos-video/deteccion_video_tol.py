@@ -75,7 +75,7 @@ if __name__ == "__main__":
     colors = np.random.randint(0, 255, size=(len(classes), 3), dtype="uint8")
     
     l_pos = [] #Inicializamos la lista dinámica
-    tolerancia_porcentaje = 5 #Establecemos la tolerancia para la detección de distintos objetos
+    tolerancia_porcentaje = 5 #Establecemos la tolerancia para la detección de distintos objetos en %
     
     while cap:
         ret, frame = cap.read()
