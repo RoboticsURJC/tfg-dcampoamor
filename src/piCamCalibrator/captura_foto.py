@@ -3,7 +3,7 @@ import os
 
 def main():
     # Establecer la carpeta en la que se guardan las imágenes
-    folder_name = "/home/dcampoamor/Escritorio/chess_folder"
+    folder_name = "/home/dcampoamor/Escritorio/chess_board"
 
     # Inicializar la cámara
     cap = cv2.VideoCapture(0)
