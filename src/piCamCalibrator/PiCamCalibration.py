@@ -14,9 +14,9 @@ import glob
 # termination criteria
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
-# 6x9 chess board, prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
-object_point = np.zeros((6*9, 3), np.float32)
-object_point[:, :2] = np.mgrid[0:9, 0:6].T.reshape(-1, 2)
+# 16x22 chess board, prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
+object_point = np.zeros((16*22, 3), np.float32)
+object_point[:, :2] = np.mgrid[0:22, 0:16].T.reshape(-1, 2)
 
 # 3d point in real world space
 object_points = []
@@ -37,7 +37,7 @@ for file_name in images:
     # add object points, image points
     if ret:
         object_points.append(object_point)
-        cv2.cornerSubPix(gray, corners, (11, 11), (-1, -1), criteria)
+        cv2.cornerSubPix(gray, corners, (20, 20), (-1, -1), criteria)
         image_points.append(corners)
 
         # draw and display the corners
@@ -48,18 +48,18 @@ for file_name in images:
 # calibration
 retval, cameraMatrix, distCoeffs, rvecs, tvecs = cv2.calibrateCamera(object_points, image_points, (w, h), None, None)
 
-print "camera matrix:\n", cameraMatrix
-print "====================================="
-print "====================================="
+print ("camera matrix:\n", cameraMatrix)
+print ("=====================================")
+print ("=====================================")
 # pi camera intrinsic parameters
 fx = cameraMatrix[0, 0] # distancia focal f_x
 fy = cameraMatrix[1, 1] # distancia focal f_y
 u0 = cameraMatrix[0, 2] # centro optico c_x
 v0 = cameraMatrix[1, 2] # centro optico c_y
 
-print "Parametros interesantes de la matriz:"
-print "====================================="
-print "Distancia focal [Fx, Fy] =", "[", fx, ", ", fy, "]"
-print "Centro optico [Cx, Cy] o [u0, v0] =", "[", u0, ", ", v0, "]\n"
-print "Coeficientes de distorsion =", distCoeffs
+print ("Parametros interesantes de la matriz:")
+print ("=====================================")
+print ("Distancia focal [Fx, Fy] =", "[", fx, ", ", fy, "]")
+print ("Centro optico [Cx, Cy] o [u0, v0] =", "[", u0, ", ", v0, "]\n")
+print ("Coeficientes de distorsion =", distCoeffs)
 cv2.destroyAllWindows()
