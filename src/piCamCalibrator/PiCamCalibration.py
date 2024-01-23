@@ -32,7 +32,7 @@ for file_name in images:
     h, w = gray.shape[:2]
 
     # find chess board corners
-    ret, corners = cv2.findChessboardCorners(gray, (9, 6), None)
+    ret, corners = cv2.findChessboardCorners(gray, (22, 16), None)
 
     # add object points, image points
     if ret:
@@ -41,25 +41,30 @@ for file_name in images:
         image_points.append(corners)
 
         # draw and display the corners
-        cv2.drawChessboardCorners(image, (9, 6), corners, ret)
+        cv2.drawChessboardCorners(image, (22, 16), corners, ret)
         cv2.imshow('image', image)
         cv2.waitKey(500)
 
-# calibration
-retval, cameraMatrix, distCoeffs, rvecs, tvecs = cv2.calibrateCamera(object_points, image_points, (w, h), None, None)
+if len(object_points) > 0 and len(image_points) > 0:
 
-print ("camera matrix:\n", cameraMatrix)
-print ("=====================================")
-print ("=====================================")
-# pi camera intrinsic parameters
-fx = cameraMatrix[0, 0] # distancia focal f_x
-fy = cameraMatrix[1, 1] # distancia focal f_y
-u0 = cameraMatrix[0, 2] # centro optico c_x
-v0 = cameraMatrix[1, 2] # centro optico c_y
+    # calibration
+    retval, cameraMatrix, distCoeffs, rvecs, tvecs = cv2.calibrateCamera(object_points, image_points, (w, h), None, None)
 
-print ("Parametros interesantes de la matriz:")
-print ("=====================================")
-print ("Distancia focal [Fx, Fy] =", "[", fx, ", ", fy, "]")
-print ("Centro optico [Cx, Cy] o [u0, v0] =", "[", u0, ", ", v0, "]\n")
-print ("Coeficientes de distorsion =", distCoeffs)
+    print ("camera matrix:\n", cameraMatrix)
+    print ("=====================================")
+    print ("=====================================")
+    # pi camera intrinsic parameters
+    fx = cameraMatrix[0, 0] # distancia focal f_x
+    fy = cameraMatrix[1, 1] # distancia focal f_y
+    u0 = cameraMatrix[0, 2] # centro optico c_x
+    v0 = cameraMatrix[1, 2] # centro optico c_y
+
+    print ("Parametros interesantes de la matriz:")
+    print ("=====================================")
+    print ("Distancia focal [Fx, Fy] =", "[", fx, ", ", fy, "]")
+    print ("Centro optico [Cx, Cy] o [u0, v0] =", "[", u0, ", ", v0, "]\n")
+    print ("Coeficientes de distorsion =", distCoeffs)
+    
+else:
+    print ("No se encontraron esquinas en ninguna de las imágenes. La calibración no es posible.")
 cv2.destroyAllWindows()
