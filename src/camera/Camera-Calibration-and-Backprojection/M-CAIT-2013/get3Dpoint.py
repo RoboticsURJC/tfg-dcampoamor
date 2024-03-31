@@ -66,7 +66,10 @@ cy = camera_matrix[1,2]
 # [ 431.89203, 96.42651 ],
 # [ 469.4813, 97.2708 ]])
 
-image_points = np.array([[256,256], [300, 300],[150, 200], [50, 450]])
+image_points = np.array([[256,256], 
+[300, 300],
+[150, 200], 
+[50, 450]])
 
 # convertir los puntos de la imagen en coordenadas homogéneas
 image_points_hom = np.concatenate((image_points, np.ones((image_points.shape[0], 1))), axis=1)
