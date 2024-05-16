@@ -52,7 +52,7 @@ def loadCamera ():
 	# -------------------------------------------------------------
 	#R = numpy.array ([(1,0,0),(0,1,0),(0,0,1)]) # R is a 3x3 rotation matrix
 	#R = numpy.array ([(1,0,-0.0274),(0,1,0),(0.0274,0,1)]) # R is a 3x3 rotation matrix
-	thetaY = 34*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+	thetaY = 65*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 	thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 	thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 
@@ -63,7 +63,7 @@ def loadCamera ():
 	R_subt = numpy.dot (R_y, R_z)
 	R_tot = numpy.dot (R_subt, R_x)
 
-	T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-390)]) # T is a 3x4 traslation matrix
+	T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-265)]) # T is a 3x4 traslation matrix
 	Res = numpy.dot (R_tot,T)
 	RT = numpy.append(Res, [[0,0,0,1]], axis=0) # RT is a 4x4 matrix
 	K = numpy.array ([(FX,0,CX,0),(0,FY,CY,0),(0,0,1,0)]) # K is a 3x4 matrix
@@ -76,7 +76,7 @@ def loadCamera ():
 	# -------------------------------------------------------------
 	myCamera.position.x = 0
 	myCamera.position.y = 0
-	myCamera.position.z = -390
+	myCamera.position.z = -265
 	myCamera.position.h = 1
 
 	# K intrinsec parameters matrix (values got from the PiCamCalibration.py)
@@ -177,7 +177,14 @@ def getIntersectionZ (p2d):
 
 	return res
 
+# Función para calcular la distancia euclidiana
+def calcular_distancia_3d(x_cam, y_cam, z_cam, x_punto, y_punto, z_punto):
+    distancia = np.sqrt((x_punto - x_cam)**2 + (y_punto - y_cam)**2 + (z_punto - z_cam)**2)
+    
+    return distancia
 
+
+# Función para detectar el color amarillo del post-it utilizado
 def detect_color(frame, lower_color, upper_color):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_color, upper_color)
@@ -193,7 +200,7 @@ def detect_color(frame, lower_color, upper_color):
     return None, None
 
 
-# obtenemos el pixel de la imagen
+# Obtenemos el pixel de la imagen
 def getPoints (frame):
 
     global fronteraImg
@@ -221,6 +228,22 @@ def getPoints (frame):
         pixelOnGround3D = getIntersectionZ (pixel)
 
         print(f"Coordenadas 3D: X={pixelOnGround3D.x}, Y={pixelOnGround3D.y}, Z={pixelOnGround3D.z}")
+        
+        # Coordenadas aproximadas del punto en 3D
+        x_punto = pixelOnGround3D.x
+        y_punto = pixelOnGround3D.y
+        z_punto = pixelOnGround3D.z
+
+        # Coordenadas aproximadas de la cámara en 3D
+        x_cam = myCamera.position.x
+        y_cam = myCamera.position.y
+        z_cam = myCamera.position.z
+
+        # Calcular distancia euclidiana
+        distancia = calcular_distancia_3d(x_cam, y_cam, z_cam, x_punto, y_punto, z_punto)
+        
+        # Mostrar la distancia debajo de las coordenadas 3D aproximadas
+        print(f"Distancia al punto: {distancia:.2f} milímetros")
 
 if __name__=="__main__":
 	
@@ -239,8 +262,9 @@ if __name__=="__main__":
         # Lee un frame de la cámara 
         ret,frame = cap.read() 
     
-        # Gira la cámara 180º porque la cámara está físicamente dada la vuelta 
-        flipped_frame = cv2.flip(frame,0)
+        # No gira la cámara 180º porque la cámara NO está físicamente dada la vuelta 
+        #flipped_frame = cv2.flip(frame,0)
+        flipped_frame = frame
         flipped_frame = cv2.flip(flipped_frame,1)
 
 	
