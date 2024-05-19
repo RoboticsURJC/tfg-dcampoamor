@@ -2,11 +2,11 @@
 
 from Window import *
 
-class HelloWorld(Window):
+class IntroduccionOpenGL(Window):
     '''Este es un programa simple e introductorio a OpenGL.'''
 
     def __init__(self):
-        super(HelloWorld, self).__init__("hello.c", "Introduccion a OpenGL", 250, 250, 1)
+        super(IntroduccionOpenGL, self).__init__("hello.c", "Introduccion a OpenGL", 500, 500, 1)
 
     def display(self):
         '''Se renderiza el esquema de un cubo y un triángulo.'''
@@ -29,11 +29,11 @@ class HelloWorld(Window):
         glVertex3f(0.25, 0.5, 0.0)
         glEnd()
 
-        # Don't wait! Start processing buffered OpenGL routines.
+       
         glFlush()
 
 if __name__ == '__main__':
-    HelloWorld().run()
+    IntroduccionOpenGL().run()
 
 
 
