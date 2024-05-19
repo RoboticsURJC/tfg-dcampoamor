@@ -1,26 +1,25 @@
-#!/usr/bin/python
-'''Abstract GLUT window that takes care of all the busy work.'''
+'''Ventana GLUT abstracta que se encarga de todo el trabajo pesado'''
 
 from OpenGL.GL	 import *
 from OpenGL.GLU  import *
 from OpenGL.GLUT import *
 
-# There is a hole in the python-opengl implementation of glMan2f.
-# The python implementation states:
-# 	glMap2f(target, u1, u2, v1, v2, points)
-# 		This is a completely non-standard signature which doesn't allow for most of the funky uses with
-# 		strides and the like, but it has been like this for a very long time...
-# The c implementation states:
-#	glMap2f(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points)
+# Hay un agujero en la implementación python-opengl de glMan2f.
+# La implementación en python dice:
+# glMap2f(target, u1, u2, v1, v2, points)
+# Esta es una firma completamente no estándar que no permite la mayoría de los usos funky con
+# strides y similares, pero ha sido así durante mucho tiempo...
+# La implementación en c dice:
+# glMap2f(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points)
 
 def noop():
-	'''A function that does nothing.'''
+	'''Una función que no hace nada.'''
 	pass
 
 class Window(object):
-	'''An abstract GLUT window.'''
+	'''Una ventana GLUT abstracta.'''
 	def __init__(self, source=None, title="Untitled Window", width=500, height=500, ortho=None):
-		'''Constructs a window with the given title and dimensions. Source is the original redbook file.'''
+		'''Construye una ventana con el título y dimensiones dados. La fuente es el archivo redbook original'''
 		self.source = source
 		self.ortho  = ortho
 		self.width  = width
@@ -39,12 +38,12 @@ class Window(object):
 		glShadeModel(GL_FLAT)
 
 	def keyboard(self, key, mouseX, mouseY):
-		'''Call the code mapped to the pressed key.'''
+		'''Llama al código asignado a la tecla pulsada.'''
 		self.keybindings.get(key, noop)()
 		glutPostRedisplay()
 	
 	def mouse(self, button, state, x, y):
-		'''Handle mouse clicking.'''
+		'''Maneja los clics del ratón.'''
 		if button == GLUT_LEFT_BUTTON:
 			self.mouseLeftClick(x, y)
 		elif button == GLUT_MIDDLE_BUTTON:
@@ -65,7 +64,7 @@ class Window(object):
 		pass
 
 	def reshape(self, width, height):
-		'''Recalculate the clipping window the GLUT window is resized.'''
+		'''Recalcula la ventana de recorte, la ventana GLUT se redimensiona.'''
 		self.width  = width
 		self.height = height
 		glViewport(0, 0, self.width, self.height)
@@ -84,11 +83,11 @@ class Window(object):
 		glLoadIdentity()
 
 	def display(self):
-		'''Children implement this to define their rendering behavior.'''
+		
 		raise NotImplementedError
 	
 	@staticmethod
 	def run():
-		'''Start up the main loop.'''
+		'''Inicia el bucle principal.'''
 		glutMainLoop()
 
