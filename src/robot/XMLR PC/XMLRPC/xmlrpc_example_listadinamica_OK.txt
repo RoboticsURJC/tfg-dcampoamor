@@ -1,0 +1,15 @@
+ Program
+   Variables Setup
+   BeforeStart
+     camera≔rpc_factory("xmlrpc","http://192.168.56.250:50000")
+   Robot Program
+     Loop  True 
+       next_pose≔camera.get_next_pose()
+       If next_pose[0] == 0  and next_pose[1] == 0  and next_pose[2] == 0  and next_pose[3] == 0  and next_pose[4] ==0  and next_pose[5] == 0
+         MoveJ
+           Casa
+           Wait: 1.0
+       Else
+         MoveJ
+           next_pose
+       sync()
