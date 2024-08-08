@@ -1,12 +1,3 @@
-###############################################################################
-# (C) 2019 - Julio Vega
-###############################################################################
-# Algoritmo de navegación de PiBot basado en sonar visual percibido por PiCam.#
-# En este programa, los motores están parados, para así poder hacer pruebas.  #
-###############################################################################
-
-
-# Import necessary libraries
 import cv2
 import numpy as np
 import threading
@@ -155,8 +146,8 @@ def getPoints(frame):
         print(f"Punto P{idx+1} - Distancia al punto: {distancia:.2f} milímetros")
 
 def camera_capture():
-    cv2.namedWindow("Image Feed")
-    cv2.moveWindow("Image Feed", 159, -25)
+    cv2.namedWindow("Imagen de la camara")
+    cv2.moveWindow("Imagen de la camara", 159, -25)
 
     cap = cv2.VideoCapture(2)
     if not cap.isOpened():
@@ -174,7 +165,7 @@ def camera_capture():
         flipped_frame = cv2.flip(frame, 1)
         getPoints(flipped_frame)
 
-        cv2.imshow("Image Feed", flipped_frame)
+        cv2.imshow("Imagen de la camara", flipped_frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -195,22 +186,39 @@ def display():
     glRotatef(angle_x, 1, 0, 0)
     glRotatef(angle_y, 0, 1, 0)
 
-    draw_points()
+    if len(detected_points) >= 3:
+        glColor3f(0.0, 1.0, 0.0)  # Set color to green
+
+        # Calculate the centroid of the points
+        centroid = np.mean(detected_points, axis=0)
+
+        # Sort the points based on angle with respect to the centroid
+        def angle_from_centroid(point):
+            return np.arctan2(point[1] - centroid[1], point[0] - centroid[0])
+
+        sorted_points = sorted(detected_points, key=angle_from_centroid)
+
+        # Draw the points
+        glBegin(GL_LINE_LOOP)
+        for point in sorted_points:
+            glVertex3f(point[0], point[1], point[2])
+        glEnd()
+
+    elif len(detected_points) > 0:
+        glColor3f(0.0, 1.0, 0.0)
+        glPointSize(10)
+        glBegin(GL_POINTS)
+        for point in detected_points:
+            glVertex3f(point[0], point[1], point[2])
+        glEnd()
 
     glutSwapBuffers()
 
-def draw_points():
-    glColor3f(1.0, 0.0, 0.0)
-    glBegin(GL_POINTS)
-    for point in detected_points:
-        glVertex3f(point[0], point[1], point[2])
-    glEnd()
-
-def reshape(w, h):
-    glViewport(0, 0, w, h)
+def reshape(width, height):
+    glViewport(0, 0, width, height)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    gluPerspective(45, w / h, 1, 50.0)
+    gluPerspective(45, width / height, 0.1, 100.0)
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
 
@@ -265,7 +273,7 @@ def opengl_main():
     glutInit()
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
     glutInitWindowSize(800, 600)
-    glutCreateWindow(b"Interaccion con puntos 3D")
+    glutCreateWindow(b"OpenGL")
 
     init()
 
