@@ -6,7 +6,7 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-# Camera and projection parameters
+# Parámetros de Cámera y proyección 
 ANCHO_IMAGEN = 640
 LARGO_IMAGEN = 480
 FX = 816.218
@@ -15,7 +15,7 @@ CX = 316.068
 CY = 236.933
 DEGTORAD = 3.1415926535897932 / 180
 
-# Variables for OpenGL navigation
+# Variables para la navegación con OpenGL
 angle_x = 0
 angle_y = 0
 zoom = -5
@@ -26,10 +26,10 @@ mouse_last_x = 0
 mouse_last_y = 0
 is_dragging = False
 
-# Global variable to store detected points
+# Variables Globales para almacenar los puntos detectados
 detected_points = []
 
-# Pinhole camera model
+# Modelo Pinhole de cámara
 class PinholeCamera:
     def __init__(self):
         self.position = np.zeros(4)
@@ -92,17 +92,17 @@ def detect_color(frame, lower_color, upper_color):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_color, upper_color)
 
-    # Apply morphology operations to reduce noise
+    # Aplicar operaciones de morfología para reducir el ruido
     kernel = np.ones((5, 5), np.uint8)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
 
-    # Find contours
+    # Encontrar contornos
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     centroids = []
     for contour in contours:
-        # Get the centroid of the contour
+        # Obtener el centroide del contorno
         M = cv2.moments(contour)
         if M["m00"] != 0:
             cX = int(M["m10"] / M["m00"])
@@ -118,7 +118,7 @@ def getPoints(frame):
 
     centroids = detect_color(frame, lower_color, upper_color)
 
-    detected_points = []  # Clear previous points
+    detected_points = []  # Borrar puntos anteriores
     for idx, centroid in enumerate(centroids):
         centroid_x = int(centroid[0])
         centroid_y = int(centroid[1])
@@ -181,24 +181,24 @@ def display():
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glLoadIdentity()
 
-    # Camera transformations
+    # Transformadas de la Cámara
     glTranslatef(camera_x, camera_y, zoom)
     glRotatef(angle_x, 1, 0, 0)
     glRotatef(angle_y, 0, 1, 0)
 
     if len(detected_points) >= 3:
-        glColor3f(0.0, 1.0, 0.0)  # Set color to green
+        glColor3f(0.0, 1.0, 0.0)  # Establecer el color en verde
 
-        # Calculate the centroid of the points
+        # Calcular el centroide de los puntos
         centroid = np.mean(detected_points, axis=0)
 
-        # Sort the points based on angle with respect to the centroid
+        # Ordenar los puntos en función del ángulo con respecto al centroide
         def angle_from_centroid(point):
             return np.arctan2(point[1] - centroid[1], point[0] - centroid[0])
 
         sorted_points = sorted(detected_points, key=angle_from_centroid)
 
-        # Draw the points
+        # Dibujar los puntos
         glBegin(GL_LINE_LOOP)
         for point in sorted_points:
             glVertex3f(point[0], point[1], point[2])
@@ -286,10 +286,10 @@ def opengl_main():
     glutMainLoop()
 
 if __name__ == "__main__":
-    # Run camera capture in a separate thread
+    # Ejecutar la captura de la cámara en un hilo separado
     camera_thread = threading.Thread(target=camera_capture)
     camera_thread.start()
 
-    # Run OpenGL main loop
+    # Ejecutar el bucle principal de OpenGL
     opengl_main()
 
