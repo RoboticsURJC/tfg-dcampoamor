@@ -1,24 +1,34 @@
 \chapter{Estado del arte}
 \label{cap:capitulo2}
 	
-En el presente capítulo, se van a describir algunos de los prototipos y soluciones más destacables aplicadas a la detección y recolección de fresas usando inteligencia artificial y técnicas robóticas.\\
+En el presente capítulo, se van a describir algunos de los prototipos y soluciones más destacables aplicadas a la detección y recolección de fresas usando inteligencia artificial y técnicas robóticas.
 
-\section{Descripción del problema}
-\label{sec:descripcion}
+\subsubsection{Robot recolector de Octinion}
+La empresa de I+D agrícola Octinion desarrolló un prototipo de robot recolector de fresas en 2017, que recoge los frutos de forma totalmente autónoma basándose en el método de cultivo habitual (sobremesa), con el fin de resolver el obstáculo emergente de la agricultura occidental: la falta de mano de obra asequible que pone en peligro la sostenibilidad y conservación del negocio \cite{DePreter18}.\\
 
-Cuenta aquí el objetivo u objetivos generales y, a continuación, concrétalos mediante objetivos específicos.
+Este robot está formado por un vehículo eléctrico consistente en una plataforma eléctrica con una batería recargable; un sistema de localización consituido por codificadores de rueda, un giroscopio y un sistema de posicionamiento en interiores de banda ultraancha (UWB); tres cámaras RGB utilizadas para la detección de las fresas por cámara mediante visión artificial, un brazo robótico diseñado a medida, la pinza que se acopla al extremo del brazo robótico y agarra con sus dedos la fresa detectada, un módulo de gestión o manipulación logística consistente en varias cestas que se transportan en la plataforma eléctrica y que están preparadas por el robot para que estén inmediatamente listas para el envasado final y el transporte; y un módulo de control de calidad que clasifica las fresas detectadas en función de su madurez, forma, tamaño y dulzor \cite{DePreter18}.
 
-\section{Requisitos}
-\label{sec:requisitos}
+\begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=13cm]{figs/DiseñoConceptual_Octinion.png}
+    \end{center}
+    \caption{Diseño conceptual del robot de recogida con sus componentes.}
+    \label{fig:DiseñoConceptual_Octinion}
+\end{figure}
+\pagebreak
 
-Describe los requisitos que ha de cumplir tu trabajo.
 
-\section{Metodología}
-\label{sec:metodologia}
+Todo esto le permite al robot recoger al menos el 70 \% de las fresas maduras, siempre sin dañarlas, ya que sólo decide recoger la fruta si su acción no va a dañar otras fresas, siendo el tiempo necesario para desplazarse hasta la fresa, cogerla y depositarla en una cesta (caja en la que se colocan las
+fresas) de 4 segundos, siendo la calidad y velocidad de recolección comparables a las de un recolector humano ideal \cite{DePreter18}. Además de esto, el uso de este robot para cosechar las fresas de forma autónoma, presenta algunas ventajas adicionales:
 
-Qué paradigma de desarrollo software has seguido para alcanzar tus objetivos.
+\begin{itemize}
+    \item Mayor calidad de recolección (disminución de los daños en la fruta).
+    \item Mayor calidad de clasificación (más categorías, colocación más óptima 								en los envases, categorización mejor y más flexible).
+    \item La productividad del robot es constante y predecible. No necesita formación, por lo que no supone un coste elevado al principio.
+    \item Nuevas herramientas de gestión con los datos recopilados: predicción del rendimiento, asignaciones de cosecha más complejas (recogida de un tamaño
+determinado, recogida un día antes o después).
+    \item Horario de recogida ilimitado (fines de semana, horario nocturno).
+\end{itemize}
 
-\section{Plan de trabajo}
-\label{sec:plantrabajo}
 
-Qué agenda has seguido. Si has ido manteniendo reuniones semanales, cumplimentando objetivos parciales, si has ido afinando poco a poco un producto final completo, etc.
+
