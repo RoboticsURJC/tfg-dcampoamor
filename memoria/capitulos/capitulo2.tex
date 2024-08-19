@@ -3,15 +3,36 @@
 	
 En el presente capítulo, se van a describir algunos de los prototipos y soluciones más destacables aplicadas a la detección y recolección de fresas usando inteligencia artificial y técnicas robóticas.
 
+\subsubsection{Robot autónomo recolector de fresas en invernadero}
+Este sistema, explicado en \cite{Xiong19}, presenta el desarrollo y la evaluación de un robot para la recolección de fresas (Fragaria × ananassa) cultivadas en invernaderos. El robot encargado de realizar esta tarea, está compuesto por una pinza montada en un brazo industrial que a su vez está montado en una base móvil junto con una cámara RGB-D, que utilizará el sistema de visión que se basa en el umbral de color combinado con el cribado del área del objeto y el rango de profundidad para seleccionar las fresas maduras y alcanzables. La novedosa pinza está diseñada para apuntar a la fruta y no al tallo, por lo que sólo requiere la ubicación de la fruta para la recolección. Además, está equipada con sensores internos, por lo que la pinza puede detectar y corregir errores de posición, y es resistente a los errores de localización introducidos por el módulo de visión. Otra característica importante de la pinza es el contenedor interno que se utiliza para recoger las bayas durante la recolección, lo cual reduce considerablemente el tiempo de recogida dado que el manipulador no tiene que ir y venir entre cada fresa a una cesta separada.
+
+\begin{figure} [h!]
+    \begin{center}
+      \includegraphics[width=8cm]{figs/Hardware assembly in a strawberry farm.jpg}
+    \end{center}
+    \caption{Montaje del hardware en una explotación de fresas: el robot consta principalmente de una cámara RGB-D, un brazo 5-DOF, una pinza y una plataforma móvil.}
+    \label{fig:Robot_Xiong}
+\end{figure}
+\pagebreak
+
+
+Con todo esto, los experimentos de campo muestran la duración media del ciclo de recolección continua de una sola fresa es de 7,5 s y de 10,6 s cuando se incluyen todos los procedimientos. Además, el robot es capaz de recoger fresas aisladas con una tasa de éxito cercana a la perfección (96,8\%). Sin embargo, en las explotaciones agrícolas, el porcentaje medio de éxito es del 53,6\%, y del 59,0\% si se incluye el «éxito con daños».
+
+Este descenso de la tasa de éxito es debido a los siguientes factores:
+
+\begin{itemize}
+    \item Oclusión de las fresas, lo que deriva en una detección fallida y una no recolección de las mismas
+    \item Posibles detecciones duplicadas debido a las agrupaciones de fresas que se tocan entre sí
+    \item Errores de localización demasiado grandes para la que la pinza pueda coger la fresa producidos por localizaciones imprecisas y/o fallos de segmentación del sistema de visión artificial
+    \item Perturbaciones que produce la pinza cuando se encuentran fresas por debajo del objetivo o dentro del área de búsqueda de la pinza, por lo que la pinza detecta las fresas molestas y las considera objetivos. También debido a los toques que pueda tener el brazo robótico durante el proceso de recolección con las plantas, ya que estos tpques afectan a la ubicación de objetivos.
+    \item Región de alcance del robot reducida, ya que el espacio de trabajo con el que cuenta el brazo robótico para llevar a cabo la tarea de recolección es limitado
+    \item Fallos de comunicación del brazo o la pinza
+\end{itemize}
+
+
+
 \subsubsection{Robot recolector de Octinion}
-
-
-
-
-
-
-\subsubsection{Robot recolector de Octinion}
-La empresa de I+D agrícola Octinion desarrolló un prototipo de robot recolector de fresas en 2017, que recoge los frutos de forma totalmente autónoma basándose en el método de cultivo habitual (sobremesa), con el fin de resolver el obstáculo emergente de la agricultura occidental: la falta de mano de obra asequible que pone en peligro la sostenibilidad y conservación del negocio \cite{DePreter18}.\\
+La empresa belga de I+D agrícola Octinion desarrolló un prototipo de robot recolector de fresas en 2017, que recoge los frutos de forma totalmente autónoma basándose en el método de cultivo habitual (sobremesa), con el fin de resolver el obstáculo emergente de la agricultura occidental: la falta de mano de obra asequible que pone en peligro la sostenibilidad y conservación del negocio \cite{DePreter18}.\\
 
 Este robot está formado por un vehículo eléctrico consistente en una plataforma eléctrica con una batería recargable; un sistema de localización consituido por codificadores de rueda, un giroscopio y un sistema de posicionamiento en interiores de banda ultraancha (UWB); tres cámaras RGB utilizadas para la detección de las fresas por cámara mediante visión artificial, un brazo robótico diseñado a medida, la pinza que se acopla al extremo del brazo robótico y agarra con sus dedos la fresa detectada, un módulo de gestión o manipulación logística consistente en varias cestas que se transportan en la plataforma eléctrica y que están preparadas por el robot para que estén inmediatamente listas para el envasado final y el transporte; y un módulo de control de calidad que clasifica las fresas detectadas en función de su madurez, forma, tamaño y dulzor \cite{DePreter18}.
 
