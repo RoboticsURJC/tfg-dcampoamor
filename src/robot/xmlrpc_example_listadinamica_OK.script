@@ -1,0 +1,55 @@
+def xmlrpc_example():
+  global _hidden_verificationVariable=0
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_gravity([0.0, 0.0, 9.82])
+  set_safety_mode_transition_hardness(1)
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  step_count_4bbe5e1e_7d3a_426a_b121_f9817fbd3f54 = 0.0
+  thread Step_Counter_Thread_53647036_bf1e_4eb4_ab1f_5e7105ca42d5():
+    while (True):
+      step_count_4bbe5e1e_7d3a_426a_b121_f9817fbd3f54 = step_count_4bbe5e1e_7d3a_426a_b121_f9817fbd3f54 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_53647036_bf1e_4eb4_ab1f_5e7105ca42d5()
+  global Casa_p=p[-.135367242089, -.436495952418, .231741306824, 1.273220905329, 2.580627788436, -.385949605410]
+  global Casa_q=[-1.5, -1.546105720283574, -2.6371993333332355, -0.17880066666669236, 1.6416006666665495, 1.0000000000000004]
+  $ 2 "BeforeStart"
+  $ 3 "camera≔rpc_factory('xmlrpc','http://192.168.56.250:50000')"
+  global camera=rpc_factory("xmlrpc","http://192.168.56.250:50000")
+  while (True):
+    $ 4 "Robot Program"
+    $ 5 "Loop  True "
+    while (  True  ):
+      $ 6 "next_pose≔camera.get_next_pose()"
+      global next_pose=camera.get_next_pose()
+      $ 7 "If next_pose[0] == 0  and next_pose[1] == 0  and next_pose[2] == 0  and next_pose[3] == 0  and next_pose[4] ==0  and next_pose[5] == 0"
+      if (next_pose[0] == 0   and  next_pose[1] == 0   and  next_pose[2] == 0   and  next_pose[3] == 0   and  next_pose[4] ==0   and  next_pose[5] == 0):
+        $ 8 "MoveJ"
+        $ 9 "Casa" "breakAfter"
+        movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+        $ 10 "Wait: 1.0"
+        sleep(1.0)
+      else:
+        $ 11 "Else" "noBreak"
+        $ 12 "MoveJ"
+        $ 13 "next_pose" "breakAfter"
+        movej(next_pose, a=1.3962634015954636, v=1.0471975511965976)
+      end
+      $ 14 "sync()"
+      sync()
+    end
+  end
+end

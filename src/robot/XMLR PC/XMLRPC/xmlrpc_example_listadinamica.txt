@@ -1,0 +1,11 @@
+ Program
+   Variables Setup
+   BeforeStart
+     camera≔rpc_factory("xmlrpc","https:10.0.2.20")
+   Robot Program
+     Loop  True 
+       next_pose≔camera.get_pose()
+       If next_pose[0]==0
+         Popup: No hay  mas posiciones a las que moverse
+       MoveJ
+         next_pose

@@ -1,0 +1,46 @@
+def xmlrpc_example():
+  global _hidden_verificationVariable=0
+  step_count_e1aa22cf_d306_4e86_91ee_d5d2577e9b02 = 0.0
+  thread Step_Counter_Thread_ded9adaf_4365_4625_89dc_e34dd079e3b6():
+    while (True):
+      step_count_e1aa22cf_d306_4e86_91ee_d5d2577e9b02 = step_count_e1aa22cf_d306_4e86_91ee_d5d2577e9b02 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_ded9adaf_4365_4625_89dc_e34dd079e3b6()
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  set_safety_mode_transition_hardness(1)
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  set_gravity([0.0, 0.0, 9.82])
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  $ 2 "BeforeStart"
+  $ 3 "camera≔rpc_factory('xmlrpc','https:10.0.2.20')"
+  global camera=rpc_factory("xmlrpc","https:10.0.2.20")
+  while (True):
+    $ 4 "Robot Program"
+    $ 5 "Loop  True "
+    while (  True  ):
+      $ 6 "next_pose≔camera.get_pose()"
+      global next_pose=camera.get_pose()
+      $ 7 "If next_pose[0]==0"
+      if (next_pose[0]==0):
+        $ 8 "Popup: No hay  mas posiciones a las que moverse"
+        popup("No hay  mas posiciones a las que moverse", "Warning", True, False, blocking=True)
+      end
+      $ 9 "MoveJ"
+      $ 10 "next_pose" "breakAfter"
+      movej(next_pose, a=1.3962634015954636, v=1.0471975511965976)
+    end
+  end
+end
