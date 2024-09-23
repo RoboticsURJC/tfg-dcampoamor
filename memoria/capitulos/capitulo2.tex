@@ -41,8 +41,6 @@ En 2009, después de más de 30 años de comercializar fresas en la provincia de
     \label{fig:Agrobot}
   \end{figure}
 
-En \cite{Durmus15}, se estudia como aumentar la eficiencia de la producción en el campo agrícola mediante el desarrollo de un robot móvil autónomo que tenga la capacidad de procesar y supervisar las operaciones necesarias. Sin embargo, las principales limitaciones son la fiabilidad y la durabilidad de las condiciones del campo frente a la reducción del coste unitario del robot para la fabricación de grandes volúmenes de este. Además en este artículo se busca que los dispositivos de red puedan comunicarse a través de los servicios en la nube del Centro de Investigación Aplicada en Informática Agrícola Medioambiental (TARBIL) y que el software de aplicación pueda transmitir datos a todos los dispositivos asociados en la aplicación para poder ser conscientes y manejar toda esta información disponible y mejorar la eficiencia de la producción. De este modo, se puede dividir el trabajo presentado en el artículo en dos etapas principales, siendo la primera etapa aquella que engloba la integración de conductores, actuadores, sistema de control, sistema de comunicación, sistema de gestión de energía, sistema de gestión de tareas y sensores en una plataforma adecuada según estos criterios y estando formada la segunda etapa por la integración de la gestión de tareas con el sistema TARBIL.\\
-
 La empresa belga de I+D agrícola Octinion \footnote{\url{http://octinion.com/products/agricultural-robotics/rubion}} desarrolló un prototipo de robot recolector de fresas en 2017, que recoge los frutos de forma totalmente autónoma basándose en el método de cultivo habitual (sobremesa), con el fin de resolver el obstáculo emergente de la agricultura occidental: la falta de mano de obra asequible que pone en peligro la sostenibilidad y conservación del negocio \cite{DePreter18}.
 
 Este robot, cuyo diseño está representado en la Figura \ref{fig:DiseñoConceptual_Octinion}, está formado por un vehículo eléctrico consistente en una plataforma eléctrica con una batería recargable; un sistema de localización consituido por codificadores de rueda, un giroscopio y un sistema de posicionamiento en interiores de banda ultraancha (UWB); tres cámaras RGB utilizadas para la detección de las fresas por cámara mediante visión artificial, un brazo robótico diseñado a medida, la pinza que se acopla al extremo del brazo robótico y agarra con sus dedos la fresa detectada, un módulo de gestión o manipulación logística consistente en varias cestas que se transportan en la plataforma eléctrica y que están preparadas por el robot para que estén inmediatamente listas para el envasado final y el transporte; y un módulo de control de calidad que clasifica las fresas detectadas en función de su madurez, forma, tamaño y dulzor \cite{DePreter18}.
@@ -66,6 +64,13 @@ fresas) de 4 segundos, siendo la calidad y velocidad de recolección comparables
 determinado, recogida un día antes o después).
     \item Horario de recogida ilimitado (fines de semana, horario nocturno).
 \end{itemize}
+
+En \cite{DePreter18} se menciona el sistema Doogtooth \footnote{\url{https://dogtooth.tech/}} de Cambridge (Reino Unido). El desarrollo de este robot inteligente diseñado para mejorar las operaciones de recogida de frutos rojos siendo capaz de navegar por hileras de fresas y frambuesas, detectar y localizar las maduras, así como recoger y comprobar la fruta antes de colocarla en un cesto, permite a las empresas de recolección de fruta sustituir el método de recogida manual y ahorrar tiempo. Sin embargo, al cortar el tallo produce una pequeña herida, que permite que las enfermedades entren fácilmente en la planta, y la parte restante del pedúnculo puede magullar otras fresas durante el transporte, cuando las frutas se agitan en sus cajas. Así mismo, Dogtooth parte de un robot industrial caro cuya cinemática no está optimizada para la recogida de fresas, suponiendo un inconveniente frente a sus competidores que, a pesar de encontrarse en fase de prototipo, sus conceptos exigen cambios drásticos en la infraestructura ya que las fresas recolectadas no cumplen las especificaciones exigidas por el mercado. 
+
+
+
+
+
 
 El sistema explicado en \cite{Xiong19}, presenta el desarrollo y la evaluación de un robot para la recolección de fresas (Fragaria × ananassa) cultivadas en invernaderos (ver Figura \ref{fig:Robot_Xiong}). El robot encargado de realizar esta tarea, está compuesto por una pinza montada en un brazo industrial que a su vez está montado en una base móvil junto con una cámara RGB-D, que utilizará el sistema de visión que se basa en el umbral de color combinado con el cribado del área del objeto y el rango de profundidad para seleccionar las fresas maduras y alcanzables. La novedosa pinza está diseñada para apuntar a la fruta y no al tallo, por lo que sólo requiere la ubicación de la fruta para la recolección. Además, está equipada con sensores internos, por lo que la pinza puede detectar y corregir errores de posición, y es resistente a los errores de localización introducidos por el módulo de visión. Otra característica importante de la pinza es el contenedor interno que se utiliza para recoger las bayas durante la recolección, lo cual reduce considerablemente el tiempo de recogida dado que el manipulador no tiene que ir y venir entre cada fresa a una cesta separada.
 
@@ -119,7 +124,6 @@ El robot, representado en la Figura \ref{fig:Robots_tomates}, consta de una cám
 \end{figure}
 
 Con todo esto, obtenemos un tiempo medio de recolección del tomate rojo de 4,932 s, y del tomate verde de 5,276 s, siendo el tiempo necesario para que el robot detecte el tomate rojo y vuelva a la posición de espera de 9,676 s, y de 10,586 s para los tomates verdes. Esta diferencia de tiempo se debe a la distancia del robot al tomate y no al color del mismo.
-
 
 
 
