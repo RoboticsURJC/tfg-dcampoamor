@@ -1,0 +1,64 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Primer robot industrial\relax }}{4}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Standford Arm\relax }}{5}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Diagrama mecatrónico de construcción de máquinas inteligentes\relax }}{5}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Joseph Engelberger y George Devol}}}{5}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Robot Unimate}}}{5}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Victor Scheinman con el Standford Arm}}}{5}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Standford Arm}}}{5}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Robot Cincinnati Milacron T3\relax }}{6}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Uno de los primeros prototipos de robot SCARA\relax }}{7}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Robot ABB IRB 360 Flexpicker\relax }}{7}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Robot Motoman DA-20\relax }}{9}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces LWR3\relax }}{9}{figure.caption.19}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RoboAssistant en Automatica 2004}}}{9}{figure.caption.19}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Robot KUKA LWR3 con controladora (2006)}}}{9}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Robots utilizados para el desarrollo de ROS\relax }}{10}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Logo de ROS\relax }}{10}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces UR5 con su controladora\relax }}{11}{figure.caption.22}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Robot PR1}}}{11}{figure.caption.22}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Robot PR2}}}{11}{figure.caption.22}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Universal Robots e-Series\relax }}{12}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Robot Shakey\relax }}{13}{figure.caption.24}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Robots de servicio\relax }}{15}{figure.caption.25}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Robot aspirador Roomba de iRobot\relax }}{15}{figure.caption.26}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Robots de inspección y mantenimiento\relax }}{16}{figure.caption.27}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Robots de educación\relax }}{16}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Robots de logística\relax }}{17}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Robots de entretenimiento\relax }}{17}{figure.caption.30}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Robot Da Vinci\relax }}{18}{figure.caption.31}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Robots médicos\relax }}{19}{figure.caption.32}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Modelos de inteligencia\relax }}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {UR presenta los nuevos e-Series en Automatica 2018}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UR e-Series}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Alexa}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pepper}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Sophia}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Spot de Boston Dynamics}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ROBTET, robot para el mantenimiento de líneas de alta tensión}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Robot NAO}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Turtlebot 4}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {AGV Robots Kiva de Amazon}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {AMRs de MiR}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {SONY Aibo}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Dron DJI Spark}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Exoesqueleto Ekso Bionics}}}{21}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Robot RP-VITA}}}{21}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Aspectos clave y semántica del Aprendizaje automático\relax }}{24}{figure.caption.35}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Diagrama de Venn de la relación entre distintas subáreas de la IA\relax }}{25}{figure.caption.36}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Modelo biológico de una neurona genérica, comúnmente una neurona motora típica (izquierda) y el respectivo modelo matemático (derecha)\relax }}{27}{figure.caption.37}%
+\contentsline {figure}{\numberline {1.26}{\ignorespaces Arquitectura de una red neuronal\relax }}{27}{figure.caption.38}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representación de varios tipos de robots agrícolas\relax }}{29}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ilustración global del rendimiento general de los robots revisados\relax }}{30}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Agrobot\relax }}{32}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diseño conceptual del robot de recogida con sus componentes\relax }}{33}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Robot agrícola Dogtooth\relax }}{34}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Montaje del hardware en una explotación de fresas: el robot consta principalmente de una cámara RGB-D, un brazo 5-DOF, una pinza y una plataforma móvil\relax }}{35}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Detección de tomates indicada por los círculos rojos\relax }}{37}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Robot recolector de tomates\relax }}{38}{figure.caption.46}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

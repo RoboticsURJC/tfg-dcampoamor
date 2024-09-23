@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: memoria.aux
+The style file: apalike.bst
+Database file #1: bibliografia.bib
+I was expecting a `,' or a `}'---line 446 of file bibliografia.bib
+ :   
+ :   month = "Julio",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--there's a number but no volume in Abeliuk21
+Warning--empty booktitle in Bischoff10
+Warning--empty booktitle in Dechter86
+Warning--there's a number but no volume in Hardy01
+Warning--empty journal in Romero20
+You've used 60 entries,
+            1935 wiz_defined-function locations,
+            873 strings with 15984 characters,
+and the built_in function-call counts, 24410 in all, are:
+= -- 2296
+> -- 1191
+< -- 45
++ -- 429
+- -- 412
+* -- 2029
+:= -- 4333
+add.period$ -- 187
+call.type$ -- 60
+change.case$ -- 495
+chr.to.int$ -- 59
+cite$ -- 65
+duplicate$ -- 923
+empty$ -- 1583
+format.name$ -- 495
+if$ -- 4790
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 64
+newline$ -- 306
+num.names$ -- 180
+pop$ -- 466
+preamble$ -- 1
+purify$ -- 503
+quote$ -- 0
+skip$ -- 713
+stack$ -- 0
+substring$ -- 1339
+swap$ -- 138
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 340
+warning$ -- 5
+while$ -- 167
+width$ -- 0
+write$ -- 780
+(There was 1 error message)
