@@ -47,7 +47,7 @@ Este robot, cuyo diseño está representado en la Figura \ref{fig:DiseñoConcept
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=13cm]{figs/DiseñoConceptual_Octinion.png}
+      \includegraphics[width=12cm]{figs/DiseñoConceptual_Octinion.png}
     \end{center}
     \caption{Diseño conceptual del robot de recogida con sus componentes}
     \label{fig:DiseñoConceptual_Octinion}
@@ -64,15 +64,16 @@ fresas) de 4 segundos, siendo la calidad y velocidad de recolección comparables
 determinado, recogida un día antes o después).
     \item Horario de recogida ilimitado (fines de semana, horario nocturno).
 \end{itemize}
+\pagebreak
 
 El sistema Dogtooth \footnote{\url{https://dogtooth.tech/}} de Cambridge (Reino Unido) (ver en Figura \ref{fig:Dogtooth}) fue desarrollado para mejorar las operaciones de recogida de frutos rojos siendo capaz de navegar por hileras de fresas y frambuesas, detectar y localizar las maduras, así como recoger y comprobar la fruta antes de colocarla en un cesto, permite a las empresas de recolección de fruta sustituir el método de recogida manual y ahorrar tiempo. Sin embargo, al cortar el tallo produce una pequeña herida, que permite que las enfermedades entren fácilmente en la planta, y la parte restante del pedúnculo puede magullar otras fresas durante el transporte, cuando las frutas se agitan en sus cajas. Así mismo, Dogtooth parte de un robot industrial caro cuya cinemática no está optimizada para la recogida de fresas, suponiendo un inconveniente frente a sus competidores que, a pesar de encontrarse en fase de prototipo, sus conceptos exigen cambios drásticos en la infraestructura ya que las fresas recolectadas no cumplen las especificaciones exigidas por el mercado. 
 
 \begin{figure}[H]
     \begin{center}
       \subcapcentertrue
-      \subfigure[Robot Dogtooth]{\includegraphics[width=12cm]{figs/Dogtooth.jpg}}
+      \subfigure[Robot Dogtooth]{\includegraphics[width=10cm]{figs/Dogtooth.jpg}}
       \hspace{2mm}
-      \subfigure[Brazo robótico del Dogtooth]{\includegraphics[width=12cm]{figs/Brazo Dogtooth.png}}
+      \subfigure[Brazo robótico del Dogtooth]{\includegraphics[width=10cm]{figs/Brazo Dogtooth.png}}
     \end{center}
     \caption{Robot agrícola Dogtooth}
     \label{fig:Dogtooth}
@@ -82,7 +83,7 @@ El sistema explicado en \cite{Xiong19}, presenta el desarrollo y la evaluación 
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=8cm]{figs/Hardware assembly in a strawberry farm.jpg}
+      \includegraphics[width=9cm]{figs/Hardware assembly in a strawberry farm.jpg}
     \end{center}
     \caption{Montaje del hardware en una explotación de fresas: el robot consta principalmente de una cámara RGB-D, un brazo 5-DOF, una pinza y una plataforma móvil}
     \label{fig:Robot_Xiong}
@@ -93,17 +94,15 @@ Con todo esto, los experimentos de campo muestran la duración media del ciclo d
 Este descenso de la tasa de éxito es debido a los siguientes factores:
 
 \begin{itemize}
-    \item Oclusión de las fresas, lo que deriva en una detección fallida y una no recolección de las mismas
-    \item Posibles detecciones duplicadas debido a las agrupaciones de fresas que se tocan entre sí
-    \item Errores de localización demasiado grandes para la que la pinza pueda coger la fresa producidos por localizaciones imprecisas y/o fallos de segmentación del sistema de visión artificial
+    \item Oclusión de las fresas, lo que deriva en una detección fallida y una no recolección de las mismas.
+    \item Posibles detecciones duplicadas debido a las agrupaciones de fresas que se tocan entre sí.
+    \item Errores de localización demasiado grandes para la que la pinza pueda coger la fresa producidos por localizaciones imprecisas y/o fallos de segmentación del sistema de visión artificial.
     \item Perturbaciones que produce la pinza cuando se encuentran fresas por debajo del objetivo o dentro del área de búsqueda de la pinza, por lo que la pinza detecta las fresas molestas y las considera objetivos. También debido a los toques que pueda tener el brazo robótico durante el proceso de recolección con las plantas, ya que estos tpques afectan a la ubicación de objetivos.
-    \item Región de alcance del robot reducida, ya que el espacio de trabajo con el que cuenta el brazo robótico para llevar a cabo la tarea de recolección es limitado
-    \item Fallos de comunicación del brazo o la pinza
+    \item Región de alcance del robot reducida, ya que el espacio de trabajo con el que cuenta el brazo robótico para llevar a cabo la tarea de recolección es limitado.
+    \item Fallos de comunicación del brazo o la pinza.
 \end{itemize}
 
-En 2020, la Universidad Politécnica Negeri Sriwijaya de Indonesia, analizó desde el departamento de ingeniería eléctrica, el empleo de un robot recolector como proyecto piloto, tal y como se cuenta en el artículo \cite{Oktarina20}, en el cual la fruta a recolectar serían tomates rojos y verdes, en lugar de fresas. A pesar de la diferencia en el tipo de cultivo, el estudio resulta relevante para este trabajo debido a la similitud en los principios de detección y recolección de frutos, y al tratarse de un prototipo básico lo convierte en un punto de partida útil para proyectos de investigación enfocados en la automatización agrícola aplicada a fresas.\\
-
-El objetivo de este estudio es establecer el proyecto inicial en la creación de una serie de robots aplicados en la agricultura para hacer realidad la idea de la agricultura digital. La novedad de este estudio es que este método es simple, al igual que el procesamiento de imágenes, para adaptarse a los recursos limitados de los procesadores con los que se llevó a cabo este proyecto. El robot diseñado se personaliza en función del tamaño de la tomatera y el color, donde la ubicación del tomate se indica mediante un círculo resultante del tratamiento de la imagen y la división en las posiciones izquierda, derecha y central en el plano de la imagen, cuya resolución en este estudio es de 320 × 180 píxeles, como se muestra en la Figura \ref{fig:Deteccion_tomates}. 
+En 2020, la Universidad Politécnica Negeri Sriwijaya de Indonesia, analizó el empleo de un robot recolector como proyecto piloto, tal y como se cuenta el artículo \cite{Oktarina20}, en el cual la fruta a recolectar serían tomates rojos y verdes, en lugar de fresas. A pesar de la diferencia en el tipo de cultivo, el estudio resulta relevante para este trabajo debido a la similitud en los principios de detección y recolección de frutos, y al tratarse de un prototipo básico lo convierte en un punto de partida útil para proyectos de investigación enfocados en la automatización agrícola aplicada a fresas. El objetivo de este estudio es establecer el proyecto inicial en la creación de una serie de robots aplicados en la agricultura para hacer realidad la idea de la agricultura digital. La novedad de este estudio es que este método es simple, al igual que el procesamiento de imágenes, para adaptarse a los recursos limitados de los procesadores con los que se llevó a cabo este proyecto. El robot diseñado se personaliza en función del tamaño de la tomatera y el color, donde la ubicación del tomate se indica mediante un círculo resultante del tratamiento de la imagen y la división en las posiciones izquierda, derecha y central en el plano de la imagen, cuya resolución en este estudio es de 320 × 180 píxeles, como se muestra en la Figura \ref{fig:Deteccion_tomates}. 
 
 \begin{figure}[H]
     \begin{center}
@@ -129,7 +128,12 @@ El robot, representado en la Figura \ref{fig:Robots_tomates}, consta de una cám
     \label{fig:Robots_tomates}
 \end{figure}
 
-Con todo esto, obtenemos un tiempo medio de recolección del tomate rojo de 4,932 s, y del tomate verde de 5,276 s, siendo el tiempo necesario para que el robot detecte el tomate rojo y vuelva a la posición de espera de 9,676 s, y de 10,586 s para los tomates verdes. Esta diferencia de tiempo se debe a la distancia del robot al tomate y no al color del mismo.
+Con todo esto, obtenemos un tiempo medio de recolección del tomate rojo de 4,932 s, y del tomate verde de 5,276 s, siendo el tiempo necesario para que el robot detecte el tomate rojo y vuelva a la posición de espera de 9,676 s, y de 10,586 s para los tomates verdes. Esta diferencia de tiempo se debe a la distancia del robot al tomate y no al color del mismo.\\
+\\
+\\
+En este capítulo se han revisado algunos de los avances más relevantes en el campo de la robótica agrícola, más concretamente en los sistemas aplicados a la recolección de fresas, donde se ha evidenciado cómo el uso de la inteligencia artificial y la visión artificial ha impulsado mejoras significativas tanto en la velocidad como en la precisión de los procesos de recolección. Sin embargo, aún queda trabajo por hacer para optimizar y mejorar la eficiencia y la viabilidad económica de estos sistemas.
+
+
 
 
 
