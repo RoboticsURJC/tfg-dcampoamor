@@ -65,12 +65,18 @@ determinado, recogida un día antes o después).
     \item Horario de recogida ilimitado (fines de semana, horario nocturno).
 \end{itemize}
 
-En \cite{DePreter18} se menciona el sistema Doogtooth \footnote{\url{https://dogtooth.tech/}} de Cambridge (Reino Unido). El desarrollo de este robot inteligente diseñado para mejorar las operaciones de recogida de frutos rojos siendo capaz de navegar por hileras de fresas y frambuesas, detectar y localizar las maduras, así como recoger y comprobar la fruta antes de colocarla en un cesto, permite a las empresas de recolección de fruta sustituir el método de recogida manual y ahorrar tiempo. Sin embargo, al cortar el tallo produce una pequeña herida, que permite que las enfermedades entren fácilmente en la planta, y la parte restante del pedúnculo puede magullar otras fresas durante el transporte, cuando las frutas se agitan en sus cajas. Así mismo, Dogtooth parte de un robot industrial caro cuya cinemática no está optimizada para la recogida de fresas, suponiendo un inconveniente frente a sus competidores que, a pesar de encontrarse en fase de prototipo, sus conceptos exigen cambios drásticos en la infraestructura ya que las fresas recolectadas no cumplen las especificaciones exigidas por el mercado. 
+El sistema Dogtooth \footnote{\url{https://dogtooth.tech/}} de Cambridge (Reino Unido) (ver en Figura \ref{fig:Dogtooth}) fue desarrollado para mejorar las operaciones de recogida de frutos rojos siendo capaz de navegar por hileras de fresas y frambuesas, detectar y localizar las maduras, así como recoger y comprobar la fruta antes de colocarla en un cesto, permite a las empresas de recolección de fruta sustituir el método de recogida manual y ahorrar tiempo. Sin embargo, al cortar el tallo produce una pequeña herida, que permite que las enfermedades entren fácilmente en la planta, y la parte restante del pedúnculo puede magullar otras fresas durante el transporte, cuando las frutas se agitan en sus cajas. Así mismo, Dogtooth parte de un robot industrial caro cuya cinemática no está optimizada para la recogida de fresas, suponiendo un inconveniente frente a sus competidores que, a pesar de encontrarse en fase de prototipo, sus conceptos exigen cambios drásticos en la infraestructura ya que las fresas recolectadas no cumplen las especificaciones exigidas por el mercado. 
 
-
-
-
-
+\begin{figure}[H]
+    \begin{center}
+      \subcapcentertrue
+      \subfigure[Robot Dogtooth]{\includegraphics[width=12cm]{figs/Dogtooth.jpg}}
+      \hspace{2mm}
+      \subfigure[Brazo robótico del Dogtooth]{\includegraphics[width=10cm]{Brazo Dogtooth.png}}
+    \end{center}
+    \caption{Robot agrícola Dogtooth}
+    \label{fig:Dogtooth}
+\end{figure}
 
 El sistema explicado en \cite{Xiong19}, presenta el desarrollo y la evaluación de un robot para la recolección de fresas (Fragaria × ananassa) cultivadas en invernaderos (ver Figura \ref{fig:Robot_Xiong}). El robot encargado de realizar esta tarea, está compuesto por una pinza montada en un brazo industrial que a su vez está montado en una base móvil junto con una cámara RGB-D, que utilizará el sistema de visión que se basa en el umbral de color combinado con el cribado del área del objeto y el rango de profundidad para seleccionar las fresas maduras y alcanzables. La novedosa pinza está diseñada para apuntar a la fruta y no al tallo, por lo que sólo requiere la ubicación de la fruta para la recolección. Además, está equipada con sensores internos, por lo que la pinza puede detectar y corregir errores de posición, y es resistente a los errores de localización introducidos por el módulo de visión. Otra característica importante de la pinza es el contenedor interno que se utiliza para recoger las bayas durante la recolección, lo cual reduce considerablemente el tiempo de recogida dado que el manipulador no tiene que ir y venir entre cada fresa a una cesta separada.
 
