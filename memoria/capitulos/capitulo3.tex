@@ -5,12 +5,45 @@ Una vez presentado el contexto general en el cual se enmarca el presente trabajo
 \section{Descripción del problema}
 \label{sec:descripcion}
 
-Cuenta aquí el objetivo u objetivos generales y, a continuación, concrétalos mediante objetivos específicos.
+La necesidad de implementar soluciones tecnológicas que automaticen y optimicen las tareas de recolección incrementando la eficiencia en la recolección, mejorando la calidad del producto y disminuyendo los costes asociados, surge debido a la situación actual de la agricultura en la que, uno de los mayores desafíos que enfrenta es la recolección de frutas y hortalizas, problema que deriva de la escasa mano de obra disponible y el proceso manual que esto conlleva, y de la posibilidad de que existan errores humanos en la identificación de los frutos para su recoleccción, pudiendo influenciar esto en la calidad del producto, especialmente en la recolección de frutos que requieren un manejo cuidadoso como las fresas.
+
+La solución propuesta en este trabajo busca ayudar a mejorar esta situación,
+proporcionando un robot de bajo coste y accesible para cualquier persona y que sirva para poder mejorar el proceso de reconocimiento por visión de la maduración de frutos, más concretamente fresas, para su posterior recolección. Por lo tanto, este proyecto pretende, como objetivo principal, utilizar un robot colaborativo que, gracias a su interfaz intuitiva y accesible para cualquier persona no acostumbrada a programar ni a la robótica, y junto con el sistema de detección elaborado con materiales de bajo coste, sea capaz de reconocer las fresas maduras de un sistema de cultivo agrícola vertical, para su posterior recolección por el brazo robótico gracias a la comunicación establecida entre el sistema de visión y el robot. 
+
+Con el fin de alcanzar este objetivo principal, se han establecido los siguientes
+subobjetivos:
+
+\begin{enumerate}
+  \item Investigar las soluciones actuales que cumplen con las características y objetivos establecidos.
+  \item Seleccionar la técnica de inteligencia artificial de reconocimiento de frutas y seleccionar los componentes hardware necesarios para desarrollar el sistema de visión de bajo coste.
+  \item Optimizar la técnica escogida y adaptarla de tal manera que sea capaz de funcionar en nuestra plataforma. Al ser una técnica basada en Machine Learning, se deberá crear un dataset de valor con imágenes de fresas y, por lo tanto, hacer un correcto tratamiento de los datos para conseguir un resultado preciso en el posterior entrenamiento.
+  \item Realizar el entrenamiento con varios algoritmos de Machine Learning de
+clasificación. Estudiar el rendimiento y precisión de cada uno de ellos a través de pruebas con el sistema de visión y fresas reales.
+  \item Seleccionar el protocolo de comunicación entre el sistema de visión y el robot y llevar a cabo pruebas tanto simuladas a través del simulador que facilita el fabricante del robot como reales para establecer esta comunicación.
+  \item Programación tanto del robot como del archivo en python que posee el código del sistema de reconocimiento de las fresas y el guardado de las posiciones y la distancia de estas a la posición de la cámara para su posterior envío al brazo robótico.
+  \item Realización de pruebas de la aplicación final tanto en entornos simulados como reales.
+\end{enumerate} 
+
 
 \section{Requisitos}
 \label{sec:requisitos}
 
-Describe los requisitos que ha de cumplir tu trabajo.
+Para solucionar los problemas descritos, además de cumplir los subobjetivos
+marcados, este trabajo deberá cumplir los siguientes requisitos:
+
+\begin{enumerate}
+  \item Se utilizará \textit{GNU/Linux}, con la distribución \textit{Ubuntu 22.04 LTS} como sistema operativo en el hardware que se encargará de ejecutar el programa del sistema de visión.
+  \item Los modelos entrenados se deben ajustar a las limitaciones hardware que ejecutará el programa del sistema de visión.
+  \item El sistema deberá poder ser utilizado en tiempo real. 
+  \item El \textit{hardware} utilizado para el desarrollo del sistema de visión debe ser lo suficientemente económico para ser adquirido por cualquier estudiante.
+  \item La aplicación debe ser fácilmente reproducibles y desplegables tanto en un entorno simulado como en un ambiente educativo real o de laboratorio.
+\end{enumerate}  
+
+\section{Competencias}
+\label{sec:competencias}
+
+Las competencias empleadas para la realización de este proyecto, y que han sido
+tomadas de las distintas asignaturas del grado, son las siguientes:
 
 \section{Metodología}
 \label{sec:metodologia}
