@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.17)  29 SEP 2024 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.17)  29 SEP 2024 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,7 +1790,7 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl1
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on memoria.pdf (68 pages, 20747800 bytes).
+Output written on memoria.pdf (68 pages, 20747796 bytes).
 PDF statistics:
  1095 PDF objects out of 1200 (max. 8388607)
  890 compressed objects within 9 object streams
