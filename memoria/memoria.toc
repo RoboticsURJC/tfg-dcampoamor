@@ -13,15 +13,15 @@
 \contentsline {section}{\numberline {3.1}Descripción del problema}{39}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Requisitos}{40}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Competencias}{41}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Metodología}{41}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Plan de trabajo}{41}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{42}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Diseño}{43}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{43}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{43}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{44}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{44}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{46}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{46}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{47}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{48}{appendix*.52}%
+\contentsline {section}{\numberline {3.4}Metodología}{42}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Plan de trabajo}{42}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{43}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Diseño}{44}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{44}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{44}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{45}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{45}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{47}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{48}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{49}{appendix*.52}%
