@@ -5,15 +5,73 @@ Una vez presentado el contexto general en el cual se enmarca el presente trabajo
 \section{Descripción del problema}
 \label{sec:descripcion}
 
-Cuenta aquí el objetivo u objetivos generales y, a continuación, concrétalos mediante objetivos específicos.
+La necesidad de implementar soluciones tecnológicas que automaticen y optimicen las tareas de recolección incrementando la eficiencia en la recolección, mejorando la calidad del producto y disminuyendo los costes asociados, surge debido a la situación actual de la agricultura en la que, uno de los mayores desafíos que enfrenta es la recolección de frutas y hortalizas, problema que deriva de la escasa mano de obra disponible y el proceso manual que esto conlleva, y de la posibilidad de que existan errores humanos en la identificación de los frutos para su recoleccción, pudiendo influenciar esto en la calidad del producto, especialmente en la recolección de frutos que requieren un manejo cuidadoso como las fresas.
+
+La solución propuesta en este trabajo busca ayudar a mejorar esta situación,
+proporcionando un robot de bajo coste y accesible para cualquier persona y que sirva para poder mejorar el proceso de reconocimiento por visión de la maduración de frutos, más concretamente fresas, para su posterior recolección. Por lo tanto, este proyecto pretende, como objetivo principal, utilizar un robot colaborativo que, gracias a su interfaz intuitiva y accesible para cualquier persona no acostumbrada a programar ni a la robótica, y junto con el sistema de detección elaborado con materiales de bajo coste, sea capaz de reconocer las fresas maduras de un sistema de cultivo agrícola vertical, para su posterior recolección por el brazo robótico gracias a la comunicación establecida entre el sistema de visión y el robot. 
+
+Con el fin de alcanzar este objetivo principal, se han establecido los siguientes
+subobjetivos:
+
+\begin{enumerate}
+  \item Investigar las soluciones actuales que cumplen con las características y objetivos establecidos.
+  \item Seleccionar la técnica de inteligencia artificial de reconocimiento de frutas y seleccionar los componentes hardware necesarios para desarrollar el sistema de visión de bajo coste.
+  \item Optimizar la técnica escogida y adaptarla de tal manera que sea capaz de funcionar en nuestra plataforma. Al ser una técnica basada en Machine Learning, se deberá crear un dataset de valor con imágenes de fresas y, por lo tanto, hacer un correcto tratamiento de los datos para conseguir un resultado preciso en el posterior entrenamiento.
+  \item Realizar el entrenamiento con varios algoritmos de Machine Learning de
+clasificación. Estudiar el rendimiento y precisión de cada uno de ellos a través de pruebas con el sistema de visión y fresas reales.
+  \item Seleccionar el protocolo de comunicación entre el sistema de visión y el robot y llevar a cabo pruebas tanto simuladas a través del simulador que facilita el fabricante del robot como reales para establecer esta comunicación.
+  \item Programación tanto del robot como del archivo en python que posee el código del sistema de reconocimiento de las fresas y el guardado de las posiciones y la distancia de estas a la posición de la cámara para su posterior envío al brazo robótico.
+  \item Realización de pruebas de la aplicación final tanto en entornos simulados como reales.
+\end{enumerate} 
+
 
 \section{Requisitos}
 \label{sec:requisitos}
 
-Describe los requisitos que ha de cumplir tu trabajo.
+Para solucionar los problemas descritos, además de cumplir los subobjetivos
+marcados, este trabajo deberá cumplir los siguientes requisitos:
+
+\begin{enumerate}
+  \item Se utilizará \textit{GNU/Linux}, con la distribución \textit{Ubuntu 22.04 LTS} como sistema operativo en el hardware que se encargará de ejecutar el programa del sistema de visión.
+  \item Los modelos entrenados se deben ajustar a las limitaciones hardware que ejecutará el programa del sistema de visión.
+  \item El sistema deberá poder ser utilizado en tiempo real. 
+  \item El \textit{hardware} utilizado para el desarrollo del sistema de visión debe ser lo suficientemente económico para ser adquirido por cualquier estudiante.
+  \item La aplicación debe ser fácilmente reproducible y desplegable tanto en un entorno simulado como en un ambiente educativo real o de laboratorio.
+\end{enumerate}  
+
+\section{Competencias}
+\label{sec:competencias}
+
+Las competencias empleadas del grado, que han sido tomadas de las distintas asignaturas del mismo, y que han sido utilizadas para la realización de este proyecto se dividen tanto en generales como específicas, y son las siguientes:
+\begin{enumerate} 
+  \item \textit{Capacidad de organización y planificación: CG02.} Esta competencia ha sido empleada en la consecución de todo el trabajo de fin de grado, y queda reflejada tanto en las reuniones semanales o quincenales con el tutor responsable de este trabajo como en la wiki de GitHub \footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/wiki}} dedicada al proyecto, que refleja los avances y la organizacización llevada a cabo.  
+  \item \textit{Conocimiento de una lengua extranjera: CG04.} Esta competencia ha sido utilizada a la hora de buscar toda clase de información para poder elaborar este proyecto, ya que se han utilizado documentos publicados en, al menos, una lengua extranjera, como lo es el inglés.
+  \item \textit{Resolución de problemas: CG06.} Dado el nivel de conocimiento necesario en ciertas materias como la inteligencia artificial o la visión artificial, ha sido empleada para poder resolver los diversos inconvenientas que afrontar las pruebas prácticas relacionadas con estas áreas del trabajo suponían.
+  \item \textit{Uso de internet como medio de comunicación y como fuente de información: CG21.} Para poder elaborar este trabajo de fin de grado, ha sido necesario emplear esta competencia para buscar la información necesaria y poder completar principalmente los capítulos 1 y 2.
+  \item \textit{Conocimientos de informática relativos al ámbito de estudio: CG24.} Esta competencia ha sido empleada a la hora de desarrollar y programar la aplicación sobre la que trata este trabajo.
+  \item \textit{Conocimientos básicos sobre el uso y programación de los ordenadores, sistemas operativos, bases de datos y programas informáticos con aplicación en ingeniería: CE3.} Para poder desarrollar la aplicación se tuvo que emplear esta competencia a la hora de llevar a cabo la partición del disco duro en el ordenador y poder instalar la versión de \textit{Ubuntu 22.04.5 LTS (Jammy Jellyfish)}.  
+  \item \textit{Conocimientos sobre los fundamentos de automatismos y métodos de control: CE13.} Esta competencia se refleja en la programación de la toma de decisiones automática, donde el sistema ajusta las operaciones en función de los resultados obtenidos del sistema de visión, así como el trabajo sincronizado de varios dispositivos (cámara y robot) y la comunicación entre estos.
+  \item \textit{Conocimiento de los principios de regulación automática y su aplicación a la automatización industrial: CE32.} Esta competencia se emplea una vez que el sistema de visión identifica el grado de maduración de la fresa, ya que el sistema toma la decisión de recolectar o no el fruto, ajustando los actuadores o robots para realizar la tarea de forma precisa, dependiendo de las condiciones detectadas. Así mismo, se emplea la regulación automática en la optimización del proceso ajustando el comportamiento del robot en función del estado de la maduración de la fresa, maximizando la velocidad de la aplicación y su precisión.
+  \item \textit{Capacidad para diseñar sistemas de control y automatización industrial: CE33.} Gracias a esta competencia se ha podido estructurar el sistema completo, incluyendo la parte de visión artificial, el procesamiento de imágenes, la toma de decisiones y el control del brazo robótico, integrando todos los datos en tiempo real y llevando a cabo operaciones de monitoreo y seguimiento de la aplicación y sus operaciones en remoto, tal y como se realizó en la etapa de pruebas.
+  
+\end{enumerate}  
+
+Por otro lado, las competencias adquiridas con el desarrollo de este trabajo fin de grado, y que aparecen descritas en la guía docente de la propia asignatura, son las siguientes:
+\begin{enumerate}
+  \item \textit{Capacidad de análisis y síntesis: CG01.} 
+  \item \textit{Razonamiento crítico: CG11.}
+  \item \textit{Aprendizaje autónomo: CG13.}
+  \item \textit{Adaptación a nuevas situaciones: CG14.}
+  \item \textit{Capacidad de aplicar los conocimientos teóricos en la práctica: CG20.}
+  \item \textit{Capacidad para entender el lenguaje y propuestas de otros especialistas: CG22.}
+\end{enumerate} 
+
 
 \section{Metodología}
 \label{sec:metodologia}
+
+
+
 
 Qué paradigma de desarrollo software has seguido para alcanzar tus objetivos.
 
