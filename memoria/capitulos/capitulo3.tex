@@ -43,6 +43,7 @@ marcados, este trabajo deberá cumplir los siguientes requisitos:
 \label{sec:competencias}
 
 Las competencias empleadas del grado, que han sido tomadas de las distintas asignaturas del mismo, y que han sido utilizadas para la realización de este proyecto se dividen tanto en generales como específicas, y son las siguientes:
+
 \begin{enumerate} 
   \item \textit{Capacidad de organización y planificación: CG02.} Esta competencia ha sido empleada en la consecución de todo el trabajo de fin de grado, y queda reflejada tanto en las reuniones semanales o quincenales con el tutor responsable de este trabajo como en la wiki de GitHub \footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/wiki}} dedicada al proyecto, que refleja los avances y la organizacización llevada a cabo.  
   \item \textit{Conocimiento de una lengua extranjera: CG04.} Esta competencia ha sido utilizada a la hora de buscar toda clase de información para poder elaborar este proyecto, ya que se han utilizado documentos publicados en, al menos, una lengua extranjera, como lo es el inglés.
@@ -57,25 +58,55 @@ Las competencias empleadas del grado, que han sido tomadas de las distintas asig
 \end{enumerate}  
 
 Por otro lado, las competencias adquiridas con el desarrollo de este trabajo fin de grado, y que aparecen descritas en la guía docente de la propia asignatura, son las siguientes:
+
 \begin{enumerate}
-  \item \textit{Capacidad de análisis y síntesis: CG01.} 
-  \item \textit{Razonamiento crítico: CG11.}
-  \item \textit{Aprendizaje autónomo: CG13.}
-  \item \textit{Adaptación a nuevas situaciones: CG14.}
-  \item \textit{Capacidad de aplicar los conocimientos teóricos en la práctica: CG20.}
-  \item \textit{Capacidad para entender el lenguaje y propuestas de otros especialistas: CG22.}
+  \item \textit{Capacidad de análisis y síntesis: CG01.} Esta competencia se adquiere debido a la necesidad de la búsqueda y recopilación de información necesaria para el desarrollo del proyecto.
+  \item \textit{Razonamiento crítico: CG11.} En relación con la competencia adquirida CG01, el razonamiento crítico se emplea a la hora de filtrar, seleccionar y decidir qué de toda la información obtenida es válido, cómo se puede utilizar y cómo ajustarlo y añadirlo al contenido del proyecto.
+  \item \textit{Aprendizaje autónomo: CG13.} Esta competencia ha sido adquirida dada  la necesidad de adaptarse al marco técnico en cuál se desarrolla este proyecto, su complejidad, y la constante actualización y mejoras de las técnicas que pueden ser empleadas para el desarrollo del mismo.
+  \item \textit{Adaptación a nuevas situaciones: CG14.} Esta competencia se adquiere gracias a la aplicación de la competencia adquirida \textit{CG13 Aprendizaje autónomo}, justificada anteriormente, y que se puede ver reflejada en el proyecto.
+  \item \textit{Capacidad de aplicar los conocimientos teóricos en la práctica: CG20.} La parte empírica y práctica del proyecto refleja la adquisición de esta competencia.
+  \item \textit{Capacidad para entender el lenguaje y propuestas de otros especialistas: CG22.} Esta competencia se ha visto reflejadan dado que, en relación con el resto de competencias adquiridas, sobre todo con las competencias \textit{CG01 Capacidad de análisis y síntesis} y \textit{CG11 Razonamiento crítico}, se ha tenido la necesidad de consulta, recopilación y filtrado de información y metodologías científicas existentes para poder desarrollar la aplicación del proyecto.
 \end{enumerate} 
 
 
 \section{Metodología}
 \label{sec:metodologia}
 
+Para lograr los objetivos descritos anteriormente, se optó por emplear el método DMADV (Definir, Medir, Analizar, Diseñar,Verificar), perteneciente a la metodología \textit{Six Sigma} (ver en Figura \ref{fig:DMADV}). 
 
+Se decidió optar por esta metodología dado que la aplicación desarrollada en este trabajo está basada en otros proyectos y estudios similares ya existentes, y esta metodología está diseñada para desarrollar procesos o productos nuevos o significativamente mejorados, independientemente de si partes de cero o si te basas en conocimientos previos, y esta información recopilada fue utilizada como punto de partida en las fases iniciales de la metodología. A continuación, se detallan las fases del método DMADV y cómo han sido aplicadas en el desarrollo de este proyecto.
 
+\begin{itemize}
+  \item Definir: En esta fase se establecen como objetivos del proyecto la identificación de fresas maduras mediante un sistema de visión artificial y su integración con el brazo robótico encargado de su recolección. 
+  \item Medir: Tomando como referencia el estado del arte existente, se llevó a cabo la selección de la tecnología (hardware y software necesarios) y las métricas existentes para poder considerar que las detecciones son aceptables y suficientes, basándose así el trabajo en proyectos y estudios que han demostrado ser eficaces, constituyendo un proyecto robusto y eficiente y ayudando a evitar problemas comunes ya que se sostiene sobre conocimientos adquiridos de proyectos similares testados. 
+  \item Analizar: En esta etapa se llevaron a cabo pruebas con diferentes algoritmos y sistemas para detección de objetos, tanto en imágenes como en vídeo a tiempo real, para poder determinar cuál ofrecía un mejor rendimiento en precisión y velocidad y se ajustaba a los requisitos que presentaba el hardware disponible para el desarrollo del proyecto.  
+  \item Diseñar: En base a los resultados obtenidos en la fase de análisis, se configuró el sistema de reconocimiento por visión incluyendo el hardware, previamente seleccionado, y el software, compuesto por los códigos y entornos necesarios para poder desarrollarlo y ejecutarlo, y su integración con el robot.
+  \item Verificar: Finalmente, se llevaron a cabo pruebas para verificar que el sistema funcionaba y cumplía con los requisitos definidos, validándose la precisión en la identificación de las fresas maduras con distintas intensidades de luz ambiente y la comunicación y el correcto funcionamiento del brazo robótico.
+\end{itemize}
+  
+\begin{figure} [H]
+    \begin{center}
+      \includegraphics[width=9cm]{figs/DMADV.png}
+    \end{center}
+    \caption{Ciclo de la metodología DMADV}
+    \label{fig:DMADV}
+\end{figure}
 
-Qué paradigma de desarrollo software has seguido para alcanzar tus objetivos.
-
+	
 \section{Plan de trabajo}
 \label{sec:plantrabajo}
+El desarrollo y seguimiento que el proyecto ha seguido es una planificación en base a reuniones semanales con el tutor, en las cuales se revisaron los avances, se fijaron nuevos objetivos y se discutieron y propusieron posibles mejoras, mientras que el trabajo se organizó en varias fases clave: 
+\begin{enumerate}
+  \item \textit{Investigación inicial:} En esta fase, se investigó el estado del arte relacionado con sistemas de visión artificial y técnicas de reconocimiento de objetos, especialmente aplicadas al sector agrícola y la maduración de frutos, y utilizando para ello artículos científicos, capítulos de libros y proyectos previos. 
+  \item \textit{Diseño y desarrollo del sistema de visión artificial:} Esta fase se centró en el diseño y la implementación del sistema de visión artificial, abarcando tanto el desarrollo del software como la integración del hardware, e incluyendo las diversas pruebas realizadas con distintos sistemas y códigos, hasta seleccionar el \textit{software} funcional con el que se llevó a cabo el proyecto finalmente.
+  \item \textit{Pruebas en entorno simulado:} Durante esta fase se realizaron múltiples pruebas y ajustes para optimizar el funcionamiento del sistema y comprobar su funcionamiento en diferentes escenarios simulados o por separado, y se afinaron los algoritmos para mejorar la precisión en la detección, ajustando los parámetros relacionados con la cámara en los códigos para poder obtener las coordenadas y distancia real de las detecciones respecto a la cámara y poder transmitirselas al brazo robótico, con el que también se llevaron a cabo pruebas de comunicación con el sistema de visión y de programación, para que este alcanzase el punto de la detección.
+  \item \textit{Pruebas en entorno real:} Una vez desarrollado el prototipo inicial, el sistema completo fue sometido a pruebas en un entorno real de lo que sería la aplicación final. 
+  \item \textit{Escritura de la memoria:} Con el sistema ya afinado y probado, se procedió a la redacción de la memoria del proyecto. En esta etapa, se documentó detalladamente todo el proceso seguido, desde la investigación inicial hasta los resultados finales obtenidos durante las pruebas reales. 
+\end{enumerate}
+\pagebreak
+Todo el contenido del proyecto se puede encontrar en un repositorio público de GitHub \footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor}}, donde en el apartado Wiki \footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/wiki}} de dicho repositorio puede verse el desarrollo del trabajo en semanas a lo largo de los meses, durante el trascurso del proyecto.\\
+\\
+\\
+\\
+Después de haber revisado los objetivos, requisitos, competencias, metodología y el plan de trabajo implementado para la realización de este proyecto, se abordarán las plataformas de desarrollo empleadas.
 
-Qué agenda has seguido. Si has ido manteniendo reuniones semanales, cumplimentando objetivos parciales, si has ido afinando poco a poco un producto final completo, etc.
