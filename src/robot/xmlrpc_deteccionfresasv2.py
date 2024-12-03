@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
-import xmlrpc.client
-from xmlrpc.server import SimpleXMLRPCServer
+import xmlrpc.server
 import torch
 import argparse
 from models import Darknet
@@ -133,7 +132,36 @@ def calcular_distancia_3d(x_cam, y_cam, z_cam, x_punto, y_punto, z_punto):
     distancia = np.sqrt((x_punto - x_cam)**2 + (y_punto - y_cam)**2 + (z_punto - z_cam)**2)
     return distancia
 
+# Configuración del servidor XML-RPC
+
+server = xmlrpc.server.SimpleXMLRPCServer(("localhost", 50000), allow_none=True, bind_and_activate=False)
+try:
+    server.server_bind()
+    server.server_activate()
+except OSError as e:
+    if e.errno == 98:  # Address already in use
+        print("[ERROR] The address is already in use. Please use another port or stop the process occupying the port.")
+
+# Registrar introspección y funciones
+server.register_introspection_functions()
+
+
+# Definir la función para enviar la posición al robot
+def send_position_to_robot(positions):
+    # Enviar coordenadas como una lista de tuplas
+    if positions:
+        print(f"Fresa detectada en: {positions}")
+    return True
+
+server.register_function(send_position_to_robot, "send_position_to_robot")
+
 print("[INFO] Iniciando detección de fresas en el frame actual...")
+
+def get_detected_points():
+    return detected_points
+
+# Registrar la función para obtener los puntos detectados
+server.register_function(get_detected_points, "get_detected_points")
 
 if __name__ == "__main__":
     # Argumentos de línea de comandos para la configuración del modelo y otros parámetros
@@ -174,25 +202,6 @@ if __name__ == "__main__":
 
     previous_positions = []  # Para almacenar posiciones previamente detectadas
     threshold_distance = 0.1  # Aumentar margen para considerar que una detección sigue siendo la misma
-
-    # Conexión con el robot usando XML-RPC
-    server = SimpleXMLRPCServer(("localhost", 50000))
-    print("Servidor XML-RPC corriendo en el puerto 50000...")
-
-    # Definir la función para enviar la posición al robot
-    def send_position_to_robot(positions):
-    # Enviar coordenadas como una lista de tuplas
-      if positions:
-          print(f"Enviando coordenadas al robot: {positions}")
-      return True
-
-    server.register_function(send_position_to_robot, "send_position_to_robot")
-
-    # Ejecutar el servidor en un hilo aparte
-    import threading
-    server_thread = threading.Thread(target=server.serve_forever)
-    server_thread.daemon = True
-    server_thread.start()
 
     while cap:
         ret, frame = cap.read()
@@ -238,10 +247,10 @@ if __name__ == "__main__":
                         p2d = np.array([center_x, center_y])
                         pixelOnGround3D = getIntersectionZ(p2d)
 
-                        # Extraer las coordenadas 3D del punto y convertirlas a tipo float
-                        x_punto = float(pixelOnGround3D[0])
-                        y_punto = float(pixelOnGround3D[1])
-                        z_punto = float(pixelOnGround3D[2])
+                        # Extraer las coordenadas 3D del punto
+                        x_punto = pixelOnGround3D[0]
+                        y_punto = pixelOnGround3D[1]
+                        z_punto = pixelOnGround3D[2]
 
                         # Añadir las coordenadas 3D a las posiciones detectadas
                         positions.append((x_punto, y_punto, z_punto))
@@ -271,23 +280,6 @@ if __name__ == "__main__":
         for (x, y, z) in filtered_positions:
             print(f"Punto P{len(positions)} - Coordenadas 3D: X={x_punto:.2f}, Y={y_punto:.2f}, Z={z_punto:.2f}")
             print(f"Punto P{len(positions)} - Distancia al punto: {distancia:.2f} milímetros")
-
-            # Enviar la posición al robot usando XML-RPC
-            try:
-                send_position_to_robot([(x_punto, y_punto, z_punto)])
-            except Exception as e:
-                print(f"[ERROR] No se pudo enviar la posición al robot: {e}")
-            except xmlrpc.client.Fault as e:
-                print(f"[ERROR] No se pudo enviar la posición al robot (Fault): {e}")
-            except xmlrpc.client.ProtocolError as e:
-                print(f"[ERROR] Error de protocolo al comunicarse con el robot: {e}")
-            except xmlrpc.client.ResponseError as e:
-                print(f"[ERROR] Error en la respuesta del servidor XML-RPC: {e}")
-            except Exception as e:
-                print(f"[ERROR] No se pudo enviar la posición al robot: {e}")
-                print(f"[INFO] Posición enviada al robot: X={x_punto:.2f}, Y={y_punto:.2f}, Z={z_punto:.2f}")
-            except Exception as e:
-                print(f"[ERROR] No se pudo enviar la posición al robot: {e}")
 
         # Mostrar el frame con las detecciones
         cv2.imshow('Deteccion de Fresas', frame)
