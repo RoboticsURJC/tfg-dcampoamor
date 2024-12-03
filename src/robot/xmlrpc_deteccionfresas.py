@@ -241,7 +241,7 @@ if __name__ == "__main__":
                         cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), color, 2)
                         cv2.putText(frame, "Fresa", (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
                         
-                        cv2.putText(frame, f"{cls_conf:.2f}", (int(x2) - 50, int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+                        cv2.putText(frame, f"{cls_conf:.2f}", (int(x2) + 10, int(y1)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
                         # Calcular las coordenadas 3D utilizando la función getIntersectionZ (similar al pinhole.py)
                         p2d = np.array([center_x, center_y])
