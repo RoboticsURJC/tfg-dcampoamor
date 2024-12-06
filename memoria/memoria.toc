@@ -16,6 +16,8 @@
 \contentsline {section}{\numberline {3.4}Metodología}{44}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Plan de trabajo}{46}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hardware}{48}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Software}{48}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Diseño}{49}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Snippets}{49}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Verbatim}{49}{section.5.2}%
