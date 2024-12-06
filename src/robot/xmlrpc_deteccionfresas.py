@@ -147,7 +147,7 @@ if __name__ == "__main__":
     parser.add_argument("--webcam", type=int, default=1, help="Is the video processed from webcam? 1 = Yes, 0 = No")
     parser.add_argument("--directorio_video", type=str, help="Directorio al video")
     opt = parser.parse_args()
-    print(opt)
+    
 
     # Configuración del dispositivo (CPU o GPU)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -176,7 +176,8 @@ if __name__ == "__main__":
     threshold_distance = 0.1  # Aumentar margen para considerar que una detección sigue siendo la misma
 
     # Conexión con el robot usando XML-RPC
-    server = SimpleXMLRPCServer(("localhost", 50000))
+    server = SimpleXMLRPCServer(("0.0.0.0", 50000))
+    server.RequestHandlerClass.protocol_version = "HTTP/1.1"
     print("Servidor XML-RPC corriendo en el puerto 50000...")
 
     # Definir la función para enviar la posición al robot
