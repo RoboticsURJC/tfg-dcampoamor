@@ -17,7 +17,15 @@
 \contentsline {section}{\numberline {3.5}Plan de trabajo}{46}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{48}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Hardware}{48}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{48}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{48}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{48}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Software}{48}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{48}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Python}{48}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}OpenCV}{48}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}YOLOv3}{48}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}PyTorch}{48}{subsection.4.2.5}%
 \contentsline {chapter}{\numberline {5}Diseño}{49}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Snippets}{49}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Verbatim}{49}{section.5.2}%
