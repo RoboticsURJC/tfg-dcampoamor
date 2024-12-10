@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {4.1}Hardware}{48}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{48}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{49}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{50}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{49}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Robot de Universal Robots de la gama e-series}{51}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}Software}{51}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Ubuntu}{51}{subsection.4.2.1}%
@@ -36,4 +36,4 @@
 \contentsline {chapter}{\numberline {6}Conclusiones}{55}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Conclusiones}{55}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Corrector ortográfico}{56}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{57}{appendix*.58}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{57}{appendix*.59}%
