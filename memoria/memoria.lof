@@ -31,21 +31,6 @@
 \contentsline {figure}{\numberline {1.21}{\ignorespaces Robot Da Vinci\relax }}{19}{figure.caption.32}%
 \contentsline {figure}{\numberline {1.22}{\ignorespaces Robots médicos\relax }}{20}{figure.caption.33}%
 \contentsline {figure}{\numberline {1.23}{\ignorespaces Modelos de inteligencia\relax }}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {UR presenta los nuevos e-Series en Automatica 2018}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UR e-Series}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Alexa}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pepper}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Sophia}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Spot de Boston Dynamics}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ROBTET, robot para el mantenimiento de líneas de alta tensión}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Robot NAO}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Turtlebot 4}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {AGV Robots Kiva de Amazon}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {AMRs de MiR}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {SONY Aibo}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Dron DJI Spark}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Exoesqueleto Ekso Bionics}}}{22}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Robot RP-VITA}}}{22}{figure.caption.34}%
 \contentsline {figure}{\numberline {1.24}{\ignorespaces Aspectos clave y semántica del Aprendizaje automático\relax }}{25}{figure.caption.36}%
 \contentsline {figure}{\numberline {1.25}{\ignorespaces Diagrama de Venn de la relación entre distintas áreas de la IA\relax }}{26}{figure.caption.37}%
 \contentsline {figure}{\numberline {1.26}{\ignorespaces Modelo biológico de una neurona genérica, comúnmente una neurona motora típica (izquierda) y el respectivo modelo matemático (derecha)\relax }}{28}{figure.caption.38}%
@@ -62,5 +47,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ciclo de la metodología DMADV\relax }}{45}{figure.caption.48}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Cámara Logitech C270 HD$^{\ref {note:enlace16}}$\relax }}{48}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Soporte de brazo articulado$^{\ref {note:enlace17}}$\relax }}{49}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Lenovo Legion 5 15IMH05$^{\ref {note:enlace18}}$\relax }}{50}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace19}}$\relax }}{51}{figure.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
