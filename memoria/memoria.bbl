@@ -269,6 +269,11 @@ Raj, M. and Seamans, R. (2019).
 \newblock Primer on artificial intelligence and robotics.
 \newblock {\em Journal of {O}rganization {D}esign}, 8:1--14.
 
+\bibitem[Redmon and Farhadi, 2018]{Redmon18}
+Redmon, J. and Farhadi, A. (2018).
+\newblock Yolov3: An {I}ncremental {I}mprovement.
+\newblock {\em arXiv preprint}, abs/1804.02767.
+
 \bibitem[Romero-Tamarit et~al., 2020]{Romero20}
 Romero-Tamarit, A., Reig-Viader, R., Estrada-Sabadell, M.~D., and
   Espallargues-Carreras, M. (2020).
