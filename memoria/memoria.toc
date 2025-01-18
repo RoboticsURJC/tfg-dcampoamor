@@ -23,17 +23,19 @@
 \contentsline {subsection}{\numberline {4.1.4}Robot de Universal Robots de la gama e-series}{51}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}Software}{51}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Ubuntu}{52}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Python}{52}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}OpenCV}{52}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Anaconda}{52}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}YOLOv3}{52}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}PyTorch}{52}{subsection.4.2.6}%
-\contentsline {chapter}{\numberline {5}Diseño}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{53}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{54}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{54}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{56}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{56}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{57}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{58}{appendix*.59}%
+\contentsline {subsection}{\numberline {4.2.2}Python}{53}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}PyTorch}{53}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}NumPy}{53}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}OpenCV}{54}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}XML-RPC}{55}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Anaconda}{55}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}YOLOv3}{56}{subsection.4.2.8}%
+\contentsline {chapter}{\numberline {5}Diseño}{58}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{58}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{58}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{59}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{59}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{61}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{61}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{62}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{63}{appendix*.62}%
