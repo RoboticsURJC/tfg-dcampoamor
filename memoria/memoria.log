@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.17)  30 JAN 2025 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.17)  31 JAN 2025 08:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1993,7 +1993,7 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 Here is how much of TeX's memory you used:
  16392 strings out of 480112
  261558 string characters out of 5892631
- 750570 words of memory out of 5000000
+ 751570 words of memory out of 5000000
  33585 multiletter control sequences out of 15000+600000
  476068 words of font info for 52 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
@@ -2016,7 +2016,7 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on memoria.pdf (85 pages, 22207073 bytes).
+Output written on memoria.pdf (85 pages, 22207036 bytes).
 PDF statistics:
  1423 PDF objects out of 1440 (max. 8388607)
  1175 compressed objects within 12 object streams
