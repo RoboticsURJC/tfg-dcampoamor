@@ -107,6 +107,11 @@ A continuación, en el Cuadro \ref{cuadro:carac_ordena}, se recogen las caracter
 
 Los robots de Universal Robots, también conocidos como robots colaborativos o cobots, están diseñados para trabajar junto a los humanos de manera segura, eficiente y flexible tanto en aplicaciones industriales como no industriales, destacando por su facilidad de uso, versatilidad y capacidad para automatizar tareas repetitivas o peligrosas. 
 
+Fabricados en aluminio junto con otros materiales de bajo peso, permitiendo reducir la inercia del propio robot y facilitar su manipulación, cada brazo robótico tiene seis ejes, otorgando al robot seis grados de libertad (Degree Of Freedom o DOF), que permiten movimientos precisos y fluidos, y en cuyas articulaciones están equipadas, a su vez, encoders absolutos, reductoras armónicas, que reducen la velocidad de rotación de los engranajes en las juntas, y aumentan el par del eje, ofreciendo una alta precisión y eficiencia; y, en aquellos brazos robóticos pertenecientes a la gama e-series, sensores de fuerza y torque, encontrándose integrados en el efector o tool flange del propio brazo robótico \footnote{\url{https://www.universal-robots.com/mx/acerca-de-universal-robots/noticias/meet-the-next-generation-of-collaborative-ur-robots-at-robobusiness/?utm_source=chatgpt.com}}. 
+
+Por otro lado, en la controladora de los brazos robóticos de la gama e-series, pueden diferenciarse varios módulos: la unidad de procesamiento principal (CPU), que se encarga de realizar los cálculos cinemáticos y dinámicos del robot, la ejecución de programas y control del brazo robótico mediante su software Polyscope, y la comunicación con los periféricos y la consola de mando o teach pendant; la fuente de alimentación, que suministra energía a todos los componentes del sistema, incluyendo a las articulaciones del brazo robótico y el teach pendant, y que incluye protección contra sobrecargas y cortocircuitos para garantizar una alimentación estable y segura;  el módulo de seguridad o la placa de seguridad (Safety Control Board o SCB), que implementa funciones de seguridad colaborativa, como límites de velocidad, fuerza y espacio de trabajo, y que supervisa las entradas de seguridad y gestiona las paradas de emergencia; las interfaces de comunicación, compuesta del puerto ethernet, que soporta los protocolos de comunicación ModbusTCP, ProfiNet y EthernetIP,  los dos puertos USB (uno de ellos USB 2.0 y otro USB 3.0), las dieciseis entradas y salidas digitales, y las dos entradas y salidas analógicas;  el sistema de refrigeración, que está compuesto por ventiladores internos, que están controlados por sensores térmicos que ajustan su velocidad en función de la temperatura interna de los componentes, llegando a activar alarmas si se detectasen temperaturas anormales, rejillas de ventilación en el lateral de la carcasa o envolvente de acero que recubre y protege los componentes internos de la controladora, que a su vez están protegidas por filtros para evitar la entrada de polvo o partículas grandes; y por último, del módulo de almacenamiento interno, que para esta gama de robots se compone de una tarjeta SSD.
+\\
+
 Para el desarrollo de este proyecto se han utilizado diferentes modelos de robots de la gama e-series, todos ellos representados en la Figura \ref{fig:Gama_e-series}, desde el UR3e hasta el UR10e, pasando por el UR5e.
 A pesar de que tanto la gama CB-series como la gama e-series permiten la comunicación mediante el protocolo XML-RPC, la interfaz más intuitiva y simplificada que facilita la programación y reduce la sobrecarga de información, poseer sensor de fuerza integrado, permitiendo un control más preciso y sensible haciendo que mejore la interacción con el entorno, así como una mayor precisión en la repetición de movimientos, entre otros factores, constituyeron que se eligiera la gama e-series para este trabajo.
 
@@ -140,6 +145,11 @@ Este sistema operativo está diseñado para ser utilizado en una gran variedad d
     \label{fig:Ubuntu_Releases}
 \end{figure}
 \pagebreak
+
+\subsection{Polyscope}
+\label{sec:Polyscope}
+
+
 
 
 \subsection{Python}

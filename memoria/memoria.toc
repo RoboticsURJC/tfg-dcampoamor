@@ -21,21 +21,22 @@
 \contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{49}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{49}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Robot de Universal Robots de la gama e-series}{51}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Software}{51}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Software}{52}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Ubuntu}{52}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Python}{53}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}PyTorch}{53}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}NumPy}{53}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}OpenCV}{54}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}XML-RPC}{55}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Anaconda}{55}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}YOLOv3}{56}{subsection.4.2.8}%
-\contentsline {chapter}{\numberline {5}Diseño}{58}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{58}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{58}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{59}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{59}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{61}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{61}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{62}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{63}{appendix*.62}%
+\contentsline {subsection}{\numberline {4.2.2}Polyscope}{54}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Python}{54}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}PyTorch}{54}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}NumPy}{54}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}OpenCV}{55}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}XML-RPC}{56}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}Anaconda}{56}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}YOLOv3}{57}{subsection.4.2.9}%
+\contentsline {chapter}{\numberline {5}Diseño}{59}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{59}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{59}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{60}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{60}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{62}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{62}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{63}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{64}{appendix*.62}%
