@@ -13,45 +13,45 @@ Warning--empty booktitle in Bischoff10
 Warning--empty booktitle in Dechter86
 Warning--there's a number but no volume in Hardy01
 Warning--empty journal in Romero20
-You've used 62 entries,
+You've used 69 entries,
             1935 wiz_defined-function locations,
-            884 strings with 16236 characters,
-and the built_in function-call counts, 24961 in all, are:
-= -- 2351
-> -- 1211
-< -- 47
-+ -- 435
-- -- 418
-* -- 2068
-:= -- 4439
-add.period$ -- 192
-call.type$ -- 62
-change.case$ -- 508
-chr.to.int$ -- 61
-cite$ -- 67
-duplicate$ -- 946
-empty$ -- 1618
-format.name$ -- 505
-if$ -- 4893
-int.to.chr$ -- 2
+            909 strings with 16909 characters,
+and the built_in function-call counts, 26775 in all, are:
+= -- 2520
+> -- 1260
+< -- 54
++ -- 453
+- -- 432
+* -- 2187
+:= -- 4774
+add.period$ -- 210
+call.type$ -- 69
+change.case$ -- 543
+chr.to.int$ -- 64
+cite$ -- 74
+duplicate$ -- 1037
+empty$ -- 1758
+format.name$ -- 526
+if$ -- 5230
+int.to.chr$ -- 6
 int.to.str$ -- 0
 missing$ -- 65
-newline$ -- 315
-num.names$ -- 186
-pop$ -- 474
+newline$ -- 347
+num.names$ -- 207
+pop$ -- 512
 preamble$ -- 1
-purify$ -- 516
+purify$ -- 558
 quote$ -- 0
-skip$ -- 734
+skip$ -- 809
 stack$ -- 0
-substring$ -- 1363
-swap$ -- 139
+substring$ -- 1447
+swap$ -- 153
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 352
+type$ -- 394
 warning$ -- 5
-while$ -- 171
+while$ -- 185
 width$ -- 0
-write$ -- 803
+write$ -- 881
 (There was 1 error message)
