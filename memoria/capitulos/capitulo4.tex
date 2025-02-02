@@ -128,13 +128,33 @@ A pesar de que tanto la gama CB-series como la gama e-series permiten la comunic
     \begin{center}
       \includegraphics[width=15cm]{figs/Gama e-series.png}
     \end{center}
-    \caption{Gama e-series de Universal Robots$^{\ref{note:enlace19}}$}
+    \caption{Gama e-series de Universal Robots$^{\ref{note:enlace20}}$}
     \label{fig:Gama_e-series}
 \end{figure}
 
 \setcounter{footnote}{20} 
 \footnotetext[\value{footnote}]{\url{https://www.universal-robots.com/es/productos/}\label{note:enlace20}}
 
+
+\subsection{Comunicaciones}
+\label{subsec:comunicacion}
+
+En este proyecto, la comunicación entre el robot y el ordenador que ejecuta el servidor XML-RPC se establece vía Ethernet, permitiendo una conexión rápida y confiable. La infraestructura de red juega un papel fundamental en esta comunicación, ya que el robot y el servidor deben estar correctamente configurados dentro de la misma red, por lo que se emplea un switch Ethernet, en este caso el TP-Link LS105G (Figura \ref{fig:TPLink_LS105G}), para gestionar las conexiones entre los diferentes dispositivos y asegurar una comunicación fluida y sin interferencias.
+
+Este switch de escritorio, cuyo precio es de 14,90€,  posee cinco puertos Ethernet RJ45 a 10/100/1000 Megabits por segundo (Mbps), permitiendo la transferencia instanténea de archivos y paquetes, con gran ancho de banda y sin interferencias, y no necesita configuración manual previa, ya que se trata de un dispositivo \emph{plug and play}, por lo que simplemente se tiene que conectar y empieza a funcionar. \\
+
+\begin{figure} [H]
+    \begin{center}
+      \includegraphics[width=8cm]{figs/TPLink LS105G.jpg}
+    \end{center}
+    \caption{Switch TP-Link LS105G$^{\ref{note:enlace21}}$}
+    \label{fig:TPLink_LS105G}
+\end{figure}
+
+\setcounter{footnote}{21} 
+\footnotetext[\value{footnote}]{\url{https://www.tp-link.com/es/business-networking/litewave-switch/ls105g/}\label{note:enlace21}}
+
+\pagebreak
 
 \section{Software}
 \label{sec:software}
@@ -144,35 +164,41 @@ Este apartado estará dedicado a detallar las plataformas de software, librería
 \subsection{Ubuntu}
 \label{sec:ubuntu}
 Ubuntu\footnote{\url{https://ubuntu.com/}} es un sistema operativo de código abierto basado en Linux y desarrollado por la empresa británica Canonical Ltd. 
-Este sistema operativo está diseñado para ser utilizado en una gran variedad de dispositivos, y es reconocido por su facilidad de uso, estabilidad y seguridad, contando con una amplia comunidad de desarrolladores y usuarios que contribuyen activamente a su desarrollo y soporte. La versión utilizada para la realización de este proyecto, de entre todas las versiones disponibles, tal y como muestra Figura \ref{fig:Ubuntu_Releases}, es Ubuntu 22.04 Long Term Support (LTS) (Jammy Jellyfish), ya que era la última versión disponible de Ubuntu en el momento en el que se empezó a elaborar el proyecto. Sus principales diferencias con versiones anteriores incluyen el uso de un kernel y versiones de python más modernas, que proporcionan mejor soporte para hardware reciente y optimizaciones de rendimiento, un entorno de escritorio GNOME, que ha evolucionado de Unity en versiones antiguas como 14.04 y 16.04, y  la reducción en el tamaño de las imágenes del sistema, al igual que la optimización del uso de recursos.\\
-
-\begin{figure} [H]
-    \begin{center}
-      \includegraphics[width=16cm]{figs/Ubuntu Releases.png}
-    \end{center}
-    \caption{Lanzamiento de las versiones de Ubuntu}
-    \label{fig:Ubuntu_Releases}
-\end{figure}
-\pagebreak
+Este sistema operativo está diseñado para ser utilizado en una gran variedad de dispositivos, y es reconocido por su facilidad de uso, estabilidad y seguridad, contando con una amplia comunidad de desarrolladores y usuarios que contribuyen activamente a su desarrollo y soporte. La versión utilizada para la realización de este proyecto, de entre todas las versiones disponibles, es Ubuntu 22.04 Long Term Support (LTS) (Jammy Jellyfish), ya que era la última versión disponible de Ubuntu en el momento en el que se empezó a elaborar el proyecto. Sus principales diferencias con versiones anteriores incluyen el uso de un kernel y versiones de python más modernas, que proporcionan mejor soporte para hardware reciente y optimizaciones de rendimiento, un entorno de escritorio GNOME, que ha evolucionado de Unity en versiones antiguas como 14.04 y 16.04, y  la reducción en el tamaño de las imágenes del sistema, al igual que la optimización del uso de recursos.
 
 \subsection{Polyscope}
 \label{sec:Polyscope}
 
 Polyscope\footnote{\url{https://www.universal-robots.com/es/productos/polyscope/}} es la interfaz de usuario gráfica desarrollada por Universal Robots para poder programar y utilizar sus robots colaborativos. Está diseñada para ser intuitiva y accesible, ya que permite a los usuarios crear programas de robot sin necesidad de conocimientos avanzados en programación. 
 
-Construido sobre una plataforma basada en Linux, le proporciona estabilidad y flexibilidad. Utiliza tecnologías estándar de la industria para garantizar un rendimiento óptimo y una experiencia de usuario fluida.
+Construido sobre una plataforma basada en Linux, PolyScope está basado en una arquitectura de software que combina una interfaz gráfica amigable con un lenguaje de programación propio llamado URScript, permitiendo tanto a usuarios sin experiencia en programación como a programadores avanzados interactuar eficazmente con los robots UR, ya que la interfaz gráfica facilita la creación de programas mediante bloques visuales, mientras que URScript ofrece una mayor flexibilidad para desarrollos más complejos.
 
-\subsection{Python}
-\label{sec:python}
-Python\footnote{\url{https://www.python.org/}}(Figura \ref{fig:Python_Logo}) es un lenguaje de programación de alto nivel, orientado a objetos y de semántica dinámica. La sintaxis de Python, sencilla y fácil de aprender, favorece la legibilidad y, por tanto, reduce el coste de mantenimiento de los programas, admitiendo módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización de código \footnote{\url{https://www.python.org/doc/essays/blurb/}} para el desarrollo de aplicaciones en diferentes áreas, como sucede en este caso con la inteligencia y visión artificial y el aprendizaje automático (PyTorch, NumPy y OpenCV). 
+A lo largo de los años, Universal Robots ha lanzado varias versiones de PolyScope, cada una con mejoras y nuevas funcionalidades, siendo la primera versión PolyScope 3, lanzada en 2012, ya que fue diseñada para la serie CB3 de robots UR. PolyScope 5\footnote{\url{https://www.universal-robots.com/products/polyscope-5/}} se introdujo en junio de 2018, coincidiendo con el lanzamiento de la gama de robots e-series de Universal Robots, incluyendo mejoras respecto a Polyscope 3 en la interfaz de usuario (Figura \ref{fig:Polyscope5}), haciéndola más intuitiva y moderna y facilitando la programación y configuración del robot, incluyendo nuevas funcionalidades de seguridad como la capacidad de restringir la entrada de una esfera virtual en una zona o plano de seguridad y establecer límites de velocidad y distancia de frenado mejorando la seguridad en el entorno de trabajo; incrementando la frecuencia de control a 500 hercios (Hz) permitiendo de esta manera movimientos más precisos e incorporando soporte para nuevas características de hardware como la interfaz de comunicación de herramientas (Tool Communication Interface) en la que el conector de herramientas puede utilizarse para la comunicación serie RS485 con una velocidad de datos de hasta 5 megabits\footnote{\url{https://forum.universal-robots.com/t/release-of-e-series-polyscope-5-0-polyscope-3-6-sdk-1-3-and-a-brand-new-developer-community}}.
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=10cm]{figs/python logo.png}
+      \includegraphics[width=15cm]{figs/InterfazPolyscope5.png}
     \end{center}
-    \caption{Logo de Python}
-    \label{fig:Python_Logo}
+    \caption{Pantalla principal de la interfaz de Polyscope 5}
+    \label{fig:Polyscope5}
 \end{figure}
+\pagebreak
+
+Por último, PolyScope X\footnote{\url{https://www.universal-robots.com/products/polyscope-x/}} es la última evolución del software de Universal Robots, diseñado para simplificar y potenciar los procesos de automatización. Aunque se presentó un prototipo en la feria International Manufacturing Technology Show (IMTS) en 2022 y se mostró en Automatica en Múnich en junio de 2023, su lanzamiento oficial no fue hasta noviembre de 2024\footnote{\url{https://www.universal-robots.com/2024q3/polyscope-x-festival/}}. Basado en tecnologías como ROS2 y contenedores Docker, ofrece una plataforma más flexible y escalable para el desarrollo y la integración de aplicaciones, modificando de nuevo la interfaz de usuario (Figura \ref{fig:PolyscopeX}) respecto a Polyscope 5, centralizando las funciones más importantes y simplificando la programación mediante el uso de plantillas predefinidas para agilizar y facilitar la creación de módulos reutilizables y simplificando la programación a los operarios, reduciendo de esta manera la complejidad en el desarrollo de aplicaciones.
+
+\begin{figure} [H]
+    \begin{center}
+      \includegraphics[width=15cm]{figs/InterfazPolyscopeX.png}
+    \end{center}
+    \caption{Pantalla principal de la interfaz de Polyscope X}
+    \label{fig:PolyscopeX}
+\end{figure}
+
+A pesar de que Polyscope X es compatible con los robots de la gama e-series, se deben cumplir una serie de requisitos en cuanto al hardware de la controladora para poder actualizar desde Polyscope 5, por lo que para el desarrollo de este proyecto se ha terminado utilizado la versión 5.16 de Polyscope 5, puesto que no se cumplían todos los requisitos para que se diera esta actualización en los robots utilizados.
+
+\subsection{Python}
+\label{sec:python}
+Python\footnote{\url{https://www.python.org/}} es un lenguaje de programación de alto nivel, orientado a objetos y de semántica dinámica. La sintaxis de Python, sencilla y fácil de aprender, favorece la legibilidad y, por tanto, reduce el coste de mantenimiento de los programas, admitiendo módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización de código \footnote{\url{https://www.python.org/doc/essays/blurb/}} para el desarrollo de aplicaciones en diferentes áreas, como sucede en este caso con la inteligencia y visión artificial y el aprendizaje automático (PyTorch, NumPy y OpenCV). 
 
 \subsection{PyTorch}
 \label{sec:PyTorch}
@@ -196,9 +222,9 @@ En este proyecto, OpenCV (importado como cv2) se ha usado para poder capturar lo
 \subsection{XML-RPC}
 \label{sec:XMLRPC}
 
-XML-RPC\footnote{\url{https://docs.python.org/es/3.8/library/xmlrpc.html}} es un método de Llamada a Procedimiento Remoto (o RPC en inglés) que usa XML para codificar y tranferir datos entre programas a través de sockets y HTTP como protocolo de transporte. Para muchos lenguajes de programación existen servidores XML-RPC gratuitos, entre otros para: Python, Java, C++ y C.
+XML-RPC\footnote{\url{https://docs.python.org/es/3.8/library/xmlrpc.html}} es un método de llamada a procedimiento remoto (RPC) que usa XML para codificar y tranferir datos entre programas a través de sockets y HTTP como protocolo de transporte. Para muchos lenguajes de programación existen servidores XML-RPC gratuitos, entre otros para: Python, Java, C++ y C.
 
-Debido al uso de Python en el proyecto, se utilizó el paquete \textit{xmlrpc}, que agrupa los módulos tanto de cliente como de servidor que implementan XML-RPC. Con este paquete, el controlador del robot UR puede llamar a métodos/funciones (con parámetros) en un programa/servidor remoto y obtener de vuelta datos estructurados, pudiendo realizar un cálculo complejo mediante su uso, que no está disponible en el lenguaje propio de programación del robot.
+Debido al uso de Python en el proyecto, se utilizó el paquete \textit{xmlrpc}, que agrupa los módulos tanto de cliente como de servidor que implementan XML-RPC. Con este paquete, el controlador del robot UR puede llamar a métodos o funciones (con parámetros) en un programa/servidor remoto y obtener de vuelta datos estructurados, pudiendo realizar un cálculo complejo mediante su uso, que no está disponible en el lenguaje propio de programación del robot.
 
 \subsection{Anaconda}
 \label{sec:Anaconda}
@@ -206,24 +232,15 @@ Debido al uso de Python en el proyecto, se utilizó el paquete \textit{xmlrpc}, 
 Anaconda\footnote{\url{https://www.anaconda.com/}} es una distribución de código abierto para los lenguajes de programación Python y R, diseñada para facilitar la gestión de paquetes y entornos, así como el despliegue de aplicaciones de ciencia de datos y aprendizaje automático. Ofrece herramientas como conda, un sistema de gestión de paquetes y entornos que funciona en Windows, macOS y Linux; y Anaconda Navigator, una aplicación de escritorio que permite gestionar aplicaciones integradas, paquetes y entornos sin necesidad de utilizar la línea de comandos \footnote{\url{https://docs.anaconda.com/anaconda/}}. 
 
 Para este proyecto se ha hecho uso del programa conda, ya que, utilizando esta herramienta es posible instalar y actualizar paquetes y dependencias y cambiar entre entornos desde el mismo ordneador local, permitiendo que puedan ser mantenidos y ejecutados independientemente sin archivos, directorios y rutas, para que se pueda trabajar con versiones específicas de librerías y/o Python mismo, sin afectar a otros proyectos Python, es decir, no afectando los cambios de un entorno a otros \footnote{\url{https://docs.anaconda.com/reference/glossary/\#conda}}.
-\pagebreak
 
 \subsection{YOLOv3}
 \label{sec:YOLOv3}
 
-YOLOv3 (You Only Look Once versión 3)\footnote{\url{https://docs.ultralytics.com/es/models/yolov3/}} es un algoritmo de detección de objetos en tiempo real que identifica y localiza múltiples objetos dentro de una imagen o video. Desarrollado por Joseph Redmon y Ali Farhadi en 2018, YOLOv3 es la tercera iteración de la serie YOLO (Figura \ref{fig:YOLO_Logo}), conocida por su capacidad para realizar detecciones rápidas y precisas \cite{Redmon18}. Introdujo el uso de tres escalas diferentes para la detección, aprovechando tres tamaños distintos de núcleos de detección: 13x13, 26x26 y 52x52, lo que mejoró significativamente la precisión de la detección de objetos de diferentes tamaños \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#key-features}}. La serie YOLOv3, está diseñada específicamente para tareas de detección de objetos, además, YOLOv3 añadió funciones como predicciones multietiqueta para cada cuadro delimitador y una red extractora de características mejorada. Estos modelos son famosos por su eficacia en diversos escenarios del mundo real, equilibrando precisión y velocidad, lo que los hace adecuados para una amplia gama de aplicaciones \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#supported-tasks-and-modes}}.
-
-Esta herramienta ha sido elegida para el entrenamiento del modelo de detección de fresas debido a su eficiencia en el uso de recursos computacionales, lo que lo hace más accesible para sistemas con capacidades limitadas; a la amplia documentación y la comunidad activa existente en torno a YOLOv3, que proporciona recursos valiosos para la implementación y resolución de problemas, lo que es esencial en proyectos académicos con plazos definidos \footnote{\url{https://github.com/ultralytics/yolov3/}}; a la competencia en cuanto a precisión y velocidad de YOLOv3 frente a versiones superiores a pesar de presentar estas ciertas mejoras; y a que YOLOv3 es compatible con entornos de desarrollo ampliamente utilizados en proyectos académicos, como Python y bibliotecas estándar de aprendizaje automático, facilitando su integración en el flujo de trabajo del proyecto.
-
-\begin{figure} [H]
-    \begin{center}
-      \includegraphics[width=5cm]{figs/yolo_logo.png}
-    \end{center}
-    \caption{Logo de YOLO}
-    \label{fig:YOLO_Logo}
-\end{figure}
-
+YOLOv3 (You Only Look Once versión 3)\footnote{\url{https://docs.ultralytics.com/es/models/yolov3/}} es un algoritmo de detección de objetos en tiempo real que identifica y localiza múltiples objetos dentro de una imagen o video. Desarrollado por Joseph Redmon y Ali Farhadi en 2018, YOLOv3 es la tercera iteración de la serie YOLO, conocida por su capacidad para realizar detecciones rápidas y precisas \cite{Redmon18}. Introdujo el uso de tres escalas diferentes para la detección, aprovechando tres tamaños distintos de núcleos de detección: 13x13, 26x26 y 52x52, lo que mejoró significativamente la precisión de la detección de objetos de diferentes tamaños \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#key-features}}. La serie YOLOv3, está diseñada específicamente para tareas de detección de objetos, además, YOLOv3 añadió funciones como predicciones multietiqueta para cada cuadro delimitador y una red extractora de características mejorada. Estos modelos son famosos por su eficacia en diversos escenarios del mundo real, equilibrando precisión y velocidad, lo que los hace adecuados para una amplia gama de aplicaciones \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#supported-tasks-and-modes}}.
 \pagebreak
+
+Esta herramienta ha sido elegida para el entrenamiento del modelo de detección de fresas debido a su eficiencia en el uso de recursos computacionales, lo que lo hace más accesible para sistemas con capacidades limitadas; a la amplia documentación y la comunidad activa existente en torno a YOLOv3, que proporciona recursos valiosos para la implementación y resolución de problemas, lo que es esencial en proyectos académicos con plazos definidos \footnote{\url{https://github.com/ultralytics/yolov3/}}; a la competencia en cuanto a precisión y velocidad de YOLOv3 frente a versiones superiores a pesar de presentar estas ciertas mejoras; y a que YOLOv3 es compatible con entornos de desarrollo ampliamente utilizados en proyectos académicos, como Python y bibliotecas estándar de aprendizaje automático, facilitando su integración en el flujo de trabajo del proyecto.\\
+
 Una vez analizadas las plataformas de software y hardware utilizadas en este trabajo de fin de grado, se procederá a detallar el proceso completo de diseño y desarrollo de la aplicación, lo cual será explicado con detalle en los capítulos siguientes.
 
 
