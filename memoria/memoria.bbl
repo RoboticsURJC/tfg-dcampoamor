@@ -334,6 +334,38 @@ Sánchez~Martín, F., Millán~Rodríguez, F., Salvador~Bayarri, J.,
   {V}inci. ({P}arte {II}).
 \newblock {\em Actas {U}rológicas {E}spañolas}, 31:185--196.
 
+\bibitem[{Universal Robots A/S}, 2018]{UR_e-series_brochure18}
+{Universal Robots A/S} (2018).
+\newblock {\em UR e-series brochure}.
+
+\bibitem[{Universal Robots A/S}, 2024a]{Service_Manual_UR_e-series_2024}
+{Universal Robots A/S} (2024a).
+\newblock {\em Service manual - e-Series}.
+\newblock Last modified on Nov 18, 2024.
+
+\bibitem[{Universal Robots A/S}, 2024b]{SoftwareHandbook_UR_Polyscope5_2024}
+{Universal Robots A/S} (2024b).
+\newblock {\em Software Handbook Polyscope 5}.
+
+\bibitem[{Universal Robots A/S}, 2024c]{SoftwareHandbook_UR_PolyscopeX_2024}
+{Universal Robots A/S} (2024c).
+\newblock {\em Software Handbook Polyscope X}.
+
+\bibitem[{Universal Robots A/S}, 2025a]{User_Manual_UR10e_2025}
+{Universal Robots A/S} (2025a).
+\newblock {\em User manual - UR10e e-Series - SW 5.20}.
+\newblock Last modified on Jan 13, 2025.
+
+\bibitem[{Universal Robots A/S}, 2025b]{User_Manual_UR3e_2025}
+{Universal Robots A/S} (2025b).
+\newblock {\em User manual - UR3e e-Series - SW 5.20}.
+\newblock Last modified on Jan 13, 2025.
+
+\bibitem[{Universal Robots A/S}, 2025c]{User_Manual_UR5e_2025}
+{Universal Robots A/S} (2025c).
+\newblock {\em User manual - UR5e e-Series - SW 5.20}.
+\newblock Last modified on Jan 13, 2025.
+
 \bibitem[Vega, 2021]{Vega19}
 Vega, J. (2021).
 \newblock Basic human–robot interaction system running on an embedded
