@@ -1,43 +1,43 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Robots y robótica}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.1}Los robots y la robótica}{2}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Robots industriales}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{13}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Robot Médico}{19}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Inteligencia Artificial}{21}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Visión Artificial}{23}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Machine Learning}{25}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Deep Learning}{27}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Estado del arte}{30}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Objetivos}{40}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Descripción del problema}{40}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Requisitos}{41}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Competencias}{42}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Metodología}{44}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Plan de trabajo}{46}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{48}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Hardware}{48}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{48}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{49}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{49}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Robot de Universal Robots de la gama e-series}{51}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{53}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}Software}{54}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{54}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Polyscope}{54}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Python}{57}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}PyTorch}{57}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}NumPy}{57}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}OpenCV}{58}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}XML-RPC}{58}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}Anaconda}{59}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}YOLOv3}{59}{subsection.4.2.9}%
-\contentsline {chapter}{\numberline {5}Diseño}{61}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{61}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{61}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{62}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{62}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{64}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{64}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{65}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{66}{appendix*.62}%
+\contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{11}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Robots médicos}{17}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Inteligencia Artificial}{19}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Visión Artificial}{20}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Machine Learning}{22}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Deep Learning}{24}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Estado del arte}{27}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Objetivos}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción del problema}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Requisitos}{36}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Competencias}{37}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Metodología}{39}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Plan de trabajo}{41}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hardware}{43}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{43}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{44}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{44}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Robot de \textit {Universal Robots} de la gama \textit {e-series}}{46}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{48}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Software}{49}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{49}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Polyscope}{49}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Python}{51}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}PyTorch}{51}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}NumPy}{52}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}OpenCV}{52}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}XML-RPC}{53}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}Anaconda}{53}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}YOLOv3}{54}{subsection.4.2.9}%
+\contentsline {chapter}{\numberline {5}Diseño}{56}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{56}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{56}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{57}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{57}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{59}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{60}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{61}{appendix*.59}%
