@@ -29,7 +29,8 @@ Partiendo de todos estos avances y del interés por automatizar las tareas de pr
 
 Se define robot industrial como un manipulador polivalente, reprogramable y controlado automáticamente, programable en tres o más ejes, que puede ser fijo o móvil para su uso en aplicaciones de automatización industrial \cite{ISO8373}.\\
 
-El inicio de la robótica industrial puede datarse en la década de 1950, aunque algunos tipos de automatización en el entorno industrial empezaron a aparecer desde los tiempos de la Revolución Industrial. La evolución de los robots industriales puede subdividirse en cuatro categorías: las tres primeras abarcan el período comprendido entre los años cincuenta y finales de los noventa, mientras que la cuarta generación abarca desde 2000 hasta nuestros días \cite{Gasparetto19}.\\
+%El inicio de la robótica industrial puede datarse en la década de 1950, aunque algunos tipos de automatización en el entorno industrial empezaron a aparecer desde los tiempos de la Revolución Industrial. 
+La evolución de los robots industriales puede subdividirse en cuatro categorías: las tres primeras abarcan el período comprendido entre los años cincuenta y finales de los noventa, mientras que la cuarta generación abarca desde 2000 hasta nuestros días \cite{Gasparetto19}.\\
 
 La primera generación, o primeros manipuladores (1950-1967), eran básicamente máquinas programables que no tenían comunicación con el entorno externo y con algoritmos de control sencillos (punto a punto). En cuanto al hardware, contaban con equipos de baja tecnología, sin servo-controladores. Sin embargo, en 1954, George Devol y Joseph Engelberger formaron la empresa Unimation, empresa que desarrollaría Unimate (ver en Figura \ref{fig:primer_robot_industrial}), considerado el primer robot industrial de la historia, fabricado en 1961 \cite{Zamalloa17}.
   
@@ -45,11 +46,11 @@ La primera generación, o primeros manipuladores (1950-1967), eran básicamente 
   \end{figure}
   
 %Empresas como Ford y General Motors empezaron a plantearse la automatización de sus plantas productivas, por lo que, en 1962, la empresa AMF Corporation fabricó un nuevo robot llamado Versatan, un robot cilíndrico que Ford encargó para sus fábricas. Este robot, fue también el primero que se instaló en un centro productivo en Japón \cite{Gasparetto19}. \\
-\pagebreak
 
 La segunda generación, o robots sensorizados (1968-1977), eran máquinas programables básicas con posibilidades limitadas de comportamiento autoadaptativo y capacidades elementales para reconocer el entorno externo, poseían sistemas sensoriales avanzados y eran robots de gran volumen que se utilizaban principalmente en automoción \cite{Zamalloa17}. \\
 
-En 1968, en el Stanford Artificial Intelligence Laboratory (SAIL) se confecciona el WAVE, el primer lenguaje de programación para robots. En 1969, Unimation concedió a Kawasaki Heavy Industries Ltd. la licencia para producir robots para el mercado japonés y asiático, conduciendo al desarrollo del Kawasaki-Unimate 2000, el primer robot industrial construido en Japón. Es también en este año cuando Víctor Scheinman, un estudiante de ingeniería mecánica de la Universidad de Standford, diseñó y construyó el primer prototipo de brazo robótico (Figura \ref{fig:standford_arm}), cuya cinemática inversa podía resolverse de manera analíticamente cerrada, permitiendo una rápida ejecución de la trayectoria \cite{Gasparetto19}. \\
+En 1968, en el Stanford Artificial Intelligence Laboratory (SAIL) se confecciona el WAVE, el primer lenguaje de programación para robots. En 1969, %Unimation concedió a Kawasaki Heavy Industries Ltd. la licencia para producir robots para el mercado japonés y asiático, conduciendo al desarrollo del Kawasaki-Unimate 2000, el primer robot industrial construido en Japón. Es también en este año cuando 
+Víctor Scheinman, un estudiante de ingeniería mecánica de la Universidad de Standford, diseñó y construyó el primer prototipo de brazo robótico (Figura \ref{fig:standford_arm}), cuya cinemática inversa podía resolverse de manera analíticamente cerrada, permitiendo una rápida ejecución de la trayectoria \cite{Gasparetto19}. \\
 
   \begin{figure}[H]
     \begin{center}
@@ -82,7 +83,7 @@ En 1973, KUKA  \footnote{\url{https://www.kuka.com/es-es}} construyó el primer 
     \label{fig:T3}
   \end{figure}
   
-La tercera generación, o robots industriales (1978-1999), disponían de controladores específicos (ordenadores), siendo un punto clave en la caracterización de esta generación, además del surgimiento de nuevos lenguajes de programación para el control de los robots, la posibilidad de reprogramarlos y la inclusión parcial de la visión artificial \cite{Zamalloa17}. A finales de los años setenta y principios de los ochenta, otros avances científicos y técnicos contribuyeron a la difusión de los robots \cite{Gasparetto19}, que junto a que las empresas de todo el mundo invirtieron miles de millones de dólares en del mundo para automatizar tareas básicas en sus cadenas de montaje, supusieron que los robots poblaran muchos sectores industriales para automatizar una amplia variedad de actividades \cite{Zamalloa17}.\\ 
+La tercera generación, o robots industriales (1978-1999), disponían de controladores específicos (ordenadores), siendo un punto clave en la caracterización de esta generación, además del surgimiento de nuevos lenguajes de programación para el control de los robots, la posibilidad de reprogramarlos y la inclusión parcial de la visión artificial \cite{Zamalloa17}. %A finales de los años setenta y principios de los ochenta, otros avances científicos y técnicos contribuyeron a la difusión de los robots \cite{Gasparetto19}, que junto a que las empresas de todo el mundo invirtieron miles de millones de dólares en del mundo para automatizar tareas básicas en sus cadenas de montaje, supusieron que los robots poblaran muchos sectores industriales para automatizar una amplia variedad de actividades \cite{Zamalloa17}.\\ 
 
 En 1978, Unimation diseñó y fabricó el robot PUMA. El PUMA (\textit{Programmable Universal Machine for Assembly}) fue considerado durante muchas décadas el arquetipo de los robots antropomórficos \cite{Gasparetto19}. Ese mismo año, el científico japonés Hiroshi Makino, de la Universidad de Yamanashi, propuso una nueva estructura cinemática. El robot con esta estructura se denominó SCARA (\textit{Selective Compliance Assembly Robot Arm})(ver Figura \ref{fig:Scara}), ya que su conformidad en la dirección horizontal resultó menor que la conformidad en la dirección vertical. Por esta razón, así como por la ligereza de la cadena cinemática (que permitía un controlador más sencillo y rápido), este robot era adecuado para ser empleado en tareas como el ensamblaje de objetos pequeños \cite{Makino80}.
   
@@ -129,7 +130,7 @@ cuando se toma la decisión de producir una primera pequeña serie del robot lig
   \begin{figure}[H]
     \begin{center}
       \subcapcentertrue
-      \subfigure[RoboAssistant en Automatica 2004]{\includegraphics[width=65mm]{figs/RoboAssistant.png}}
+      \subfigure[RoboAssistant en Automatica 2004]{\includegraphics[width=72mm]{figs/RoboAssistant.png}}
       \hspace{2mm}
       \subfigure[Robot KUKA LWR3 con controladora (2006)]{\includegraphics[width=55mm]{figs/Kuka_lightweightrobot_2006.png}}
     \end{center}
@@ -155,7 +156,7 @@ En el año 2008 se entrega el primer robot colaborativo o cobot, el UR5 de Unive
 Esben H. Østergaard, Director de Tecnología y cofundador de Universal Robots, tomó el trabajo original de Peskhin y Colgate, dos investigadores de la empresa automovilística Ford de los años 90, que decidieron crear un nuevo robot industrial, más pequeño y ágil que los tradicionales, que saliera de su jaula para colaborar estrechamente con el ser humano en las tareas de calidad y personalización de los productos, sin embargo, no fueron capaces, puesto que el problema estaba en la relación entre seguridad y rendimiento, ya que el aumento de la primera reducía el de la segunda. Østergaard consiguió diseñar un sistema de seguridad y control para el cobot que lo bloquea en caso de colisión con el operario, %Como recuerda el propio Østergaard, la seguridad era la clave con la que la robótica colaborativa podía entrar en el escenario industrial. Así se creó un robot 
 siendo capaz de operar en espacios confinados, en estrecho contacto con humanos, y sin instalar costosas barreras de seguridad \cite{Cusano22}.
   
-  \begin{figure} [h!]
+  \begin{figure} [H]
     \begin{center}
       \includegraphics[width=75mm]{figs/UR5_controller.png}
     \end{center}
@@ -163,14 +164,12 @@ siendo capaz de operar en espacios confinados, en estrecho contacto con humanos,
     \label{fig:UR5}
   \end{figure}
   
-  \pagebreak
-  
 Más tarde, en 2018, Universal Robots presenta los robots colaborativos e-Series, que se pueden ver en la Figura \ref{fig:UR_e-Series}, que incluían avances tecnológicos que permitían un desarrollo más rápido para una mayor variedad de aplicaciones, ofrecía una programación más sencilla y seguía las normas de seguridad ISO más actuales y recientes\footnote{\url{https://www.universal-robots.com/es/acerca-de-universal-robots/nuestra-historia/}}.
  
   \begin{figure}[H]
     \begin{center}
       \subcapcentertrue
-      \subfigure[UR presenta los  nuevos e-Series en Automatica 2018]{\includegraphics[width=72mm]{figs/UR Automatica 2018.png}}
+      \subfigure[UR presenta los  nuevos e-Series en Automatica 2018]{\includegraphics[width=75mm]{figs/UR Automatica 2018.png}}
       \hspace{2mm}
       \subfigure[UR e-Series]{\includegraphics[width=65mm]{figs/UR e-series.jpg}}
     \end{center}
@@ -188,32 +187,37 @@ Debido a que la tecnología se encuentra en constante desarrollo y a la colabora
 
 Se define robot de servicio como un robot que realiza tareas útiles para las personas o los equipos, incluyendo en esta la manipulación o el servicio de artículos, el transporte, el apoyo físico, la orientación o información, el aseo personal, la cocina y la manipulación de alimentos y la limpieza en el ámbito personal; y la inspección, vigilancia, manipulación de objetos, transporte de personas, orientación o información, cocina y manipulación de alimentos y limpieza en el ámbito profesional \cite{ISO8373}.\\
 
-Su historia se remonta a la década de 1960, cuando surgieron los primeros intentos de crear robots para ayudar en tareas domésticas y de atención al cliente. Uno de los precursores de estos robots de servicio en 1968 fue el robot Shakey, desarrollado por el Laboratorio de Investigación de Inteligencia Artificial de Stanford (Stanford Research Institute, SRI). Shakey (ver en Figura \ref{fig:shakey}), provisto de múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b}, podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno\footnote{\url{https://www.sri.com/hoi/shakey-the-robot/}}. 
+%Su historia se remonta a la década de 1960, cuando surgieron los primeros intentos de crear robots para ayudar en tareas domésticas y de atención al cliente. Uno de los precursores de estos robots de servicio en 1968 fue el robot Shakey, desarrollado por el Laboratorio de Investigación de Inteligencia Artificial de Stanford (Stanford Research Institute, SRI). Shakey (ver en Figura \ref{fig:shakey}), provisto de múltiples sensores y medios para desplazarse por el suelo, además de control remoto por radio \cite{Sanchez07b}, podía realizar tareas de planificación, búsqueda de rutas y reordenación de objetos sencillos, siendo el primer robot móvil con capacidad para percibir y razonar sobre su entorno\footnote{\url{https://www.sri.com/hoi/shakey-the-robot/}}. 
 
-  \begin{figure} [H]
-    \begin{center}
-      \includegraphics[width=65mm]{figs/Shakey.png}
-    \end{center}
-    \caption{Robot Shakey}
-    \label{fig:shakey}
-  \end{figure}
+%  \begin{figure} [H]
+%    \begin{center}
+%      \includegraphics[width=65mm]{figs/Shakey.png}
+%    \end{center}
+%    \caption{Robot Shakey}
+%    \label{fig:shakey}
+%  \end{figure}
      
 %Sin embargo, fue a mediados de los años 80 cuando en los laboratorios y centros de investigación dedicados a la robótica se trató de revitalizar la importancia de los robots en nuestra sociedad, planteando las ventajas que el uso del robot podía traer en tareas en las que el ser humano asumía riesgos o en las que las capacidades de aquel estaban limitadas por factores como la fuerza o la precisión necesaria. Fue precisamente al entenderse que estas nuevas aplicaciones de la robótica no tenían un uso industrial con el objetivo de fabricar bienes, sino que se trataba de un empleo para desarrollar tareas para las personas, cuando se catalogaron como aplicaciones en el sector servicios \cite{Barrientos02}(ver ejemplos en la Figura \ref{fig:Robots_servicio}).\\
 
-En la práctica, las actuales y potenciales aplicaciones no industriales de los robots son tan variadas y diferentes que se dificulta su catalogación \cite{Barrientos02}; sin embargo, existen ciertas características especiales en estos robots de servicio (ver ejemplos en la Figura \ref{fig:Robots_servicio}) que los hacen diferentes de los robots industriales \cite{Aracil08}, y los caracterizan para llevar a cabo estas tareas para las personas, siendo las principales características estos tres atributos de diseño: representación, antropomorfismo y orientación a la tarea, es decir, los robots de servicio pueden tener una representación física (por ejemplo, Pepper) o tener una representación únicamente virtual (por ejemplo, Alexa, ya que el software de IA virtual que funciona de forma autónoma y aprende con el tiempo también puede clasificarse como robot de servicio), diseñarse como humanoides (es decir, antropomorfos) simulando una apariencia humana o como no humanoides (por ejemplo, el robot de limpieza Roomba de iRobot \footnote{\url{https://www.irobot.es/}} (Figura \ref{fig:roomba}), y pueden realizar tareas cognitivo-analíticas gracias a la potencia informática subyacente o tareas emocionales-sociales (por ejemplo, robots de recepción) \cite{Wirtz18}.\\
+En la práctica, las actuales y potenciales aplicaciones no industriales de los robots son tan variadas y diferentes que se dificulta su catalogación \cite{Barrientos02}; sin embargo, existen ciertas características especiales en estos robots de servicio %(ver ejemplos en la Figura \ref{fig:Robots_servicio})
+que los hacen diferentes de los robots industriales \cite{Aracil08}, y los caracterizan para llevar a cabo estas tareas para las personas, siendo las principales características estos tres atributos de diseño: representación, antropomorfismo y orientación a la tarea, es decir, los robots de servicio pueden tener una representación física %(por ejemplo, Pepper) 
+o tener una representación únicamente virtual %(por ejemplo, Alexa, ya que el software de IA virtual que funciona de forma autónoma y aprende con el tiempo también puede clasificarse como robot de servicio)
+, diseñarse como humanoides (es decir, antropomorfos) simulando una apariencia humana o como no humanoides %(por ejemplo, el robot de limpieza Roomba de iRobot \footnote{\url{https://www.irobot.es/}} (Figura \ref{fig:roomba})
+, y pueden realizar tareas analíticas %gracias a la potencia informática subyacente 
+o tareas emocionales-sociales (por ejemplo, robots de recepción) \cite{Wirtz18}.\\
 
- \begin{figure}[H]
-    \begin{center}
-      \subcapcentertrue
-      \subfigure[Alexa]{\includegraphics[width=45mm]{figs/Alexa.jpeg}}
-      \hspace{2mm}
-      \subfigure[Pepper]{\includegraphics[width=45mm]{figs/Pepper.jpeg}}
-      \hspace{2mm}
-      \subfigure[Sophia]{\includegraphics[width=38mm]{figs/Sophia.png}}
-    \end{center}
-    \caption{Robots de servicio}
-    \label{fig:Robots_servicio}
-  \end{figure}
+% \begin{figure}[H]
+%    \begin{center}
+%      \subcapcentertrue
+%      \subfigure[Alexa]{\includegraphics[width=45mm]{figs/Alexa.jpeg}}
+%      \hspace{2mm}
+%      \subfigure[Pepper]{\includegraphics[width=45mm]{figs/Pepper.jpeg}}
+%      \hspace{2mm}
+%      \subfigure[Sophia]{\includegraphics[width=38mm]{figs/Sophia.png}}
+%    \end{center}
+%    \caption{Robots de servicio}
+%    \label{fig:Robots_servicio}
+%  \end{figure}
 
 Tratando de establecer una división de los robots de servicio, la norma ISO 8373:2012, así como la Federación Internacional de Robótica o IFR, propuso clasificarles en diferentes categorías según su función y aplicación en robots para uso doméstico y personal y robots de servicio destinados a un uso profesional \cite{Gonzalez21}, siendo las aplicaciones más importantes las siguientes:
 
@@ -242,7 +246,9 @@ Tratando de establecer una división de los robots de servicio, la norma ISO 837
   \end{figure}
  
  
- \item \textit{Educación:} Aquellos robots utilizados en educación son robots diseñados para facilitar el aprendizaje y la enseñanza en los diferentes niveles educativos. Estos robots pueden ser utilizados en aulas, bibliotecas y entornos de aprendizaje para ayudar a los estudiantes a adquirir habilidades, fomentar la creatividad y brindar experiencias educativas interactivas.\\
+ \item \textit{Educación:} %Aquellos robots utilizados en educación 
+Son robots diseñados para facilitar el aprendizaje y la enseñanza en los diferentes niveles educativos%. Estos robots 
+, pudiendo ser utilizados en aulas, bibliotecas y entornos de aprendizaje para ayudar a los estudiantes a adquirir habilidades, fomentar la creatividad y brindar experiencias educativas interactivas.\\
  
  \begin{figure}[H]
     \begin{center}
@@ -257,15 +263,15 @@ Tratando de establecer una división de los robots de servicio, la norma ISO 837
  
  \item \textit{Logística:} Los robots de servicio utilizados en logística son robots diseñados para llevar a cabo tareas relacionadas con la gestión y el movimiento de mercancías y productos en entornos de almacenamiento, distribución y transporte. Estos robots desempeñan un papel fundamental en la optimización de la cadena de suministro, mejorando la eficiencia y la precisión en la manipulación de productos. Un ejemplo del posible uso de estos robots en el sector agrícola, es la primera granja vertical de interior del mundo en Estados Unidos, que producirá 18 millones de kilogramos de fresas al año, marcando un hito en la agricultura moderna, y demostrando que la automatización e integración de la robótica en este tipo de granjas verticales puede transformar la producción y recolección de alimentos a gran escala \cite{EcoInventos24}.
  
- \begin{figure} [H]
-  \begin{center}
-    \includegraphics[width=70mm]{figs/agricultura vertical 1.png}
-  \end{center}
-  \caption{Agricultura vertical}
-  \label{fig:agricultura_vertical}
- \end{figure}
+% \begin{figure} [H]
+%  \begin{center}
+%    \includegraphics[width=50mm]{figs/agricultura vertical 1.png}
+%  \end{center}
+%  \caption{Agricultura vertical}
+%  \label{fig:agricultura_vertical}
+% \end{figure}
  
-Por otro lado, dentro de los robots de logística empleados para el movimiento de mercancías, se pueden distinguir dos grandes grupos: Vehículos Guiados Automáticos (AGV) y Robots Móviles Autónomos (AMR). La principal diferencia entre los AMR y los AGV radica en la capacidad de adaptación y autonomía, ya que los AMR son altamente flexibles, autónomos y versátiles, con capacidades autónomas avanzadas que les permiten ajustarse rápidamente a cambios en los entornos de trabajo, mientras que los AGV siguen rutas predefinidas y son adecuados para tareas de transporte predecibles en entornos más controlados.
+%Por otro lado, dentro de los robots de logística empleados para el movimiento de mercancías, se pueden distinguir dos grandes grupos: Vehículos Guiados Automáticos (AGV) y Robots Móviles Autónomos (AMR). La principal diferencia entre los AMR y los AGV radica en la capacidad de adaptación y autonomía, ya que los AMR son altamente flexibles, autónomos y versátiles, con capacidades autónomas avanzadas que les permiten ajustarse rápidamente a cambios en los entornos de trabajo, mientras que los AGV siguen rutas predefinidas y son adecuados para tareas de transporte predecibles en entornos más controlados.
  
  \begin{figure}[H]
     \begin{center}
@@ -278,6 +284,7 @@ Por otro lado, dentro de los robots de logística empleados para el movimiento d
     \label{fig:Robots de logística}
   \end{figure}
   
+ \pagebreak 
  \item \textit{Entretenimiento:} Son robots diseñados específicamente para proporcionar experiencias lúdicas y de entretenimiento a las personas. Estos robots se utilizan en una variedad de contextos, siendo máquinas robóticas diseñadas para interactuar con el público. 
  
   \begin{figure}[H]
@@ -294,7 +301,6 @@ Por otro lado, dentro de los robots de logística empleados para el movimiento d
 \end{itemize}
 
 La robótica de servicio representa una revolución en la asistencia y el apoyo a diversas industrias, desde la logística hasta la atención al cliente en el comercio minorista. Sin embargo, su impacto va más allá, extendiéndose hasta la atención médica. En este contexto, la robótica médica emerge como una vanguardia tecnológica que fusiona la innovación robótica con la medicina moderna para ofrecer soluciones innovadoras en diagnóstico, tratamiento y rehabilitación, demostrando su potencial para revolucionar la forma en que brindamos y recibimos atención médica.
-\pagebreak
  
 \subsection{Robots médicos}
 \label{sec:robotica_industrial} 
@@ -314,29 +320,30 @@ Los robots médicos se desarrollaron por primera vez hace poco más de tres déc
 Las primeras aplicaciones fueron en los campos de neurocirugía y cirugía ortopédica, siendo la cirugía donde mayor impacto han tenido los robots médicos, %A medida que se ha hecho patente la aceptación de los robots quirúrgicos por nuestros sistemas sanitarios, los investigadores en robótica han ido centrando cada vez más su atención en cómo podría ser la próxima generación de robots médicos. Su atención no se limita a los robots quirúrgicos, y también 
 sin embargo, se están investigando otras áreas de la medicina, como los robots para realizar rehabilitación física con pacientes con discapacidades motores, como el exoesqueleto Ekso Bionics, robots de telepresencia para la interacción del paciente con el personal sanitario externo, como el robot RP-VITA, automatización de farmacias, robots para desinfectar clínicas, etc. \cite{Dupont21}\\
 
- \begin{figure}[H]
-    \begin{center}
-      \subcapcentertrue
-      \subfigure[Exoesqueleto Ekso Bionics]{\includegraphics[width=35mm]{figs/Ekso Bionics.png}}
-      \hspace{20mm}
-      \subfigure[Robot RP-VITA]{\includegraphics[width=35mm]{figs/RP Vita.png}}
-    \end{center}
-    \caption{Robots médicos}
-    \label{fig:Robots_medicos}
-  \end{figure}
+% \begin{figure}[H]
+%    \begin{center}
+%      \subcapcentertrue
+%      \subfigure[Exoesqueleto Ekso Bionics]{\includegraphics[width=35mm]{figs/Ekso Bionics.png}}
+%      \hspace{20mm}
+%      \subfigure[Robot RP-VITA]{\includegraphics[width=35mm]{figs/RP Vita.png}}
+%    \end{center}
+%    \caption{Robots médicos}
+%    \label{fig:Robots_medicos}
+%  \end{figure}
 
 El rápido crecimiento de la robótica médica se debe a una combinación de mejoras tecnológicas (motores, materiales y teoría de control), los avances en imagen médica (mayor resolución, resonancia magnética y ecografía 3D) y una mayor aceptación por cirujanos y pacientes de los procedimientos laparoscópicos y la asistencia robótica \cite{Beasley12}, convirtiéndose en un campo interdisciplinario que abarca desde cirugía asistida por robots hasta sistemas de diagnóstico de vanguardia. Gran parte de su éxito radica en la integración de tecnologías avanzadas, como la inteligencia y la visión artificial. Estas disciplinas están redefiniendo la forma en que los robots médicos pueden interactuar con el entorno, interpretar datos y, en última instancia, mejorar los resultados en la atención médica.\\
+\\
 
 A continuación, explicaremos el impacto que la inteligencia y la visión artificial están teniendo en la robótica, y las capacidades y oportunidades que estas presentan en una inmensa variedad de aplicaciones.
-
-\pagebreak
 
 \section{Inteligencia Artificial}
 \label{sec:IA} 
 
-La Inteligencia Artificial (IA) es un área de la ciencia de gran interés por ser un área multidisciplinaria donde se realizan sistemas que tratan de hacer tareas y resolver problemas como lo hace un humano;así mismo, trata de simular de manera artificial las formas de pensamiento y de trabajar del cerebro para la toma de decisiones \cite{Ponce14}.\\
+La Inteligencia Artificial (IA) es un área multidisciplinaria de la ciencia %de gran interés por ser un área multidisciplinaria 
+donde se realizan sistemas que tratan de hacer tareas y resolver problemas como lo hace un humano;así mismo, trata de simular de manera artificial las formas de pensamiento y de trabajar del cerebro para la toma de decisiones \cite{Ponce14}.\\
 
 El origen del concepto y de los criterios de desarrollo de la IA se remontan al año 1936, con el matemático inglés Alan Turing, quien definió una máquina abstracta como ya vimos en la sección \ref{sec:robótica}, que sirvió de base de la noción de algoritmo y la definición de clase de problemas deducibles \cite{Hardy01}, y quien intuyó la importancia que jugaría el aprendizaje automático en el desarrollo de la IA al afirmar que, en lugar de intentar emular mediante una máquina la mente de un adulto, quizá sería más factible intentar emular la mente de un niño y luego someter a la máquina a un proceso de aprendizaje que diera lugar a un desarrollo cognitivo de dicha mente hasta alcanzar el equivalente de una mente adulta, lo que actualmente se conoce como robótica de desarrollo \cite{Gonzalez17}, mientras que el apelativo Inteligencia Artificial se debe a John McCarthy, quien organizó una conferencia en el Darmouth College (Estados Unidos) en agosto de 1956, para discutir sobre la posibilidad de construir máquinas inteligentes. Como resultado de esta reunión, se establecieron los primeras bases sobre la inteligencia de los computadores \cite{Ponce14}. \\
+\\
 
 %La historia de la IA ha sido testigo de ciclos caracterizados por la introducción de nuevos y creativos enfoques y de un sistemático perfeccionamiento de los mejores. Estos ciclos de avance y desafío continúan moldeando su evolución y prometen un futuro emocionante y lleno de posibilidades.\\
 
@@ -357,28 +364,36 @@ Una de las ramas más fascinantes y prometedoras de la inteligencia artificial e
 \section{Visión Artificial}
 \label{sec:VA} 
 
-La visión artificial se define como la ciencia de programar un ordenador para procesar imágenes o vídeos e incluso entenderlos \cite{Culjak12}. En \cite{Bradski08} explica cómo es la transformación de datos desde un fotograma o vídeo cámara hasta lo que puede ser una decisión o una nueva representación \cite{Alvear17}. Para ello, la imagen percibida pasa por los procesos de obtención, caracterización e interpretación de información de imágenes; y estos procesos pueden ser subdivididos a su vez en \cite{Santillan15} según el Cuadro \ref{cuadro:procesos_VA}.\\
+La visión artificial se define como la ciencia de programar un ordenador para procesar imágenes o vídeos e incluso entenderlos \cite{Culjak12}. En \cite{Bradski08} explica cómo es la transformación de datos desde un fotograma o vídeo cámara hasta lo que puede ser una decisión o una nueva representación \cite{Alvear17}. \\
 
-\begin{table} [h!]
+Para ello, la imagen percibida pasa por los procesos de obtención, caracterización e interpretación de información de imágenes; y estos procesos pueden ser subdivididos a su vez en \cite{Santillan15} según el Cuadro \ref{cuadro:procesos_VA}.\\
+
+\begin{table} [H]
   \begin{center}
-      \includegraphics[width=16cm, height=8cm]{figs/Procesos de la visión artificial.png}
+      \includegraphics[width=15cm, height=7cm]{figs/Procesos de la visión artificial.png}
   \end{center}
   \caption{Procesos de la visión artificial}
   \label{cuadro:procesos_VA}
 \end{table}
 
 \begin{enumerate}
- \item \textit{Captura:} La captura o digitalización es el proceso en el que se obtiene una imagen digital a partir de una imagen analógica a través de un dispositivo para que pueda ser manipulada por un ordenador. Esta imagen estará representada como una matriz de números (píxeles) \cite{Martinez22}.
+ \item \textit{Captura:} %La captura o digitalización 
+Es el proceso en el que se obtiene una imagen digital a partir de una imagen analógica a través de un dispositivo para que pueda ser manipulada por un ordenador. Esta imagen estará representada como una matriz de números (píxeles) \cite{Martinez22}.
  
- \item \textit{Pre-procesamiento:} En esta fase, se incorporan métodos destinados a restaurar las imágenes capturadas, dado que es factible que las imágenes experimenten deterioro, como la disminución de su claridad o la presencia de ruido. Esta etapa tiene como objetivo corregir estos problemas mediante procedimientos como la eliminación de ruido o la mejora del contraste y la nitidez.
+ \item \textit{Pre-procesamiento:} En esta fase, se incorporan métodos destinados a restaurar las imágenes capturadas.%, dado que es factible que las imágenes experimenten deterioro.%, como la disminución de su claridad o la presencia de ruido. 
+Esta etapa tiene como objetivo corregir estos problemas mediante procedimientos como la eliminación de ruido o la mejora del contraste y la nitidez.
  
- \item \textit{Segmentación:} La segmentación consiste en dividir una imagen en regiones o componentes más pequeños (grupo de píxeles) con el objetivo de identificar y aislar objetos o áreas de interés dentro de la imagen. El propósito principal es simplificar y organizar la información visual contenida en la imagen para que sea más fácil de analizar, comprender y procesar por ordenador.
+ \item \textit{Segmentación:} %La segmentación 
+Consiste en dividir una imagen en regiones o componentes más pequeños (grupo de píxeles) con el objetivo de identificar y aislar objetos o áreas de interés dentro de la imagen %El propósito principal es simplificar y organizar la información visual contenida en la imagen 
+para que sea más fácil de analizar, comprender y procesar por ordenador.
 
  \item \textit{Descripción:} Es el proceso que obtiene características relevantes para poder diferenciar un tipo de objeto de otro, pudiendo ser externas, como la forma, el perímetro o el rectángulo mínimo que contiene la región; o internas, como el área o el centro de gravedad, entre otros \cite{Santillan15}. 
  
- \item \textit{Reconocimiento (clasificación):} Esta fase se centra en identificar y asignar etiquetas o categorías a objetos o patrones previamente segmentados en una imagen o secuencia de imágenes. Implica el uso de algoritmos y técnicas de aprendizaje automático, como redes neuronales artificiales o métodos estadísticos, entre otros, para entrenar un modelo que pueda tomar las características extraídas y realizar predicciones sobre la clase o categoría a la que pertenecen los objetos detectados.
+ \item \textit{Reconocimiento (clasificación):} %Esta fase se centra en identificar y asignar etiquetas o categorías a objetos o patrones previamente segmentados en una imagen o secuencia de imágenes. 
+El proceso de reconocimiento implica el uso de algoritmos y técnicas de aprendizaje automático, como redes neuronales artificiales o métodos estadísticos, entre otros, para entrenar un modelo que pueda tomar las características extraídas y realizar predicciones sobre la clase o categoría a la que pertenecen los objetos detectados.
  
- \item \textit{Interpretación:} Esta fase implica el análisis y comprensión del significado y el contexto de la información visual obtenida de las imágenes o la secuencia de imágenes capturadas. Este proceso implica razonamiento, toma de decisiones y puede requerir el procesamiento de lenguaje natural para obtener una comprensión más profunda del contenido visual.
+ \item \textit{Interpretación:} %Esta fase implica el análisis y comprensión del significado y el contexto de la información visual obtenida de las imágenes o la secuencia de imágenes capturadas. 
+Esta etapa implica razonamiento, toma de decisiones y puede requerir el procesamiento de lenguaje natural para obtener una comprensión más profunda del contenido visual.
  
 \end{enumerate}
 
@@ -389,28 +404,32 @@ Sin embargo, para mejorar aún más la eficacia de los sistemas de visión artif
 \section{Machine Learning}
 \label{sec:MachineLearning} 
 
-El Machine Learning (Aprendizaje Automático) es una rama en evolución de la Inteligencia Artificial que se encarga de generar algoritmos que tienen la capacidad de aprender del entorno circundante y no tener que programarlos de manera explícita, teniendo en cuenta todos los escenarios posibles, a partir de la construcción de modelos analíticos \cite{Sandoval18}. Los aspectos clave y la semántica del machine learning se muestran en la Figura \ref{fig:ML semantics}.
+El Machine Learning (Aprendizaje Automático) es una rama en evolución de la Inteligencia Artificial que se encarga de generar algoritmos que tienen la capacidad de aprender del entorno circundante y no tener que programarlos de manera explícita, teniendo en cuenta todos los escenarios posibles, a partir de la construcción de modelos analíticos \cite{Sandoval18}. %Los aspectos clave y la semántica del machine learning se muestran en la Figura \ref{fig:ML semantics}.
 
- \begin{figure} [H]
-    \begin{center}
-      \includegraphics[width=14cm]{figs/ML semantics.png}
-    \end{center}
-    \caption{Aspectos clave y semántica del Aprendizaje automático}
-    \label{fig:ML semantics}
-\end{figure}
+% \begin{figure} [H]
+%    \begin{center}
+%      \includegraphics[width=14cm]{figs/ML semantics.png}
+%    \end{center}
+%    \caption{Aspectos clave y semántica del Aprendizaje automático}
+%    \label{fig:ML semantics}
+% \end{figure}
 
-En función del problema planteado y de los datos disponibles, se pueden distinguir tres tipos de ML:
+%En función del problema planteado y de los datos disponibles, se pueden distinguir tres tipos de ML:
 
-\begin{itemize}
- \item \textit{Aprendizaje supervisado:} Consiste en operar a partir de una expectativa conocida. En este contexto, los conjuntos de datos de entrada se denominan conjuntos de datos etiquetados. Los algoritmos clasificados en esta categoría se centran en establecer una relación entre los atributos de entrada y salida, y utilizan esta relación de forma especulativa para generar una salida para nuevos puntos de datos de entrada \cite{Gollapudi16}. 
+%\begin{itemize}
+% \item \textit{Aprendizaje supervisado:} Consiste en operar a partir de una expectativa conocida. %En este contexto, los conjuntos de datos de entrada se denominan conjuntos de datos etiquetados. 
+%Los algoritmos clasificados en esta categoría se centran en establecer una relación entre los atributos de entrada y salida, y utilizan esta relación de forma especulativa para generar una salida para nuevos puntos de datos de entrada \cite{Gollapudi16}. 
  
- \item \textit{Aprendizaje no supervisado:} El análisis o aprendizaje no supervisado se basa en el análisis de clasificación en el que no empezamos con un objetivo específico en mente, también denominado agrupación. En este caso, el objetivo es descifrar la estructura de los datos a partir de la construcción de un mapa entre los atributos de entrada y salida y, de hecho, los atributos de salida no están definidos. Estos algoritmos de aprendizaje operan sobre un conjunto de datos no etiquetados por esta razón \cite{Gollapudi16}.
+% \item \textit{Aprendizaje no supervisado:} %El análisis o aprendizaje no supervisado 
+%Se basa en el análisis de clasificación en el que no empezamos con un objetivo específico en mente, también denominado agrupación. En este caso, el objetivo es descifrar la estructura de los datos a partir de la construcción de un mapa entre los atributos de entrada y salida y, de hecho, los atributos de salida no están definidos %Estos algoritmos de aprendizaje operan sobre un conjunto de datos no etiquetados por esta razón
+%\cite{Gollapudi16}.
  
- \item \textit{Aprendizaje por refuerzo:} En lugar de proporcionar pares de entrada y salida, se describe el estado actual del sistema, se especifica un objetivo proporcionando una lista de acciones permitidas y sus restricciones ambientales para sus resultados, y se deja que el modelo de ML experimente por sí mismo el proceso para alcanzar el objetivo utilizando el principio de ensayo y error para maximizar la recompensa del resultado \cite{Janiesch21}.
+% \item \textit{Aprendizaje por refuerzo:} En lugar de proporcionar pares de entrada y salida, se describe el estado actual del sistema, se especifica un objetivo proporcionando una lista de acciones permitidas y sus restricciones ambientales para sus resultados, y se deja que el modelo de ML experimente por sí mismo el proceso para alcanzar el objetivo utilizando el principio de ensayo y error para maximizar la recompensa del resultado \cite{Janiesch21}.
  
-\end{itemize}
+%\end{itemize}
 
-Del mismo modo, dependiendo de la tarea de aprendizaje, existen varias clases de algoritmos de ML, cada uno de ellos con múltiples especificaciones y variantes, que pueden englobarse o bien en el Shallow Machine Learning (aprendizaje superficial), que se centra en algoritmos más simples para realizar tareas específicas, o en Deep Learning (aprendizaje profundo), que utiliza la construcción y entrenamiento de Redes Neuronales Artificiales (RNA), un tipo de modelo inspirado en la estructura y funcionamiento del cerebro humano, tal y como se puede apreciar en el diagrama de la Figura \ref{fig:AlgoritmosML} \cite{Janiesch21}. \\
+%Del mismo modo, 
+Dependiendo de la tarea de aprendizaje, existen varias clases de algoritmos de ML, cada uno de ellos con múltiples especificaciones y variantes, que pueden englobarse o bien en el Shallow Machine Learning (aprendizaje superficial), que se centra en algoritmos más simples para realizar tareas específicas, o en Deep Learning (aprendizaje profundo), que utiliza la construcción y entrenamiento de Redes Neuronales Artificiales (RNA), un tipo de modelo inspirado en la estructura y funcionamiento del cerebro humano, tal y como se puede apreciar en el diagrama de la Figura \ref{fig:AlgoritmosML} \cite{Janiesch21}. \\
 
  \begin{figure} [H]
     \begin{center}
@@ -422,18 +441,18 @@ Del mismo modo, dependiendo de la tarea de aprendizaje, existen varias clases de
 
 El Machine Learning, abarca desde enfoques más superficiales hasta técnicas más avanzadas, tal y como se ha podido observar, sin embargo, es el Deep Learning lo que realmente potencia la capacidad de las máquinas para aprender y generalizar patrones complejos de manera excepcional. En la próxima sección, se hablará sobre el Deep Learning, centrándose en las RNA y en cómo estas posibilitan abordar tareas más complejas, como el reconocimiento de patrones en imágenes o el procesamiento de lenguaje natural.
 
+
 \section{Deep Learning}
 \label{sec:DeepLearning} 
-El Deep Learning o aprendizaje profundo, constituye una rama de la IA, incluida dentro del Machine Learning, cuyos modelos computacionales se inspiran en el funcionamiento del cerebro humano y se diseñan con el propósito de adquirir conocimientos y llevar a cabo tareas específicas mediante el procesamiento de datos. La etiqueta \textit{profundo} hace referencia a la presencia de múltiples capas de neuronas artificiales en la red, lo que facilita la representación jerárquica de características y potencia la capacidad para aprender y poder diferenciar patrones complejos a partir de los datos.\\
-\pagebreak
+El Deep Learning o aprendizaje profundo, constituye una rama de la IA, incluida dentro del Machine Learning, cuyos modelos computacionales se inspiran en el funcionamiento del cerebro humano y se diseñan con el propósito de adquirir conocimientos y llevar a cabo tareas específicas mediante el procesamiento de datos. %La etiqueta \textit{profundo} hace referencia a la presencia de múltiples capas de neuronas artificiales en la red, lo que facilita la representación jerárquica de características y potencia la capacidad para aprender y poder diferenciar patrones complejos a partir de los datos.\\
 
-Las Redes Neuronales Artificiales (RNA) o Artificial Neural Networks (ANN) en inglés, están inspiradas en las redes neuronales biológicas del cerebro humano, tal y como muestra la Figura \ref{fig:Modelo neurona}, presentando características del mismo, ya que estas aprenden de la experiencia, generalizan de ejemplos previos a ejemplos nuevos, y abstraen las características principales de una serie de datos. En las RNA, la unidad análoga a la neurona biológica es el elemento procesador, PE (Process Element). Un PE tiene varias entradas y las combina, normalmente, con una suma básica. La suma de las entradas es modificada por una función de transferencia y el valor de la salida de esta función de transferencia se pasa directamente a la salida del elemento procesador. Existen dos capas con conexiones con el mundo exterior, una capa de entrada o \textit{buffer} de entrada, donde se presentan los datos a la red, y una capa o \textit{buffer} de salida que mantiene la respuesta de la red a una entrada, mientras que el resto de las capas reciben el nombre de capas ocultas \cite{Basogain08}.\\
+Estas Redes Neuronales Artificiales (RNA) o Artificial Neural Networks (ANN) en inglés, están inspiradas en las redes neuronales biológicas del cerebro humano, tal y como muestra la Figura \ref{fig:Modelo neurona}, presentando características del mismo, ya que estas aprenden de la experiencia, generalizan de ejemplos previos a ejemplos nuevos, y abstraen las características principales de una serie de datos. En las RNA, la unidad análoga a la neurona biológica es el elemento procesador, PE (Process Element). Un PE tiene varias entradas y las combina, normalmente, con una suma básica. La suma de las entradas es modificada por una función de transferencia y el valor de la salida de esta función de transferencia se pasa directamente a la salida del elemento procesador. Existen dos capas con conexiones con el mundo exterior, una capa de entrada o \textit{buffer} de entrada, donde se presentan los datos a la red, y una capa o \textit{buffer} de salida que mantiene la respuesta de la red a una entrada, mientras que el resto de las capas reciben el nombre de capas ocultas \cite{Basogain08}.\\
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=14cm]{figs/Modelo neurona.jpeg}
+      \includegraphics[width=15cm]{figs/Modelo neurona.jpeg}
     \end{center}
-    \caption{Modelo biológico de una neurona genérica, comúnmente una neurona motora típica (izquierda) y el respectivo modelo matemático (derecha)}
+    \caption{Modelo biológico de una neurona genérica (izquierda) y el respectivo modelo matemático (derecha)}
     \label{fig:Modelo neurona}
 \end{figure}
 
@@ -442,7 +461,7 @@ Es importante señalar que la característica clave de la sinapsis, el escalar l
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=8cm]{figs/capas rrnn.jpeg}
+      \includegraphics[width=9cm]{figs/capas rrnn.jpeg}
     \end{center}
     \caption{Arquitectura de una red neuronal}
     \label{fig:Arquitectura red neuronal}
@@ -450,8 +469,12 @@ Es importante señalar que la característica clave de la sinapsis, el escalar l
 
 %La historia de las redes neuronales se remonta a la década de 1940, cuando el neurofisiólogo Warren McCulloch y el matemático Walter Pitts modelaron una red neuronal simple utilizando circuitos eléctricos. Su modelo estaba basado en la idea de lógica de umbral, que más tarde sería fundamental para el desarrollo de las redes neuronales artificiales. En 1958, el neurobiólogo Frank Rosenblatt dio un paso significativo al comenzar a trabajar en el perceptrón, un modelo computacional que representaba la unidad básica de una red neuronal y realizaba una suma ponderada de varias entradas, al tratarse de una unidad de procesamiento, llevando a cabo una combinación lineal de esas entradas, y aplicando posteriormente una función de activación para producir una salida. Este trabajo marcó el inicio de la investigación en redes neuronales artificiales. Saltando a la década de 2010, dos factores contribuirían a la revolución de aplicaciones de redes neuronales y algoritmos de aprendizaje profundo. En primer lugar, los avances en hardware especializado aceleraron drásticamente el entrenamiento y el rendimiento de las redes neuronales, reduciendo su consumo de energía, mientras que, en segundo lugar, el aumento de datos abiertos disponibles en línea y servicios de bajo costo para etiquetar datos impulsaron el desarrollo de la inteligencia artificial \cite{Abeliuk21}.\\
 
+\vspace{10mm}
+
 En este capítulo se ha introducido el nacimiento y la historia de los robots y la robótica tal y como los conocemos hoy en día, dentro de cuya rama encontramos uno de los tres grandes grupos en los cuales puede dividirse esta, la Robótica de Servicio, y para la que la Inteligencia Artificial, y más concretamente el campo de la Visión Artificial junto con el del Deep Learning, siendo este subcategoría del Machine Learning, juegan un papel fundamental en el desarrollo de nuevas aplicaciones.\\
 
 En este proyecto se presenta un sistema que, mediante Visión Artificial y Machine Learning, es capaz de reconocer la maduración de frutos, más concretamente de fresas, con el objetivo de poder ayudar así a mejorar su proceso de recolección en un huerto vertical, gracias al algoritmo desarrollado para esto y su integración con un brazo robótico de la marca Universal Robots, que se encargará de llevar a cabo este proceso.\\
-
+\\
+\\
+\\
 En los siguientes capítulos de este trabajo se detallarán los objetivos del mismo, delineando claramente las metas; se expondrá la plataforma de desarrollo, detallando las herramientas seleccionadas para la elaboración del proyecto; se presentará el diseño y la arquitectura del proyecto; y, finalmente, llegaremos a las conclusiones, donde tendrá lugar una breve recopilación de información sobre los resultados obtenidos y las posibles direcciones futuras. 
