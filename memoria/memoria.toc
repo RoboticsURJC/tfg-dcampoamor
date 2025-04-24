@@ -32,12 +32,15 @@
 \contentsline {subsection}{\numberline {4.2.7}XML-RPC}{46}{subsection.4.2.7}%
 \contentsline {subsection}{\numberline {4.2.8}Anaconda}{46}{subsection.4.2.8}%
 \contentsline {subsection}{\numberline {4.2.9}YOLOv3}{47}{subsection.4.2.9}%
-\contentsline {chapter}{\numberline {5}Diseño}{48}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Sistema de reconocimiento por visión de maduración de frutos\\ para su recolección con un brazo robótico}{48}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Snippets}{48}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{48}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Verbatim}{49}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Ecuaciones}{49}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{49}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{51}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{51}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{52}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{53}{appendix*.50}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{50}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Experimentos}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Selección del algoritmo de detección y bibliotecas}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Detección de fresas en imágenes con TensorFlow}{52}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{54}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{54}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{55}{section.7.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{56}{appendix*.51}%
