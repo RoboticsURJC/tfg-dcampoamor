@@ -269,6 +269,11 @@ Raj, M. and Seamans, R. (2019).
 \newblock Primer on artificial intelligence and robotics.
 \newblock {\em Journal of {O}rganization {D}esign}, 8:1--14.
 
+\bibitem[Redmon et~al., 2016]{Redmon16}
+Redmon, J., Divvala, S., Girshick, R., and Farhadi, A. (2016).
+\newblock You only look once: {U}nified, {R}eal-{T}ime {O}bject {D}etection.
+\newblock {\em Computer Vision and Pattern Recognition (CVPR)}.
+
 \bibitem[Redmon and Farhadi, 2018]{Redmon18}
 Redmon, J. and Farhadi, A. (2018).
 \newblock Yolov3: An {I}ncremental {I}mprovement.

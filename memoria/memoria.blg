@@ -3,7 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: memoria.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
-I was expecting a `,' or a `}'---line 455 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 463 of file bibliografia.bib
  :   
  :   month = "Julio",
 (Error may have been on previous line)
@@ -13,45 +13,45 @@ Warning--empty booktitle in Bischoff10
 Warning--empty booktitle in Dechter86
 Warning--there's a number but no volume in Hardy01
 Warning--empty journal in Romero20
-You've used 69 entries,
+You've used 70 entries,
             1935 wiz_defined-function locations,
-            909 strings with 16909 characters,
-and the built_in function-call counts, 26775 in all, are:
-= -- 2520
-> -- 1260
+            914 strings with 17107 characters,
+and the built_in function-call counts, 27142 in all, are:
+= -- 2553
+> -- 1283
 < -- 54
-+ -- 453
-- -- 432
-* -- 2187
-:= -- 4774
-add.period$ -- 210
-call.type$ -- 69
-change.case$ -- 543
-chr.to.int$ -- 64
-cite$ -- 74
-duplicate$ -- 1037
-empty$ -- 1758
-format.name$ -- 526
-if$ -- 5230
++ -- 461
+- -- 440
+* -- 2218
+:= -- 4844
+add.period$ -- 213
+call.type$ -- 70
+change.case$ -- 552
+chr.to.int$ -- 65
+cite$ -- 75
+duplicate$ -- 1050
+empty$ -- 1778
+format.name$ -- 535
+if$ -- 5297
 int.to.chr$ -- 6
 int.to.str$ -- 0
-missing$ -- 65
-newline$ -- 347
-num.names$ -- 207
-pop$ -- 512
+missing$ -- 66
+newline$ -- 352
+num.names$ -- 210
+pop$ -- 521
 preamble$ -- 1
-purify$ -- 558
+purify$ -- 567
 quote$ -- 0
-skip$ -- 809
+skip$ -- 819
 stack$ -- 0
-substring$ -- 1447
-swap$ -- 153
+substring$ -- 1459
+swap$ -- 154
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 394
+type$ -- 400
 warning$ -- 5
-while$ -- 185
+while$ -- 187
 width$ -- 0
-write$ -- 881
+write$ -- 893
 (There was 1 error message)
