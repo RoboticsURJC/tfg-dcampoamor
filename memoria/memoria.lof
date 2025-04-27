@@ -38,4 +38,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Deteccion con Pytorch\relax }}{52}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Entrenamiento del algoritmo con TensorFlow\relax }}{53}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{55}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Pruebas de deteccion de fresas en imágenes con TensorFlow\relax }}{56}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{57}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{57}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{57}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Entrenamiento del modelo ssd\_mobilenet\_v2 para detectar fresas\relax }}{58}{figure.caption.59}%
 \addvspace {10\p@ }
