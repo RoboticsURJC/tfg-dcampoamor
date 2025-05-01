@@ -6,11 +6,11 @@ En este capítulo se recogen las distintos experimentos que se han llevado a cab
 \section{Detección con YOLOv3 y PyTorch}
 \label{exp_seleccion_algoritmo}
 
-Dada la finalidad del proyecto, se requería que la detección de objetos se diera en tiempo real, por lo que se buscó información sobre YOLO, un sistema de código abierto que permitía esto a partir de una red neuronal convolucional para detectar objetos en imágenes y vídeo, y se iniciaron las pruebas pertinentes para la selección del algoritmo de detección y bibliotecas.\\
+Dada la finalidad del proyecto, se requería que la detección de objetos se diera en tiempo real, por lo que se buscó información sobre YOLO, un sistema de código abierto que permitía esto a partir de una red neuronal convolucional para detectar objetos en imágenes y vídeo, y se iniciaron las pruebas pertinentes para la selección del algoritmo de detección y de las bibliotecas a utilizar.\\
 
 Después de realizar la lectura \textit{You Only Look Once: Unified, Real-Time Object Detection}\cite{Redmon16}, se replicó lo que se exponía en dicho artículo con la cámara integrada del ordenador portátil, mediante un programa en Python y usando la librería Open Source Computer Vision Library (OpenCV) mediante la biblioteca Pytorch. Este programa, partiendo del \textit{feed} de la propia webcam, descomponía el vídeo en imágenes o cuadros, alimentando a la red neuronal (en este caso YOLOv3), que recibía esta detección y se procesaba con OpenCV, dibujando los recuadros o \textit{bounding box} alrededor de los objetos que se detectaban en vivo.\\
 
-Para ello, primero se realizó la instalación de Anaconda para poder crear un ambiente de trabajo independiente y así evitar problemas entre las versiones de los paquetes necesarios para la ejecución de estas pruebas, y posteriormente se instaló OpenCV. Se clonó el repositorio \textit{deteccion-objetos-video}\footnote{\url{https://github.com/puigalex/deteccion-objetos-video}} basado en el proyecto \textit{PyTorch-YOLOv3}\footnote{\url{https://github.com/eriklindernoren/PyTorch-YOLOv3}} para correr detección de objetos sobre video con el código y los actuales, mientras se siguieron los pasos detallados en el archivo README.
+Para ello, primero se realizó la instalación de Anaconda para poder crear un ambiente de trabajo independiente y así evitar problemas entre las versiones de los paquetes necesarios para la ejecución de estas pruebas, y posteriormente se instaló OpenCV. Se clonó el repositorio \textit{deteccion-objetos-video}\footnote{\url{https://github.com/puigalex/deteccion-objetos-video}} basado en el proyecto \textit{PyTorch-YOLOv3}\footnote{\url{https://github.com/eriklindernoren/PyTorch-YOLOv3}} para correr detección de objetos sobre video y se siguieron los pasos detallados en el archivo README.
 Una vez instalado todo, se probó a utilizar varios objetos y posteriormente varias frutas simultáneamente para verificar que el modelo las diferenciaba correctamente y las detectaba, tal y como se muestra en la Figura \ref{fig:Deteccion_Pytorch}.
 
   \begin{figure}[H]
@@ -29,7 +29,7 @@ Una vez instalado todo, se probó a utilizar varios objetos y posteriormente var
 
 Para poder comprobar las diferencias en un ejemplo práctico a la hora de detectar objetos entre PyTorch y TensorFlow, y de esta manera poder escoger una de las dos bibliotecas para el desarrollo del modelo de aprendizaje automático y aprendizaje profundo en este proyecto, se decidió crear de nuevo un entorno de Anaconda y probar a detectar objetos en imágenes utilizando Tensorflow.\\
 
-Se utilizó el repositorio de \textit{deteccion\_objetos}\footnote{\url{https://github.com/puigalex/deteccion_objetos}} basados en la configuración \textit{faster rcnn resnet101 coco} de los modelos de detección de objetos de Tensorflow para poder llevar a cabo la comparación, y etiquetando imágenes, en este caso de tigres, mediante la herramienta labelImg\footnote{\url{https://github.com/HumanSignal/labelImg}}, se prepararon las carpetas y archivos de configuración correspondientes para poder llevar a cabo el entrenamiento del modelo siguiendo los pasos indicados en el repositorio utilizando una distribución de las imágenes utilizadas para el aprendizaje del modelo y su uso en la detecciónn aproximadamente del 70:30 (73\% datos de entrenamiento y 27\% datos de prueba)(Cuadro \ref{tab:Imagenes_Entrenamiento}) a partir de los cuales se entrenó ese 70\% con uno de los algoritmos y los respectivos parámetros escogidos y medimos su rendimiento usando el 30\% restante de los datos.
+Se utilizó el repositorio \textit{deteccion\_objetos}\footnote{\url{https://github.com/puigalex/deteccion_objetos}} basados en la configuración \textit{faster rcnn resnet101 coco} de los modelos de detección de objetos de Tensorflow para poder llevar a cabo la comparación, y etiquetando imágenes, en este caso de tigres, mediante la herramienta labelImg\footnote{\url{https://github.com/HumanSignal/labelImg}}, se prepararon las carpetas y archivos de configuración correspondientes para poder llevar a cabo el entrenamiento del modelo siguiendo los pasos indicados en el repositorio utilizando una distribución de las imágenes utilizadas para el aprendizaje del modelo y su uso en la detecciónn aproximadamente del 70:30 (73\% datos de entrenamiento y 27\% datos de prueba)(Cuadro \ref{tab:Imagenes_Entrenamiento}), a partir de los cuales se entrenó ese 70\% con uno de los algoritmos y los respectivos parámetros escogidos y medimos su rendimiento usando el 30\% restante de los datos.
 
   \begin{table}[H]
   \centering
@@ -42,11 +42,11 @@ Se utilizó el repositorio de \textit{deteccion\_objetos}\footnote{\url{https://
     \centering 594 & \centering 218 & \centering 812 \tabularnewline
     \hline
   \end{tabularx}
-  \caption{Esta es una tabla de ejemplo con tabularx.}
+  \caption{Distribución de las imágenes utilizadas para el entrenamiento del modelo}
   \label{tab:Imagenes_Entrenamiento}
   \end{table}
 
-Se entrenó este modelo hasta que se observó que la pérdida estaba por debajo de 1, considerando que esta pérdida no era alta, y que no existían demasiadas fluctuaciones,  deteniendo este entrenamiento a los 1400 pasos, a pesar de que este entrenamiento estuviera programado para llegar hasta los 20000, ya que se trataba de una prueba simplemente, lo que supuso que se tuviera que utilizar el último checkpoint disponible, en este caso el del paso 1337 (Figura \ref{fig:Deteccion_Prueba_TF}), para convertirlo en un modelo final y de esta manera poder generar predicciones, utilizando imágenes de diferentes tamaños.
+Se entrenó este modelo hasta que se observó que la pérdida estaba por debajo de 1, considerando que esta pérdida no era alta, y que no existían demasiadas fluctuaciones,  deteniendo este entrenamiento a los 1400 pasos, a pesar de que este entrenamiento estuviera programado para llegar hasta los 20000, ya que se trataba de una prueba simplemente. Esto supuso que se tuviera que utilizar el último checkpoint disponible, en este caso el del paso 1337 (Figura \ref{fig:Deteccion_Prueba_TF}), para convertirlo en un modelo final y de esta manera poder generar predicciones, utilizando imágenes de diferentes tamaños.
 
   \begin{figure}[H]
     \begin{center}
@@ -149,7 +149,9 @@ Una vez descargado el archivo, se comenzó a etiquetar una a una las imágenes m
   \label{fig:Deteccion_Fresas_Imagenes_TF}
   \end{figure}
 
-Tras haber conseguido la detección de fresas en imágenes estáticas utilizando TensorFlow, el siguiente paso dentro del desarrollo del sistema consistió en extender las pruebas a la detección en vídeo en tiempo real, por lo que, de forma análoga a como se había realizado previamente con la librería PyTorch, se procedió a evaluar distintos modelos de detección de objetos pertenecientes al zoo de TensorFlow (TensorFlow 2 Detection Model Zoo), los cuales, al estar ya preentrenados sobre conjuntos de datos de referencia, permitieron llevar a cabo una comparación de estos diferentes modelos o sistemas bajo las mismas condiciones iniciales sin necesidad de realizar un nuevo entrenamiento desde cero. Para la realización de estas pruebas, se utilizó tanto la cámara web integrada del ordenador portátil como una imagen previamente seleccionada, para que, de esta manera pudieran observarse las diferencias entre los modelos tanto en la detección en vídeo como en la detección en imágenes, y poder valorar qué modelo de los tres distintos probados ofrecería mejores prestaciones en términos de precisión, velocidad de procesamiento y robustez frente a las condiciones reales de trabajo (ver Figuras  \ref{fig:modelo_ssd_mobilenet}, \ref{fig:modelo_efficientdet_d4} y \ref{fig:modelo_faster_rcnn_resnet50}). 
+Tras haber conseguido la detección de fresas en imágenes estáticas utilizando TensorFlow, el siguiente paso dentro del desarrollo del sistema consistió en extender las pruebas a la detección en vídeo en tiempo real, por lo que, de forma análoga a como se había realizado previamente con la librería PyTorch, se procedió a evaluar distintos modelos de detección de objetos pertenecientes al zoo de TensorFlow (TensorFlow 2 Detection Model Zoo), los cuales, al estar ya preentrenados sobre conjuntos de datos de referencia, permitieron llevar a cabo una comparación de estos diferentes modelos o sistemas bajo las mismas condiciones iniciales sin necesidad de realizar un nuevo entrenamiento desde cero. \\
+
+Para la realización de estas pruebas, se utilizó tanto la cámara web integrada del ordenador portátil como una imagen previamente seleccionada, para que, de esta manera pudieran observarse las diferencias entre los modelos tanto en la detección en vídeo como en la detección en imágenes, y poder valorar qué modelo de los tres distintos probados ofrecería mejores prestaciones en términos de precisión, velocidad de procesamiento y robustez frente a las condiciones reales de trabajo (ver Figuras  \ref{fig:modelo_ssd_mobilenet}, \ref{fig:modelo_efficientdet_d4} y \ref{fig:modelo_faster_rcnn_resnet50}). 
 
 	\begin{figure}[H]
     		\begin{center}
@@ -186,59 +188,48 @@ Tras haber conseguido la detección de fresas en imágenes estáticas utilizando
   	\end{figure}	
   	
 \pagebreak
-Después de haber llevado a cabo estas pruebas con los modelos de detección de objetos ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8, efficientdet\_d4\_coco17\_tpu-32 y faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8, y tras valorar que, el principal uso del modelo en la aplicación final sería la de llevar a cabo detecciones a tiempo real con una cámara, se escogió el modelo ssd\_mobilenet\_v2 para proseguir con los experimentos, incluso por delante de cualquiera de los otros dos modelos, incluso teniendo menor precisión y calidad de detección, ya que destacaba principalmente por su elevada velocidad de procesamiento y su bajo consumo de recursos, gracias a su arquitectura ligera basada en MobileNetV2 y su tamaño de entrada reducido, haciéndolo especialmente adecuado para aplicaciones en tiempo real sobre hardware con capacidades limitadas, como puede ser un sistema de visión embarcado en un brazo robótico.\\
+Después de haber llevado a cabo estas pruebas con los modelos de detección de objetos ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8, efficientdet\_d4\_coco17\_tpu-32 y faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8, y tras valorar que, el principal uso del modelo en la aplicación final sería la de llevar a cabo detecciones a tiempo real con una cámara, se escogió el modelo ssd\_mobilenet\_v2 para proseguir con los experimentos, incluso por delante de cualquiera de los otros dos modelos, ya que, a pesar de tener menor precisión y calidad de detección, destacaba principalmente por su elevada velocidad de procesamiento y su bajo consumo de recursos, gracias a su arquitectura ligera basada en MobileNetV2 y su tamaño de entrada reducido, haciéndolo especialmente adecuado para aplicaciones en tiempo real sobre hardware con capacidades limitadas, como puede ser un sistema de visión embarcado en un brazo robótico.\\
 
-Para ello, y dado que para poder llevar a cabo la detección de fresas era necesario utilizar un modelo entrenado desde cero, tal y como muestra la Figura \ref{fig:entrenamiento_ssdmobilenet}, se utilizó de guía el repositorio \textit{real\_time\_object\_detection\_cpu}\footnote{\url{https://github.com/haroonshakeel/real_time_object_detection_cpu/blob/main/README.md}}, creando y activando un nuevo entorno de Anaconda, donde se instalaron los paquetes y librerías necesarios para ello junto al Object Detection API de TensorFlow junto con Jupyter Notebook\footnote{\url{https://jupyter.org}}, un entorno computacional interactivo basado en web para crear cuadernos que contienen código en vivo, ecuaciones, visualizaciones y texto narrativo. 
-
- \begin{figure} [H]
-  \begin{center}
-    \includegraphics[width=150mm]{figs/tensorflow step 10000.png}
-  \end{center}
-  \caption{Entrenamiento del modelo ssd\_mobilenet\_v2 para detectar fresas}
-  \label{fig:entrenamiento_ssdmobilenet}
- \end{figure}
+Para ello, y dado que para poder llevar a cabo la detección de fresas era necesario utilizar un modelo entrenado desde cero, para lo que se utilizó de guía el repositorio \textit{real\_time\_object\_detection\_cpu}\footnote{\url{https://github.com/haroonshakeel/real_time_object_detection_cpu/blob/main}}, creando y activando un nuevo entorno de Anaconda, donde se instalaron los paquetes y librerías necesarios para ello junto al Object Detection API de TensorFlow junto con Jupyter Notebook\footnote{\url{https://jupyter.org}}, un entorno computacional interactivo basado en web para crear cuadernos que contienen código en vivo, ecuaciones, visualizaciones y texto narrativo. \\
 
 Completada la configuración del entorno, la instalación de todos los componentes, y el entrenamiento del modelo, se realizó una primera prueba de detección utilizando el modelo entrenado para comprobar si funcionaba, obteniendo las primeras predicciones en tiempo real sobre vídeo con fresas reales, y de este modo, poder llevar a cabo la batería de pruebas en las cuales se variaba tanto el número de fresas como las condiciones de luz, siendo los resultados de estos escenarios los que se muestran a continuación:
 \pagebreak
 
+
 \begin{figure}[H]
-  \centering
+    \centering
+    \subcapcentertrue
+    % Fila 1
+    \subfigure[Una única fresa con luz natural de día]{\includegraphics[width=0.30\textwidth]{figs/Deteccion una fresa luz natural dia JN.png}}
+    \hspace{1mm}
+    \subfigure[Una única fresa con luz artificial de día]{\includegraphics[width=0.30\textwidth]{figs/Deteccion una fresa luz artificial dia JN.png}}
+    \hspace{1mm}
+    \subfigure[Una única fresa con luz artificial de noche]{\includegraphics[width=0.30\textwidth]{figs/Deteccion una fresa luz artificial de noche JN.png}}
 
-  % Fila 1
-  \subfigure[Detección de una única fresa con luz natural de día]{\includegraphics[width=0.30\textwidth]{figs/Deteccion una fresa luz natural dia JN.png}}
-  \hspace{5mm}
-  \subfigure[Segunda imagen]{\includegraphics[width=0.30\textwidth]{ruta/imagen2.jpg}}
-  \hspace{5mm}
-  \subfigure[Tercera imagen]{\includegraphics[width=0.30\textwidth]{ruta/imagen3.jpg}}
+    \vspace{1mm} % Espacio vertical entre filas
 
-  \\[5mm] % Espacio vertical entre filas  
-
-  % Fila 2
-  \subfigure[Cuarta imagen]{\includegraphics[width=0.30\textwidth]{ruta/imagen4.jpg}}
-  \hspace{5mm}
-  \subfigure[Quinta imagen]{\includegraphics[width=0.30\textwidth]{ruta/imagen5.jpg}}
-  \hspace{5mm}
-  \subfigure[Sexta imagen]{\includegraphics[width=0.30\textwidth]{ruta/imagen6.jpg}}
-  \caption{Collage de 6 imágenes en dos filas}
-  \label{fig:collage_6}
+    % Fila 2
+    \subfigure[Varias fresas con luz natural de día]{\includegraphics[width=0.30\textwidth]{figs/Deteccion varias fresas luz natural dia JN.png}}
+    \hspace{1mm}
+    \subfigure[Varias fresas con luz artificial de día]{\includegraphics[width=0.30\textwidth]{figs/Deteccion varias fresas luz artificial dia JN.png}}
+    \hspace{1mm}
+    \subfigure[Varias fresas con luz artificial de noche]{\includegraphics[width=0.30\textwidth]{figs/Deteccion varias fresas luz artificial de noche JN.png}}
+    
+    \caption{Detección de fresas en webcam con TensorFlow con modelos no pre-entrenados (ssd mobilenet v2 320x320)}
+    \label{fig:deteccion_Fresas_webcam_TF_ssdmobilenet}
 \end{figure}
 
+Después de verificar la viabilidad y funcionamiento de estas pruebas, se pasó a introducir en el programa de detección varios añadidos para obtener más datos sobre estas detecciones y poder mejorar el programa, como por ejemplo, la instrucción cv2.destroyAllWindows() para que al pulsar la letra 'q' se dejase de captar lo que se podía ver por la cámara del ordenador y se cerrase la ventana emergente 'object detection', a la que también se le cambió el nombre por 'strawberry detection', o la inclusión del cálculo de los FPS (fotogramas por segundo) en la ventana de detección en tiempo real, es decir, la medida de la frecuencia de cuadros en el vídeo, ya que representa la cantidad de imágenes individuales que se muestran en un segundo, midiendo la velocidad de procesamiento de los cuadros, siendo útil para comparar entre las distintas condiciones de detección, ya que un FPS más alto indica que se están procesando más cuadros por segundo, lo que generalmente se considera deseable para aplicaciones en tiempo real. 
 
+Aunque Jupyter Notebook ofrece un entorno interactivo y muy útil para el desarrollo exploratorio, no es recomendable utilizarlo como entorno de ejecución para aplicaciones estables conectadas a robots. Su diseño está orientado principalmente a tareas de análisis, visualización y prototipado, donde el usuario interactúa continuamente con el entorno mediante la ejecución manual de celdas. Esto supone una limitación importante para sistemas robóticos, los cuales requieren un comportamiento determinista, autónomo y ejecutable sin supervisión constante.
 
+Una de las principales desventajas de Jupyter en este contexto es su modelo de ejecución no lineal. A diferencia de un script en Python (.py), donde el flujo de ejecución es siempre secuencial y controlado, en un notebook es posible ejecutar fragmentos de código en cualquier orden. Esto puede provocar desincronización del estado interno del programa y errores difíciles de detectar, especialmente críticos en aplicaciones donde se controla hardware, se toman decisiones en tiempo real o se actúa sobre el entorno físico.
 
+Además, Jupyter Notebook no está pensado para integrarse fácilmente en entornos de producción. Ejecutar un notebook requiere iniciar un servidor local, abrir una interfaz gráfica y mantener el entorno en funcionamiento manualmente. Esto lo hace incompatible con sistemas embebidos o entornos industriales donde el software debe iniciarse automáticamente al arrancar el sistema, integrarse con otros servicios (por ejemplo, mediante systemd, ROS o Docker) y funcionar de manera continua sin intervención humana.
 
+Otra limitación relevante es la dificultad para aplicar buenas prácticas de ingeniería de software dentro de Jupyter, como la modularización del código, el uso de pruebas unitarias, la depuración estructurada o la integración continua. Estas prácticas son fundamentales cuando se trabaja con robots, dado que permiten garantizar fiabilidad, trazabilidad y facilidad de mantenimiento.
 
-
-\begin{itemize}
-	\item{Detección de una única fresa con luz natural de día:} 
-	\item{Detección de varias fresas con luz natural de día:}
-	\item{Detección de una única fresa con luz artifical de día:} 
-	\item{Detección de varias fresas con luz artifical de día:} 
-	\item{Detección de una única fresa con luz artifical de noche:}
-	\item{Detección de varias fresas con luz artifical de noche:} 
-
-\end{itemize}
-
+Por todas estas razones, aunque Jupyter puede ser muy útil durante las fases iniciales del desarrollo para validar algoritmos de visión o procesado de datos, la implementación definitiva de un sistema conectado a un robot debe realizarse mediante scripts de Python. Esta elección permite un mayor control sobre el flujo de ejecución, una integración más sencilla en sistemas de control y producción, y una mayor robustez operativa, aspectos esenciales en el desarrollo de aplicaciones robóticas fiables.
 
 
 
