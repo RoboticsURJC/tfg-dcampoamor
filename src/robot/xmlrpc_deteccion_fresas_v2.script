@@ -1,0 +1,1053 @@
+def xmlrpc_deteccion_fresas_v2():
+  global _hidden_verificationVariable=0
+  step_count_16af2a5c_bdf8_4c4a_af84_5ee9c6afe910 = 0.0
+  thread Step_Counter_Thread_08b3a30e_afce_4d7a_9ffd_b9adba615eb0():
+    while (True):
+      step_count_16af2a5c_bdf8_4c4a_af84_5ee9c6afe910 = step_count_16af2a5c_bdf8_4c4a_af84_5ee9c6afe910 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_08b3a30e_afce_4d7a_9ffd_b9adba615eb0()
+  set_tool_communication(True, 1000000, 2, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(24)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_tcp(p[0.0,0.0,0.02,0.0,0.0,0.0])
+  set_safety_mode_transition_hardness(1)
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  set_gravity([0.0, 0.0, 9.82])
+  modbus_add_signal("192.168.1.4", 255, 0, 3, "txModo", False)
+  modbus_set_signal_update_frequency("txModo", 10)
+  modbus_add_signal("192.168.1.4", 255, 1, 3, "txColor", False)
+  modbus_set_signal_update_frequency("txColor", 10)
+  modbus_add_signal("192.168.1.4", 255, 2, 2, "pulsador", False)
+  modbus_set_signal_update_frequency("pulsador", 10)
+  modbus_set_runstate_dependent_choice("txModo",0)
+  modbus_set_runstate_dependent_choice("txColor",0)
+  global Plano_1=p[0.3471627555008302,0.3746302081793512,0.34478763237354854,-1.4646301359313476,0.6851424550031726,-0.679691695663605]
+  global Punto_1=p[0.35310763972164344,-0.01597843807451954,0.23102503398344604,2.4878791567183596,-1.8987733984366406,-0.039836129150563275]
+  global mesa=p[0.1871761156701295,-0.31783622058388133,-0.10714189364497986,-0.001364771882183871,-0.002191891524872315,2.6543955623490345]
+  # begin: URCap Installation Node
+  #   Source: UR Connect, 1.13.79, Universal Robots
+  #   Type: UR Connect
+  myurRPC = rpc_factory("xmlrpc","http://127.0.0.1:40474")
+  # end: URCap Installation Node
+  # begin: URCap Installation Node
+  #   Source: OnRobot, 6.3.1, OnRobot A/S
+  #   Type: Configuración de OnRobot
+  sleep(1)
+  if (False):
+  end
+  ON_CONN_SHIFT_BOOL = 64
+  ON_CONN_SHIFT_INT = 24
+  ON_CONN_SHIFT_FLOAT = 24
+  ON_CONN_REG_SUM_BOOL = 0
+  ON_CONN_REG_SUM_INT = 1
+  ON_CONN_REG_SUM_FLOAT = 0
+  ON_TOOL_SHIFT_BOOL = 64
+  ON_TOOL_SHIFT_INT = 25
+  ON_TOOL_SHIFT_FLOAT = 24
+  ON_TOOL_SHIFT_BOOL_ARR = [64, 64, 64]
+  ON_TOOL_SHIFT_INT_ARR = [25, 25, 25]
+  ON_TOOL_SHIFT_FLOAT_ARR = [24, 24, 24]
+  ON_TOOL_REG_SUM_BOOL = 0
+  ON_TOOL_REG_SUM_INT = 0
+  ON_TOOL_REG_SUM_FLOAT = 0
+  ON_REGISTERS_SPEEDL_FLOAT = 0
+  ON_REG_USE_TOOL = False
+  ON_DI_SINGLE = 0
+  ON_DI_PRIMARY = 1
+  ON_DI_SECONDARY = 2
+  ON_DI_DUAL = 3
+  on_robot_type = 3
+  on_robot_cycle = 2.0
+  on_conn_ip = "localhost"
+  on_tool_ip = "localhost"
+  on_device_socket_port = 51234
+  on_conn_xmlrpc = rpc_factory("xmlrpc", "http://localhost:41414")
+  on_tool_xmlrpc = rpc_factory("xmlrpc", "http://localhost:41414")
+  on_RPC = rpc_factory("xmlrpc", "http://127.0.0.1:31416")
+  ON_DEBUG_LOG = False
+  on_isMetric = True
+  on_toolConnector = True
+  on_ioqc = False
+  on_dual = False
+  on_computebox = False
+  on_devices = 0
+  on_gripper = [False, False, False]
+  on_custom_tcp_id = "none"
+  on_custom_tcp_enabled = False
+  speedlTime = 0.002
+  on_ft = False
+  #======    OnRobot Globals    ======#
+  
+  ON_MATH_PI=3.141593
+  ON_ZEROPOSE=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  ON_ZEROFRAME=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  ON_ZERO3D=[0.0,0.0,0.0]
+  ON_ZERO6D=[0.0,0.0,0.0,0.0,0.0,0.0]
+  ON_ZERO8D=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+  ON_FALSE3D=[False,False,False]
+  ON_FALSE6D=[False,False,False,False,False,False]
+  ON_FALSE8D=[False,False,False,False,False,False,False,False]
+  ON_DEFAULT_TRANSITION_TIME=0.15
+  global on_return=0
+  on_speedL=ON_ZERO6D
+  on_speedBase=ON_ZERO6D
+  on_speedVect=ON_ZERO6D
+  on_speedExtra=ON_ZERO6D
+  on_speedCB=ON_ZERO6D
+  on_speedGecko=ON_ZERO6D
+  on_RTDE_error=0
+  on_RTDE_tool_error=0
+  on_dataProcess_thrd=0
+  ON_DEVICE_ID_MISSING=0
+  ON_INIT_WATCHDOG_HZ=5
+  ON_INIT_TIMEOUT=2000
+  on_robot_TCP_offset=ON_ZEROFRAME
+  on_tcp_offset_actual=ON_ZEROFRAME
+  on_cog_actual=ON_ZEROFRAME
+  on_mass_actual=0.0
+  on_transition_time=ON_DEFAULT_TRANSITION_TIME
+  on_robot_mount=[0.0,0.0]
+  
+  #======    End of OnRobot Globals    ======#
+  #======    OnRobot Interface Messages    ======#
+  
+  on_devices_primary_log="Dispositivos de OnRobot"
+  on_devices_secondary_log="Dispositivo secundario de OnRobot"
+  on_program_halted="<br>Programa detenido."
+  on_device_error_title="OnRobot - Error de dispositivo"
+  on_install_error="La configuración de OnRobot no es correcta.<br>Compruebe el estado en la página de configuración de OnRobot, en la pestaña de instalación.<br>Programa detenido."
+  on_device_missing="No hay ningún dispositivo conectado.<br>Programa detenido."
+  cb_device_missing="No hay ninguna Compute Box de OnRobot conectada.<br>Programa detenido."
+  ft_device_missing="No se ha detectado ningún sensor FT ni ninguna licencia de OnRobot.<br>Programa detenido."
+  hex_device_missing="No hay ningún sensor HEX conectado.<br>Programa detenido."
+  rg2ft_device_missing="No hay ninguna pinza RG2-FT conectada.<br>Programa detenido."
+  rg_device_missing="No hay ninguna pinza RG conectada.<br>Programa detenido."
+  vg_device_missing="No hay ninguna pinza VG conectada.<br>Programa detenido."
+  gg_device_missing="No hay ninguna Gecko Gripper conectada.<br>Programa detenido."
+  sg_device_missing="No hay ninguna Soft Gripper conectada.<br>Programa detenido."
+  tfg_device_missing="No hay ninguna pinza 3FG conectada.<br>Programa detenido."
+  sdr_device_missing="No hay ninguna OnRobot Sander conectada.<br>Programa detenido."
+  twofg_device_missing="No hay ninguna pinza 2FG conectada.<br>Programa detenido."
+  vgp_device_missing="No hay ninguna pinza VGP conectada.<br>Programa detenido."
+  mg_device_missing="No hay ninguna Magnetic Gripper conectada.<br>Programa detenido."
+  fgp_device_missing="No hay ninguna pinza 2FGP20 conectada.<br>Programa detenido."
+  eyes_device_missing="No hay ningún OnRobot Eyes conectado.<br>Programa detenido."
+  on_xmlrpc_start_ip="Conexión al servidor XML-RPC de OnRobot:"
+  on_java_comm_error_textmsg_title="OnRobot - Error de comunicación:"
+  on_java_comm_controlsocket_open_error="Apertura de la toma 'javaSocket' incorrecta."
+  on_java_comm_error_title="OnRobot - Error de comunicación"
+  on_java_comm_socket_open_error="El establecimiento de la conexión con el URCap ha excedido el tiempo.<br>Compruebe el estado en la página de configuración de OnRobot, en la pestaña de instalación.<br>Programa detenido."
+  on_rtde_feed_error_textmsg_title="OnRobot - Error RTDE:"
+  on_rtde_feed_error="Error de alimentación RTDE. Discrepancia en el recuento de dispositivos de OnRobot.<br>Programa detenido."
+  on_rtde_feed_tool_error="Error de alimentación RTDE de la herramienta. Discrepancia en el recuento de dispositivos de OnRobot.<br>Programa detenido."
+  on_rtde_feed_open_error_textmsg="Apertura de la toma 'rtdeFeed' incorrecta."
+  on_rtde_feed_error_title="OnRobot - Error RTDE"
+  on_rtde_feed_count_error="Detección de configuración de desplazamiento RTDE no válida. Compruebe los desplazamientos RTDE en la página de configuración de OnRobot en la pestaña de instalación.<br>Programa detenido."
+  on_rtde_feed_open_error="El establecimiento de la conexión con los dispositivos ha excedido el tiempo.<br>Asegúrese de que los dispositivos de OnRobot funcionen y compruebe el estado en la página de configuración de OnRobot, en la pestaña de instalación."
+  
+  #======    End of OnRobot Interface Messages    ======#
+  #======    OnRobot Interface    ======#
+  
+  on_portopened_javaSocket=False
+  on_rtde_feed_opened=False
+  on_dataProcess_running=False
+  def on_missing():
+  popup(on_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def cb_missing():
+  popup(cb_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def ft_missing():
+  popup(ft_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def hex_missing():
+  popup(hex_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def rg2ft_missing():
+  popup(rg2ft_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def rg_missing():
+  popup(rg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def vg_missing():
+  popup(vg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def gg_missing():
+  popup(gg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def sg_missing():
+  popup(sg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def tfg_missing():
+  popup(tfg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def sdr_missing():
+  popup(sdr_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def twofg_missing():
+  popup(twofg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def vgp_missing():
+  popup(vgp_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def mg_missing():
+  popup(mg_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def fgp_missing():
+  popup(fgp_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def eyes_missing():
+  popup(eyes_device_missing,title=on_device_error_title,error=True,blocking=False)
+  halt
+  end 
+  def on_portclose_javaSocket():
+  socket_close("javaSocket")
+  on_portopened_javaSocket=False
+  end 
+  def on_portopen_javaSocket():
+  on_portclose_javaSocket()
+  on_portopened_javaSocket=socket_open("127.0.0.1",44005,"javaSocket")
+  if not on_portopened_javaSocket:
+  textmsg(on_java_comm_error_textmsg_title,on_java_comm_controlsocket_open_error)
+  popup(on_java_comm_socket_open_error,title=on_java_comm_error_title,error=True,blocking=False)
+  halt
+  end 
+  end 
+  on_conn_rtde_feed_name="rtdeFeedConn"
+  on_tool_rtde_feed_name="rtdeFeedTool"
+  def on_rtde_feed_close(rtdeFeedName):
+  socket_close(rtdeFeedName)
+  on_rtde_feed_opened=False
+  end 
+  def on_rtde_feed_open(deviceIP,rtdeFeedName,regStart,regSum,regSpeedl):
+  on_rtde_feed_close(rtdeFeedName)
+  if((regStart[0]+regSum[0])>128)or((regStart[1]+regSum[1])>48)or((regStart[2]+regSum[2])>48):
+  popup(on_rtde_feed_count_error,title=on_rtde_feed_error_title,error=True,blocking=False)
+  textmsg(str_cat("RegStart: ",regStart),str_cat("  -  RegSum: ",regSum))
+  halt
+  end 
+  on_rtde_feed_opened=socket_open(deviceIP,on_device_socket_port,rtdeFeedName)
+  if not on_rtde_feed_opened:
+  on_rtde_feed_opened=socket_open(deviceIP,on_device_socket_port,rtdeFeedName)
+  end 
+  if not on_rtde_feed_opened:
+  textmsg(on_rtde_feed_error_textmsg_title,on_rtde_feed_open_error_textmsg)
+  popup(on_rtde_feed_open_error,title=on_rtde_feed_error_title,error=True,blocking=False)
+  halt
+  end 
+  socket_send_int(regStart[0],rtdeFeedName)
+  socket_send_int(regSum[0],rtdeFeedName)
+  socket_send_int(regStart[1],rtdeFeedName)
+  socket_send_int(regSum[1],rtdeFeedName)
+  socket_send_int(regStart[2],rtdeFeedName)
+  socket_send_int(regSum[2],rtdeFeedName)
+  socket_send_int(regSpeedl,rtdeFeedName)
+  socket_send_int(on_devices,rtdeFeedName)
+  end 
+  def on_dataRead():
+  enter_critical
+  on_RTDE_error=read_input_integer_register(ON_CONN_SHIFT_INT)
+  if(ON_REG_USE_TOOL):
+  on_RTDE_tool_error=read_input_integer_register(ON_TOOL_SHIFT_INT_ARR[0])
+  end
+  exit_critical
+  end 
+  def on_set_rtde_watchdog(updateHz=ON_INIT_WATCHDOG_HZ):
+  local effect="stop"
+  if(updateHz<1):
+  effect="ignore"
+  end 
+  watchdog_conn_reg_str=str_cat("input_int_register_",ON_CONN_SHIFT_INT)
+  rtde_set_watchdog(watchdog_conn_reg_str,updateHz,effect)
+  if(ON_REG_USE_TOOL):
+  watchdog_tool_reg_str=str_cat("input_int_register_",ON_TOOL_SHIFT_INT_ARR[0])
+  rtde_set_watchdog(watchdog_tool_reg_str,updateHz,effect)
+  end 
+  if ON_DEBUG_LOG:
+  local update_str=str_cat(" "+effect+" watchdog set to [Hz]: ",updateHz)
+  textmsg(watchdog_conn_reg_str,update_str)
+  if(ON_REG_USE_TOOL):
+  local update_str=str_cat(" "+effect+" watchdog set to [Hz]: ",updateHz)
+  textmsg(watchdog_tool_reg_str,update_str)
+  end 
+  end 
+  end 
+  def on_speedCB_get():
+  return[on_speedCB[0],on_speedCB[1],on_speedCB[2],on_speedCB[3],on_speedCB[4],on_speedCB[5]]
+  end 
+  def on_speedGecko_get():
+  local speedExtra=ON_ZERO6D
+  if on_speedl_for_gecko:
+  speedExtra=[on_speedGecko[0],on_speedGecko[1],on_speedGecko[2],on_speedGecko[3],on_speedGecko[4],on_speedGecko[5]]
+  end 
+  return speedExtra
+  end 
+  def on_speedGecko_set(speedGecko):
+  on_speedGecko=[speedGecko[0],speedGecko[1],speedGecko[2],speedGecko[3],speedGecko[4],speedGecko[5]]
+  end 
+  thread on_dataProcess_thread():
+  if ON_DEBUG_LOG:
+  textmsg("Starting on_dataRead thread")
+  end 
+  local error=False
+  on_dataProcess_running=True
+  sync()
+  while on_dataProcess_running:
+  sync()
+  on_dataRead()
+  error=on_error((on_RTDE_error<0),on_rtde_feed_error,on_rtde_feed_error_title,error)
+  error=on_error((ON_REG_USE_TOOL and(on_RTDE_tool_error<0)),on_rtde_feed_tool_error,on_rtde_feed_error_title,error)
+  on_dataProcess_running=not error
+  end 
+  if error:
+  halt
+  end 
+  if ON_DEBUG_LOG:
+  textmsg("Stopping on_dataRead thread")
+  end 
+  end 
+  thread on_set_watchdog_thread():
+  sleep(2)
+  on_set_rtde_watchdog(updateHz=ON_INIT_WATCHDOG_HZ)
+  sleep(1/ON_INIT_WATCHDOG_HZ)
+  on_dataProcess_running=False
+  kill on_dataProcess_thrd
+  end 
+  
+  #======    End of OnRobot Interface    ======#
+  #======    OnRobot QC Setup Tool Connector    ======#
+  
+  def tc_setup_tool():
+  if ON_DEBUG_LOG:
+  textmsg("QC Setup Tool Connector start...")
+  end 
+  set_tool_voltage(24)
+  
+  set_tool_communication(True,1000000,2,1,1.5,3.5)
+  
+  if ON_DEBUG_LOG:
+  textmsg("QC Setup Tool Connector end.")
+  end 
+  end 
+  
+  #======    End of OnRobot QC Setup Tool Connector    ======#
+  #======    OnRobot TCP Messages    ======#
+  
+  on_tcp_log_msg_default="OnRobot: Desplazamiento del TCP del robot establecido en:"
+  on_tcp_log_msg_primary="OnRobot: Desplazamiento del TCP del robot establecido en primario:"
+  on_tcp_log_msg_secondary="OnRobot: Desplazamiento del TCP del robot establecido en secundario:"
+  
+  #======    End of OnRobot TCP Messages    ======#
+  #======    OnRobot TCP    ======#
+  
+  on_tcp_offset_actual=ON_ZEROFRAME
+  on_tcp_offset_primary=ON_ZEROFRAME
+  on_tcp_static_primary=ON_ZEROFRAME
+  on_tcp_dynamic_primary=ON_ZEROFRAME
+  on_tcp_adapters=ON_ZEROFRAME
+  on_tcp_qc_primary=ON_ZEROFRAME
+  on_tcp_base_primary=ON_ZEROFRAME
+  on_tcp_gripper_static_primary=ON_ZEROFRAME
+  on_tcp_workpiece_primary=ON_ZEROFRAME
+  on_tcp_gripper_dynamic_primary=ON_ZEROFRAME
+  on_tcp_gripper_primary=ON_ZEROFRAME
+  on_tcp_offset_secondary=ON_ZEROFRAME
+  on_tcp_static_secondary=ON_ZEROFRAME
+  on_tcp_dynamic_secondary=ON_ZEROFRAME
+  on_tcp_qc_secondary=ON_ZEROFRAME
+  on_tcp_base_secondary=ON_ZEROFRAME
+  on_tcp_gripper_static_secondary=ON_ZEROFRAME
+  on_tcp_workpiece_secondary=ON_ZEROFRAME
+  on_tcp_gripper_dynamic_secondary=ON_ZEROFRAME
+  on_tcp_gripper_secondary=ON_ZEROFRAME
+  on_tcp_custom_preset_assigned=False
+  on_tcp_custom_preset=ON_ZEROFRAME
+  def on_tcp_init_adapters():
+  if ON_DEBUG_LOG:
+  textmsg("TCP Init Adapters start..")
+  end 
+  enter_critical
+  on_tcp_adapters=ON_ZEROFRAME
+  local adapterCount=length(on_tcp_adapters_array)
+  local i=0
+  while(i<adapterCount):
+  on_tcp_adapters=pose_trans(on_tcp_adapters,on_tcp_adapters_array[i])
+  i=i+1
+  end
+  exit_critical
+  if ON_DEBUG_LOG:
+  textmsg("TCP Init Adapters end.")
+  end 
+  end 
+  def on_tcp_update_primary():
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Primary start..")
+  end 
+  on_tcp_gripper_dynamic_primary=p[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  enter_critical
+  on_tcp_dynamic_primary=pose_trans(on_tcp_static_primary,on_tcp_gripper_dynamic_primary)
+  on_tcp_offset_primary=pose_trans(on_tcp_dynamic_primary,on_tcp_workpiece_primary)
+  exit_critical
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Primary end.")
+  end 
+  end 
+  def on_tcp_init_primary():
+  if ON_DEBUG_LOG:
+  textmsg("TCP Init Primary start..")
+  end 
+  enter_critical
+  on_tcp_base_primary=pose_trans(on_tcp_adapters,on_tcp_qc_primary)
+  on_tcp_static_primary=pose_trans(on_tcp_base_primary,on_tcp_gripper_static_primary)
+  exit_critical
+  on_tcp_update_primary()
+  if ON_DEBUG_LOG:
+  textmsg("TCP Init Primary end.")
+  end 
+  end 
+  def on_tcp_offset_set(TCP_offset):
+  if ON_DEBUG_LOG:
+  textmsg("TCP Offset set started!")
+  end 
+  on_tcp_offset_send(TCP_offset)
+  if(on_follow_tcp):
+  set_tcp(TCP_offset)
+  end 
+  on_robot_TCP_offset=TCP_offset
+  if ON_DEBUG_LOG:
+  textmsg("TCP Offset set to: ",on_robot_TCP_offset)
+  end 
+  end 
+  def on_tcp_offset_forced_set_actual(isPrimary=True):
+  if(not on_follow_tcp):
+  
+  local tcp_log_msg=on_tcp_log_msg_default
+  
+  textmsg(tcp_log_msg,on_tcp_offset_actual)
+  set_tcp(on_tcp_offset_actual)
+  end 
+  end 
+  def on_tcp_update(isPrimary=True):
+  on_tcp_update_primary()
+  
+  on_tcp_set_actual_to(isPrimary)
+  end 
+  def on_tcp_set_actual_to(isPrimary=True):
+  
+  on_tcp_offset_actual=on_tcp_offset_primary
+  if(on_follow_tcp):
+  textmsg(on_tcp_log_msg_default,on_tcp_offset_actual)
+  end 
+  
+  on_tcp_active_is_primary=isPrimary
+  on_tcp_offset_set(on_tcp_offset_actual)
+  end 
+  def on_tcp_update_workpiece_primary(workpiece_offset):
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Tool Primary start..")
+  end 
+  on_tcp_workpiece_primary=workpiece_offset
+  on_tcp_update_primary()
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Tool Primary end.")
+  end 
+  end 
+  def on_tcp_workpiece_rpy_get(xyz=[0.0,0.0,0.0],rpy=[0.0,0.0,0.0]):
+  local rotvec=rpy2rotvec(rpy)
+  local workpiece_offset=p[xyz[0],xyz[1],xyz[2],rotvec[0],rotvec[1],rotvec[2]]
+  return workpiece_offset
+  end 
+  
+  def on_tcp_update_workpiece(workpiece_offset,tool_index=0):
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Tool start..")
+  end 
+  if(tool_index!=ON_DI_SECONDARY):
+  on_tcp_update_workpiece_primary(workpiece_offset)
+  local isPrimary=True
+  
+  end 
+  on_tcp_set_actual_to(isPrimary)
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Tool end.")
+  end 
+  end 
+  def on_get_tcp_for(tool_index):
+  if tool_index==ON_DI_SECONDARY:
+  local actual_tcp=on_tcp_static_secondary
+  else:
+  local actual_tcp=on_tcp_static_primary
+  end 
+  return actual_tcp
+  end 
+  def on_tcp_custom_unused():
+  return ON_ZEROFRAME
+  end 
+  def on_tcp_update_custom():
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Custom start..")
+  end 
+  if(on_custom_tcp_enabled):
+  on_tcp_custom_unused()
+  on_tcp_custom_unused()
+  on_tcp_custom_unused()
+  on_tcp_custom_unused()
+  
+  end 
+  if ON_DEBUG_LOG:
+  textmsg("TCP Update Custom end.")
+  end 
+  end 
+  
+  #======    End of OnRobot TCP    ======#
+  #======    OnRobot Payload Messages    ======#
+  
+  on_mass_log_msg="OnRobot: Masa de la carga útil del robot establecida en:"
+  on_cog_log_msg="OnRobot: Centro de gravedad de la carga útil del robot establecido en:"
+  
+  #======    End of OnRobot Payload Messages    ======#
+  #======    OnRobot Payload    ======#
+  
+  on_cog_actual=ON_ZEROFRAME
+  on_mass_actual=0.0
+  on_cog_primary=ON_ZEROFRAME
+  on_cog_L1L2_primary=ON_ZEROFRAME
+  on_mass_primary=0.0
+  on_mass_L1L2_primary=0.0
+  on_cog_adapters=ON_ZEROFRAME
+  on_cog_qc_primary=ON_ZEROFRAME
+  on_cog_base_primary=ON_ZEROFRAME
+  on_cog_gripper_primary=ON_ZEROFRAME
+  on_cog_workpiece_primary=ON_ZEROFRAME
+  on_mass_adapters=0.0
+  on_mass_qc_primary=0.0
+  on_mass_base_primary=0.0
+  on_mass_gripper_primary=0.0
+  on_mass_workpiece_primary=0.0
+  on_cog_secondary=ON_ZEROFRAME
+  on_mass_secondary=0.0
+  on_cog_gripper_secondary=ON_ZEROFRAME
+  on_mass_gripper_secondary=0.0
+  on_cog_workpiece_secondary=ON_ZEROFRAME
+  on_mass_workpiece_secondary=0.0
+  ON_LB2KG001=0.45359237/100
+  def on_payload_init_adapters():
+  if ON_DEBUG_LOG:
+  textmsg("TCP Init Adapters start..")
+  end 
+  enter_critical
+  on_cog_adapters=ON_ZEROFRAME
+  on_mass_adapters=0.0
+  local massLAL0Ratio=0
+  local adapterAbsCOG=ON_ZEROFRAME
+  local tcp_adapter_offset=ON_ZEROFRAME
+  local adapterCount=length(on_tcp_adapters_array)
+  local i=0
+  while(i<adapterCount):
+  on_mass_adapters=on_mass_adapters+on_mass_adapters_array[i]
+  if(on_mass_adapters<=0):
+  massLAL0Ratio=0
+  else:
+  massLAL0Ratio=on_mass_adapters_array[i]/on_mass_adapters
+  end
+  adapterAbsCOG=pose_trans(tcp_adapter_offset,on_tcp_adapters_array[i])
+  adapterAbsCOG=p[adapterAbsCOG[0],adapterAbsCOG[1],adapterAbsCOG[2],0.0,0.0,0.0]
+  on_cog_adapters=interpolate_pose(on_cog_adapters,adapterAbsCOG,massLAL0Ratio)
+  on_cog_adapters=p[on_cog_adapters[0],on_cog_adapters[1],on_cog_adapters[2],0.0,0.0,0.0]
+  tcp_adapter_offset=pose_trans(tcp_adapter_offset,on_tcp_adapters_array[i])
+  i=i+1
+  sync()
+  end
+  exit_critical
+  if ON_DEBUG_LOG:
+  textmsg("TCP Init Adapters end.")
+  end 
+  end 
+  def on_payload_update_primary():
+  if ON_DEBUG_LOG:
+  textmsg("Payload Update Primary start..")
+  end 
+  enter_critical
+  on_mass_primary=on_mass_L1L2_primary+on_mass_workpiece_primary
+  local massL1L2L3Ratio=on_mass_workpiece_primary/on_mass_primary
+  local workpieceAbsCOG=pose_trans(on_tcp_dynamic_primary,on_cog_workpiece_primary)
+  workpieceAbsCOG=p[workpieceAbsCOG[0],workpieceAbsCOG[1],workpieceAbsCOG[2],0.0,0.0,0.0]
+  on_cog_primary=interpolate_pose(on_cog_L1L2_primary,workpieceAbsCOG,massL1L2L3Ratio)
+  on_cog_primary=p[on_cog_primary[0],on_cog_primary[1],on_cog_primary[2],0.0,0.0,0.0]
+  exit_critical
+  if ON_DEBUG_LOG:
+  textmsg("Payload Update Primary end.")
+  end 
+  end 
+  def on_payload_init_primary():
+  if ON_DEBUG_LOG:
+  textmsg("Payload Init Primary start..")
+  end 
+  enter_critical
+  on_mass_base_primary=on_mass_adapters+on_mass_qc_primary
+  local massL0L1Ratio=on_mass_qc_primary/on_mass_base_primary
+  on_mass_L1L2_primary=on_mass_base_primary+on_mass_gripper_primary
+  local massL1L2Ratio=on_mass_gripper_primary/on_mass_L1L2_primary
+  local qcAbsCOG=pose_trans(on_tcp_adapters,on_cog_qc_primary)
+  qcAbsCOG=p[qcAbsCOG[0],qcAbsCOG[1],qcAbsCOG[2],0.0,0.0,0.0]
+  on_cog_base_primary=interpolate_pose(on_cog_adapters,qcAbsCOG,massL0L1Ratio)
+  on_cog_base_primary=p[on_cog_base_primary[0],on_cog_base_primary[1],on_cog_base_primary[2],0.0,0.0,0.0]
+  local gripperAbsCOG=pose_trans(on_tcp_base_primary,on_cog_gripper_primary)
+  gripperAbsCOG=p[gripperAbsCOG[0],gripperAbsCOG[1],gripperAbsCOG[2],0.0,0.0,0.0]
+  on_cog_L1L2_primary=interpolate_pose(on_cog_base_primary,gripperAbsCOG,massL1L2Ratio)
+  on_cog_L1L2_primary=p[on_cog_L1L2_primary[0],on_cog_L1L2_primary[1],on_cog_L1L2_primary[2],0.0,0.0,0.0]
+  exit_critical
+  on_payload_update_primary()
+  if ON_DEBUG_LOG:
+  textmsg("Payload Init Primary end.")
+  end 
+  end 
+  def on_payload_update():
+  on_payload_update_primary()
+  
+  on_mass_actual =on_mass_primary
+  on_cog_actual=on_cog_primary
+  
+  on_payload_set_actual()
+  end 
+  def on_payload_set_actual():
+  
+  on_mass_actual =on_mass_primary
+  on_cog_actual=on_cog_primary
+  
+  local CoG=[on_cog_actual[0],on_cog_actual[1],on_cog_actual[2]]
+  on_payload_set(on_mass_actual,CoG)
+  end 
+  def on_payload_update_workpiece_primary(workpiece_mass=0,workpiece_cog=[0.0,0.0,0.0]):
+  if ON_DEBUG_LOG:
+  textmsg("Payload Update Workpiece Primary start..")
+  end 
+  on_cog_workpiece_primary=p[workpiece_cog[0],workpiece_cog[1],workpiece_cog[2],0.0,0.0,0.0]
+  on_mass_workpiece_primary=workpiece_mass
+  on_payload_update_primary()
+  if ON_DEBUG_LOG:
+  textmsg("Payload Update Workpiece Primary end.")
+  end 
+  end 
+  def on_payload_set(mass,CoG):
+  if ON_DEBUG_LOG:
+  textmsg("Payload set started!")
+  end 
+  local center_of_gravity=[CoG[0],CoG[1],CoG[2]]
+  on_payload_send(center_of_gravity,mass)
+  if(on_isMetric):
+  local roundedMass=floor(mass*100+0.5)/100
+  else:
+  local roundedMass=floor(mass/ON_LB2KG001+0.5)*ON_LB2KG001
+  end 
+  
+  set_target_payload(roundedMass,center_of_gravity,inertia=[0,0,0,0,0,0],transition_time=on_transition_time)
+  on_transition_time=ON_DEFAULT_TRANSITION_TIME
+  
+  on_mass_actual=roundedMass
+  on_cog_actual=p[CoG[0],CoG[1],CoG[2],0.0,0.0,0.0]
+  if ON_DEBUG_LOG:
+  textmsg("Payload mass, CoG set to: ",str_cat(str_cat(mass,", "),CoG))
+  end 
+  end 
+  
+  def on_payload_update_secondary():
+  end 
+  def on_payload_init_secondary():
+  end 
+  
+  def on_payload_update_workpiece(workpiece_mass,workpiece_cog=[0.0,0.0,0.0],tool_index=0):
+  if ON_DEBUG_LOG:
+  textmsg("Payload Update Workpiece start..")
+  end 
+  if(tool_index!=ON_DI_SECONDARY):
+  on_cog_workpiece_primary=p[workpiece_cog[0],workpiece_cog[1],workpiece_cog[2],0.0,0.0,0.0]
+  on_mass_workpiece_primary=workpiece_mass
+  else:
+  on_cog_workpiece_secondary=p[workpiece_cog[0],workpiece_cog[1],workpiece_cog[2],0.0,0.0,0.0]
+  on_mass_workpiece_secondary=workpiece_mass
+  end 
+  on_payload_update()
+  if ON_DEBUG_LOG:
+  textmsg("Payload Update Workpiece end.")
+  end 
+  end 
+  def on_payload_get_cog2tcp_workpiece(tool_index=0):
+  if(tool_index!=ON_DI_SECONDARY):
+  local cog_tool=[on_tcp_workpiece_primary[0],on_tcp_workpiece_primary[1],on_tcp_workpiece_primary[2]]
+  else:
+  local cog_tool=[on_tcp_workpiece_secondary[0],on_tcp_workpiece_secondary[1],on_tcp_workpiece_secondary[2]]
+  end 
+  return cog_tool
+  end 
+  
+  #======    End of OnRobot Payload    ======#
+  #======    OnRobot QC TCP    ======#
+  
+  onrobotmini=0
+  
+  def on_tcp_offset_send(TCP_offset):
+  on_robot_TCP_offset=TCP_offset
+  end 
+  def on_payload_send(CoG,mass):
+  on_robot_payload_cog=CoG
+  on_robot_payload_mass=mass
+  end 
+  
+  
+  #======    End of OnRobot QC TCP    ======#
+  #======    OnRobot  Speedl    ======#
+  
+  on_speedl_thread_handler=0
+  on_speedl_is_enabled=False
+  on_speedl_is_running=False
+  on_speedl_acc=0.0
+  ft_speedl_hg_caranteen_reached=False
+  ft_speedl_hg_caranteen_safemode=False
+  on_speedl_for_ftcontrol=False
+  on_speedl_for_move=False
+  on_speedl_for_handguide=False
+  on_speedl_for_insertpart=False
+  on_speedl_for_depthcompensation=False
+  on_speedl_for_center=False
+  on_speedl_for_gecko=False
+  on_speedl_acc=10000.0 
+  on_speedl_acc_to_zero=3.0 
+  ON_SPEEDL_FTCONTROL=1
+  ON_SPEEDL_HANDGUIDE=2
+  ON_SPEEDL_TRAJECTORY=3
+  ON_SPEEDL_MOVE=ON_SPEEDL_TRAJECTORY
+  ON_SPEEDL_INSERTPART=4
+  ON_SPEEDL_DEPTHCOMP=5
+  ON_SPEEDL_CENTER=6
+  ON_SPEEDL_GECKO=7
+  def on_wait_ms(time_ms):
+  local sync_time=ceil(norm(time_ms/2.0))
+  while(sync_time>0):
+  sync_time=sync_time-1
+  sync()
+  end
+  end 
+  def on_error(status_flag,message,title,stop_var=False):
+  if(status_flag):
+  popup(message,title=title,error=True,blocking=False)
+  stop_var=True
+  textmsg(title+": ",message)
+  end 
+  return stop_var
+  end 
+  def on_warning(status_flag,message,title,isPopupNeeded=False,is_shown=False):
+  if(status_flag):
+  if(not is_shown):
+  if(isPopupNeeded):
+  popup(message,title=title,warning=True,blocking=False)
+  else:
+  textmsg(title+": ",message)
+  end 
+  is_shown=True
+  end 
+  else:
+  is_shown=False
+  end 
+  return is_shown
+  end 
+  def on_speedl_add_extra(speedBase,speedExtra):
+  speedSum=ON_ZERO6D
+  speedBaseP=p[speedBase[0],speedBase[1],speedBase[2],speedBase[3],speedBase[4],speedBase[5]]
+  speedExtraP=p[speedExtra[0],speedExtra[1],speedExtra[2],speedExtra[3],speedExtra[4],speedExtra[5]]
+  speedSumP=pose_add(speedExtraP,speedBaseP)
+  speedSum=[speedSumP[0],speedSumP[1],speedSumP[2],speedSumP[3],speedSumP[4],speedSumP[5]]
+  return speedSum
+  end 
+  
+  thread on_speedl_thread():
+  if ON_DEBUG_LOG:
+  textmsg("Speedl thread started..")
+  end 
+  enter_critical
+  on_speedl_is_running=True
+  on_speedl_is_enabled=True
+  exit_critical
+  on_speedL=ON_ZERO6D
+  on_speedL_last=ON_ZERO6D
+  
+  while on_speedl_is_running:
+  on_speedBase=on_speedCB_get()
+  on_speedL=on_speedBase
+  
+  
+  if on_speedl_is_enabled:
+  if(on_speedL==ON_ZERO6D):
+  on_speedL=[on_speedL_last[0]/100,on_speedL_last[1]/100,on_speedL_last[2]/100,on_speedL_last[3]/100,on_speedL_last[4]/100,on_speedL_last[5]/100]
+  end
+  speedl(on_speedL,a=on_speedl_acc,t=speedlTime)
+  else:
+  speedl(ON_ZERO6D,a=on_speedl_acc_to_zero,t=speedlTime)
+  end 
+  on_speedL_last=on_speedL
+  end 
+  
+  on_speedL=ON_ZERO6D
+  if ON_DEBUG_LOG:
+  textmsg("Speedl thread ended.")
+  end 
+  end 
+  def on_speedl_integer_get():
+  local speedl_integer=binary_list_to_integer([on_speedl_for_ftcontrol,on_speedl_for_handguide,on_speedl_for_move,on_speedl_for_insertpart,on_speedl_for_depthcompensation,on_speedl_for_center,on_speedl_for_gecko])
+  return speedl_integer
+  end 
+  def on_speedl_start_for(speedl_id):
+  if(speedl_id==ON_SPEEDL_FTCONTROL):
+  on_speedl_for_ftcontrol=True
+  elif(speedl_id==ON_SPEEDL_HANDGUIDE):
+  on_speedl_for_handguide=True
+  elif(speedl_id==ON_SPEEDL_TRAJECTORY):
+  on_speedl_for_move=True
+  elif(speedl_id==ON_SPEEDL_INSERTPART):
+  on_speedl_for_insertpart=True
+  elif(speedl_id==ON_SPEEDL_DEPTHCOMP):
+  on_speedl_for_depthcompensation=True
+  elif(speedl_id==ON_SPEEDL_CENTER):
+  on_speedl_for_center=True
+  elif(speedl_id==ON_SPEEDL_GECKO):
+  on_speedl_for_gecko=True
+  else:
+  textmsg("Unknown Start speedl ID received: ",speedl_id)
+  end 
+  local speedl_integer=on_speedl_integer_get()
+  if not(speedl_integer==0):
+  if not on_speedl_is_running:
+  on_speedl_thread_handler=run on_speedl_thread()
+  end 
+  end 
+  return on_speedl_is_running
+  end 
+  def on_speedl_stop_for(speedl_id,brake=10,brakeRot=10):
+  if(speedl_id==ON_SPEEDL_FTCONTROL):
+  on_speedl_for_ftcontrol=False
+  elif(speedl_id==ON_SPEEDL_HANDGUIDE):
+  on_speedl_for_handguide=False
+  elif(speedl_id==ON_SPEEDL_TRAJECTORY):
+  on_speedl_for_move=False
+  elif(speedl_id==ON_SPEEDL_INSERTPART):
+  on_speedl_for_insertpart=False
+  elif(speedl_id==ON_SPEEDL_DEPTHCOMP):
+  on_speedl_for_depthcompensation=False
+  elif(speedl_id==ON_SPEEDL_CENTER):
+  on_speedl_for_center=False
+  elif(speedl_id==ON_SPEEDL_GECKO):
+  on_speedl_for_gecko=False
+  on_speedGecko_set(ON_ZERO6D)
+  else:
+  textmsg("Unknown Stop speedl ID received: ",speedl_id)
+  end 
+  local speedl_integer=on_speedl_integer_get()
+  if(speedl_integer==0):
+  if(on_speedl_is_running):
+  kill on_speedl_thread_handler
+  enter_critical
+  on_speedl_is_running=False
+  exit_critical
+  
+  end 
+  if ON_DEBUG_LOG:
+  textmsg("Speedl thread stopped")
+  end 
+  stopl(brake,brakeRot)
+  end 
+  return on_speedl_is_running
+  end 
+  def on_speedl_pause():
+  on_speedl_is_enabled=False
+  return on_speedl_integer_get()
+  end 
+  def on_speedl_resume():
+  on_speedl_is_enabled=True
+  return on_speedl_integer_get()
+  end 
+  
+  #======    End of OnRobot  Speedl    ======#
+  textmsg(on_devices_primary_log, ": Quick Changer + Lado de la herramienta de QC + [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]")
+  on_follow_tcp = False
+  on_tcp_active_is_primary = True
+  on_tcp_adapters_array = []
+  on_cog_adapters_array = []
+  on_mass_adapters_array = []
+  on_tcp_qc_primary = p[0.0, 0.0, 0.0136, 0.0, 0.0, 0.0]
+  on_cog_qc_primary = p[0.0, 0.0, 0.004, 0.0, 0.0, 0.0]
+  on_mass_qc_primary = 0.06
+  on_tcp_gripper_static_primary = p[0.0, 0.0, 0.017, 0.0, 0.0, 0.0]
+  on_cog_gripper_primary = p[0.0, 0.0, 0.002, 0.0, 0.0, 0.0]
+  on_mass_gripper_primary = 0.14
+  on_tcp_workpiece_primary = p[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  on_cog_workpiece_primary = p[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  on_mass_workpiece_primary = 0.0
+  #======    OnRobot Run    ======#
+  
+  on_portopen_javaSocket()
+  sync()
+  textmsg(on_xmlrpc_start_ip,on_conn_ip)
+  if(ON_REG_USE_TOOL):
+  on_regStart_conn=[ON_CONN_SHIFT_BOOL,ON_CONN_SHIFT_INT,ON_CONN_SHIFT_FLOAT]
+  on_regSum_conn=[ON_CONN_REG_SUM_BOOL,ON_CONN_REG_SUM_INT,ON_CONN_REG_SUM_FLOAT]
+  on_rtde_feed_open(on_conn_ip,on_conn_rtde_feed_name,on_regStart_conn,on_regSum_conn,ON_REGISTERS_SPEEDL_FLOAT)
+  sync()
+  textmsg(on_xmlrpc_start_ip,on_tool_ip)
+  on_regStart_tool=[ON_TOOL_SHIFT_BOOL,ON_TOOL_SHIFT_INT,ON_TOOL_SHIFT_FLOAT]
+  on_regSum_tool=[ON_TOOL_REG_SUM_BOOL,ON_TOOL_REG_SUM_INT,ON_TOOL_REG_SUM_FLOAT]
+  on_rtde_feed_open(on_tool_ip,on_tool_rtde_feed_name,on_regStart_tool,on_regSum_tool,0)
+  sync()
+  else:
+  on_regStart_conn=[ON_CONN_SHIFT_BOOL,ON_CONN_SHIFT_INT,ON_CONN_SHIFT_FLOAT]
+  on_regSum_conn=[ON_CONN_REG_SUM_BOOL,ON_CONN_REG_SUM_INT,ON_CONN_REG_SUM_FLOAT]
+  on_rtde_feed_open(on_conn_ip,on_conn_rtde_feed_name,on_regStart_conn,on_regSum_conn,ON_REGISTERS_SPEEDL_FLOAT)
+  sync()
+  end
+  on_set_rtde_watchdog(updateHz=0.2)
+  sync()
+  on_dataProcess_thrd=run on_dataProcess_thread()
+  sync()
+  on_tcp_init_adapters()
+  on_payload_init_adapters()
+  on_tcp_init_primary()
+  on_payload_init_primary()
+  
+  on_tcp_update_custom()
+  on_tcp_set_actual_to(on_tcp_active_is_primary)
+  if(on_follow_tcp):
+  on_payload_set_actual()
+  end 
+  on_watchdog_thrd=run on_set_watchdog_thread()
+  sync()
+  def done_waiting_for_init(device_name,product_code,tool_index=0):
+  textmsg(str_cat(device_name,str_cat(str_cat("[",tool_index),"]: ")),product_code)
+  end
+  
+  #======    End of OnRobot Run    ======#
+  #======    OnRobot QC Start    ======#
+  
+  if(on_toolConnector):
+  tc_setup_tool()
+  end 
+  sync()
+  
+  #======    End of OnRobot QC Start    ======#
+  # end: URCap Installation Node
+  global reference_p_p=p[-.184324179770, .315895265188, .051885595931, 1.356312904639, 2.833728916709, .000000000037]
+  global reference_p_q=[-3.8220070953736442, -2.2144714339488054, -1.9469988543541303, -0.5504229370485607, 1.5554992880533876, -1.3658564776641757]
+  global Casa_p=p[-.078238285693, .201293045899, .163744650742, 1.334475463956, 2.825595561232, -.023904982883]
+  global Casa_q=[-3.7150315583417512, -1.1535205805714952, -2.452892012816509, -1.124016351136362, 1.565513478858029, -1.2579007439877117]
+  $ 2 "AntesDeIniciar"
+  $ 3 "Configuracion XMLRPC"
+  $ 4 "'Configuración del XMLRPC'"
+  # 'Configuración del XMLRPC'
+  $ 5 "camera≔rpc_factory('xmlrpc','http://192.168.23.107:50000')"
+  global camera=rpc_factory("xmlrpc","http://192.168.23.107:50000")
+  $ 6 "Inicializacipn variables"
+  $ 7 "'Configuracion offset para el pre_pick'"
+  # 'Configuracion offset para el pre_pick'
+  $ 8 "z≔0.03"
+  global z=0.03
+  $ 9 "offset≔p[0,0,z,0,0,0]"
+  global offset=p[0,0,z,0,0,0]
+  $ 10 "'Variable para ver si se detecta dos veces el mismo pto'"
+  # 'Variable para ver si se detecta dos veces el mismo pto'
+  $ 11 "next_pose_aux≔p[0,0,0,0,0,0]"
+  global next_pose_aux=p[0,0,0,0,0,0]
+  $ 12 "Centro coord camara"
+  $ 13 "'Punto de referencia de la camara (centro de coordenadas camara)'"
+  # 'Punto de referencia de la camara (centro de coordenadas camara)'
+  $ 14 "MoverJ"
+  $ 15 "reference_p" "breakAfter"
+  movej(get_inverse_kin(reference_p_p, qnear=reference_p_q), a=1.3962634015954636, v=1.0471975511965976)
+  $ 16 "referencep_var≔reference_p"
+  global referencep_var=reference_p_p
+  while (True):
+    $ 17 "Programa de robot"
+    $ 18 "Home"
+    $ 19 "'Home: Punto inicial para posterior recogida de deteccion'"
+    # 'Home: Punto inicial para posterior recogida de deteccion'
+    $ 20 "MoverJ"
+    $ 21 "Casa" "breakAfter"
+    movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 22 "Comunicacion camara"
+    $ 23 "'Obtencion de datos de la camara'"
+    # 'Obtencion de datos de la camara'
+    $ 24 "next_pose≔camera.get_next_pose()"
+    global next_pose=camera.get_next_pose()
+    $ 25 "'Se hace el cambio de unidades mm a m'"
+    # 'Se hace el cambio de unidades mm a m'
+    $ 26 "next_pose_list≔p[next_pose[0]/1000,next_pose[1]/1000,0,0,0,0]"
+    global next_pose_list=p[next_pose[0]/1000,next_pose[1]/1000,0,0,0,0]
+    $ 27 "'Trasformada entre el robot y las coordenadas obtenidas'"
+    # 'Trasformada entre el robot y las coordenadas obtenidas'
+    $ 28 "target≔pose_trans(reference_p,next_pose_list)"
+    global target= pose_trans (pose_trans(p[0.0,0.0,0.0,0.0,0.0,0.0], pose_trans(p[-.284929009434, -.079502171486, -.234213820347, .911734688036, 1.916269570271, .007404348932], reference_p_p)),next_pose_list)
+    $ 29 "target≔p[target[0],target[1],target[2],0,0,0]"
+    global target=p[target[0],target[1],target[2],0,0,0]
+    $ 30 "Movimiento UR"
+    $ 31 "If next_pose_list[0]≟0  and next_pose_list[1]≟0"
+    if (next_pose_list[0] == 0   and  next_pose_list[1] == 0):
+      $ 32 "NO_Deteccion"
+      $ 33 "MoverJ"
+      $ 34 "Casa" "breakAfter"
+      movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+    else:
+      $ 35 "Else" "noBreak"
+      $ 36 "Deteccion_OK"
+      $ 37 "If next_pose_aux ≠ next_pose_list "
+      if (next_pose_aux  !=  next_pose_list ):
+        $ 38 "'Hay detecciones que recoger'"
+        # 'Hay detecciones que recoger'
+        $ 39 "'Posicion previa a la recogida'"
+        # 'Posicion previa a la recogida'
+        $ 40 "pre_pick≔pose_trans(target, offset)"
+        global pre_pick= pose_trans (target, offset)
+        $ 41 "pre_pick≔p[pre_pick[0],pre_pick[1],pre_pick[2],referencep_var[3],referencep_var[4],referencep_var[5]]"
+        global pre_pick=p[pre_pick[0],pre_pick[1],pre_pick[2],referencep_var[3],referencep_var[4],referencep_var[5]]
+        $ 42 "MoverL"
+        $ 43 "pre_pick" "breakAfter"
+        movel(pre_pick, a=1.2, v=0.25)
+        $ 44 "'Variable aux para comparar listas '"
+        # 'Variable aux para comparar listas '
+        $ 45 "next_pose_aux≔p[next_pose_list[0],next_pose_list[1],next_pose_list[2],0,0,0]"
+        global next_pose_aux=p[next_pose_list[0],next_pose_list[1],next_pose_list[2],0,0,0]
+      else:
+        $ 46 "Else" "noBreak"
+        $ 47 "'No hay detecciones que recoger'"
+        # 'No hay detecciones que recoger'
+        $ 48 "MoverJ"
+        $ 49 "Casa" "breakAfter"
+        movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+      end
+    end
+    $ 50 "Esperar: 1.0"
+    sleep(1.0)
+  end
+end
