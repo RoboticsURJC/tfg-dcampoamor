@@ -1,0 +1,101 @@
+def xmlrpc_deteccion_fresas_v3():
+  global _hidden_verificationVariable=0
+  step_count_57929a34_0101_4231_a97c_03ceaa6dfc88 = 0.0
+  thread Step_Counter_Thread_16786975_4525_4580_8992_3d2359d5da19():
+    while (True):
+      step_count_57929a34_0101_4231_a97c_03ceaa6dfc88 = step_count_57929a34_0101_4231_a97c_03ceaa6dfc88 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_16786975_4525_4580_8992_3d2359d5da19()
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_target_payload(0.000000, [0.000000, 0.000000, 0.000000], [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000])
+  set_gravity([0.0, 0.0, 9.82])
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_safety_mode_transition_hardness(1)
+  set_tcp(p[0.0,0.0,0.06,0.0,0.0,0.0])
+  global Plano_camara=p[-0.2051355897379743,0.3036405487822988,-0.013102402294313992,-1.1966572129307746,-2.9046418616289205,-5.520621818014276E-5]
+  # begin: URCap Installation Node
+  #   Source: UR Connect, 1.13.79, Universal Robots
+  #   Type: UR Connect
+  myurRPC = rpc_factory("xmlrpc","http://127.0.0.1:40474")
+  # end: URCap Installation Node
+  global Casa_p=p[-.078238285693, .201293045899, .163744650742, 1.334475463956, 2.825595561232, -.023904982883]
+  global Casa_q=[-3.7150315583417512, -1.1535205805714952, -2.452892012816509, -1.124016351136362, 1.565513478858029, -1.2579007439877117]
+  $ 2 "AntesDeIniciar"
+  $ 3 "Configuracion XMLRPC"
+  $ 4 "'Configuración del XMLRPC'"
+  # 'Configuración del XMLRPC'
+  $ 5 "camera≔rpc_factory('xmlrpc','http://192.168.23.107:50000')"
+  global camera=rpc_factory("xmlrpc","http://192.168.23.107:50000")
+  $ 6 "Inicializacipn variables"
+  $ 7 "'Variable para ver si se detecta dos veces el mismo pto'"
+  # 'Variable para ver si se detecta dos veces el mismo pto'
+  $ 8 "next_pose_aux≔p[0,0,0,0,0,0]"
+  global next_pose_aux=p[0,0,0,0,0,0]
+  $ 9 "Centro coord camara"
+  $ 10 "'Punto de referencia de la camara (centro de coordenadas camara)'"
+  # 'Punto de referencia de la camara (centro de coordenadas camara)'
+  while (True):
+    $ 13 "Programa de robot"
+    $ 14 "Home"
+    $ 15 "'Home: Punto inicial para posterior recogida de deteccion'"
+    # 'Home: Punto inicial para posterior recogida de deteccion'
+    $ 16 "MoverJ"
+    $ 17 "Casa" "breakAfter"
+    movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 18 "Comunicacion camara"
+    $ 19 "'Obtencion de datos de la camara'"
+    # 'Obtencion de datos de la camara'
+    $ 20 "next_pose≔camera.get_next_pose()"
+    global next_pose=camera.get_next_pose()
+    $ 21 "'Se hace el cambio de unidades mm a m'"
+    # 'Se hace el cambio de unidades mm a m'
+    $ 22 "next_pose_list≔p[next_pose[0]/1000,next_pose[1]/1000,0,0,0,0]"
+    global next_pose_list=p[next_pose[0]/1000,next_pose[1]/1000,0,0,0,0]
+    $ 23 "Movimiento UR"
+    $ 24 "If next_pose_list[0]≟0  and next_pose_list[1]≟0"
+    if (next_pose_list[0] == 0   and  next_pose_list[1] == 0):
+      $ 25 "NO_Deteccion"
+      $ 26 "MoverJ"
+      $ 27 "Casa" "breakAfter"
+      movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+    else:
+      $ 28 "Else" "noBreak"
+      $ 29 "Deteccion_OK"
+      $ 30 "If next_pose_aux ≠ next_pose_list "
+      if (next_pose_aux  !=  next_pose_list ):
+        $ 31 "'Hay detecciones que recoger'"
+        # 'Hay detecciones que recoger'
+        $ 32 "'Posicion de la recogida'"
+        # 'Posicion de la recogida'
+        $ 33 "MoverL"
+        $ 34 "next_pose_list" "breakAfter"
+        movel(pose_trans(Plano_camara, next_pose_list), a=1.2, v=0.25)
+        $ 35 "'Variable aux para comparar listas '"
+        # 'Variable aux para comparar listas '
+        $ 36 "next_pose_aux≔p[next_pose_list[0],next_pose_list[1],next_pose_list[2],0,0,0]"
+        global next_pose_aux=p[next_pose_list[0],next_pose_list[1],next_pose_list[2],0,0,0]
+      else:
+        $ 37 "Else" "noBreak"
+        $ 38 "'No hay detecciones que recoger'"
+        # 'No hay detecciones que recoger'
+        $ 39 "MoverJ"
+        $ 40 "Casa" "breakAfter"
+        movej(get_inverse_kin(Casa_p, qnear=Casa_q), a=1.3962634015954636, v=1.0471975511965976)
+      end
+    end
+    $ 41 "Esperar: 1.0"
+    sleep(1.0)
+  end
+end

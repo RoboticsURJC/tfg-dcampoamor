@@ -1,0 +1,50 @@
+ Programa
+   Configuración de variables
+   AntesDeIniciar
+     Configuracion XMLRPC
+       'Configuración del XMLRPC'
+       camera≔rpc_factory("xmlrpc","http://192.168.23.107:50000")
+     Inicializacipn variables
+       'Configuracion offset para el pre_pick'
+       z≔0.03
+       offset≔p[0,0,z,0,0,0]
+       'Variable para ver si se detecta dos veces el mismo pto'
+       next_pose_aux≔p[0,0,0,0,0,0]
+     Centro coord camara
+       'Punto de referencia de la camara (centro de coordenadas camara)'
+       MoverJ
+         reference_p
+   Programa de robot
+     Home
+       'Home: Punto inicial para posterior recogida de deteccion'
+       MoverJ
+         Casa
+     Comunicacion camara
+       'Obtencion de datos de la camara'
+       next_pose≔camera.get_next_pose()
+       'Se hace el cambio de unidades mm a m'
+       next_pose_list≔p[next_pose[0]/1000,next_pose[1]/1000,0,0,0,0]
+       'Trasformada entre el robot y las coordenadas obtenidas'
+       target≔pose_trans(reference_p,next_pose_list)
+       target≔p[target[0],target[1],target[2],0,0,0]
+     Movimiento UR
+       If next_pose_list[0]≟0  and next_pose_list[1]≟0
+         NO_Deteccion
+           MoverJ
+             Casa
+       Else
+         Deteccion_OK
+           If next_pose_aux ≠ next_pose_list 
+             'Hay detecciones que recoger'
+             'Posicion previa a la recogida'
+             pre_pick≔pose_trans(target, offset)
+             pre_pick≔p[pre_pick[0],pre_pick[1],pre_pick[2],reference_p[3],reference_p[4],reference_p[5]]
+             MoverL
+               pre_pick
+             'Variable aux para comparar listas '
+             next_pose_aux≔p[next_pose_list[0],next_pose_list[1],next_pose_list[2],0,0,0]
+           Else
+             'No hay detecciones que recoger'
+             MoverJ
+               Casa
+     Esperar: 1.0
