@@ -37,13 +37,17 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Pantalla principal de la interfaz de Polyscope 5\relax }}{44}{figure.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Deteccion con Pytorch\relax }}{52}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Entrenamiento del algoritmo con TensorFlow\relax }}{53}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{54}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{55}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Pruebas de deteccion de fresas en imágenes con TensorFlow\relax }}{56}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{57}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{57}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{57}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Detección de fresas en webcam con TensorFlow con modelos no pre-entrenados (ssd mobilenet v2 320x320)\relax }}{59}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Entrenamiento del algoritmo con TensorFlow\relax }}{52}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{53}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pruebas de deteccion de fresas en imágenes con TensorFlow\relax }}{55}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{56}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{56}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{56}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Detección de fresas en webcam con TensorFlow con modelos no pre-entrenados (ssd mobilenet v2 320x320)\relax }}{58}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Deteccion de fresas en Jupyter Notebook\relax }}{59}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Deteccion con Pytorch\relax }}{61}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Etiquetado de las imágenes con labelImg\relax }}{62}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{63}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{64}{figure.caption.63}%
 \addvspace {10\p@ }
