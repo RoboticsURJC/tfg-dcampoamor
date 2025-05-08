@@ -222,6 +222,13 @@ OpenCV (Open Source Computer Vision Library)\footnote{\url{https://opencv.org/}}
 
 En este proyecto, OpenCV se ha usado importado como cv2 para poder capturar los frames desde la cámara en tiempo real y mostrarlo en una ventana para poder controlar y verificar que se realizan las detecciones correctamente, para convertir estos frames del formato BGR a RGB, dibujar un rectángulo alrededor de las fresas detectadas, añadiendo la etiqueta de texto correspondiente que indica la clase detectada y la confianza de esta detección. Permite detener el bucle principal del programa, terminarlo y salir de este si se presiona la tecla configurada para ello, asegurando que la cámara o el archivo de vídeo no permanezcan bloqueados por el programa y cerrando todas las ventanas de visualización creadas.
 
+\subsection{OpenGL}
+\label{sec:OpenCV}
+
+OpenGL (Open Graphics Library)\footnote{\url{https://opengl.org/}} es una especificación de gráficos 2D y 3D de código abierto que define una API multiplataforma ampliamente utilizada para desarrollar aplicaciones gráficas interactivas desarrollado inicialmente por Silicon Graphics Inc. (SGI) en 1992.\\
+
+Gracias a su rendimiento y compatibilidad con GPU, OpenGL permite una visualización fluida y personalizada de las detecciones, que ha permitido que en este proyecto, se haya integrado con otras bibliotecas como OpenCV para superponer elementos visuales, como rectángulos, etiquetas o coordenadas, sobre el entorno, utilizándose para representar gráficamente la información capturada por la cámara en una ventana emergente, facilitando así las pruebas relacionadas con el cálculo de la distancia a las detecciones. Esto ha permitido verificar si los resultados obtenidos eran válidos y coherentes, así como comprobar que el sistema respondía correctamente a la distorsión geométrica derivada de la perspectiva de la cámara para el modelo pinhole.
+
 \subsection{XML-RPC}
 \label{sec:XMLRPC}
 
