@@ -29,25 +29,26 @@
 \contentsline {subsection}{\numberline {4.2.4}PyTorch}{45}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}NumPy}{45}{subsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.2.6}OpenCV}{45}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}XML-RPC}{46}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}Anaconda}{46}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}YOLOv3}{47}{subsection.4.2.9}%
-\contentsline {chapter}{\numberline {5}Sistema de reconocimiento por visión de maduración de frutos\\ para su recolección con un brazo robótico}{48}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{48}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{49}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{49}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{50}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Experimentos}{51}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Detección con YOLOv3 y TensorFlow}{51}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Pruebas con imágenes}{51}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Pruebas con vídeo en tiempo real}{55}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Detección con YOLOv3 y PyTorch}{60}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Pruebas con modelos preentrenados}{60}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Entrenamiento del modelo}{61}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Calibrado de la cámara}{63}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{63}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{64}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{66}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{66}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{67}{section.7.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{68}{appendix*.64}%
+\contentsline {subsection}{\numberline {4.2.7}OpenGL}{46}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}XML-RPC}{46}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}Anaconda}{47}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}YOLOv3}{47}{subsection.4.2.10}%
+\contentsline {chapter}{\numberline {5}Sistema de reconocimiento por visión de maduración de frutos\\ para su recolección con un brazo robótico}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{49}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{50}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{50}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{51}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Experimentos}{52}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Detección con YOLOv3 y TensorFlow}{52}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Pruebas con imágenes}{52}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Pruebas con vídeo en tiempo real}{56}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Detección con YOLOv3 y PyTorch}{62}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Pruebas con modelos preentrenados}{62}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Entrenamiento del modelo}{63}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Calibrado de la cámara}{65}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{66}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{71}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{72}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{72}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{73}{section.7.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{74}{appendix*.73}%

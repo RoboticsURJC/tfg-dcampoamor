@@ -5,7 +5,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Parámetros intrínsecos de la cámara\relax }}{50}{table.caption.49}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parámetros intrínsecos de la cámara\relax }}{51}{table.caption.49}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Distribución de las imágenes utilizadas para el entrenamiento del modelo\relax }}{52}{table.caption.50}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Distribución de las imágenes utilizadas para el entrenamiento del modelo\relax }}{53}{table.caption.50}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Comparacion entre coordenadas reales y obtenidas (en mm)\relax }}{68}{table.caption.68}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Resultados del programa pinhole.py con valores de Z positivos\relax }}{70}{table.caption.71}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Resultados del programa pinhole.py con valores de Z negativos\relax }}{70}{table.caption.72}%
 \addvspace {10\p@ }
