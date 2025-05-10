@@ -33,27 +33,37 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Cámara Logitech C270 HD$^{\ref {note:enlace16}}$\relax }}{39}{figure.caption.41}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Soporte de brazo articulado$^{\ref {note:enlace17}}$\relax }}{40}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace20}}$\relax }}{42}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace20}}$\relax }}{41}{figure.caption.43}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Pantalla principal de la interfaz de Polyscope 5\relax }}{44}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Pruebas realizadas con SocketTest para verificar la comunicación robot-servidor externo\relax }}{47}{figure.caption.45}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Entrenamiento del algoritmo con TensorFlow\relax }}{53}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{54}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{55}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Pruebas de deteccion de fresas en imágenes con TensorFlow\relax }}{56}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{57}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{57}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{57}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Detección de fresas en webcam con TensorFlow con modelos no pre-entrenados (ssd mobilenet v2 320x320)\relax }}{59}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Gráficas de la confianza de detección obtenida en las pruebas según la luminosidad para el modelo ssd mobilenet v2\relax }}{60}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Gráficas de la media de los porcentajes de confianza obtenidos en las pruebas de detección según la luminosidad para el modelo ssd mobilenet v2\relax }}{60}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Deteccion de fresas en Jupyter Notebook\relax }}{61}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Deteccion con Pytorch\relax }}{63}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Etiquetado de las imágenes con labelImg\relax }}{64}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{65}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{66}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{66}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{68}{figure.caption.67}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{69}{figure.caption.69}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{70}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Entrenamiento del algoritmo con TensorFlow\relax }}{54}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{55}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{56}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pruebas de deteccion de fresas en imágenes con TensorFlow\relax }}{57}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{58}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{58}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{58}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Detección de fresas en webcam con TensorFlow con modelos no pre-entrenados (ssd mobilenet v2 320x320)\relax }}{60}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Gráficas de la confianza de detección obtenida en las pruebas según la luminosidad para el modelo ssd mobilenet v2\relax }}{61}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Gráficas de la media de los porcentajes de confianza obtenidos en las pruebas de detección según la luminosidad para el modelo ssd mobilenet v2\relax }}{61}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Deteccion de fresas en Jupyter Notebook\relax }}{62}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Deteccion con Pytorch\relax }}{64}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Etiquetado de las imágenes con labelImg\relax }}{65}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{66}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{67}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{67}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{69}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{70}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{71}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Esquema de la rotación de la cámara\relax }}{72}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Cálculo de la distancia de la cámara a la detección\relax }}{73}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{74}{figure.caption.77}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{75}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{76}{figure.caption.79}%
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{79}{figure.caption.84}%
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }}{81}{figure.caption.87}%
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{82}{figure.caption.88}%
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{83}{figure.caption.90}%
 \addvspace {10\p@ }

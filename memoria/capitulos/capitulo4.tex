@@ -229,6 +229,21 @@ OpenGL (Open Graphics Library)\footnote{\url{https://opengl.org/}} es una especi
 
 Gracias a su rendimiento y compatibilidad con GPU, OpenGL permite una visualización fluida y personalizada de las detecciones, que ha permitido que en este proyecto, se haya integrado con otras bibliotecas como OpenCV para superponer elementos visuales, como rectángulos, etiquetas o coordenadas, sobre el entorno, utilizándose para representar gráficamente la información capturada por la cámara en una ventana emergente, facilitando así las pruebas relacionadas con el cálculo de la distancia a las detecciones. Esto ha permitido verificar si los resultados obtenidos eran válidos y coherentes, así como comprobar que el sistema respondía correctamente a la distorsión geométrica derivada de la perspectiva de la cámara para el modelo pinhole.
 
+\subsection{SocketTest}
+\label{sec:SocketTest}
+
+SocketTest\footnote{\url{https://sockettest.sourceforge.net/}} es una herramienta de software utilizada para probar conexiones de red a través de sockets, ya sea como cliente o como servidor, que permite enviar y recibir datos de manera manual o automatizada mediante protocolos como TCP o UDP.
+
+En este trabajo, se ha utilizado la versión v3.0.0, tal y como se puede comprobar en la Figura \ref{fig:socket}, para probar y verificar en una etapa temprana del proyecto, la comunicación entre el robot y un servidor externo, permitiendo comprobar que los puertos estaban abierto y que la conexión era posible, ya que los datos enviados desde el servidor llegaban correctamente al robot, de igual manera que los datos que se enviaron del robot al servidor.
+
+\begin{figure} [H]
+    \begin{center}
+      \includegraphics[width=8cm]{figs/pruebas_socket_test.png}
+    \end{center}
+    \caption{Pruebas realizadas con SocketTest para verificar la comunicación robot-servidor externo}
+    \label{fig:socket}
+\end{figure}
+
 \subsection{XML-RPC}
 \label{sec:XMLRPC}
 
