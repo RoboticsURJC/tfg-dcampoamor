@@ -246,8 +246,6 @@ Aunque Jupyter Notebook ofrecía un entorno interactivo y muy útil no era recom
 Por todas estas razones, aunque Jupyter Notebook puede ser muy útil durante las fases iniciales del desarrollo para validar algoritmos de visión o procesado de datos, la implementación definitiva de un sistema conectado a un robot debe realizarse mediante scripts de Python, permitiendo un mayor control sobre el flujo de ejecución, una integración más sencilla en sistemas de control y producción, y una mayor robustez operativa, aspectos esenciales en el desarrollo de aplicaciones robóticas fiables.
 
 
-
-
 \section{Detección con YOLOv3 y PyTorch}
 \label{exp_seleccion_algoritmo}
 
@@ -328,7 +326,7 @@ Junto con las matrices de Rotación R y la matriz de Traslación T de la cámara
 \subsection{Pruebas detección de fresas en tiempo real}
 \label{sec:Pruebas_Fresas_Pytorch}
 
-Una vez con el modelo entrenado, se realizaron las primeras pruebas utilizando Python de detección de fresas en tiempo real, para las que se utilizó la cámara integrada del ordenador portátil e imágenes de fresas en el móvil, tal y como se muestra en la Figura \ref{fig:primerasdetecciones_Python}, y a partir de las cuales se modificaron tanto el grosor del nombre de la clase a detectar como el threshold de la detección mostrado en la ventana emergenteen con OpenCV, ajustándolde tal manera quemo argumento que pudieran ser más legibles en el programa.
+Una vez con el modelo entrenado, se realizaron las primeras pruebas utilizando Python de detección de fresas en tiempo real, para las que se utilizó la cámara integrada del ordenador portátil e imágenes de fresas en el móvil mediante el programa \textit{deteccion\_video.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/deteccion_video.py}}, tal y como se muestra en la Figura \ref{fig:primerasdetecciones_Python}, y a partir de las cuales se modificaron tanto el grosor del nombre de la clase a detectar como el threshold de la detección mostrado en la ventana emergenteen con OpenCV, ajustándolde tal manera quemo argumento que pudieran ser más legibles en el programa.
 
   \begin{figure}[H]
      \centering
@@ -378,7 +376,7 @@ Ante estas discrepancias, se procedió a consultar bibliografía útil para este
 
 Dado que los resultados experimentales mostraban una desviación considerable respecto a las distancias reales y no se lograba establecer una relación clara y precisa, se optó por adoptar un enfoque alternativo basado en un script preexistente denominado \textit{pinhole.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/cameraPibot/pinhole.py}}, que implementaba el modelo de cámara estenopeica para estimar coordenadas espaciales a partir de coordenadas de un imagen o vídeo. Se ajustaron diversos parámetros globales fundamentales, tales como el ancho y alto de la imagen, la distancia focal y la posición del centro óptico de la cámara, datos obtenidos anteriormente en la calibración de la cámara, así como variables asociadas a la rotación de la misma, como el ángulo de inclinación de la cámara, y a la traslación o altura de la cámara respecto a la superficie de trabajo, con el fin de calcular adecuadamente las matrices de rotación y traslación necesarias para la proyección de puntos desde el espacio imagen al espacio real. Además, se adaptó el rango de detección cromática para que, al ejecutar el script, pudiera detectarse el color amarillo característico del post-it sobre la cartulina blanca dispuesta sobre la mesa, facilitando así la identificación automática del objeto en las pruebas, tal y como se había hecho con scripts anteriores.\\
 
-Se estableció como origen del sistema de coordenadas del mundo la proyección vertical del centro óptico de la cámara sobre la superficie de la mesa, y se llevaron a cabo distintas pruebas experimentales, modificando tanto el signo del ángulo de rotación como el signo de la distancia de la cámara a la mesa, con el objetivo de determinar la orientación correcta de los ejes espaciales definidos en el script y verificar si los resultados estimados se correspondían con las coordenadas reales. Para la recogida de datos, se empleó una regla graduada colocada sobre la superficie de la mesa, y se fue desplazando de manera progresiva el post-it en distintas direcciones para poder validar las suposiciones sobre la configuración del sistema de coordenadas (Figura \ref{fig:prueba_ejes_camara}).
+Se estableció como origen del sistema de coordenadas del mundo la proyección vertical del centro óptico de la cámara sobre la superficie de la mesa, y se llevaron a cabo distintas pruebas experimentales, modificando tanto el signo del ángulo de rotación como el signo de la distancia de la cámara a la mesa, cuya medida era de 22º para estos experimentos, con el objetivo de determinar la orientación correcta de los ejes espaciales definidos en el script y verificar si los resultados estimados se correspondían con las coordenadas reales. Para la recogida de datos, se empleó una regla graduada colocada sobre la superficie de la mesa, y se fue desplazando de manera progresiva el post-it en distintas direcciones para poder validar las suposiciones sobre la configuración del sistema de coordenadas (Figura \ref{fig:prueba_ejes_camara}).
 
  \begin{figure}[H]
     \begin{center}
@@ -390,6 +388,8 @@ Se estableció como origen del sistema de coordenadas del mundo la proyección v
     \caption{Pruebas para determinar la configuración del sistema de coordenadas de la cámara}
     \label{fig:prueba_ejes_camara}
   \end{figure}
+  
+A partir de los resultados obtenidos en estas pruebas, recogidos en los Cuadros \ref{tab:pinhole_Zpos} y \ref{tab:pinhole_Zneg}, se pudo comprobar que, para que las estimaciones del sistema fueran coherentes con las distancias reales, era necesario introducir la altura de la cámara respecto al plano suelo, en este caso, la mesa, como un valor negativo, mientras que el ángulo de rotación de la cámara debía establecerse en valor positivo. Esta configuración permitía que, al alejar el post-it amarillo del origen, la distancia estimada aumentara progresivamente, tal y como era esperable. 
   
   \begin{table}[H]
     \centering
@@ -410,12 +410,228 @@ Se estableció como origen del sistema de coordenadas del mundo la proyección v
    \label{tab:pinhole_Zneg}
   \end{table}
 
+No obstante, a pesar de haber definido un sistema de coordenadas inicial, los resultados continuaban sin ajustarse adecuadamente a las distancias reales, por ello, se decidió revisar en mayor detalle la lógica del script \textit{pinhole.py}, prestando especial atención a los comentarios incluidos en el código, en los que se indicaba que los ángulos utilizados para calcular la matriz de rotación se definían bajo la suposición de que la cámara, en orientación vertical, había sido sometida a una rotación previa de 90 grados sobre el eje Y. A partir de esta observación, se procedió a representar y analizar el sistema de coordenadas original de la cámara antes de aplicar dicha transformación, con el objetivo de comprender mejor la correspondencia entre los ejes del sistema imagen y del sistema mundo, y así ajustar de forma más precisa las transformaciones necesarias (Figura \ref{fig:esquema_rot_camara}). 
+
+  \begin{figure}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=100mm]{figs/Esquema rotación cámara.png}
+     \end{center}
+     \caption{Esquema de la rotación de la cámara}
+    \label{fig:esquema_rot_camara}
+  \end{figure}
+
+Se consideró entonces una rotación sobre el eje vertical de la cámara, y se utilizó como ángulo de entrada para el código, el valor resultante de restar los 90° de la rotación inicial asumida en el script menos el ángulo previamente utilizado (definido como el ángulo entre la horizontal y la dirección de la lente). El valor resultante en esta ocasión fue de aproximadamente 65°, con el cual se volvió a ejecutar el script, a fin de evaluar si esta nueva configuración ofrecía una mayor coherencia entre las coordenadas estimadas y las medidas reales, repitiendo las mismas pruebas definidas anteriormente y obteniendo los resultados del Cuadro \ref{tab:pinhole_rot_camara}.
+
+   \begin{table}[H]
+   \centering
+   \begin{center}
+     \includegraphics[width=95mm]{figs/Resultados mediciones pinhole 65º Rotacion.png}
+   \end{center}
+   \caption{Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara}
+   \label{tab:pinhole_rot_camara}
+  \end{table}
+  
+Una vez verificada y establecida la forma correcta de introducir los parámetros relativos al ángulo de inclinación y a la altura de la cámara respecto al plano suelo, ya que pudieron considerarse satisfactorios debido a su similitud con las mediciones reales, se procedió a incorporar en el propio script el cálculo de la distancia a partir de las coordenadas tridimensionales (X,Y,Z) del punto detectado, desarrollando para ello la función \textit{calcular\_distancia\_3d}, que permitía estimar la distancia euclídea desde el origen del sistema hasta el punto proyectado (Figura \ref{fig:dist_camara}). 
+
+   \begin{figure}[H]
+    \begin{center}
+      \subcapcentertrue
+      \subfigure[Detección y cálculo de las coordenadas y la distancia a la detección]{\includegraphics[height=50mm, width=70mm]{figs/Deteccion puntos y distancia EJE X.png}}
+      \hspace{2mm}
+      \subfigure[Comprobación de la medición de la distancia de la cámara a la detección]{\includegraphics[height=50mm, width=75mm]{figs/Distancia al punto.png}}
+    \end{center}
+    \caption{Cálculo de la distancia de la cámara a la detección}
+    \label{fig:dist_camara}
+  \end{figure}
+
+Dado que el programa \textit{pinhole.py} permitía inicialmente la detección de un único punto amarillo dentro de la escena, en línea con el enfoque de las pruebas preliminares, centradas en validar el funcionamiento del sistema y la precisión del cálculo de la posición y la distancia del objeto respecto a la cámara, surgía una limitación evidente al poder darse la posibilidad de trabajar con múltiples detecciones. Para permitir la detección simultánea, se modificó este programa, generando uno nuevo denominado \textit{pinhole\_deteccionmultiple.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/cameraPibot/pinhole_deteccionmultiple.py}}, y se procedió en primer lugar a ajustar los filtros de color del sistema, ya que en el entorno de pruebas existían varios elementos de madera cuyas tonalidades se confundían con el amarillo claro bajo determinadas condiciones de iluminación, generando falsas detecciones, por lo que, para mitigar este problema, se optó por reemplazar el color amarillo por el verde, lo que implicó también pintar los fragmentos de post-it utilizados en las pruebas con este nuevo color. Una vez realizada esta modificación, se implementaron mejoras adicionales, como la numeración de los objetos detectados para permitir identificar de forma unívoca cada detección dentro del mismo escenario, lo cual resultaba esencial para poder asociar correctamente las coordenadas espaciales y las distancias estimadas con cada objeto individual, ampliando la capacidad del sistema para trabajar en escenarios más complejos con múltiples puntos de interés (Figura \ref{fig:deteccion_multiple_ptos}).
+
+   \begin{figure}[H]
+   \centering
+   \begin{center}
+     \includegraphics[width=110mm]{figs/Deteccionmultiple ejemplo.png}
+   \end{center}
+   \caption{Detección múltiple simultánea de post-it}
+   \label{fig:deteccion_multiple_ptos}
+  \end{figure}
+  
+Una vez resueltas las limitaciones iniciales del programa \textit{pinhole.py} en cuanto a la detección de múltiples objetos, y tras haber conseguido proyectar correctamente los centroides de los objetos detectados junto con el cálculo de sus coordenadas espaciales y distancias respectivas, se avanzó en la representación visual de estos resultados modificando el script \textit{pinhole\_deteccionmultiple.py} para que, además de realizar la detección y proyección de múltiples detecciones de manera simultánea, se capturaran y representaran estos datos en una ventana adicional mediante OpenGL. Para ello, se reutilizaron y adaptaron las funcionalidades de navegación y visualización incluidas en el script \textit{scene\_navigation.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/openglhw/scene_navegation.py}}, que permitía representar escenas 3D de forma interactiva mediante el uso de \textit{multithreading}, una técnica de programación que permite ejecutar múltiples tareas concurrentemente dentro de un mismo proceso. Tras varias pruebas y ajustes en la integración de ambos scripts, se consiguió que los puntos detectados por la cámara se representaran correctamente en una ventana paralela con fondo negro utilizando OpenGL, mostrándose cada punto como una marca roja en el espacio tridimensional, pero para mejorar la visibilidad y el contraste de estos puntos, se modificó tanto el tamaño de los puntos comoo la selección del color para que fuera más perceptible frente al fondo y se añadieron líneas entre los puntos detectados, tal y como se muestra en la Figura \ref{fig:dist_camara}. Esta representación permitió verificar visualmente la coherencia de las coordenadas 3D calculadas a partir de la cámara, facilitando así la validación y comprensión de los resultados espaciales obtenidos durante las pruebas anteriores.
+
+    \begin{figure}[H]
+      \begin{center}
+        \subcapcentertrue
+        \subfigure{\includegraphics[height=43mm, width=75mm]{figs/pinhole_openGL ventana cuadrado.png}}
+        \hspace{1mm}
+        \subfigure{\includegraphics[width=75mm]{figs/pinhole_openGL triangulo.png}}
+      \end{center}
+      \caption{Representación de las detecciones con OpenGL}
+      \label{fig:dist_camara}
+    \end{figure}
+
+Una vez validado el funcionamiento del sistema con fragmentos de post-it pintados, y comprobada la capacidad del programa para detectar múltiples puntos, calcular sus coordenadas espaciales, se consideró que el sistema estaba preparado para abordar el siguiente paso del proyecto: sustituir los objetos de prueba por el objeto real de estudio, las fresas, por lo que se inició una nueva fase centrada en la detección, localización y estimación de la distancia a estas detecciones de fresas en condiciones más próximas a las del entorno operativo final, recogida en el programa \textit{xmlrpc\_deteccionfresas.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/xmlrpc_deteccionfresas.py}}. Para ello, fue necesario modificar algunos parámetros del sistema y sustituir el método de detección basado en filtros de color, empleado durante las pruebas iniciales, por el modelo de detección entrenado específicamente para identificar fresas, que ya se encontraba integrado en el script \textit{deteccion\_video.py}, por lo que se reutilizó dicha lógica adaptándola al flujo de trabajo del sistema basado en pinhole.py, obteniendo los resultados de la Figura \ref{fig:union_scripts_fresas}.
+
+  \begin{figure}[H]
+    \centering
+    \begin{center}
+      \includegraphics[width=110mm]{figs/Pruebas deteccion fresas y obtencion coordenadas varios codigos.png}
+    \end{center}
+    \caption{Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias}
+    \label{fig:union_scripts_fresas}
+  \end{figure}
+
+Sin embargo, la integración del modelo de detección de fresas no fue un proceso directo, ya que el cambio de un método de detección basado en filtrado de color a uno basado en inteligencia artificial implicó importantes ajustes, ya que las características de la detección variaban considerablemente. Debido a esta modificación, fue necesario repetir las pruebas de estimación de coordenadas y distancias, con el fin de verificar nuevamente la orientación del sistema de coordenadas y asegurar que las nuevas detecciones proporcionadas por el modelo se proyectaran correctamente en el espacio tridimensional. Estas pruebas permitieron recalibrar el sistema en función del nuevo flujo de trabajo (ver Cuadros \ref{tab:resultados_145mm_59grados}, \ref{tab:resultados_125mm_59grados} \ref{tab:resultados_225mm_69grados} y \ref{tab:resultados_180mm_58grados}).
+
+   \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=155mm]{figs/Resultados 145 mm 59 grados.png}
+     \end{center}
+     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados}
+     \label{tab:resultados_145mm_59grados}
+  \end{table}
+  
+  \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=155mm]{figs/Resultados 125 mm 59 grados.png}
+     \end{center}
+     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados}
+     \label{tab:resultados_125mm_59grados}
+  \end{table}
+
+  \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=155mm]{figs/Resultados 225 mm 69 grados.png}
+     \end{center}
+     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados}
+     \label{tab:resultados_225mm_69grados}
+  \end{table}  
+  
+  \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=155mm]{figs/Resultados 180 mm 58 grados.png}
+     \end{center}
+     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados}
+     \label{tab:resultados_180mm_58grados}
+  \end{table}
+
+En todas estas mediciones, en las que se realizaron variaciones tanto en la altura de la cámara como en su ángulo de inclinación de la misma, se analizó el impacto de estos ajustes sobre la precisión del sistema de proyección de coordenadas, observando un patrón consistente en el que las coordenadas obtenidas mediante el programa de las fresas situadas en los extremos del campo de visión (FoV) de la cámara presentaban valores anómalos o significativamente desviados con respecto a las posiciones reales y a la distancia total, y más concretamente, en aquellas fresas detectadas cerca de los bordes superior, inferior o laterales del encuadre. En contraste, los objetos ubicados en la zona central del campo de visión ofrecían una mayor precisión en los resultados obtenidos respecto a las medidas reales, siendo esta región la más fiable tanto para las coordenadas proyectadas en los ejes X e Y, asumidos como el eje longitudinal y transversal de la mesa respectivamente, como para la distancia al plano de referencia.\\
+
+A pesar de haber identificado una zona dentro del campo de visión de la cámara en la que los resultados obtenidos se aproximaban considerablemente a las coordenadas reales, persistían errores significativos, especialmente en el eje que se había supuesto como eje Y del sistema, donde se concentraban las mayores desviaciones entre las coordenadas supuestas y las estimadas. Con el fin de analizar más a fondo este problema y validar visualmente el comportamiento del sistema, se llevó a cabo la proyección en OpenGL de las detecciones junto con la representación del campo visual de la cámara en una ventana emergente paralela en la ejecución del programa \textit{xmlrpc\_deteccionfresas\_OpenGL.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/xmlrpc_deteccionfresas_OpenGL.py}}, permitiendo comprobar de manera más intuitiva y precisa si la transformación de puntos desde el espacio 2D (imagen) al espacio 3D se estaba realizando correctamente, tal y como muestra la Figura \ref{fig:proy_OpenGL_deteccion}.
+
+   \begin{figure}[H]
+    \centering
+    \begin{center}
+      \includegraphics[width=140mm]{figs/Proyeccion plano mesa OpenGL con ejes coordenadas_2.png}
+    \end{center}
+    \caption{Proyección con OpenGL de las detecciones y el campo visual de la cámara}
+    \label{fig:proy_OpenGL_deteccion}
+  \end{figure}
+
+Mediante esta representación, se pudo verificar que la proyección desde coordenadas 2D a 3D se realizaba de forma adecuada, lo que reforzaba la validez del modelo de transformación empleado, por lo que se llevaron a cabo nuevas pruebas experimentales, esta vez situando la cámara en una posición completamente perpendicular a la superficie del plano suelo (plano de la mesa) gracias al soporte impreso en 3D para poder colocar y fijar la cámara de manera mas fiable, como se puede apreciar en la Figura \ref{fig:deteccion_plano_perpendicular}, lo que correspondía a un ángulo de rotación de 0 grados. \\
+
+El objetivo de esta configuración era eliminar posibles efectos de inclinación en las mediciones y facilitar la comprobación directa de la correspondencia entre los ejes del sistema real y los ejes definidos teóricamente, tomando nuevas medidas que permitieron evaluar si las coordenadas estimadas mantenían una relación coherente con la realidad física del entorno y terminar de validar la orientación definitiva de los ejes espaciales del sistema.
+
+  \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=155mm]{figs/Resultados 225 mm 0 grados.png}
+     \end{center}
+     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano}
+     \label{tab:resultados_180mm_58grados}
+  \end{table}
+
+A partir de estas mediciones, se puede observar que existe una discrepancia notable entre los ejes de referencia inicialmente supuestos y los que realmente se corresponden con el sistema físico, ya que los resultados obtenidos no guardan una relación directa ni coherente con las coordenadas esperadas según la hipótesis inicial del sistema de ejes, y si se analizan con detenimiento las mediciones, se aprecia que la correspondencia aparente entre los ejes proyectados y los reales podría responder a una rotación o permutación de los mismo, lo que indica una posible equivalencia o relación entre los ejes definidos y los reales, evidenciando que el único error existente era la consideración de los ejes para realizar las medidas reales, y quedando estos definidos como se representa en la Figura \ref{fig:sistemas_coordenadas}. Esta equivalencia se detalla en la Ecuación \ref{ec:equivalencia_resultados}.
+
+  \begin{myequation}[H]
+    \begin{align}
+      X_{\text{obtenido}} &= Y_{\text{supuesto}}
+      \nonumber \\
+      Y_{\text{obtenido}} &= -X_{\text{supuesto}}  
+      \nonumber
+    \end{align}
+    \caption{Equivalencia entre las coordenadas supuestas y obtenidas}
+    \label{ec:equivalencia_resultados}
+  \end{myequation}
+
+
+  \begin{figure}[H]
+      \begin{center}
+        \subcapcentertrue
+        \subfigure[Sistema de coordenadas supuesto]{\includegraphics[width=75mm]{figs/Coordenadas supuestas.png}}
+        \hspace{1mm}
+        \subfigure[Sistema de coordenadas real]{\includegraphics[width=75mm]{figs/Coordenadas obtenidas.png}}
+      \end{center}
+      \caption{Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido}
+      \label{fig:sistemas_coordenadas}
+    \end{figure}
+
+Después de verificar que existía un problema en cuanto a la elección de los ejes de coordenadas, se volvieron a realizar pruebas de medición para la toma de datos y su análisis y verificación posterior en el caso de la cámara perpendicular al plano mesa (Figura \ref{fig:deteccion_plano_perpendicular}), siendo esta vez para la serie de puntos que se encuentran en el Cuadro \ref{tab:resultados_343mm_0grados}, y dando de esta manera por terminadas este tipo de pruebas dada la exactitud obtenida en estos últimos resultados.
+
+   \begin{figure}[H]
+      \begin{center}
+        \subcapcentertrue
+        \subfigure[Montaje de la cámara para realizar las pruebas con la cámara perpendicular al plano mesa]{\includegraphics[height=58mm , width=49mm]{figs/Vista Ejes mediciones cámara perpendicular 343 mm.jpeg}}
+        \hspace{1mm}
+        \subfigure[Ventana de la detección al ejecutar el programa xmlrpc\_deteccionfresas.py]{\includegraphics[width=65mm]{figs/Deteccion de Fresas_Ejes correctos.png}}
+      \end{center}
+      \caption{Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa}
+      \label{fig:deteccion_plano_perpendicular}
+    \end{figure}
+   
+    
+    \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=155mm]{figs/Resultados 343 mm 0 grados.png}
+     \end{center}
+     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano}
+     \label{tab:resultados_343mm_0grados}
+  \end{table}
+
+
 \section{Pruebas con el robot real}
 \label{Pruebas_UR}
 
 Una vez decidido que la mejor opción para la detección de fresas era utilizar el modelo YOLOv3, implementado con TensorFlow en Python, se procedió a realizar las primeras pruebas con el brazo robótico de Universal Robots. El objetivo principal de estas pruebas fue comprobar la correcta comunicación entre el sistema de detección y el robot, así como validar la precisión del movimiento del robot hacia las posiciones detectadas en el plano, permitieron identificar posibles ajustes en la calibración y evaluar el funcionamiento del sistema en un entorno controlado antes de su aplicación conjunta.
 
-En primer lugar, se programó en la Interfaz Gráfica de Usuario (IGR) del robot un ejemplo para ir a una posición fija que simulaba una posición en el espacio determinada por un sistema de visión externo, siendo esto la base del programa final del propio robot, ya que, tras esto, se añadieron al programa las líneas necesarias para poder abrir la comunicación con un servidor, leer los datos de este.
+En primer lugar, se programó en la Interfaz Gráfica de Usuario (IGR) del robot el programa \textit{visionsimple.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/visionsimple.urp}} para ir a una posición fija que simulaba una posición en el espacio determinada por un sistema de visión externo, tal y como se muestra en la Figura \ref{fig:visionsimple}, siendo esto la base del programa final del propio robot.
 
+   \begin{figure}[H]
+      \begin{center}
+        \subcapcentertrue
+        \subfigure[Programa visionsimple.urp]{\includegraphics[width=70mm]{figs/visionsimple.jpeg}}
+        \hspace{1mm}
+        \subfigure[Representación de la transformada entre posiciones]{\includegraphics[width=78mm]{figs/pose_trans.png}}
+      \end{center}
+      \caption{Representación básica de un programa de un sistema de visión externo}
+      \label{fig:visionsimple}
+    \end{figure}
+
+Se desarrolló el programa \textit{recibir\_cadena\_socket}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/recibir_cadena_socket.urp}} con el objetivo de establecer una comunicación mediante sockets entre el robot y un servidor externo, como puede ser un sistema de visión. En este programa, el robot abría una conexión socket con el servidor y enviaba una cadena de caracteres tipo string con el contenido "listo", como señal de que la comunicación había sido establecida correctamente, para posteriormente esperar tres valores de tipo float de este servidor externo, que eran almacenados en variables internas antes de cerrar la conexión (Figura \ref{fig:recibir_cadena_socket}), todo esto, asegurando que ambos dispositivos se encontraban conectados a la misma red local.
+
+   \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=130mm]{figs/recibir_cadena_socket.png}
+     \end{center}
+     \caption{Programa recibir\_cadena\_socket.urp}
+     \label{fig:recibir_cadena_socket}
+  \end{table}
+
+Continuando con las pruebas iniciales del programa de robot \textit{visionsimple.urp} orientadas a enviar un brazo robótico a una posición en el espacio determinada por un sistema de visión externo, se desarrolló y amplió en el programa \textit{prueba\_visionsimple.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/prueba_visionsimple.urp}}, añadiendo las líneas necesarias para establecer la comunicación con el servidor mediante sockets, leer los datos recibidos, introducidos manualmente desde el programa SocketTest, calcular la posición de objetivo \textit{pos\_pick} correspondiente a la posición de recogida del objeto, y enviar estos datos al robot para que se desplazase a dicha posición (ver Figura \ref{fig:prueba_visionsimple}). 
+
+  \begin{table}[H]
+     \centering
+     \begin{center}
+       \includegraphics[width=130mm]{figs/prueba_visionsimple.png}
+     \end{center}
+     \caption{Programa prueba\_visionsimple.urp}
+     \label{fig:prueba_visionsimple}
+  \end{table}
+  
 
 
