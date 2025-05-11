@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {4.2.9}XML-RPC}{47}{subsection.4.2.9}%
 \contentsline {subsection}{\numberline {4.2.10}Anaconda}{47}{subsection.4.2.10}%
 \contentsline {subsection}{\numberline {4.2.11}YOLOv3}{48}{subsection.4.2.11}%
-\contentsline {chapter}{\numberline {5}Sistema de reconocimiento por visión de maduración de frutos\\ para su recolección con un brazo robótico}{50}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Sistema de reconocimiento y recolección}{50}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Snippets}{50}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Verbatim}{51}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Ecuaciones}{51}{section.5.3}%
