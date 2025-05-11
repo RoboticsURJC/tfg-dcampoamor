@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {4.1.4}Robot de \textit {Universal Robots} de la gama \textit {e-series}}{41}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{42}{subsection.4.1.5}%
 \contentsline {section}{\numberline {4.2}Software}{42}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{42}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{43}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Polyscope}{43}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Python}{44}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}PyTorch}{45}{subsection.4.2.4}%
@@ -47,8 +47,9 @@
 \contentsline {subsection}{\numberline {6.2.1}Pruebas con modelos preentrenados}{63}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Entrenamiento del modelo}{64}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Calibrado de la cámara}{66}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{67}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{83}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{86}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{86}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{87}{section.7.2}%
+\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{68}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{84}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{96}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{96}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{97}{section.7.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{98}{appendix*.106}%

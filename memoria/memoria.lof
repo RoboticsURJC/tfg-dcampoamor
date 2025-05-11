@@ -33,7 +33,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Cámara Logitech C270 HD$^{\ref {note:enlace16}}$\relax }}{39}{figure.caption.41}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Soporte de brazo articulado$^{\ref {note:enlace17}}$\relax }}{40}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace20}}$\relax }}{41}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace20}}$\relax }}{42}{figure.caption.43}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Pantalla principal de la interfaz de Polyscope 5\relax }}{44}{figure.caption.44}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Pruebas realizadas con SocketTest para verificar la comunicación robot-servidor externo\relax }}{47}{figure.caption.45}%
 \addvspace {10\p@ }
@@ -52,18 +52,29 @@
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Deteccion con Pytorch\relax }}{64}{figure.caption.63}%
 \contentsline {figure}{\numberline {6.13}{\ignorespaces Etiquetado de las imágenes con labelImg\relax }}{65}{figure.caption.64}%
 \contentsline {figure}{\numberline {6.14}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{66}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{67}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{67}{figure.caption.67}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{69}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{70}{figure.caption.70}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{71}{figure.caption.71}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Esquema de la rotación de la cámara\relax }}{72}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Cálculo de la distancia de la cámara a la detección\relax }}{73}{figure.caption.76}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{74}{figure.caption.77}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{75}{figure.caption.78}%
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{76}{figure.caption.79}%
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{79}{figure.caption.84}%
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }}{81}{figure.caption.87}%
-\contentsline {figure}{\numberline {6.27}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{82}{figure.caption.88}%
-\contentsline {figure}{\numberline {6.28}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{83}{figure.caption.90}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{68}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{68}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{70}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{71}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{72}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Esquema de la rotación de la cámara\relax }}{73}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Cálculo de la distancia de la cámara a la detección\relax }}{74}{figure.caption.80}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{75}{figure.caption.81}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{76}{figure.caption.82}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{77}{figure.caption.83}%
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{80}{figure.caption.88}%
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }}{82}{figure.caption.91}%
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{83}{figure.caption.92}%
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{84}{figure.caption.94}%
+\contentsline {figure}{\numberline {6.29}{\ignorespaces Programa recibir\_cadena\_socket.urp\relax }}{85}{figure.caption.95}%
+\contentsline {figure}{\numberline {6.30}{\ignorespaces Programa prueba\_visionsimple.urp\relax }}{86}{figure.caption.96}%
+\contentsline {figure}{\numberline {6.31}{\ignorespaces Programa xmlrpc\_example.urp\relax }}{89}{figure.caption.97}%
+\contentsline {figure}{\numberline {6.32}{\ignorespaces Pruebas funcionales con el programa pinhole.py y el robot real\relax }}{90}{figure.caption.98}%
+\contentsline {figure}{\numberline {6.33}{\ignorespaces Primeras pruebas deteccion de fresas y envío de las posiciones al UR\relax }}{90}{figure.caption.99}%
+\contentsline {figure}{\numberline {6.34}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR3e\relax }}{92}{figure.caption.100}%
+\contentsline {figure}{\numberline {6.35}{\ignorespaces Ejecución del programa en la terminal para un plano horizontal con un UR3e\relax }}{92}{figure.caption.101}%
+\contentsline {figure}{\numberline {6.36}{\ignorespaces Disposición de las detecciones para un plano vertical con un UR3e\relax }}{93}{figure.caption.102}%
+\contentsline {figure}{\numberline {6.37}{\ignorespaces Montaje para las pruebas de detección con el robot UR5e en plano vertical\relax }}{94}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.38}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR5e\relax }}{94}{figure.caption.104}%
+\contentsline {figure}{\numberline {6.39}{\ignorespaces Pruenas en el plano vertical de detección con garra integrada\relax }}{95}{figure.caption.105}%
 \addvspace {10\p@ }

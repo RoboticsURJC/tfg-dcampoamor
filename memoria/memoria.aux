@@ -71,6 +71,7 @@
 \newacro{ROS}[\AC@hyperlink{ROS}{ROS}]{\emph  {Robot Operating System}}
 \newacro{ROS-I}[\AC@hyperlink{ROS-I}{ROS-I}]{\emph  {Robot Operating System-Industrial}}
 \newacro{RPC}[\AC@hyperlink{RPC}{RPC}]{\emph  {Remote Procedure Call}}
+\newacro{RPY}[\AC@hyperlink{RPY}{RPY}]{\emph  {Roll Pitch Yaw}}
 \newacro{SAIL}[\AC@hyperlink{SAIL}{SAIL}]{\emph  {Stanford Artificial Intelligence Laboratory}}
 \newacro{SCARA}[\AC@hyperlink{SCARA}{SCARA}]{\emph  {Selective Compliance Assembly Robot Arm}}
 \newacro{SCB}[\AC@hyperlink{SCB}{SCB}]{\emph  {Safety Control Board}}
@@ -268,16 +269,16 @@
 \citation{Service_Manual_UR_e-series_2024}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Robot de \textit  {Universal Robots} de la gama \textit  {e-series}}{41}{subsection.4.1.4}\protected@file@percent }
 \newlabel{subsec:URe-series}{{4.1.4}{41}{Robot de \textit {Universal Robots} de la gama \textit {e-series}}{subsection.4.1.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref  {note:enlace20}}$\relax }}{41}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:Gama_e-series}{{4.3}{41}{Gama e-series de Universal Robots$^{\ref {note:enlace20}}$\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref  {note:enlace20}}$\relax }}{42}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:Gama_e-series}{{4.3}{42}{Gama e-series de Universal Robots$^{\ref {note:enlace20}}$\relax }{figure.caption.43}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{42}{subsection.4.1.5}\protected@file@percent }
 \newlabel{subsec:comunicacion}{{4.1.5}{42}{Comunicaciones}{subsection.4.1.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Software}{42}{section.4.2}\protected@file@percent }
 \newlabel{sec:software}{{4.2}{42}{Software}{section.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{42}{subsection.4.2.1}\protected@file@percent }
-\newlabel{sec:ubuntu}{{4.2.1}{42}{Ubuntu}{subsection.4.2.1}{}}
 \newlabel{note:enlace20}{{20}{42}{Robot de \textit {Universal Robots} de la gama \textit {e-series}}{figure.caption.43}{}}
 \newlabel{note:enlace21}{{21}{42}{Comunicaciones}{subsection.4.1.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{43}{subsection.4.2.1}\protected@file@percent }
+\newlabel{sec:ubuntu}{{4.2.1}{43}{Ubuntu}{subsection.4.2.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Polyscope}{43}{subsection.4.2.2}\protected@file@percent }
 \newlabel{sec:Polyscope}{{4.2.2}{43}{Polyscope}{subsection.4.2.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Pantalla principal de la interfaz de Polyscope 5\relax }}{44}{figure.caption.44}\protected@file@percent }
@@ -374,74 +375,171 @@
 \newlabel{sec:Calibrado_camara}{{6.2.3}{66}{Calibrado de la cámara}{subsection.6.2.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{66}{figure.caption.65}\protected@file@percent }
 \newlabel{fig:calibracion_camara}{{6.14}{66}{Calibración de la cámara C270 de Logitech\relax }{figure.caption.65}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{67}{figure.caption.66}\protected@file@percent }
-\newlabel{fig:medicion_angulo_ERGONAUTAS}{{6.15}{67}{Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{67}{subsection.6.2.4}\protected@file@percent }
-\newlabel{sec:Pruebas_Fresas_Pytorch}{{6.2.4}{67}{Pruebas detección de fresas en tiempo real}{subsection.6.2.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{67}{figure.caption.67}\protected@file@percent }
-\newlabel{fig:primerasdetecciones_Python}{{6.16}{67}{Primeras pruebas de detección con PyTorch y Python\relax }{figure.caption.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Definición de los parámetros de posición y orientación de la cámara pin-hole\relax }}{66}{table.caption.66}\protected@file@percent }
+\newlabel{tab:parametros_camara}{{6.2}{66}{Definición de los parámetros de posición y orientación de la cámara pin-hole\relax }{table.caption.66}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.1}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{67}{myequation.caption.67}\protected@file@percent }
+\newlabel{ec:matriz_intrinsecos}{{6.1}{67}{Matriz de parámetros intrínsecos de la cámara\relax }{myequation.caption.67}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.2}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{67}{myequation.caption.68}\protected@file@percent }
+\newlabel{ec:rotacion_ejes}{{6.2}{67}{Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }{myequation.caption.68}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.3}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{67}{myequation.caption.69}\protected@file@percent }
+\newlabel{ec:matriz_traslacion}{{6.3}{67}{Matriz de traslación de la cámara en coordenadas tridimensionales\relax }{myequation.caption.69}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{68}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:medicion_angulo_ERGONAUTAS}{{6.15}{68}{Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }{figure.caption.70}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{68}{subsection.6.2.4}\protected@file@percent }
+\newlabel{sec:Pruebas_Fresas_Pytorch}{{6.2.4}{68}{Pruebas detección de fresas en tiempo real}{subsection.6.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{68}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:primerasdetecciones_Python}{{6.16}{68}{Primeras pruebas de detección con PyTorch y Python\relax }{figure.caption.71}{}}
 \citation{Joko13}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{69}{figure.caption.68}\protected@file@percent }
-\newlabel{fig:primera_estimacion_postit}{{6.17}{69}{Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }{figure.caption.68}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Comparacion entre coordenadas reales y obtenidas (en mm)\relax }}{69}{table.caption.69}\protected@file@percent }
-\newlabel{tab:primera_estimacion_postit}{{6.2}{69}{Comparacion entre coordenadas reales y obtenidas (en mm)\relax }{table.caption.69}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{70}{figure.caption.70}\protected@file@percent }
-\newlabel{fig:geometria_modelopinhole}{{6.18}{70}{Geometría basada en el modelo de cámara estenopeica\relax }{figure.caption.70}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{71}{figure.caption.71}\protected@file@percent }
-\newlabel{fig:prueba_ejes_camara}{{6.19}{71}{Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }{figure.caption.71}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Resultados del programa pinhole.py con valores de Z positivos\relax }}{71}{table.caption.72}\protected@file@percent }
-\newlabel{tab:pinhole_Zpos}{{6.3}{71}{Resultados del programa pinhole.py con valores de Z positivos\relax }{table.caption.72}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Resultados del programa pinhole.py con valores de Z negativos\relax }}{72}{table.caption.73}\protected@file@percent }
-\newlabel{tab:pinhole_Zneg}{{6.4}{72}{Resultados del programa pinhole.py con valores de Z negativos\relax }{table.caption.73}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Esquema de la rotación de la cámara\relax }}{72}{figure.caption.74}\protected@file@percent }
-\newlabel{fig:esquema_rot_camara}{{6.20}{72}{Esquema de la rotación de la cámara\relax }{figure.caption.74}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara\relax }}{73}{table.caption.75}\protected@file@percent }
-\newlabel{tab:pinhole_rot_camara}{{6.5}{73}{Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara\relax }{table.caption.75}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces Cálculo de la distancia de la cámara a la detección\relax }}{73}{figure.caption.76}\protected@file@percent }
-\newlabel{fig:dist_camara}{{6.21}{73}{Cálculo de la distancia de la cámara a la detección\relax }{figure.caption.76}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{74}{figure.caption.77}\protected@file@percent }
-\newlabel{fig:deteccion_multiple_ptos}{{6.22}{74}{Detección múltiple simultánea de post-it\relax }{figure.caption.77}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{75}{figure.caption.78}\protected@file@percent }
-\newlabel{fig:dist_camara}{{6.23}{75}{Representación de las detecciones con OpenGL\relax }{figure.caption.78}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{76}{figure.caption.79}\protected@file@percent }
-\newlabel{fig:union_scripts_fresas}{{6.24}{76}{Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }{figure.caption.79}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados\relax }}{76}{table.caption.80}\protected@file@percent }
-\newlabel{tab:resultados_145mm_59grados}{{6.6}{76}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados\relax }{table.caption.80}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados\relax }}{77}{table.caption.81}\protected@file@percent }
-\newlabel{tab:resultados_125mm_59grados}{{6.7}{77}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados\relax }{table.caption.81}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados\relax }}{77}{table.caption.82}\protected@file@percent }
-\newlabel{tab:resultados_225mm_69grados}{{6.8}{77}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados\relax }{table.caption.82}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados\relax }}{78}{table.caption.83}\protected@file@percent }
-\newlabel{tab:resultados_180mm_58grados}{{6.9}{78}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados\relax }{table.caption.83}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.25}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{79}{figure.caption.84}\protected@file@percent }
-\newlabel{fig:proy_OpenGL_deteccion}{{6.25}{79}{Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }{figure.caption.84}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.10}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano\relax }}{80}{table.caption.85}\protected@file@percent }
-\newlabel{tab:resultados_180mm_58grados}{{6.10}{80}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano\relax }{table.caption.85}{}}
-\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.1}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{81}{myequation.caption.86}\protected@file@percent }
-\newlabel{ec:equivalencia_resultados}{{6.1}{81}{Equivalencia entre las coordenadas supuestas y obtenidas\relax }{myequation.caption.86}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.26}{\ignorespaces Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }}{81}{figure.caption.87}\protected@file@percent }
-\newlabel{fig:sistemas_coordenadas}{{6.26}{81}{Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }{figure.caption.87}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.27}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{82}{figure.caption.88}\protected@file@percent }
-\newlabel{fig:deteccion_plano_perpendicular}{{6.27}{82}{Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }{figure.caption.88}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.11}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano\relax }}{82}{table.caption.89}\protected@file@percent }
-\newlabel{tab:resultados_343mm_0grados}{{6.11}{82}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano\relax }{table.caption.89}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{83}{section.6.3}\protected@file@percent }
-\newlabel{Pruebas_UR}{{6.3}{83}{Pruebas con el robot real}{section.6.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.28}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{83}{figure.caption.90}\protected@file@percent }
-\newlabel{fig:visionsimple}{{6.28}{83}{Representación básica de un programa de un sistema de visión externo\relax }{figure.caption.90}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.12}{\ignorespaces Programa recibir\_cadena\_socket.urp\relax }}{84}{table.caption.91}\protected@file@percent }
-\newlabel{fig:recibir_cadena_socket}{{6.12}{84}{Programa recibir\_cadena\_socket.urp\relax }{table.caption.91}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.13}{\ignorespaces Programa prueba\_visionsimple.urp\relax }}{85}{table.caption.92}\protected@file@percent }
-\newlabel{fig:prueba_visionsimple}{{6.13}{85}{Programa prueba\_visionsimple.urp\relax }{table.caption.92}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusiones}{86}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{70}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:primera_estimacion_postit}{{6.17}{70}{Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }{figure.caption.72}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Comparacion entre coordenadas reales y obtenidas (en mm)\relax }}{70}{table.caption.73}\protected@file@percent }
+\newlabel{tab:primera_estimacion_postit}{{6.3}{70}{Comparacion entre coordenadas reales y obtenidas (en mm)\relax }{table.caption.73}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{71}{figure.caption.74}\protected@file@percent }
+\newlabel{fig:geometria_modelopinhole}{{6.18}{71}{Geometría basada en el modelo de cámara estenopeica\relax }{figure.caption.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{72}{figure.caption.75}\protected@file@percent }
+\newlabel{fig:prueba_ejes_camara}{{6.19}{72}{Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }{figure.caption.75}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Resultados del programa pinhole.py con valores de Z positivos\relax }}{72}{table.caption.76}\protected@file@percent }
+\newlabel{tab:pinhole_Zpos}{{6.4}{72}{Resultados del programa pinhole.py con valores de Z positivos\relax }{table.caption.76}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Resultados del programa pinhole.py con valores de Z negativos\relax }}{73}{table.caption.77}\protected@file@percent }
+\newlabel{tab:pinhole_Zneg}{{6.5}{73}{Resultados del programa pinhole.py con valores de Z negativos\relax }{table.caption.77}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Esquema de la rotación de la cámara\relax }}{73}{figure.caption.78}\protected@file@percent }
+\newlabel{fig:esquema_rot_camara}{{6.20}{73}{Esquema de la rotación de la cámara\relax }{figure.caption.78}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara\relax }}{74}{table.caption.79}\protected@file@percent }
+\newlabel{tab:pinhole_rot_camara}{{6.6}{74}{Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara\relax }{table.caption.79}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces Cálculo de la distancia de la cámara a la detección\relax }}{74}{figure.caption.80}\protected@file@percent }
+\newlabel{fig:dist_camara}{{6.21}{74}{Cálculo de la distancia de la cámara a la detección\relax }{figure.caption.80}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{75}{figure.caption.81}\protected@file@percent }
+\newlabel{fig:deteccion_multiple_ptos}{{6.22}{75}{Detección múltiple simultánea de post-it\relax }{figure.caption.81}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{76}{figure.caption.82}\protected@file@percent }
+\newlabel{fig:dist_camara}{{6.23}{76}{Representación de las detecciones con OpenGL\relax }{figure.caption.82}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{77}{figure.caption.83}\protected@file@percent }
+\newlabel{fig:union_scripts_fresas}{{6.24}{77}{Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }{figure.caption.83}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados\relax }}{77}{table.caption.84}\protected@file@percent }
+\newlabel{tab:resultados_145mm_59grados}{{6.7}{77}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados\relax }{table.caption.84}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados\relax }}{78}{table.caption.85}\protected@file@percent }
+\newlabel{tab:resultados_125mm_59grados}{{6.8}{78}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados\relax }{table.caption.85}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados\relax }}{78}{table.caption.86}\protected@file@percent }
+\newlabel{tab:resultados_225mm_69grados}{{6.9}{78}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados\relax }{table.caption.86}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.10}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados\relax }}{79}{table.caption.87}\protected@file@percent }
+\newlabel{tab:resultados_180mm_58grados}{{6.10}{79}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados\relax }{table.caption.87}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.25}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{80}{figure.caption.88}\protected@file@percent }
+\newlabel{fig:proy_OpenGL_deteccion}{{6.25}{80}{Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }{figure.caption.88}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.11}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano\relax }}{81}{table.caption.89}\protected@file@percent }
+\newlabel{tab:resultados_180mm_58grados}{{6.11}{81}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano\relax }{table.caption.89}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.4}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{82}{myequation.caption.90}\protected@file@percent }
+\newlabel{ec:equivalencia_resultados}{{6.4}{82}{Equivalencia entre las coordenadas supuestas y obtenidas\relax }{myequation.caption.90}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.26}{\ignorespaces Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }}{82}{figure.caption.91}\protected@file@percent }
+\newlabel{fig:sistemas_coordenadas}{{6.26}{82}{Representación de los sistemas de coordenadas que se habia supuesto en un principio y del real obtenido\relax }{figure.caption.91}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.27}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{83}{figure.caption.92}\protected@file@percent }
+\newlabel{fig:deteccion_plano_perpendicular}{{6.27}{83}{Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }{figure.caption.92}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.12}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano\relax }}{83}{table.caption.93}\protected@file@percent }
+\newlabel{tab:resultados_343mm_0grados}{{6.12}{83}{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano\relax }{table.caption.93}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{84}{section.6.3}\protected@file@percent }
+\newlabel{Pruebas_UR}{{6.3}{84}{Pruebas con el robot real}{section.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.28}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{84}{figure.caption.94}\protected@file@percent }
+\newlabel{fig:visionsimple}{{6.28}{84}{Representación básica de un programa de un sistema de visión externo\relax }{figure.caption.94}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.29}{\ignorespaces Programa recibir\_cadena\_socket.urp\relax }}{85}{figure.caption.95}\protected@file@percent }
+\newlabel{fig:recibir_cadena_socket}{{6.29}{85}{Programa recibir\_cadena\_socket.urp\relax }{figure.caption.95}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.30}{\ignorespaces Programa prueba\_visionsimple.urp\relax }}{86}{figure.caption.96}\protected@file@percent }
+\newlabel{fig:prueba_visionsimple}{{6.30}{86}{Programa prueba\_visionsimple.urp\relax }{figure.caption.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.31}{\ignorespaces Programa xmlrpc\_example.urp\relax }}{89}{figure.caption.97}\protected@file@percent }
+\newlabel{fig:prueba_xmlrpc}{{6.31}{89}{Programa xmlrpc\_example.urp\relax }{figure.caption.97}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.32}{\ignorespaces Pruebas funcionales con el programa pinhole.py y el robot real\relax }}{90}{figure.caption.98}\protected@file@percent }
+\newlabel{fig:pinhole_UR}{{6.32}{90}{Pruebas funcionales con el programa pinhole.py y el robot real\relax }{figure.caption.98}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.33}{\ignorespaces Primeras pruebas deteccion de fresas y envío de las posiciones al UR\relax }}{90}{figure.caption.99}\protected@file@percent }
+\newlabel{fig:primeraspruebas_fresas_UR}{{6.33}{90}{Primeras pruebas deteccion de fresas y envío de las posiciones al UR\relax }{figure.caption.99}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.34}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR3e\relax }}{92}{figure.caption.100}\protected@file@percent }
+\newlabel{fig:UR3e_planomesa}{{6.34}{92}{Disposición de las detecciones para un plano horizontal con un UR3e\relax }{figure.caption.100}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.35}{\ignorespaces Ejecución del programa en la terminal para un plano horizontal con un UR3e\relax }}{92}{figure.caption.101}\protected@file@percent }
+\newlabel{fig:POV_Camara_UR3e_planomesa}{{6.35}{92}{Ejecución del programa en la terminal para un plano horizontal con un UR3e\relax }{figure.caption.101}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.36}{\ignorespaces Disposición de las detecciones para un plano vertical con un UR3e\relax }}{93}{figure.caption.102}\protected@file@percent }
+\newlabel{fig:UR3e_planopared}{{6.36}{93}{Disposición de las detecciones para un plano vertical con un UR3e\relax }{figure.caption.102}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.37}{\ignorespaces Montaje para las pruebas de detección con el robot UR5e en plano vertical\relax }}{94}{figure.caption.103}\protected@file@percent }
+\newlabel{fig:montaje_UR5e_vertical}{{6.37}{94}{Montaje para las pruebas de detección con el robot UR5e en plano vertical\relax }{figure.caption.103}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.38}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR5e\relax }}{94}{figure.caption.104}\protected@file@percent }
+\newlabel{fig:UR5e_planopared}{{6.38}{94}{Disposición de las detecciones para un plano horizontal con un UR5e\relax }{figure.caption.104}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.39}{\ignorespaces Pruenas en el plano vertical de detección con garra integrada\relax }}{95}{figure.caption.105}\protected@file@percent }
+\newlabel{fig:UR5e_planopared_garra}{{6.39}{95}{Pruenas en el plano vertical de detección con garra integrada\relax }{figure.caption.105}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusiones}{96}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{locode}{\addvspace {10\p@ }}
 \@writefile{lomyequation}{\addvspace {10\p@ }}
-\newlabel{cap:capitulo7}{{7}{86}{Conclusiones}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusiones}{86}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Corrector ortográfico}{87}{section.7.2}\protected@file@percent }
+\newlabel{cap:capitulo7}{{7}{96}{Conclusiones}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusiones}{96}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Corrector ortográfico}{97}{section.7.2}\protected@file@percent }
 \citation{*}
 \bibstyle{apalike}
 \bibdata{bibliografia}
-\gdef \@abspage@last{104}
+\bibcite{Abeliuk21}{Abeliuk and Gutiérrez, 2021}
+\bibcite{Aizenberg00}{Aizenberg et\unhbox \voidb@x \nobreak  \ al., 2000}
+\bibcite{Alvear17}{Alvear-Puertas et\unhbox \voidb@x \nobreak  \ al., 2017}
+\bibcite{Aracil08}{Aracil et\unhbox \voidb@x \nobreak  \ al., 2008}
+\bibcite{Arnold11}{Arnold et\unhbox \voidb@x \nobreak  \ al., 2011}
+\bibcite{Barrientos02}{Barrientos, 2002}
+\bibcite{Basogain08}{Basogain, 2008}
+\bibcite{Beasley12}{Beasley, 2012}
+\bibcite{Bischoff10}{Bischoff et\unhbox \voidb@x \nobreak  \ al., 2010}
+\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{98}{appendix*.106}\protected@file@percent }
+\bibcite{Bradski08}{Bradski and Kaehler, 2008}
+\bibcite{Cabanillas09}{Cabanillas, 2009}
+\bibcite{Clavel91}{Clavel, 1991}
+\bibcite{Culjak12}{Culjak et\unhbox \voidb@x \nobreak  \ al., 2012}
+\bibcite{Cusano22}{Cusano, 2022}
+\bibcite{DePreter18}{{D}e {P}reter et\unhbox \voidb@x \nobreak  \ al., 2018}
+\bibcite{Dechter86}{Dechter, 1986}
+\bibcite{Dinamarca18}{Dinamarca, 2018}
+\bibcite{Dupont21}{Dupont et\unhbox \voidb@x \nobreak  \ al., 2021}
+\bibcite{Durmus15}{Durmuş et\unhbox \voidb@x \nobreak  \ al., 2015}
+\bibcite{Du-Harpur20}{Du‐Harpur et\unhbox \voidb@x \nobreak  \ al., 2020}
+\bibcite{Diaz21}{Díaz-Ramírez, 2021}
+\bibcite{EcoInventos24}{EcoInventos.com, 2024}
+\bibcite{ElNaqa15}{El\unhbox \voidb@x \nobreak  \ Naqa and Murphy, 2015}
+\bibcite{Maite19}{Fernández, 2019}
+\bibcite{Fountas20}{Fountas et\unhbox \voidb@x \nobreak  \ al., 2020}
+\bibcite{Galipienso03}{GALIPIENSO et\unhbox \voidb@x \nobreak  \ al., 2003}
+\bibcite{Santillan15}{García\unhbox \voidb@x \nobreak  \ Santillán and Caranqui\unhbox \voidb@x \nobreak  \ Sánchez, 2015}
+\bibcite{Gasparetto19}{Gasparetto and Scalera, 2019}
+\bibcite{Gollapudi16}{Gollapudi, 2016}
+\bibcite{Gonzalez21}{Gonzalez-Aguirre et\unhbox \voidb@x \nobreak  \ al., 2021}
+\bibcite{Gonzalez17}{González and de\unhbox \voidb@x \nobreak  \ Mántaras\unhbox \voidb@x \nobreak  \ Badia, 2017}
+\bibcite{Gu18}{Gu et\unhbox \voidb@x \nobreak  \ al., 2018}
+\bibcite{Hardy01}{Hardy, 2001}
+\bibcite{ISO8373}{ISO/TC299, 2021}
+\bibcite{Janiesch21}{Janiesch et\unhbox \voidb@x \nobreak  \ al., 2021}
+\bibcite{Kim16}{Kim, 2016}
+\bibcite{Koditschek21}{Koditschek, 2021}
+\bibcite{Kraevsky10}{Kraevsky and Rogatkin, 2010}
+\bibcite{Makino80}{Makino and Furuya, 1980}
+\bibcite{Martinez22}{Martínez\unhbox \voidb@x \nobreak  \ Madruga, 2022}
+\bibcite{Mokyr15}{Mokyr et\unhbox \voidb@x \nobreak  \ al., 2015}
+\bibcite{Moreno94}{Moreno et\unhbox \voidb@x \nobreak  \ al., 1994}
+\bibcite{Oktarina20}{Oktarina et\unhbox \voidb@x \nobreak  \ al., 2020}
+\bibcite{Ponce14}{Ponce\unhbox \voidb@x \nobreak  \ Gallegos et\unhbox \voidb@x \nobreak  \ al., 2014}
+\bibcite{Raj19}{Raj and Seamans, 2019}
+\bibcite{Redmon16}{Redmon et\unhbox \voidb@x \nobreak  \ al., 2016}
+\bibcite{Redmon18}{Redmon and Farhadi, 2018}
+\bibcite{Romero20}{Romero-Tamarit et\unhbox \voidb@x \nobreak  \ al., 2020}
+\bibcite{Rouhiainen18}{Rouhiainen, 2018}
+\bibcite{Sandoval18}{Sandoval\unhbox \voidb@x \nobreak  \ Serrano et\unhbox \voidb@x \nobreak  \ al., 2018}
+\bibcite{Schmidhuber15}{Schmidhuber, 2015}
+\bibcite{Siciliano16}{Siciliano and Khatib, 2016}
+\bibcite{Joko13}{Siswantoro et\unhbox \voidb@x \nobreak  \ al., 2013}
+\bibcite{Suarez22}{Suárez et\unhbox \voidb@x \nobreak  \ al., 2022}
+\bibcite{Sanchez07a}{Sánchez\unhbox \voidb@x \nobreak  \ Martín et\unhbox \voidb@x \nobreak  \ al., 2007a}
+\bibcite{Sanchez07b}{Sánchez\unhbox \voidb@x \nobreak  \ Martín et\unhbox \voidb@x \nobreak  \ al., 2007b}
+\bibcite{UR_e-series_brochure18}{{Universal Robots A/S}, 2018}
+\bibcite{Service_Manual_UR_e-series_2024}{{Universal Robots A/S}, 2024a}
+\bibcite{SoftwareHandbook_UR_Polyscope5_2024}{{Universal Robots A/S}, 2024b}
+\bibcite{SoftwareHandbook_UR_PolyscopeX_2024}{{Universal Robots A/S}, 2024c}
+\bibcite{User_Manual_UR10e_2025}{{Universal Robots A/S}, 2025a}
+\bibcite{User_Manual_UR3e_2025}{{Universal Robots A/S}, 2025b}
+\bibcite{User_Manual_UR5e_2025}{{Universal Robots A/S}, 2025c}
+\bibcite{Vega19}{Vega, 2021}
+\bibcite{Vega21}{Vega and Cañas, 2021}
+\bibcite{Wang16}{Wang et\unhbox \voidb@x \nobreak  \ al., 2016}
+\bibcite{Wirtz18}{Wirtz et\unhbox \voidb@x \nobreak  \ al., 2018}
+\bibcite{Xiong20}{Xiong et\unhbox \voidb@x \nobreak  \ al., 2020}
+\bibcite{Xiong19}{Xiong et\unhbox \voidb@x \nobreak  \ al., 2019}
+\bibcite{Zamalloa17}{Zamalloa et\unhbox \voidb@x \nobreak  \ al., 2017}
+\gdef \@abspage@last{121}
