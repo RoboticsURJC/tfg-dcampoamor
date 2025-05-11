@@ -3,11 +3,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {myequation}{\numberline {5.1}{\ignorespaces Ejemplo de ecuación con fracciones}}{51}{myequation.caption.48}%
-\contentsline {myequation}{\numberline {5.2}{\ignorespaces Ejemplo de ecuación con array y letras y símbolos especiales}}{51}{myequation.caption.49}%
 \addvspace {10\p@ }
-\contentsline {myequation}{\numberline {6.1}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{67}{myequation.caption.67}%
-\contentsline {myequation}{\numberline {6.2}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{67}{myequation.caption.68}%
-\contentsline {myequation}{\numberline {6.3}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{67}{myequation.caption.69}%
-\contentsline {myequation}{\numberline {6.4}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{82}{myequation.caption.90}%
+\contentsline {myequation}{\numberline {6.1}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{69}{myequation.caption.66}%
+\contentsline {myequation}{\numberline {6.2}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{69}{myequation.caption.67}%
+\contentsline {myequation}{\numberline {6.3}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{69}{myequation.caption.68}%
+\contentsline {myequation}{\numberline {6.4}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{84}{myequation.caption.89}%
 \addvspace {10\p@ }
