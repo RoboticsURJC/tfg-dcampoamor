@@ -19,37 +19,40 @@
 \contentsline {section}{\numberline {4.1}Hardware}{39}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{39}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{40}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{40}{subsection.4.1.3}%
+\contentsline {subsubsection}{Soporte de impresión 3D}{40}{subsubsection*.43}%
+\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{41}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Robot de \textit {Universal Robots} de la gama \textit {e-series}}{41}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{42}{subsection.4.1.5}%
 \contentsline {section}{\numberline {4.2}Software}{42}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Ubuntu}{43}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Polyscope}{43}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Python}{44}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}PyTorch}{45}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}NumPy}{45}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}OpenCV}{45}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}OpenGL}{46}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}SocketTest}{46}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}XML-RPC}{47}{subsection.4.2.9}%
-\contentsline {subsection}{\numberline {4.2.10}Anaconda}{47}{subsection.4.2.10}%
+\contentsline {subsection}{\numberline {4.2.3}Anaconda}{44}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Python}{45}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}PyTorch}{45}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}NumPy}{45}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}OpenCV}{46}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}OpenGL}{46}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}SocketTest}{47}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}XML-RPC}{48}{subsection.4.2.10}%
 \contentsline {subsection}{\numberline {4.2.11}YOLOv3}{48}{subsection.4.2.11}%
 \contentsline {chapter}{\numberline {5}Sistema de reconocimiento y recolección}{50}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{50}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{51}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{51}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{52}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Experimentos}{53}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Detección con YOLOv3 y TensorFlow}{53}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Pruebas con imágenes}{53}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Pruebas con vídeo en tiempo real}{57}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Detección con YOLOv3 y PyTorch}{63}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Pruebas con modelos preentrenados}{63}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Entrenamiento del modelo}{64}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Calibrado de la cámara}{66}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{68}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{84}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{96}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{96}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{97}{section.7.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{98}{appendix*.106}%
+\contentsline {section}{\numberline {5.1}Hipótesis suelo adaptada al plano vertical}{50}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Técnica de visión}{52}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Modelo de hardware utilizado e integración con el robot}{53}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Experimentos}{55}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Detección con YOLOv3 y TensorFlow}{55}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Pruebas con imágenes}{55}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Pruebas con vídeo en tiempo real}{59}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Detección con YOLOv3 y PyTorch}{65}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Pruebas con modelos preentrenados}{65}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Entrenamiento del modelo}{66}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Calibrado de la cámara}{68}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Pruebas detección de fresas en tiempo real}{70}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Pruebas con el robot real}{86}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{98}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Objetivos y requisitos cumplidos}{98}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Objetivos}{98}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Requisitos}{98}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Habilidades desarrolladas}{98}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Líneas Futuras}{98}{section.7.3}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{99}{appendix*.105}%
