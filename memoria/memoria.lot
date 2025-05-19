@@ -5,17 +5,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Definición de los parámetros de posición y orientación de la cámara pinhole\relax }}{51}{table.caption.50}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Distribución de las imágenes utilizadas para el entrenamiento del modelo\relax }}{56}{table.caption.50}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Definición de los parámetros de posición y orientación de la cámara pin-hole\relax }}{68}{table.caption.65}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Comparacion entre coordenadas reales y obtenidas (en mm)\relax }}{72}{table.caption.72}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Resultados del programa pinhole.py con valores de Z positivos\relax }}{74}{table.caption.75}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Resultados del programa pinhole.py con valores de Z negativos\relax }}{75}{table.caption.76}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara\relax }}{76}{table.caption.78}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados\relax }}{79}{table.caption.83}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados\relax }}{80}{table.caption.84}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados\relax }}{80}{table.caption.85}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados\relax }}{81}{table.caption.86}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano\relax }}{83}{table.caption.88}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano\relax }}{85}{table.caption.92}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {I.1}{\ignorespaces Distribución de las imágenes utilizadas para el entrenamiento del modelo\relax }}{70}{table.caption.71}%
+\contentsline {table}{\numberline {I.2}{\ignorespaces Comparacion entre coordenadas reales y obtenidas (en mm)\relax }}{86}{table.caption.91}%
+\contentsline {table}{\numberline {I.3}{\ignorespaces Resultados del programa pinhole.py con valores de Z positivos\relax }}{88}{table.caption.94}%
+\contentsline {table}{\numberline {I.4}{\ignorespaces Resultados del programa pinhole.py con valores de Z negativos\relax }}{89}{table.caption.95}%
+\contentsline {table}{\numberline {I.5}{\ignorespaces Resultados del programa pinhole.py con el valor ajustado de rotación de la cámara\relax }}{90}{table.caption.97}%
+\contentsline {table}{\numberline {I.6}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados\relax }}{94}{table.caption.102}%
+\contentsline {table}{\numberline {I.7}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados\relax }}{94}{table.caption.103}%
+\contentsline {table}{\numberline {I.8}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados\relax }}{95}{table.caption.104}%
+\contentsline {table}{\numberline {I.9}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados\relax }}{96}{table.caption.105}%
+\contentsline {table}{\numberline {I.10}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano\relax }}{98}{table.caption.107}%
+\contentsline {table}{\numberline {I.11}{\ignorespaces Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano\relax }}{100}{table.caption.111}%
