@@ -3,11 +3,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {code}{\numberline {5.1}{\ignorespaces Fragmento del código que permite que el modelo de \textit {deep learning} detecte las fresas maduras y genere sus posiciones en píxeles\relax }}{57}{code.caption.60}%
-\contentsline {code}{\numberline {5.2}{\ignorespaces Fragmento del código que realiza la retroproyección desde 2D a 3D\relax }}{57}{code.caption.61}%
-\contentsline {code}{\numberline {5.3}{\ignorespaces Función \texttt {getIntersecionZ()}\relax }}{58}{code.caption.62}%
-\contentsline {code}{\numberline {5.4}{\ignorespaces Envío de la última posición tridimensional detectada al robot mediante XML-RPC\relax }}{58}{code.caption.63}%
+\contentsline {code}{\numberline {5.1}{\ignorespaces Fragmento del código que permite que el modelo de \textit {deep learning} detecte las fresas maduras y genere sus posiciones en píxeles\relax }}{50}{code.caption.47}%
+\contentsline {code}{\numberline {5.2}{\ignorespaces Fragmento del código que realiza la retroproyección desde 2D a 3D\relax }}{50}{code.caption.48}%
+\contentsline {code}{\numberline {5.3}{\ignorespaces Función \texttt {getIntersecionZ()}\relax }}{51}{code.caption.49}%
+\contentsline {code}{\numberline {5.4}{\ignorespaces Envío de la última posición tridimensional detectada al robot mediante XML-RPC\relax }}{51}{code.caption.50}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {code}{\numberline {I.1}{\ignorespaces Función \texttt {positions\_are\_similar()}\relax }}{84}{code.caption.88}%
-\contentsline {code}{\numberline {I.2}{\ignorespaces Fragmento del código donde se comparan posiciones para evitar que se dupliquen\relax }}{85}{code.caption.89}%
+\contentsline {code}{\numberline {I.1}{\ignorespaces Función \texttt {positions\_are\_similar()}\relax }}{77}{code.caption.74}%
+\contentsline {code}{\numberline {I.2}{\ignorespaces Fragmento del código donde se comparan posiciones para evitar que se dupliquen\relax }}{78}{code.caption.75}%

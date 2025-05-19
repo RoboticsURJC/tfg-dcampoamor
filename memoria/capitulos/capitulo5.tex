@@ -60,7 +60,7 @@ El hecho de que la cámara siga el modelo \textit{pinhole} o estenopeico, implic
     \label{ec:formulas_pinhole}
   \end{myequation}
 
-En esta ecuación se observa la relación entre un punto tridimensional \((X, Y, Z)\) y su proyección bidimensional \((u, v)\) multiplicada por un factor de escala \(w\) que representa la profundidad del punto proyectado en la imagen captada por la cámara, donde la matriz de parámetros instrínsecos K (Ecuación \ref{ec:matriz_intrinsecos}) junto con las matrices de rotación R (Ecuación \ref{ec:rotacion_ejes}) y la matriz de traslación T de la cámara (Ecuación \ref{ec:matriz_traslacion}), constituyen la matriz de proyección. Esta matriz de proyección transforma los puntos tridimensionales al plano imagen. 
+En esta ecuación se observa la relación entre un punto tridimensional \((X, Y, Z)\) y su proyección bidimensional \((u, v)\) multiplicada por un factor de escala \(w\) que representa la profundidad del punto proyectado en la imagen captada por la cámara, donde la matriz de parámetros intrínsecos K (Ecuación \ref{ec:matriz_intrinsecos}) junto con las matrices de rotación R (Ecuación \ref{ec:rotacion_ejes}) y la matriz de traslación T de la cámara (Ecuación \ref{ec:matriz_traslacion}), constituyen la matriz de proyección. Esta matriz de proyección transforma los puntos tridimensionales al plano imagen. 
 
   \begin{myequation}[H]
     \begin{align}
@@ -159,7 +159,7 @@ Para poder obtener la proyección tridimensional a partir de la bidimensional ha
     \label{ec:inversion_pinhole}
   \end{myequation}
 
-En este caso, y debido a la orientación del escenario, la hipótesis suelo ha sido adaptada al plano vertical, lo que significa que se asume que las fresas están dispuestas sobre una superficie vertical, como es el caso en los huertos verticales. En este plano de trabajo vertical, se ha establecido un sistema de coordenadas 3D cuyo origen coincide con el punto central del campo de visión de la cámara, actuando como referencia para crear el plano de trabajo en el robot a través de su interfaz y utlizando las mismas orientaciones de los ejes de coordenadas de la cámara (Figura \ref{fig:Plano_pared_UR}). Esto permite que una vez realizado el cálculo de las coordenadas de las fresas detectadas y el de las distancias a cada detección (Ecuación \ref{ec:formula_distancia}), estas coincidan con las coordenadas en este plano vertical, simplificando de esta manera el proceso de transformación de las coordenadas. 
+En este caso, y debido a la orientación del escenario, la hipótesis suelo ha sido adaptada al plano vertical, lo que significa que se asume que las fresas están dispuestas sobre una superficie vertical, como es el caso en los huertos verticales. En este plano de trabajo vertical, se ha establecido un sistema de coordenadas 3D cuyo origen coincide con el punto central del campo de visión de la cámara, actuando como referencia para crear el plano de trabajo en el robot a través de su interfaz y utilizando las mismas orientaciones de los ejes de coordenadas de la cámara (Figura \ref{fig:Plano_pared_UR}). Esto permite que una vez realizado el cálculo de las coordenadas de las fresas detectadas y el de las distancias a cada detección (Ecuación \ref{ec:formula_distancia}), estas coincidan con las coordenadas en este plano vertical, simplificando de esta manera el proceso de transformación de las mismas. 
 
 \begin{myequation}[H]
   \begin{align}
@@ -200,7 +200,7 @@ Para mejorar la precisión a la hora de estimar la posición de la fresa, se ha 
 \section{Arquitectura del sistema}
 \label{sec:arquitectura_sistema}
 
-El prototipo final se ha implementado utilizando una combinación de componentes hardware y software específicamente seleccionados y configurados para responder a los requisitos del sistema de recolección automatizada descritos con detalle en el Capítulo \ref{cap:capitulo4}. Esta integración ha sido diseñada para garantizar la detección precisa de fresas, el cálculo de su localización espacial en coordenadas tridimensionales y la ejecución del movimiento del robot sobre estas posiciones (Figura \ref{fig:UR5e_planopared}). 
+El prototipo final se ha implementado utilizando una combinación de componentes hardware y software, descritos con detalle en el Capítulo \ref{cap:capitulo4}, específicamente seleccionados y configurados para responder a los requisitos del sistema de recolección automatizada. Esta integración ha sido diseñada para garantizar la detección precisa de fresas, el cálculo de su localización espacial en coordenadas tridimensionales y la ejecución del movimiento del robot sobre estas posiciones (Figura \ref{fig:UR5e_planopared}). 
 
   \begin{figure}[H]
       \begin{center}
@@ -250,7 +250,7 @@ A partir de esta base, este apartado expone el proceso completo de integración 
       \label{cod:dp_pixeles}
     \end{code}
 
-  \item Estas coordenadas se proyectan al espacio tridimensional sobre el plano vertical utilizando la función \texttt{getIntersectionZ(p2d)} (Código \ref{cod:getIntersectionZ}), que calcula la intersección del rayo proyectado con el plano Z definido por la posición de la cámara utlizando como argumento de entrada \texttt{p2d}, es decir, las coordenadas en píxeles de la detección (Código \ref{cod:2D_a_3D}).
+  \item Estas coordenadas se proyectan al espacio tridimensional sobre el plano vertical utilizando la función \texttt{getIntersectionZ(p2d)} (Código \ref{cod:getIntersectionZ}), que calcula la intersección del rayo proyectado con el plano Z definido por la posición de la cámara, utilizando como argumento de entrada \texttt{p2d}, es decir, las coordenadas en píxeles de la detección (Código \ref{cod:2D_a_3D}).
  
     \begin{code}[H]
       \begin{lstlisting}[language=Python] 
@@ -326,11 +326,11 @@ A partir de esta base, este apartado expone el proceso completo de integración 
 Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a escenarios reales más complejos, sentando las bases para su posible aplicación futura en entornos agrícolas reales o semiautomatizados. Para hacer funcionar el sistema completo y conseguir una correcta integración entre el sistema de visión y el brazo robótico UR, deben seguirse los siguientes pasos de forma ordenada.
 
 \begin{enumerate}
-  \item Conexión de red: En primer lugar, es fundamental asegurarse de que, tanto el robot como el ordenador que ejecuta el sistema de visión, están conectados a la misma red local y que ambos dispositivos pertenezcan a la misma subred, y se recomienda usar conexión por cable para mayor estabilidad. Es necesario comprobar que hay conectividad entre ambos dispositivos (por ejemplo, mediante un ping a la IP del robot desde el ordenador), ya que la comunicación se establece a través del protocolo XML-RPC sobre una dirección IP y puerto determinados.
+  \item Conexión de red: Es fundamental asegurar que, tanto el robot como el ordenador que ejecuta el sistema de visión, están conectados a la misma red local y que ambos dispositivos pertenezcan a la misma subred, recomendándose el uso de cables ethernet para una mayor estabilidad. Por este motivo, es necesario comprobar que hay conectividad entre ambos dispositivos (por ejemplo, mediante el uso del comando \texttt{ping} a la IP del robot desde el ordenador), ya que la comunicación se establece a través del protocolo XML-RPC sobre una dirección IP y puerto determinados.
     
       \begin{figure} [H]
         \begin{center}
-          \includegraphics[width=90mm]{figs/Ajustes de Red UR.png}
+          \includegraphics[width=85mm]{figs/Ajustes de Red UR.png}
         \end{center}
         \caption{Ajustes de red en el robot}
         \label{fig:ajustes_red_UR}
@@ -361,21 +361,21 @@ Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a 
         \label{fig:ejecucion_python}
     \end{figure} 
   
-  \item Ejecución: Una vez en marcha tanto el programa en el ordenador como en el robot, el sistema detectará automáticamente las fresas presentes en la escena, calculará sus coordenadas tridimensionales y las enviará al robot, que ejecutará el movimiento correspondiente según el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}} para acercarse al fruto y proceder a su recolección.
+  \item Ejecución: Una vez en marcha tanto el programa en el ordenador como en el robot, el sistema detectará automáticamente las fresas presentes en la escena, calculará sus coordenadas tridimensionales y las enviará al robot, que ejecutará el movimiento correspondiente según el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, para acercarse a la fresa y situarse encima de esta para una futura recolección.
       
-    \begin{figure}[H]
-      \begin{center}
-        \subcapcentertrue
-        \subfigure[Ejecución del programa en Python en la terminal del ordenador]{\includegraphics[width=78mm]{figs/POV Camara Pruebas plano vetical deteccion simple UR5e}}
-        \hspace{4mm}
-        \subfigure[Ejecución del programa de robot]{\includegraphics[width=70mm]{figs/Carpetas del Programa UR.png}}
-      \end{center}
-      \caption{Ejecución de los programas de manera simultánea}
-      \label{fig:Ejecucion_programas}
-    \end{figure}
+%    \begin{figure}[H]
+%      \begin{center}
+%        \subcapcentertrue
+%        \subfigure[Ejecución del programa en Python en la terminal del ordenador]{\includegraphics[width=78mm]{figs/POV Camara Pruebas plano vetical deteccion simple UR5e}}
+%        \hspace{4mm}
+%        \subfigure[Ejecución del programa de robot]{\includegraphics[width=70mm]{figs/Carpetas del Programa UR.png}}
+%      \end{center}
+%      \caption{Ejecución de los programas de manera simultánea}
+%      \label{fig:Ejecucion_programas}
+%    \end{figure}
 \end{enumerate}
 
-Para completar la evaluación del prototipo, a pesar de que no se llegó a implementar la acción de cierre o agarre de la pinza dentro del flujo automatizado del sistema, se realizaron pruebas complementarias utilizando una pinza industrial acoplada al robot en el programa de robot \textit{xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical_pinza.urp}} (Figura \ref{fig:Programa_UR_pinza}) con el objetivo de verificar la compatibilidad y robustez del programa desarrollado que permitieron demostrar que el sistema era plenamente funcional y adaptable, y que se podía integrar sin inconvenientes cualquier herramienta de agarre que sea adecuada para el manejo de fresas, dada su delicadeza. De este modo, se confirma que el sistema de detección, proyección y comunicación con el robot puede extenderse fácilmente para incluir un actuador final destinado a la recolección efectiva del fruto en un entorno real (Figura \ref{fig:UR5e_planopared_garra}).
+Para completar la evaluación del prototipo, a pesar de que no se llegó a implementar la acción de cierre o agarre de la pinza dentro del flujo automatizado del sistema, se realizaron pruebas complementarias utilizando una pinza industrial acoplada al robot en el programa de robot \textit{xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical_pinza.urp}} (Figura \ref{fig:Programa_UR_pinza}) con el objetivo de verificar la compatibilidad y robustez del programa desarrollado. Estas pruebas permitieron demostrar que el sistema era plenamente funcional y adaptable, y que se podía integrar sin inconvenientes cualquier herramienta de agarre que fuera adecuada para el manejo de fresas, dada su delicadeza. De este modo, se confirma que el sistema de detección, proyección y comunicación con el robot puede extenderse fácilmente para incluir un actuador final destinado a la recolección efectiva del fruto en un entorno real (Figura \ref{fig:UR5e_planopared_garra}).
 
    \begin{figure}[H]
       \begin{center}
