@@ -29,13 +29,17 @@
 
 \input{capitulos/capitulo6}
 
-\input{capitulos/capitulo7}
-
 \clearpage
 \thispagestyle{empty}
 
 \printindex \nocite{*}
+
 \appendix
+\renewcommand{\thechapter}{\Roman{chapter}}
+%Inicia la sección de apéndices
+
+\input{capitulos/capitulo7}
+
 \bibliographystyle{apalike} \bibliography{bibliografia}
 
 \end{document}

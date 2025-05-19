@@ -3,9 +3,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {myequation}{\numberline {5.1}{\ignorespaces Relación de fórmulas del modelo de cámara estenopeico\relax }}{52}{myequation.caption.51}%
+\contentsline {myequation}{\numberline {5.2}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{52}{myequation.caption.52}%
+\contentsline {myequation}{\numberline {5.3}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{52}{myequation.caption.53}%
+\contentsline {myequation}{\numberline {5.4}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{53}{myequation.caption.54}%
+\contentsline {myequation}{\numberline {5.5}{\ignorespaces Descomposición e inversión parcial del modelo de cámara pinhole para estimar las coordenadas tridimensionales de un punto conocido en imagen bajo la hipótesis suelo \(Z = Z_0\).\relax }}{53}{myequation.caption.55}%
+\contentsline {myequation}{\numberline {5.6}{\ignorespaces Fórmula del cálculo de la distancia de la cámara a las detecciones\relax }}{53}{myequation.caption.56}%
 \addvspace {10\p@ }
-\contentsline {myequation}{\numberline {6.1}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{69}{myequation.caption.66}%
-\contentsline {myequation}{\numberline {6.2}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{69}{myequation.caption.67}%
-\contentsline {myequation}{\numberline {6.3}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{69}{myequation.caption.68}%
-\contentsline {myequation}{\numberline {6.4}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{84}{myequation.caption.89}%
 \addvspace {10\p@ }
+\contentsline {myequation}{\numberline {I.1}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{99}{myequation.caption.108}%
