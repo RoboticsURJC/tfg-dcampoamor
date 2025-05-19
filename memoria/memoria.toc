@@ -2,57 +2,57 @@
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Los robots y la robótica}{2}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Robots industriales}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{11}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Robots médicos}{14}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Inteligencia Artificial}{16}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Visión Artificial}{17}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Machine Learning}{19}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Deep Learning}{20}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Estado del arte}{23}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Objetivos}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Descripción del problema}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Requisitos}{32}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Competencias}{33}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Metodología}{35}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Plan de trabajo}{37}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Hardware}{39}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{39}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{40}{subsection.4.1.2}%
-\contentsline {subsubsection}{Soporte de impresión 3D}{40}{subsubsection*.43}%
-\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{41}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Robot de \textit {Universal Robots} de la gama \textit {e-series}}{41}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{42}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}Software}{43}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{43}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Polyscope}{43}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Anaconda}{44}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Python}{45}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}PyTorch}{45}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}NumPy}{46}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}OpenCV}{46}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}OpenGL}{47}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}SocketTest}{47}{subsection.4.2.9}%
-\contentsline {subsection}{\numberline {4.2.10}XML-RPC}{48}{subsection.4.2.10}%
-\contentsline {subsection}{\numberline {4.2.11}YOLOv3}{48}{subsection.4.2.11}%
-\contentsline {chapter}{\numberline {5}Descripción del sistema}{50}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Hipótesis suelo adaptada al plano vertical}{51}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Deep Learning}{54}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Arquitectura del sistema}{55}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{64}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Objetivos y requisitos cumplidos}{64}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Objetivos}{64}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Requisitos}{65}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Habilidades desarrolladas}{66}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Líneas Futuras}{67}{section.6.3}%
-\contentsline {chapter}{\numberline {I}Experimentos}{69}{appendix.Alph1}%
-\contentsline {section}{\numberline {I.1}Detección con YOLOv3 y TensorFlow}{69}{section.Alph1.1}%
-\contentsline {subsection}{\numberline {I.1.1}Pruebas con imágenes}{69}{subsection.Alph1.1.1}%
-\contentsline {subsection}{\numberline {I.1.2}Pruebas con vídeo en tiempo real}{73}{subsection.Alph1.1.2}%
-\contentsline {section}{\numberline {I.2}Detección con YOLOv3 y PyTorch}{79}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {I.2.1}Pruebas con modelos preentrenados}{79}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {I.2.2}Entrenamiento del modelo}{80}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {I.2.3}Calibrado de la cámara}{81}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {I.2.4}Pruebas detección de fresas en tiempo real}{83}{subsection.Alph1.2.4}%
-\contentsline {section}{\numberline {I.3}Pruebas con el robot real}{101}{section.Alph1.3}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{112}{appendix*.122}%
+\contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{7}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Robots médicos}{8}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Inteligencia Artificial}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Visión Artificial}{11}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Machine Learning}{12}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Deep Learning}{13}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Estado del arte}{16}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Objetivos}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción del problema}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Requisitos}{25}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Competencias}{26}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Metodología}{28}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Plan de trabajo}{30}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hardware}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Cámara Logitech C270 HD}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Soporte de brazo articulado}{33}{subsection.4.1.2}%
+\contentsline {subsubsection}{Soporte de impresión 3D}{33}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {4.1.3}Ordenador principal}{34}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Robot de Universal Robots de la gama e-series}{34}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Comunicaciones}{35}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Software}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ubuntu}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Polyscope}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Anaconda}{38}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Python}{38}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}PyTorch}{38}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}NumPy}{39}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}OpenCV}{39}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}OpenGL}{40}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}SocketTest}{40}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}XML-RPC}{41}{subsection.4.2.10}%
+\contentsline {subsection}{\numberline {4.2.11}YOLOv3}{41}{subsection.4.2.11}%
+\contentsline {chapter}{\numberline {5}Descripción del sistema}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Hipótesis suelo adaptada al plano vertical}{44}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Deep Learning}{47}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Arquitectura del sistema}{48}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Objetivos y requisitos cumplidos}{57}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Objetivos}{57}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Requisitos}{58}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Habilidades desarrolladas}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Líneas Futuras}{60}{section.6.3}%
+\contentsline {chapter}{\numberline {I}Experimentos}{62}{appendix.Alph1}%
+\contentsline {section}{\numberline {I.1}Detección con YOLOv3 y TensorFlow}{62}{section.Alph1.1}%
+\contentsline {subsection}{\numberline {I.1.1}Pruebas con imágenes}{62}{subsection.Alph1.1.1}%
+\contentsline {subsection}{\numberline {I.1.2}Pruebas con vídeo en tiempo real}{66}{subsection.Alph1.1.2}%
+\contentsline {section}{\numberline {I.2}Detección con YOLOv3 y PyTorch}{72}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {I.2.1}Pruebas con modelos preentrenados}{72}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {I.2.2}Entrenamiento del modelo}{73}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {I.2.3}Calibrado de la cámara}{74}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {I.2.4}Pruebas detección de fresas en tiempo real}{76}{subsection.Alph1.2.4}%
+\contentsline {section}{\numberline {I.3}Pruebas con el robot real}{94}{section.Alph1.3}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{105}{appendix*.107}%
