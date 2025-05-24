@@ -14,12 +14,15 @@ Este apartado recoge la descripción de los componentes \textit{hardware} utiliz
 Esta cámara (Figura \ref{fig:logiC270HD}), de dimensiones 72,91 x 31,91 x 66,64 mm, corrige la iluminación de manera automática, produciendo colores reales y naturales y ajustándose a las condiciones de iluminación del entorno, lo que facilita la detección de fresas. Ofrece una resolución HD 720p %proporcionando imágenes claras y nítidas 
 a una velocidad de 30 fotogramas por segundo (fps), con una lente que cuenta con enfoque fijo y un campo visual diagonal (dFoV) de 55 grados. Su coste aproximado es de entre 30-40€.
 
-\begin{figure} [H]
+\begin{figure}[H]
     \begin{center}
-      \includegraphics[width=5cm]{figs/logi C270.png}
+      \subcapcentertrue
+      \subfigure[Cámara Logitech C270 HD$^{\ref{note:enlace16}}$\label{fig:logiC270HD}]{\includegraphics[width=5cm]{figs/logi C270.png}}
+      \hspace{5mm}
+      \subfigure[Soporte de brazo articulado$^{\ref{note:enlace17}}$\label{fig:soporte_camara}]{\includegraphics[width=5cm]{figs/Soporte de brazo articulado.jpeg}}
     \end{center}
-    \caption{Cámara Logitech C270 HD$^{\ref{note:enlace16}}$}
-    \label{fig:logiC270HD}
+    \caption{Sistema de visión}
+    \label{fig:sistema_vision}
 \end{figure}
 
 \setcounter{footnote}{16}
@@ -29,20 +32,12 @@ a una velocidad de 30 fotogramas por segundo (fps), con una lente que cuenta con
 \label{subsec:soporte_camara}
 
 Para poder ubicar la cámara en una posición fija desde la cual visualizar las fresas, se utilizó un soporte de brazo articulado (Figura \ref{fig:soporte_camara}), cuya parte fija en la parte inferior se ancla a la mesa. Este soporte articulado tiene un ajuste de 360 grados, con su extremo más largo de 75 cm, mientras que la carga máxima que permite es de 560 gramos cuando se coloca de manera horizontal, siendo el precio de este soporte 23€.
-
-\begin{figure} [H]
-    \begin{center}
-      \includegraphics[width=5cm]{figs/Soporte de brazo articulado.jpeg}
-    \end{center}
-    \caption{Soporte de brazo articulado$^{\ref{note:enlace17}}$}
-    \label{fig:soporte_camara}
-\end{figure}
  
 \setcounter{footnote}{17} 
 \footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B08JCG4V5S?ref=ppx_pop_mob_ap_share&th=1}\label{note:enlace17}}
 
-\subsubsection{Soporte de impresión 3D}
-\label{subsubsec:soporte_camara_PLA}
+\subsection{Soporte de impresión 3D}
+\label{subsec:soporte_camara_PLA}
 
 Para las pruebas finales del sistema, se diseñó e imprimió en 3D un soporte específico para la cámara\footnote{\url{https://github.com/dcampoamor/tfg-dcampoamor/blob/dcampoamor_main/aux/CCR10S_camera\%20holder\%20v2.gcode}} utilizando PLA de color blanco como material de impresión (Figura \ref{fig:soporte_camara_3D}), Ultimaker Cura\footnote{\url{https://ultimaker.com/es/software/ultimaker-cura/}} como software de impresión y la impresora CREALITY CR-10 Smart Pro\footnote{\url{https://www.creality.com/es/products/creality-cr-10-smart-pro-3d-printer}} para ello con el fin de fijarla posteriormente al brazo articulado con el objetivo de asegurar una sujeción estable y precisa de la cámara durante los ensayos, de forma que permitiera colocar la cámara en una posición perpendicular tanto al plano de la mesa como a la pared, cumpliendo así con los requisitos geométricos necesarios para el correcto funcionamiento del sistema de visión artificial.
 
@@ -58,7 +53,7 @@ Para las pruebas finales del sistema, se diseñó e imprimió en 3D un soporte e
 \subsection{Ordenador principal}
 \label{subsec:ordenador}
 
-El equipo que se ha configurado como entorno de trabajo para este proyecto es un Lenovo Legion 5 IMH05$^{\ref{note:enlace20}}$ con procesador Intel Core i7 y tarjeta gráfica dedicada NVIDIA GeForce GTX 1650 Ti Mobile. %el que aparece en la Figura \ref{fig:PC_Lenovo}, sirviendo 
+El equipo que se ha configurado como entorno de trabajo para este proyecto es un Lenovo Legion 5 IMH05$^{\ref{note:enlace21}}$ con procesador Intel Core i7 y tarjeta gráfica dedicada NVIDIA GeForce GTX 1650 Ti Mobile. %el que aparece en la Figura \ref{fig:PC_Lenovo}, sirviendo 
 Ha servido como base para el desarrollo de la programación y las pruebas de la visión artificial, y utilizándose igualmente como servidor para poder llevar a cabo la comunicación con el brazo robótico mediante el protocolo XML-RPC basado en HTTP, y posteriormente el envío de posiciones detectadas en tiempo real a este. 
 
 %\begin{figure} [H]
@@ -69,10 +64,10 @@ Ha servido como base para el desarrollo de la programación y las pruebas de la 
 %    \label{fig:PC_Lenovo}
 %\end{figure}
 
-\setcounter{footnote}{20}
+\setcounter{footnote}{21}
 \footnotetext[\value{footnote}]{%
     https://www.pccomponentes.com/lenovo-legion-5-15imh05-intel-core-i7-10750h-16gb-1tb-ssd-gtx-1650-156?srsltid=AfmBOopJpvGSHUyQU696jgG7-6orSKMOEWZe2ZvvYtA0NGtJ9Ms2xJFp%
-    \label{note:enlace18}%
+    \label{note:enlace21}%
 }
     
 %A continuación, en el Cuadro \ref{cuadro:carac_ordena}, se recogen las características técnicas del ordenador utilizado:
@@ -121,11 +116,11 @@ Ha servido como base para el desarrollo de la programación y las pruebas de la 
 \subsection{Robot de Universal Robots de la gama e-series}
 \label{subsec:URe-series}
 
-Los robots de Universal Robots, también conocidos como robots colaborativos o cobots, están diseñados para trabajar junto a los humanos de manera segura, eficiente y flexible tanto en aplicaciones industriales como no industriales, destacando por su facilidad de uso, versatilidad y capacidad para automatizar tareas repetitivas o peligrosas \cite{UR_e-series_brochure18}. \\
+Los robots de Universal Robots, también conocidos como robots colaborativos o cobots, están diseñados para trabajar junto a los humanos de manera segura, eficiente y flexible tanto en aplicaciones industriales como no industriales, destacando por su facilidad de uso, versatilidad y capacidad para automatizar tareas repetitivas o peligrosas \cite{UR_e-series_brochure18}. 
 
 Son fabricados en aluminio, junto con otros materiales de bajo peso. %permitiendo reducir la inercia del propio robot y facilitar su manipulación, 
 Cada brazo robótico tiene seis ejes, otorgando al robot seis grados de libertad (Degree Of Freedom o DOF), que permiten movimientos precisos y fluidos, y en cuyas articulaciones están equipadas, a su vez, encoders absolutos y reductoras armónicas, que reducen la velocidad de rotación de los engranajes en las juntas, y aumentan el par del eje, ofreciendo una alta precisión y eficiencia; y, en aquellos brazos robóticos pertenecientes a la gama e-series, sensores de fuerza y torque, encontrándose integrados en el efector o tool flange del propio brazo robótico\footnote{\url{https://www.universal-robots.com/mx/acerca-de-universal-robots/noticias/meet-the
--next-generation-of-collaborative-ur-robots-at-robobusiness}}.\\
+-next-generation-of-collaborative-ur-robots-at-robobusiness}}.
 
 %Por otro lado, en la controladora de los brazos robóticos de la gama e-series, pueden diferenciarse varios módulos \cite{Service_Manual_UR_e-series_2024}: 
 
@@ -145,21 +140,21 @@ A pesar de que tanto la gama CB-series como la gama e-series permiten la comunic
     \begin{center}
       \includegraphics[width=15cm]{figs/Gama e-series.png}
     \end{center}
-    \caption{Gama e-series de Universal Robots$^{\ref{note:enlace22}}$}
+    \caption{Gama e-series de Universal Robots$^{\ref{note:enlace23}}$}
     \label{fig:Gama_e-series}
 \end{figure}
 
 \setcounter{footnote}{22} 
-\footnotetext[\value{footnote}]{\url{https://www.universal-robots.com/es/productos/}\label{note:enlace20}}
+\footnotetext[\value{footnote}]{\url{https://www.universal-robots.com/es/productos/}\label{note:enlace23}}
 
 
 \subsection{Comunicaciones}
 \label{subsec:comunicacion}
 
 En este proyecto, la comunicación entre el robot y el ordenador que ejecuta el servidor XML-RPC se establece vía Ethernet, permitiendo una conexión rápida y confiable. La infraestructura de red juega un papel fundamental en esta comunicación, ya que el robot y el servidor deben estar correctamente configurados dentro de la misma red, por lo que se emplea un switch Ethernet, en este caso el TP-Link LS105G$^{\ref{note:enlace23}}$, %(Figura \ref{fig:TPLink_LS105G})
-para gestionar las conexiones entre los diferentes dispositivos y asegurar una comunicación fluida y sin interferencias.\\
+para gestionar las conexiones entre los diferentes dispositivos y asegurar una comunicación fluida y sin interferencias.
 
-Este switch de escritorio, cuyo precio es de 15€,  posee cinco puertos Ethernet RJ45 a 10/100/1000 Megabits por segundo (Mbps), permitiendo la transferencia instantánea de archivos y paquetes, con gran ancho de banda y sin interferencias, y no necesita configuración manual previa, ya que se trata de un dispositivo \emph{plug and play}, por lo que simplemente se tiene que conectar y empieza a funcionar. 
+Este switch de escritorio, cuyo precio es de 15€,  posee cinco puertos Ethernet RJ45 a 10/100/1000 Megabits por segundo (Mbps), permitiendo la transferencia instantánea de archivos y paquetes, con gran ancho de banda y sin interferencias, y no necesita configuración manual previa.%, ya que se trata de un dispositivo \emph{plug and play}, por lo que simplemente se tiene que conectar y empieza a funcionar. 
 
 %\begin{figure} [H]
 %    \begin{center}
@@ -185,15 +180,17 @@ Este sistema operativo está diseñado para ser utilizado en una gran variedad d
 \subsection{Polyscope}
 \label{sec:Polyscope}
 
-Polyscope\footnote{\url{https://www.universal-robots.com/es/productos/polyscope/}} es la interfaz de usuario gráfica desarrollada por Universal Robots para poder programar y utilizar sus robots colaborativos. Está diseñada para ser intuitiva y accesible, ya que permite a los usuarios crear programas de robot sin necesidad de conocimientos avanzados en programación.\\
+Polyscope\footnote{\url{https://www.universal-robots.com/es/productos/polyscope/}} es la interfaz de usuario gráfica desarrollada por Universal Robots para poder programar y utilizar sus robots colaborativos. Está diseñada para ser intuitiva y accesible, ya que permite a los usuarios crear programas de robot sin necesidad de conocimientos avanzados en programación.
 
-Construido sobre una plataforma basada en Linux, PolyScope está basado en una arquitectura de software que combina una interfaz gráfica amigable con un lenguaje de programación propio llamado URScript, permitiendo tanto a usuarios sin experiencia en programación como a programadores avanzados interactuar eficazmente con los robots UR, ya que la interfaz gráfica facilita la creación de programas mediante bloques visuales, mientras que URScript ofrece una mayor flexibilidad para desarrollos más complejos.\\
+Construido sobre una plataforma basada en Linux, PolyScope está basado en una arquitectura de software que combina una interfaz gráfica amigable con un lenguaje de programación propio llamado URScript, permitiendo tanto a usuarios sin experiencia en programación como a programadores avanzados interactuar eficazmente con los robots UR, ya que la interfaz gráfica facilita la creación de programas mediante bloques visuales, mientras que URScript ofrece una mayor flexibilidad para desarrollos más complejos.
+
+\pagebreak
 
 A lo largo de los años, UR ha lanzado varias versiones de PolyScope, cada una con mejoras y nuevas funcionalidades, siendo la primera versión PolyScope 3, lanzada en 2012, ya que fue diseñada para la serie CB3 de robots UR. PolyScope 5\footnote{\url{https://www.universal-robots.com/products/polyscope-5/}} (Figura \ref{fig:Polyscope5}) se introdujo en junio de 2018, coincidiendo con el lanzamiento de la gama de robots e-series. Por último, PolyScope X\footnote{\url{https://www.universal-robots.com/products/polyscope-x/}} es la última evolución del software de Universal Robots, siendo su lanzamiento oficial en noviembre de 2024\footnote{\url{https://www.universal-robots.com/2024q3/polyscope-x-festival/}}, y estando basado en tecnologías como ROS2 y contenedores Docker, centraliza las funciones más importantes y simplifica la programación mediante el uso de plantillas predefinidas. %, incluyendo mejoras respecto a Polyscope 3 en la interfaz de usuario (Figura \ref{fig:Polyscope5}), haciéndola más intuitiva y moderna y facilitando la programación y configuración del robot, incluyendo nuevas funcionalidades de seguridad como la capacidad de restringir la entrada de una esfera virtual en una zona o plano de seguridad y establecer límites de velocidad y distancia de frenado mejorando la seguridad en el entorno de trabajo; incrementando la frecuencia de control a 500 hercios (Hz) permitiendo de esta manera movimientos más precisos e incorporando soporte para nuevas características de hardware como la interfaz de comunicación de herramientas (Tool Communication Interface) en la que el conector de herramientas puede utilizarse para la comunicación serie RS485 con una velocidad de datos de hasta 5 megabits\footnote{\url{https://forum.universal-robots.com/t/release-of-e-series-polyscope-5-0-polyscope-3-6-sdk-1-3-and-a-brand-new-developer-community}}.
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=15cm]{figs/InterfazPolyscope5.png}
+      \includegraphics[width=14cm]{figs/InterfazPolyscope5.png}
     \end{center}
     \caption{Pantalla principal de la interfaz de Polyscope 5}
     \label{fig:Polyscope5}
@@ -210,12 +207,12 @@ A lo largo de los años, UR ha lanzado varias versiones de PolyScope, cada una c
 %\end{figure}
 
 A pesar de que Polyscope X es compatible con los robots de la gama e-series, se deben cumplir una serie de requisitos en cuanto al hardware de la controladora para poder actualizar desde Polyscope 5, por lo que para el desarrollo de este proyecto se ha terminado utilizado la versión 5.16 de Polyscope 5, puesto que no se cumplían todos los requisitos para que se diera esta actualización en los robots utilizados.
-\pagebreak
+
 
 \subsection{Anaconda}
 \label{sec:Anaconda}
 
-Anaconda\footnote{\url{https://www.anaconda.com/}} es una distribución de código abierto para los lenguajes de programación Python y R, diseñada para facilitar la gestión de paquetes y entornos, así como el despliegue de aplicaciones de ciencia de datos y aprendizaje automático. Ofrece herramientas como \textit{conda}, un sistema de gestión de paquetes y entornos que funciona en Windows, macOS y Linux; y Anaconda Navigator, una aplicación de escritorio que permite gestionar aplicaciones integradas, paquetes y entornos sin necesidad de utilizar la línea de comandos\footnote{\url{https://docs.anaconda.com/anaconda/}}.\\ 
+Anaconda\footnote{\url{https://www.anaconda.com/}} es una distribución de código abierto para los lenguajes de programación Python y R, diseñada para facilitar la gestión de paquetes y entornos, así como el despliegue de aplicaciones de ciencia de datos y aprendizaje automático. Ofrece herramientas como \textit{conda}, un sistema de gestión de paquetes y entornos que funciona en Windows, macOS y Linux; y Anaconda Navigator, una aplicación de escritorio que permite gestionar aplicaciones integradas, paquetes y entornos sin necesidad de utilizar la línea de comandos\footnote{\url{https://docs.anaconda.com/anaconda/}}.
 
 Para este proyecto se ha hecho uso del programa Conda, ya que, utilizando esta herramienta es posible instalar y actualizar paquetes y dependencias y cambiar entre entornos desde el mismo ordenador local, permitiendo que puedan ser mantenidos y ejecutados independientemente sin archivos, directorios y rutas, para que se pueda trabajar con versiones específicas de librerías y/o el propio Python, sin afectar a otros proyectos Python, es decir, no afectando los cambios de un entorno a otro\footnote{\url{https://docs.anaconda.com/reference/glossary/\#conda}}, estando recogidas las versiones de los paquetes y bibliotecas necesarias del entorno utilizado \textit{deteccionobj} en los documentos \textit{requirements.txt}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/requirements.txt}} y \textit{environment.yml}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/environment.yml}}. 
 
@@ -232,21 +229,22 @@ De los desarrolladores de Facebook AI Research, junto a otros laboratorios, PyTo
 \subsection{NumPy}
 \label{sec:NumPy}
 
-NumPy (Numerical Python)\footnote{\url{https://numpy.org/}} es una biblioteca de Python fundamental para el cálculo numérico, que proporciona un objeto de matriz multidimensional, varios objetos derivados (como matrices y matrices enmascaradas) y un surtido de rutinas para realizar operaciones rápidas con matrices \footnote{\url{https://numpy.org/doc/stable/user/whatisnumpy.html/}}.\\
+NumPy (Numerical Python)\footnote{\url{https://numpy.org/}} es una biblioteca de Python fundamental para el cálculo numérico, que proporciona un objeto de matriz multidimensional, varios objetos derivados (como matrices y matrices enmascaradas) y un surtido de rutinas para realizar operaciones rápidas con matrices \footnote{\url{https://numpy.org/doc/stable/user/whatisnumpy.html/}}.
 
 En este proyecto, la biblioteca Numpy se ha utilizado para inicializar matrices y vectores de los parámetros intrínsecos y extrínsecos de la cámara, realizar cálculos geométricos y poder obtener las matrices de rotación y traslación de la cámara, llevar a cabo operaciones matriciales como multiplicaciones e inversiones. También se ha usado para poder proyectar las coordenadas en el espacio 2D a coordenadas tridimensionales mediante operaciones matriciales, pudiendo obtener posteriormente las distancias a los objetos detectados. 
 
 \subsection{OpenCV}
 \label{sec:OpenCV}
 
-OpenCV (Open Source Computer Vision Library)\footnote{\url{https://opencv.org/}} es una biblioteca de software de código abierto diseñada para su uso en aplicaciones de aprendizaje automático y visión artificial. Desarrollado por Intel \footnote{\url{https://www.intel.es}} en 1999, cuenta con más de 2.500 algoritmos optimizados, que incluyen un amplio conjunto de algoritmos de visión por ordenador y aprendizaje automático.\\ %, que permiten desde el reconocimiento y detección de caras, objetos y acciones humanas en vídeos, hasta el seguimiento de movimientos de estos a tiempo real en vídeo. Además, incluyen herramientas para la creación de modelos y nubes de puntos 3D, la generación de imágenes de alta resolución a partir de múltiples tomas, y la búsqueda de imágenes similares en bases de datos. También ofrecen funcionalidades como la eliminación de ojos rojos, el seguimiento ocular, el reconocimiento de paisajes, y la superposición de realidad aumentada mediante marcadores.
+OpenCV (Open Source Computer Vision Library)\footnote{\url{https://opencv.org/}} es una biblioteca de software de código abierto diseñada para su uso en aplicaciones de aprendizaje automático y visión artificial. Desarrollado por Intel \footnote{\url{https://www.intel.es}} en 1999, cuenta con más de 2.500 algoritmos optimizados, que incluyen un amplio conjunto de algoritmos de visión por ordenador y aprendizaje automático. %, que permiten desde el reconocimiento y detección de caras, objetos y acciones humanas en vídeos, hasta el seguimiento de movimientos de estos a tiempo real en vídeo. Además, incluyen herramientas para la creación de modelos y nubes de puntos 3D, la generación de imágenes de alta resolución a partir de múltiples tomas, y la búsqueda de imágenes similares en bases de datos. También ofrecen funcionalidades como la eliminación de ojos rojos, el seguimiento ocular, el reconocimiento de paisajes, y la superposición de realidad aumentada mediante marcadores.
 
+\pagebreak
 En este proyecto, OpenCV se ha usado importado como \texttt{cv2} para poder capturar los frames desde la cámara en tiempo real y mostrarlo en una ventana para poder controlar y verificar que se realizan las detecciones correctamente, para convertir estos frames del formato BGR a RGB, dibujar un rectángulo alrededor de las fresas detectadas, añadiendo la etiqueta de texto correspondiente que indica la clase detectada y la confianza de esta detección. Permite detener el bucle principal del programa, terminarlo y salir de este si se presiona la tecla configurada para ello, asegurando que la cámara o el archivo de vídeo no permanezcan bloqueados por el programa y cerrando todas las ventanas de visualización creadas.
 
 \subsection{OpenGL}
 \label{sec:OpenCV}
 
-OpenGL (Open Graphics Library)\footnote{\url{https://opengl.org/}} es una especificación de gráficos 2D y 3D de código abierto que define una API multiplataforma ampliamente utilizada para desarrollar aplicaciones gráficas interactivas desarrollado inicialmente por Silicon Graphics Inc. (SGI) en 1992.\\
+OpenGL (Open Graphics Library)\footnote{\url{https://opengl.org/}} es una especificación de gráficos 2D y 3D de código abierto que define una API multiplataforma ampliamente utilizada para desarrollar aplicaciones gráficas interactivas desarrollado inicialmente por Silicon Graphics Inc. (SGI) en 1992.
 
 Gracias a su rendimiento y compatibilidad con GPU, OpenGL permite una visualización fluida y personalizada de las detecciones, que ha permitido que en este proyecto, se haya integrado con otras bibliotecas como OpenCV para superponer elementos visuales, como rectángulos, etiquetas o coordenadas, sobre el entorno, utilizándose para representar gráficamente la información capturada por la cámara en una ventana emergente, facilitando así las pruebas relacionadas con el cálculo de la distancia a las detecciones. Esto ha permitido verificar si los resultados obtenidos eran válidos y coherentes, así como comprobar que el sistema respondía correctamente a la distorsión geométrica derivada de la perspectiva de la cámara para el modelo pinhole.
 
@@ -255,6 +253,7 @@ Gracias a su rendimiento y compatibilidad con GPU, OpenGL permite una visualizac
 
 SocketTest\footnote{\url{https://sockettest.sourceforge.net/}} es una herramienta de software utilizada para probar conexiones de red a través de sockets, ya sea como cliente o como servidor, que permite enviar y recibir datos de manera manual o automatizada mediante protocolos como TCP o UDP.
 
+\pagebreak
 En este trabajo, se ha utilizado la versión v3.0.0, tal y como se puede comprobar en la Figura \ref{fig:socket}, para probar y verificar en una etapa temprana del proyecto, la comunicación entre el robot y un servidor externo, permitiendo comprobar que los puertos estaban abierto y que la conexión era posible, ya que los datos enviados desde el servidor llegaban correctamente al robot, de igual manera que los datos que se enviaron del robot al servidor.
 
 \begin{figure} [H]
@@ -268,7 +267,7 @@ En este trabajo, se ha utilizado la versión v3.0.0, tal y como se puede comprob
 \subsection{XML-RPC}
 \label{sec:XMLRPC}
 
-XML-RPC\footnote{\url{https://docs.python.org/es/3.8/library/xmlrpc.html}} es un método de llamada a procedimiento remoto (RPC) que usa XML para codificar y transferir datos entre programas a través de sockets y HTTP como protocolo de transporte. Para muchos lenguajes de programación existen servidores XML-RPC gratuitos, entre otros para: Python, Java, C++ y C.\\
+XML-RPC\footnote{\url{https://docs.python.org/es/3.8/library/xmlrpc.html}} es un método de llamada a procedimiento remoto (RPC) que usa XML para codificar y transferir datos entre programas a través de sockets y HTTP como protocolo de transporte. Para muchos lenguajes de programación existen servidores XML-RPC gratuitos, entre otros para: Python, Java, C++ y C.
 
 Debido al uso de Python en el proyecto, se utilizó el paquete \textit{xmlrpc}, que agrupa los módulos tanto de cliente como de servidor que implementan XML-RPC. Con este paquete, el controlador del robot UR puede llamar a métodos o funciones (con parámetros) en un programa/servidor remoto y obtener de vuelta datos estructurados, pudiendo realizar un cálculo complejo mediante su uso, que no está disponible en el lenguaje propio de programación del robot.
 
@@ -276,13 +275,13 @@ Debido al uso de Python en el proyecto, se utilizó el paquete \textit{xmlrpc}, 
 \label{sec:YOLOv3}
 
 YOLOv3 (You Only Look Once versión 3)\footnote{\url{https://docs.ultralytics.com/es/models/yolov3/}} es un algoritmo de detección de objetos en tiempo real que identifica y localiza múltiples objetos dentro de una imagen o vídeo. Desarrollado por Joseph Redmon y Ali Farhadi en 2018, YOLOv3 es la tercera iteración de la serie YOLO, conocida por su capacidad para realizar detecciones rápidas y precisas \cite{Redmon18}. %Introdujo el uso de tres escalas diferentes para la detección, aprovechando tres tamaños distintos de núcleos de detección: 13x13, 26x26 y 52x52, lo que mejoró significativamente la precisión de la detección de objetos de diferentes tamaños \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#key-features}}. 
-La serie YOLOv3, está diseñada específicamente para tareas de detección de objetos, además, YOLOv3 añadió funciones como predicciones multietiqueta para cada cuadro delimitador y una red extractora de características mejorada. Estos modelos son famosos por su eficacia en diversos escenarios del mundo real, equilibrando precisión y velocidad, lo que los hace adecuados para una amplia gama de aplicaciones \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#supported-tasks-and-modes}}.\\
+La serie YOLOv3, está diseñada específicamente para tareas de detección de objetos, además, YOLOv3 añadió funciones como predicciones multietiqueta para cada cuadro delimitador y una red extractora de características mejorada. Estos modelos son famosos por su eficacia en diversos escenarios del mundo real, equilibrando precisión y velocidad, lo que los hace adecuados para una amplia gama de aplicaciones \footnote{\url{https://docs.ultralytics.com/es/models/yolov3/\#supported-tasks-and-modes}}.
 
-Esta herramienta ha sido elegida para el entrenamiento del modelo de detección de fresas debido a su eficiencia en el uso de recursos computacionales, lo que lo hace más accesible para sistemas con capacidades limitadas; a la amplia documentación y la comunidad activa existente en torno a YOLOv3, que proporciona recursos valiosos para la implementación y resolución de problemas, lo que es esencial en proyectos académicos con plazos definidos \footnote{\url{https://github.com/ultralytics/yolov3/}}; a la competencia en cuanto a precisión y velocidad de YOLOv3 frente a versiones superiores a pesar de presentar estas ciertas mejoras; y a que YOLOv3 es compatible con entornos de desarrollo ampliamente utilizados en proyectos académicos, como Python y bibliotecas estándar de aprendizaje automático, facilitando su integración en el flujo de trabajo del proyecto.
+Esta herramienta ha sido elegida para el entrenamiento del modelo de detección de fresas debido a su eficiencia en el uso de recursos computacionales, lo que lo hace más accesible para sistemas con capacidades limitadas; a la amplia documentación y la comunidad activa existente en torno a YOLOv3, que proporciona recursos valiosos para la implementación y resolución de problemas, lo que es esencial en proyectos académicos con plazos definidos \footnote{\url{https://github.com/ultralytics/yolov3/}}; a la competencia en cuanto a precisión y velocidad de YOLOv3 frente a versiones superiores a pesar de presentar estas ciertas mejoras; y a que YOLOv3 es compatible con entornos de desarrollo ampliamente utilizados en proyectos académicos, como Python y bibliotecas estándar de aprendizaje automático, facilitando su integración en el flujo de trabajo del proyecto.\\
 
-\vspace{20mm}
+%\vspace{20mm}
 
-Una vez analizadas las plataformas de software y hardware utilizadas en este trabajo de fin de grado, se procederá a detallar el proceso completo de diseño y desarrollo del sistema, lo cual será explicado con detalle en los capítulos siguientes.
+Una vez analizadas las plataformas de software y hardware utilizadas en este trabajo de fin de grado, se procederá a detallar el proceso completo de diseño y desarrollo del sistema, lo cual será explicado con detalle en el Capítulo \ref{cap:capitulo5}, pudiéndose encontrar, además, diversos experimentos en el Anexo \ref{cap:capitulo8}.
 
 
 

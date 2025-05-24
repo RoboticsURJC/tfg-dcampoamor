@@ -5,11 +5,11 @@
 
 %El presente Trabajo de Fin de Grado se enmarca en el desarrollo de un sistema de visión por ordenador para la detección de fresas maduras, con el objetivo de facilitar su recolección mediante un brazo robótico de la marca Universal Robots (UR). Este sistema propuesto permite detectar visualmente las fresas y estimar su posición en el espacio tridimensional utilizando una única cámara, integrando los datos en tiempo real con el robot colaborativo para ejecutar tareas de recolección automática.
 
-Una vez expuestos el estado del arte, los objetivos del proyecto y las plataformas de desarrollo empleadas, en este capítulo se describe de forma detallada el sistema en su conjunto (Figura \ref{fig:montaje_final}), y se abordan tanto los fundamentos teóricos que lo sustentan como el proceso seguido para su diseño e implementación, con el objetivo de ofrecer una visión completa del funcionamiento del sistema.
+Una vez expuestos el contexto, el estado del arte, los objetivos del proyecto y las plataformas de desarrollo empleadas, en este capítulo se describe de forma detallada el prototipo desarrollado (Figura \ref{fig:montaje_final}), y se abordan tanto los fundamentos teóricos que lo sustentan como el proceso seguido para su diseño e implementación, con el objetivo de ofrecer una visión completa del funcionamiento del sistema.
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=9cm]{figs/Set up coordenadas pruebas plano vertical UR5e_3.jpeg}
+      \includegraphics[width=9cm]{figs/Pruebas plano vertical deteccion multiple_editada.jpeg}
     \end{center}
     \caption{Montaje del sistema final con un UR5e}
     \label{fig:montaje_final}
@@ -19,9 +19,9 @@ Una vez expuestos el estado del arte, los objetivos del proyecto y las plataform
 \section{Hipótesis suelo adaptada al plano vertical}
 \label{sec:HS_vertical}
 
-En el sistema propuesto, la estimación de coordenadas tridimensionales se basa en la hipótesis suelo, y se realiza a partir de una única cámara estenopeica RGB fija para poder realizar esta estimación sin recurrir a sensores adicionales. Esta técnica de simplificación empleada en visión por ordenador, asume que los objetos de interés se encuentran sobre un plano conocido y fijo respecto a la cámara.\\
+En el sistema propuesto, la estimación de coordenadas tridimensionales de las fresas a recolectar se basa en la hipótesis suelo, y se realiza a partir de una única cámara estenopeica RGB fija para poder realizar esta estimación sin recurrir a sensores adicionales. Esta técnica de simplificación empleada en visión por ordenador asume que los objetos de interés se encuentran sobre un plano conocido y fijo respecto a la cámara.
 
-La hipótesis suelo (Figura \ref{fig:HS} tomada del artículo \cite{Vega21}) supone que todos los objetos del mundo en 3D están apoyados sobre el suelo, por lo tanto, asumiendo que el suelo está en el plano Z = 0, nos permitirá estimar, con el uso de la cámara, la posición 3D de los puntos que estén en el suelo.
+La hipótesis suelo (\cite{Vega21}, Figura \ref{fig:HS}) supone que todos los objetos del mundo en 3D están apoyados sobre el suelo, por lo tanto, asumiendo que el suelo está en el plano Z = 0, nos permitirá estimar, con el uso de la cámara, la posición 3D de los puntos que estén en el suelo.
 
 \begin{figure} [H]
     \begin{center}
@@ -159,7 +159,7 @@ Para poder obtener la proyección tridimensional a partir de la bidimensional ha
     \label{ec:inversion_pinhole}
   \end{myequation}
 
-En este caso, y debido a la orientación del escenario, la hipótesis suelo ha sido adaptada al plano vertical, lo que significa que se asume que las fresas están dispuestas sobre una superficie vertical, como es el caso en los huertos verticales. En este plano de trabajo vertical, se ha establecido un sistema de coordenadas 3D cuyo origen coincide con el punto central del campo de visión de la cámara, actuando como referencia para crear el plano de trabajo en el robot a través de su interfaz y utilizando las mismas orientaciones de los ejes de coordenadas de la cámara (Figura \ref{fig:Plano_pared_UR}). Esto permite que una vez realizado el cálculo de las coordenadas de las fresas detectadas y el de las distancias a cada detección (Ecuación \ref{ec:formula_distancia}), estas coincidan con las coordenadas en este plano vertical, simplificando de esta manera el proceso de transformación de las mismas. 
+En este caso, y debido a la orientación del escenario, la hipótesis suelo ha sido adaptada al plano vertical, lo que significa que se asume que las fresas están dispuestas sobre una superficie vertical conocida, como es el caso en los huertos verticales. En este plano de trabajo vertical, se ha establecido un sistema de coordenadas 3D, cuyo origen coincide con el punto central del campo de visión de la cámara, actuando como referencia para crear el plano de trabajo en el robot a través de su interfaz y utilizando las mismas orientaciones de los ejes de coordenadas de la cámara (Figura \ref{fig:Plano_pared_UR}). Esto permite que una vez realizado el cálculo de las coordenadas de las fresas detectadas y el de las distancias a cada detección (Ecuación \ref{ec:formula_distancia}), estas coincidan con las coordenadas en este plano vertical, simplificando de esta manera el proceso de transformación de las mismas. 
 
 \begin{myequation}[H]
   \begin{align}
@@ -173,25 +173,28 @@ En este caso, y debido a la orientación del escenario, la hipótesis suelo ha s
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=14cm]{figs/Plano Pared Programa UR.png}
+      \includegraphics[width=155mm]{figs/Plano Pared Programa UR.png}
     \end{center}
     \caption{Plano pared generado en el UR}
     \label{fig:Plano_pared_UR}
 \end{figure}
 
 
-\section{Deep Learning}
+\section{Detección de fresas mediante Deep Learning}
 \label{sec:Tecnica_Vision}
 
-La detección de las fresas maduras se ha resuelto mediante el uso de técnicas de visión artificial basadas en deep learning, concretamente, se ha utilizado el modelo YOLOv3 (You Only Look Once), un detector de objetos en tiempo real ampliamente utilizado por su equilibrio entre precisión y velocidad, tal y como se define en la Sección \ref{sec:YOLOv3}.\\
+La detección de las fresas maduras se ha resuelto mediante el uso de técnicas de visión artificial basadas en deep learning, concretamente, se ha utilizado el modelo YOLOv3 (You Only Look Once), un detector de objetos en tiempo real ampliamente utilizado por su equilibrio entre precisión y velocidad, tal y como se define en la Sección \ref{sec:YOLOv3}.
 
-Este modelo ha sido entrenado específicamente para reconocer fresas maduras en las condiciones del entorno de trabajo, y una vez entrenado, se ha integrado en un script que analiza el flujo de vídeo en tiempo real y devuelve las coordenadas y la distancia a la cámara de cada fresa detectada en la imagen, junto con la clase del objeto y la confianza de detección (Figura \ref{fig:deteccion_dl}).\\
+Este modelo ha sido entrenado específicamente para reconocer fresas maduras en las condiciones del entorno de trabajo y, una vez entrenado, se ha integrado en un script que analiza el flujo de vídeo en tiempo real y devuelve las coordenadas y la distancia a la cámara de cada fresa detectada en la imagen, junto con la clase del objeto y la confianza de detección (Figura \ref{fig:deteccion_dl}).
 
-Para mejorar la precisión a la hora de estimar la posición de la fresa, se ha utilizado el centro del \textit{bounding box} de la fresa detectada como punto de referencia para la proyección sobre el plano vertical, conforme a la hipótesis descrita en la Sección \ref{sec:HS_vertical}.\\
+\pagebreak
+Para mejorar la precisión a la hora de estimar la posición de la fresa, se ha utilizado el centro del \textit{bounding box} de la fresa detectada como punto de referencia para la proyección sobre el plano vertical, conforme a la hipótesis descrita en la Sección \ref{sec:HS_vertical}.
 
 \begin{figure} [H]
     \begin{center}
-      \includegraphics[width=15cm]{figs/POV Camara Pruebas plano vertical deteccion multiple UR5e.png}
+    \subcapcentertrue
+    \subfigure[Ventana donde se muestran las detecciones\label{fig:ventana_deteccion}]{\includegraphics[width=9cm]{figs/POV Camara Pruebas plano vertical deteccion multiple UR5e_VENTANA.png}}
+    \subfigure[Mensajes mostrados por la terminal al ejecutar el programa de detección\label{fig:mensajes_terminal}]{\includegraphics[width=14cm]{figs/POV Camara Pruebas plano vertical deteccion multiple UR5e_TERMINAL.png}}
     \end{center}
     \caption{Detección de fresas maduras mediante deep learning}
     \label{fig:deteccion_dl}
@@ -215,7 +218,7 @@ El prototipo final se ha implementado utilizando una combinación de componentes
 
 A partir de esta base, este apartado expone el proceso completo de integración y funcionamiento coordinado de los distintos módulos que conforman la solución propuesta, siendo este el siguiente:
 
-\begin{itemize}
+\begin{enumerate}
   \item La cámara captura imágenes de la escena en tiempo real.
   \item El modelo de deep learning detecta las fresas maduras y genera sus posiciones en píxeles gracias al fragmento de código del script en Python \ref{cod:dp_pixeles}.    
     \begin{code}[H]
@@ -313,15 +316,16 @@ A partir de esta base, este apartado expone el proceso completo de integración 
     \begin{figure}[H]
       \begin{center}
         \subcapcentertrue
-        \subfigure[Configuración de la comunicación XMLRPC en el robot]{\includegraphics[width=72mm]{figs/Antes de Iniciar_XMLRPC.png}}
+        \subfigure[Configuración de la comunicación XMLRPC en el robot]{\includegraphics[width=155mm]{figs/Antes de Iniciar_XMLRPC.png}}
         \hspace{4mm}
-        \subfigure[Instrucciones de movimiento del robot según la casuística]{\includegraphics[width=72mm]{figs/Movimiento UR.png}}
+        \subfigure[Instrucciones de movimiento del robot según la casuística]{\includegraphics[width=155mm]{figs/Movimiento UR.png}}
       \end{center}
       \caption{Ajustes de comunicación XMLRPC en el robot y ejecución de movimientos definidos en el programa}
       \label{fig:Config_comunicación_UR}
     \end{figure}
  
-\end{itemize}
+\end{enumerate}
+
 
 Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a escenarios reales más complejos, sentando las bases para su posible aplicación futura en entornos agrícolas reales o semiautomatizados. Para hacer funcionar el sistema completo y conseguir una correcta integración entre el sistema de visión y el brazo robótico UR, deben seguirse los siguientes pasos de forma ordenada.
 
@@ -330,7 +334,7 @@ Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a 
     
       \begin{figure} [H]
         \begin{center}
-          \includegraphics[width=85mm]{figs/Ajustes de Red UR.png}
+          \includegraphics[width=155mm]{figs/Ajustes de Red UR.png}
         \end{center}
         \caption{Ajustes de red en el robot}
         \label{fig:ajustes_red_UR}
@@ -341,26 +345,35 @@ Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a 
     \begin{figure}[H]
       \begin{center}
         \subcapcentertrue
-        \subfigure[Configuración del Punto Central de la Herramienta (PCH)]{\includegraphics[width=72mm]{figs/Config_PCH.png}}
+        \subfigure[Configuración del Punto Central de la Herramienta (PCH)]{\includegraphics[width=155mm]{figs/Config_PCH.png}}
         \hspace{4mm}
-        \subfigure[Configuración de la carga]{\includegraphics[width=72mm]{figs/config_Carga.png}}
+        \subfigure[Configuración de la carga]{\includegraphics[width=155mm]{figs/config_Carga.png}}
       \end{center}
       \caption{Definición de la Instalación del efector final en el robot}
       \label{fig:Config_UR}
     \end{figure}
-  
+    
+  \pagebreak
   \item Creación del plano de trabajo: A continuación, se debe definir el plano de trabajo sobre el que se va a operar, en este caso un plano vertical, como se detalló en la Sección \ref{sec:HS_vertical}. 
   
-  \item Lanzamiento del sistema de comunicación: En este punto, se debe ejecutar el script en Python, tal y como muestra la Figura \ref{fig:ejecucion_python}. Para este caso, es el programa \textit{xmlrpc\_deteccionfresas.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccionfresas.py}} el que ejerce de servidor, y tiene que ejecutarse desde la terminal del ordenador para poder ejecutar posteriormente mediante el botón de \textit{play} de la interfaz del robot, el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, que realiza la solicitud de datos al servidor remoto a través del protocolo XML-RPC, una vez que el servidor esté en marcha.
+  \item Lanzamiento del sistema de comunicación: En este punto, se debe ejecutar el script en Python mediante la línea de comando que se muestra a continuación. Para este caso, es el programa \textit{xmlrpc\_deteccionfresas.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccionfresas.py}} el que ejerce de servidor, y tiene que ejecutarse desde la terminal del ordenador para poder ejecutar posteriormente mediante el botón de \textit{play} de la interfaz del robot, el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, que realiza la solicitud de datos al servidor remoto a través del protocolo XML-RPC, una vez que el servidor esté en marcha.
   
-    \begin{figure} [H]
-        \begin{center}
-          \includegraphics[width=135mm]{figs/Ejecutar_Programa_Python.png}
-        \end{center}
-        \caption{Lanzamiento del servidor mediante el programa en Python en la terminal del ordenador}
-        \label{fig:ejecucion_python}
-    \end{figure} 
-  
+\small
+\begin{verbatim}
+python xmlrpc_deteccionfresas.py --model_def config/yolov3-custom.cfg 
+--weights_path checkpoints/yolov3_ckpt_99.pth 
+--class_path data/custom/classes.names --conf_thres 0.85 
+\end{verbatim}  
+\normalsize
+    
+    %\begin{figure} [H]
+    %   \begin{center}
+    %      \includegraphics[width=135mm]{figs/Ejecutar_Programa_Python.png}
+    %    \end{center}
+    %    \caption{Lanzamiento del servidor mediante el programa en Python en la terminal del ordenador}
+    %    \label{fig:ejecucion_python}
+    %\end{figure} 
+
   \item Ejecución: Una vez en marcha tanto el programa en el ordenador como en el robot, el sistema detectará automáticamente las fresas presentes en la escena, calculará sus coordenadas tridimensionales y las enviará al robot, que ejecutará el movimiento correspondiente según el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, para acercarse a la fresa y situarse encima de esta para una futura recolección.
       
 %    \begin{figure}[H]
@@ -380,9 +393,9 @@ Para completar la evaluación del prototipo, a pesar de que no se llegó a imple
    \begin{figure}[H]
       \begin{center}
         \subcapcentertrue
-        \subfigure{\includegraphics[width=69mm]{figs/Antes de Iniciar Programa UR Pinza.png}}
+        \subfigure{\includegraphics[width=155mm]{figs/Antes de Iniciar Programa UR Pinza.png}}
         \hspace{1mm}
-        \subfigure{\includegraphics[width=69mm]{figs/Movimiento UR Programa UR Pinza.png}}
+        \subfigure{\includegraphics[width=155mm]{figs/Movimiento UR Programa UR Pinza.png}}
       \end{center}
       \caption{Programa \textit{xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp} para uso del sistema con efector final}
       \label{fig:Programa_UR_pinza}
@@ -400,10 +413,9 @@ Para completar la evaluación del prototipo, a pesar de que no se llegó a imple
       \label{fig:UR5e_planopared_garra}
    \end{figure}
 
+\vspace{5mm}
 
-\pagebreak
-
-Con todo lo anterior, se ha descrito en detalle el sistema desarrollado, incluyendo los fundamentos técnicos, las herramientas de visión artificial empleadas, y el proceso de integración con el robot colaborativo UR, siendo un sistema diseñado con el objetivo de ser modular, reproducible y eficaz en tareas de detección y recolección de frutos maduros en entornos controlados. En el Anexo \ref{cap:capitulo7}, se presentan los experimentos realizados, donde se detallan las diferentes pruebas llevadas a cabo, los ajustes realizados durante el desarrollo y los resultados obtenidos hasta alcanzar el estado funcional final del proyecto.
+En este capítulo, se ha descrito en detalle el sistema desarrollado, incluyendo los fundamentos técnicos, las herramientas de visión artificial empleadas, y el proceso de integración con el robot colaborativo UR, siendo un sistema diseñado con el objetivo de ser modular, reproducible y eficaz en tareas de detección y recolección de frutos maduros en entornos controlados. En el Anexo \ref{cap:capitulo8}, se presentan los experimentos realizados, donde se detallan las diferentes pruebas llevadas a cabo, los ajustes realizados durante el desarrollo y los resultados obtenidos hasta alcanzar el estado funcional final del proyecto. De igual manera, puede encontrarse mayor documentación gráfica en el repositorio público de GitHub\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor}} dedicado al proyecto; como por ejemplo, vídeos del funcionamiento del sistema conjunto, tanto sin efector final, como el vídeo \textit{Pruebas plano vertical detección múltiple UR5e.mp4}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/img/code/UR/Pruebas\%20plano\%20vertical\%20deteccion\%20multiple\%20UR5e.mp4}}, como vídeos del sistema conjunto con efector final, tal cual se muestra en \textit{Pruebas plano vertical detección simple garra UR5e.mp4}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/img/code/UR/Pruebas\%20plano\%20vertical\%20deteccion\%20simple\%20garra\%20UR5e.mp4}}, entre otros.
 
 
 

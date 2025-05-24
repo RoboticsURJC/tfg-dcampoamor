@@ -1,7 +1,8 @@
 \chapter{Conclusiones}
 \label{cap:capitulo6}
 
-En este último capítulo se exponen las conclusiones generales del trabajo realizado, detallando el grado de cumplimiento de los objetivos y requisitos planteados al inicio del proyecto. Asimismo, se reflejan las competencias técnicas y personales adquiridas durante su desarrollo. Por último, se presentan algunas posibles líneas de mejora y evolución que podrían ser exploradas en futuros trabajos, con el fin de dar continuidad y ampliar el alcance del sistema propuesto.
+En este último capítulo se exponen las conclusiones generales del trabajo realizado, detallando el grado de cumplimiento de los objetivos y requisitos planteados al inicio del proyecto. Asimismo, %se reflejan las competencias técnicas y personales adquiridas durante su desarrollo. Por último, 
+se presentan algunas posibles líneas de mejora y evolución que podrían ser exploradas en futuros trabajos, con el fin de dar continuidad y ampliar el alcance del sistema propuesto.
 
 \section{Objetivos y requisitos cumplidos}
 \label{sec:objetivos_y_requisitos}
@@ -11,7 +12,7 @@ A continuación, se van a explicar todos los objetivos y requisitos cumplidos en
 \subsection{Objetivos}
 \label{subsec:objetivos}
 
-Se ha conseguido cumplir con el objetivo principal de este Trabajo Fin de Grado: desarrollar un sistema de visión artificial de bajo coste, basado en técnicas de inteligencia artificial, capaz de detectar fresas maduras y comunicar su posición y distancia a un brazo robótico para su recolección automatizada. Todo ello ha sido probado tanto en entornos simulados como en condiciones reales, demostrando la viabilidad del sistema diseñado.\\
+Se ha conseguido cumplir con el objetivo principal de este Trabajo Fin de Grado: desarrollar un sistema de visión artificial de bajo coste, basado en técnicas de inteligencia artificial, capaz de detectar fresas maduras y comunicar su posición y distancia a un brazo robótico para su recolección automatizada. Todo ello ha sido probado tanto en entornos simulados como en condiciones reales, demostrando la viabilidad del sistema diseñado.
 
 A su vez, se han cumplido todos los objetivos definidos en la Sección \ref{sec:descripcion}:
 
@@ -32,31 +33,14 @@ También cabe destacar que se han satisfecho todos los requisitos planteados en 
 
 \begin{enumerate}
     \item Se ha utilizado como sistema operativo la distribución Ubuntu 22.04 LTS sobre GNU/Linux, cumpliendo así con el requisito de utilizar software libre y con soporte a largo plazo para la ejecución del programa del sistema de visión.
-    \item Los modelos entrenados han sido optimizados y convertidos al formato adecuado para ajustarse a las limitaciones del hardware utilizado, asegurando su correcto funcionamiento sin necesidad de recursos computacionales de alto rendimiento.
+    \item Los modelos entrenados han sido optimizados %y convertidos al formato adecuado 
+    para ajustarse a las limitaciones del hardware utilizado, asegurando su correcto funcionamiento sin necesidad de recursos computacionales de alto rendimiento.
     \item El sistema ha demostrado ser capaz de operar en tiempo real, realizando la detección de fresas, el cálculo de distancias y la transmisión de datos al robot con una latencia reducida, adecuada para su uso práctico.
-    \item Todo el hardware empleado en el desarrollo del sistema de visión ha sido seleccionado con un criterio de bajo coste, haciendo que el sistema completo sea accesible para estudiantes o centros con recursos limitados.
-    \item La aplicación final es fácilmente reproducible y desplegable tanto en un entorno simulado, mediante el uso del simulador oficial del fabricante del robot, como en condiciones reales, permitiendo su integración en contextos educativos o de laboratorio sin dificultades técnicas significativas.
+    \item Todo el hardware empleado en el desarrollo del sistema de visión ha sido seleccionado con un criterio de bajo coste, haciendo que %el sistema completo 
+    sea accesible para estudiantes o centros con recursos limitados.
+    \item La aplicación final es fácilmente reproducible y desplegable tanto en un entorno simulado %mediante el uso del simulador oficial del fabricante del robot, 
+    como en condiciones reales, permitiendo su integración en contextos educativos o de laboratorio sin dificultades técnicas significativas.
 \end{enumerate}
-
-\section{Habilidades desarrolladas}
-\label{sec:habilidades_desarrolladas}
-
-Además de todas las competencias descritas en la Sección \ref{sec:competencias}, a lo largo del desarrollo de este Trabajo Fin de Grado se han adquirido y reforzado numerosas habilidades y conocimientos, entre los cuales cabe destacar:
-
-\begin{itemize}
-    \item Se ha adquirido una sólida capacidad de organización y planificación, debida a la estructuración del proyecto, el seguimiento mediante reuniones periódicas con el tutor y la documentación detallada de los avances en la plataforma GitHub.
-    \item Se ha mejorado notablemente la capacidad de búsqueda, análisis y síntesis de información técnica en inglés, utilizando documentación científica y recursos especializados en visión artificial, inteligencia artificial y robótica.
-    \item Se ha fortalecido la competencia en resolución de problemas, especialmente al afrontar desafíos técnicos relacionados con el entrenamiento de modelos de Machine Learning, la calibración del sistema de visión o la integración del sistema con el robot.
-    \item Se ha desarrollado la habilidad de utilizar Internet como fuente de información académica y técnica, contrastando distintas metodologías y enfoques para fundamentar las decisiones adoptadas en el diseño del sistema.
-    \item Se han adquirido conocimientos avanzados en programación en Python, además de conocimientos básicos en el uso de bibliotecas específicas como OpenCV, OpenGL, PyTorch y en herramientas de comunicación como XML-RPC.
-    \item Se ha reforzado el uso y conocimiento sobre el sistema operativo GNU/Linux, ya que, partiendo desde la instalación y configuración de Ubuntu 22.04 LTS y la gestión de particiones del disco duro del ordenador utilizado en la elaboración del proyecto, se ha hecho uso de la terminal y de conexiones remotas vía SSH a partir de esta.
-    \item Se han desarrollado competencias en la recogida, tratamiento y etiquetado de datos para el entrenamiento de modelos de inteligencia artificial, construyendo un dataset propio de imágenes de fresas.
-    \item Se ha adquirido la habilidad de entrenar y optimizar modelos de aprendizaje supervisado adaptados a plataformas con recursos limitados, asegurando su funcionamiento en tiempo real.
-    \item Se ha aprendido a integrar un sistema de visión con un brazo robótico, automatizando la toma de decisiones a partir de los datos recogidos por la cámara.
-    \item Se ha reforzado el conocimiento de los fundamentos de la automatización industrial y la regulación automática, aplicados a la ejecución precisa de tareas por parte del robot en función del estado de maduración detectado en cada fresa.
-    \item Se ha desarrollado la capacidad para diseñar e implementar sistemas de control en tiempo real, integrando múltiples componentes en una solución funcional y coordinada.
-    \item Finalmente, se ha adquirido experiencia en la redacción técnica y científica, mediante el uso de LaTeX para la elaboración de la memoria del proyecto, cuidando la estructura, el lenguaje y el formato exigido en un entorno académico.
-\end{itemize}
 
 \section{Líneas Futuras}
 \label{sec:lineas_futuras}
@@ -64,8 +48,9 @@ Además de todas las competencias descritas en la Sección \ref{sec:competencias
 A partir de los resultados obtenidos en este proyecto, se identifican diversas líneas de trabajo que podrían abordarse en el futuro para mejorar y ampliar el sistema desarrollado:
 
 \begin{itemize}
-    \item Entrenamiento con datasets más amplios y variados: Ampliar el conjunto de imágenes utilizado para entrenar el modelo de detección, incluyendo diferentes condiciones de iluminación, ángulos de visión y niveles de maduración, con el fin de mejorar la robustez y generalización del sistema.
+    \item Entrenamiento con datasets más amplios y variados: Ampliar el conjunto de imágenes utilizado para entrenar el modelo de detección, incluyendo diferentes %condiciones de iluminación, ángulos de visión y 
+    niveles de maduración, con el fin de mejorar la robustez y generalización del sistema.
     \item Optimización del rendimiento en hardware embebido: Adaptar el sistema para funcionar en dispositivos aún más limitados (como Raspberry Pi Zero o NVIDIA Jetson Nano), buscando reducir el consumo energético y el coste del sistema.
-    \item Implementación en entornos agrícolas reales: Validar el sistema en condiciones reales de campo, frente a variables como viento, sombra, vegetación densa o movimiento del terreno, para comprobar su fiabilidad y utilidad práctica.
+    \item Implementación en entornos agrícolas reales: Validar el sistema en condiciones reales de campo, frente a variables como viento, sombra o vegetación densa para comprobar su fiabilidad y utilidad práctica.
     \item Diseño o integración de una herramienta de recolección versátil: Investigar o desarrollar una pinza robótica compatible con el sistema de visión y adecuada para manipular distintos tipos de frutos con cuidado y precisión, ampliando así el alcance del sistema a otros cultivos más allá de la fresa. 
 \end{itemize}
