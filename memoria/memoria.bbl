@@ -1,36 +1,11 @@
 \begin{thebibliography}{}
 
-\bibitem[Abeliuk and Gutiérrez, 2021]{Abeliuk21}
-Abeliuk, A. and Gutiérrez, C. (2021).
-\newblock Historia y evoluación de la inteligencia artificial.
-\newblock {\em Revista {B}its de {C}iencia}, (21):14--21.
-
-\bibitem[Aizenberg et~al., 2000]{Aizenberg00}
-Aizenberg, I., Aizenberg, N.~N., and Vandewalle, J.~P. (2000).
-\newblock {\em Multi-valued and universal binary neurons: {T}heory, learning
-  and applications}.
-\newblock Springer Science \& Business Media.
-\newblock First work to introduce the term Deep Learning to Neural Networks.
-
 \bibitem[Alvear-Puertas et~al., 2017]{Alvear17}
 Alvear-Puertas, V., Rosero-Montalvo, P., Peluffo-Ordóñez, D., and
   Pijal-Rojas, J. (2017).
 \newblock Internet de las {C}osas y {V}isión {A}rtificial, {F}uncionamiento y
   {A}plicaciones: {R}evisión de {L}iteratura.
 \newblock {\em Enfoque {UTE}}, 8:244--256.
-
-\bibitem[Aracil et~al., 2008]{Aracil08}
-Aracil, R., Balaguer, C., and Armada, M. (2008).
-\newblock Robots de servicio.
-\newblock {\em Revista {I}beroamericana de {A}utomática e {I}nformática
-  {I}ndustrial {RIAI}}, 5(2):6--13.
-
-\bibitem[Arnold et~al., 2011]{Arnold11}
-Arnold, L., Rebecchi, S., Chevalier, S., and Paugam-Moisy, H. (2011).
-\newblock An {I}ntroduction to {D}eep {L}earning.
-\newblock In {\em European {S}ymposium on {A}rtificial {N}eural {N}etworks
-  ({ESANN})}, Proceedings of the {E}uropean {S}ymposium on {A}rtificial
-  {N}eural {N}etworks ({ESANN}), Bruges, {B}elgium. {HAL} open science.
 
 \bibitem[Barrientos, 2002]{Barrientos02}
 Barrientos, A. (2002).
@@ -51,14 +26,6 @@ Beasley, R.~A. (2012).
 \newblock Medical {R}obots: {C}urrent {S}ystems and {R}esearch {D}irections.
 \newblock {\em Journal of {R}obotics}.
 
-\bibitem[Bischoff et~al., 2010]{Bischoff10}
-Bischoff, R., Kurth, J., Schreiber, G., Koeppe, R., Albu-Schäeffer, A., Beyer,
-  A., Eiberger, O., Haddadin, S., Stemmer, A., Grunwald, G., and Hirzinger, G.
-  (2010).
-\newblock The {KUKA-DLR} {L}ightweight {R}obot arm - {A} new reference platform
-  for robotics research and manufacturing.
-\newblock volume~2, pages 1--8.
-
 \bibitem[Bradski and Kaehler, 2008]{Bradski08}
 Bradski, G. and Kaehler, A. (2008).
 \newblock {\em Learning Open{CV}}.
@@ -68,13 +35,6 @@ Bradski, G. and Kaehler, A. (2008).
 Cabanillas, F. (2009).
 \newblock Preparan en lepe el prototipo final de un robot para la recogida de
   fresas.
-
-\bibitem[Clavel, 1991]{Clavel91}
-Clavel, R. (1991).
-\newblock {\em Conception d'un robot parallèle rapide à 4 degrés de
-  liberté}.
-\newblock Docteur thesis es sciences techniques, Ecole {P}olytechnique
-  {F}ederal de {L}ausanne (EPFL), Lausanne.
 
 \bibitem[Culjak et~al., 2012]{Culjak12}
 Culjak, I., Abram, D., Pribanic, T., Dzapo, H., and Cifrek, M. (2012).
@@ -94,14 +54,6 @@ Cusano, N. (2022).
 \newblock {\em IFAC-PapersOnLine}, 51.
 \newblock 6th IFAC Conference on Bio-Robotics BIOROBOTICS 2018.
 
-\bibitem[Dechter, 1986]{Dechter86}
-Dechter, R. (1986).
-\newblock Learning {W}hile {S}earching in
-  {C}onstraint-{S}atisfaction-{P}roblems.
-\newblock pages 178--185. University of {C}alifornia, {C}omputer {S}cience
-  {D}epartment, {C}ognitive {S}ystems {L}aboratory.
-\newblock First paper to introduce the term Deep Learning to Machine Learning.
-
 \bibitem[Dinamarca, 2018]{Dinamarca18}
 Dinamarca, A. (2018).
 \newblock Aprendizaje y análisis de redes neuronales artificiales profundas.
@@ -115,50 +67,16 @@ Dupont, P.~E., Nelson, B.~J., Goldfarb, M., Hannaford, B., Menciassi, A.,
   2020.
 \newblock {\em Science {R}obotics}, 6(60).
 
-\bibitem[Durmuş et~al., 2015]{Durmus15}
-Durmuş, H., Güneş, E.~O., Kırcı, M., and Üstündağ, B.~B. (2015).
-\newblock The design of general purpose autonomous agricultural mobile-robot:
-  “{AGROBOT}”.
-\newblock In {\em 2015 Fourth International Conference on Agro-Geoinformatics
-  (Agro-geoinformatics)}, pages 49--53.
-
-\bibitem[Du‐Harpur et~al., 2020]{Du-Harpur20}
-Du‐Harpur, X., Watt, F., Luscombe, N., and Lynch, M. (2020).
-\newblock What is {AI}? {A}pplications of artificial intelligence to
-  dermatology.
-\newblock {\em British {J}ournal of {D}ermatology}, 183(3):423--430.
-
-\bibitem[Díaz-Ramírez, 2021]{Diaz21}
-Díaz-Ramírez, J. (2021).
-\newblock Aprendizaje {A}utomático y {A}prendizaje {P}rofundo.
-\newblock {\em Ingeniare. {R}evista chilena de ingeniería}, 29(2):180--181.
-
 \bibitem[EcoInventos.com, 2024]{EcoInventos24}
 EcoInventos.com (2024).
 \newblock La primera granja vertical de interior del mundo producirá 1,8
   millones de kg de fresas al año.
-
-\bibitem[El~Naqa and Murphy, 2015]{ElNaqa15}
-El~Naqa, I. and Murphy, M.~J. (2015).
-\newblock {\em What {I}s {M}achine {L}earning?}, pages 3--11.
-\newblock Springer International Publishing.
-
-\bibitem[Fernández, 2019]{Maite19}
-Fernández, M. (2019).
-\newblock El robot español que cosecha las fresas de california sin tocarlas.
 
 \bibitem[Fountas et~al., 2020]{Fountas20}
 Fountas, S., Mylonas, N., Malounas, I., Rodias, E., Hellmann~Santos, C., and
   Pekkeriet, E. (2020).
 \newblock Agricultural robotics for field operations.
 \newblock {\em Sensors}, 20(9).
-
-\bibitem[GALIPIENSO et~al., 2003]{Galipienso03}
-GALIPIENSO, A., ISABEL, M., Cazorla~Quevedo, M.~A., Colomina~Pardo, O.,
-  Escolano~Ruiz, F., and LOZANO~ORTEGA, M.~A. (2003).
-\newblock {\em Inteligencia artificial: modelos, técnicas y áreas de
-  aplicación}.
-\newblock Ediciones {P}araninfo, {SA}.
 
 \bibitem[García~Santillán and Caranqui~Sánchez, 2015]{Santillan15}
 García~Santillán, I.~D. and Caranqui~Sánchez, V.~M. (2015).
@@ -169,11 +87,6 @@ García~Santillán, I.~D. and Caranqui~Sánchez, V.~M. (2015).
 Gasparetto, A. and Scalera, L. (2019).
 \newblock A {B}rief {H}istory of {I}ndustrial {R}obotics in the 20th {C}entury.
 \newblock {\em Advances in {H}istorical {S}tudies}, 8:24--35.
-
-\bibitem[Gollapudi, 2016]{Gollapudi16}
-Gollapudi, S. (2016).
-\newblock {\em Practical machine learning}.
-\newblock Packt {P}ublishing {L}td.
 
 \bibitem[Gonzalez-Aguirre et~al., 2021]{Gonzalez21}
 Gonzalez-Aguirre, J.~A., Osorio-Oliveros, R., Rodríguez-Hernández, K.~L.,
@@ -186,11 +99,6 @@ Gonzalez-Aguirre, J.~A., Osorio-Oliveros, R., Rodríguez-Hernández, K.~L.,
 González, P.~M. and de~Mántaras~Badia, R.~L. (2017).
 \newblock {\em Inteligencia {A}rtificial}.
 \newblock {LOS LIBROS DE LA CATARATA}.
-
-\bibitem[Gu et~al., 2018]{Gu18}
-Gu, D., Shen, J., and Wang, X. (2018).
-\newblock Deep {L}earning.
-\newblock {\em Instructor}.
 
 \bibitem[Hardy, 2001]{Hardy01}
 Hardy, T. (2001).
@@ -208,11 +116,6 @@ Janiesch, C., Zschech, P., and Heinrich, K. (2021).
 \newblock Machine learning and deep learning.
 \newblock {\em Electronic {M}arkets}, 31:685--695.
 
-\bibitem[Kim, 2016]{Kim16}
-Kim, K.~G. (2016).
-\newblock Book {R}eview: {D}eep {L}earning.
-\newblock {\em Healthcare {I}nformatics {R}esearch ({HIR})}, 22(4):351--354.
-
 \bibitem[Koditschek, 2021]{Koditschek21}
 Koditschek, D.~E. (2021).
 \newblock What {I}s {R}obotics? {W}hy {D}o {W}e {N}eed {I}t and {H}ow {C}an
@@ -225,31 +128,12 @@ Kraevsky, S. and Rogatkin, D. (2010).
 \newblock Medical robotics: the first steps of medical robots.
 \newblock {\em Russian Journal: Technologies of live systems}, 7(4):3--14.
 
-\bibitem[Makino and Furuya, 1980]{Makino80}
-Makino, H. and Furuya, N. (1980).
-\newblock Selective {C}ompliance {A}ssembly {R}obot {A}rm.
-\newblock In {\em Proceedings of 1st {I}nternational {C}onference on {A}ssembly
-  {A}utomation (ICAA)}, pages 77--86, Brighton.
-
 \bibitem[Martínez~Madruga, 2022]{Martinez22}
 Martínez~Madruga, J. (2022).
 \newblock Sistema de detección de emociones faciales mediante técnicas de
   {M}achine {L}earning adaptado a {ROS} para un robot de bajo coste basadi en
   {R}aspberry {P}i.
 \newblock Trabajo de fin de grado, Universidad Rey Juan Carlos.
-
-\bibitem[Mokyr et~al., 2015]{Mokyr15}
-Mokyr, J., Vickers, C., and Ziebarth, N.~L. (2015).
-\newblock The {H}istory of {T}echnological {A}nxiety and the {F}uture of
-  {E}conomic {G}rowth: {I}s {T}his {T}ime {D}ifferent?
-\newblock {\em Journal of {E}conomic {P}erspectives}, 29(3):31--50.
-
-\bibitem[Moreno et~al., 1994]{Moreno94}
-Moreno, A., Armengol, E., Béjar~Alonso, J., Belanche~Muñoz, L.~A.,
-  Cortés~García, C.~U., Gavaldà~Mestre, R., Gimeno, J.~M., Martín~Muñoz,
-  M., and Sánchez-Marrè, M. (1994).
-\newblock {\em Aprendizaje automático}.
-\newblock Edicions de la {U}niversitat {P}olitécnica de {C}atalunya.
 
 \bibitem[Oktarina et~al., 2020]{Oktarina20}
 Oktarina, Y., Dewi, T., Risma, P., and Nawawi, M. (2020).
@@ -285,28 +169,11 @@ Romero-Tamarit, A., Reig-Viader, R., Estrada-Sabadell, M.~D., and
 \newblock Eficacia, efectividad, seguridad y eficiencia de la cirugía
   robótica con el sistema quirúrgico {D}a {V}inci.
 
-\bibitem[Rouhiainen, 2018]{Rouhiainen18}
-Rouhiainen, L. (2018).
-\newblock Inteligencia artificial.
-\newblock {\em Madrid: Alienta Editorial}, pages 1--22.
-
 \bibitem[Sandoval~Serrano et~al., 2018]{Sandoval18}
 Sandoval~Serrano, L.~J. et~al. (2018).
 \newblock Algoritmos de aprendizaje automático para análisis y predicción de
   datos.
 \newblock {\em Revista {T}ecnológica; no. 11}.
-
-\bibitem[Schmidhuber, 2015]{Schmidhuber15}
-Schmidhuber, J. (2015).
-\newblock Deep {L}earning.
-\newblock {\em Scholarpedia}, 10(11):32832.
-\newblock revision \#184887.
-
-\bibitem[Siciliano and Khatib, 2016]{Siciliano16}
-Siciliano, B. and Khatib, O. (2016).
-\newblock {\em Industrial Robotics}, pages 963--986.
-\newblock Springer Cham.
-\newblock Text not available. This book is protected by copyright.
 
 \bibitem[Siswantoro et~al., 2013]{Joko13}
 Siswantoro, J., Prabuwono, A.~S., and Abdullah, A. (2013).
@@ -314,14 +181,6 @@ Siswantoro, J., Prabuwono, A.~S., and Abdullah, A. (2013).
   {C}alibrated {C}amera {B}ased on {A}nalytic {G}eometry.
 \newblock In {\em Soft {C}omputing {A}pplications and {I}ntelligent {S}ystems},
   pages 1--11. Springer {B}erlin {H}eidelberg.
-
-\bibitem[Suárez et~al., 2022]{Suarez22}
-Suárez, R., Rosella, J., Vinagreb, M., Cortesb, F., Ansuateguic, A., Maurtuac,
-  I., Martind, D., Guashd, A., Azpiazuf, J., Serranog, D., et~al. (2022).
-\newblock Robot {O}perating {S}ystem ({ROS}).
-\newblock {\em Este trabajo se ha llevado a cabo por iniciativa y en el seno
-  del {G}rupo de {T}rabajo de {I}nnovación de la {A}sociación {E}spañola de
-  {R}obótica y {A}utomatización ({AER})}, 28:1--25.
 
 \bibitem[Sánchez~Martín et~al., 2007a]{Sanchez07a}
 Sánchez~Martín, F., Millán~Rodríguez, F., Salvador~Bayarri, J.,
@@ -343,18 +202,10 @@ Sánchez~Martín, F., Millán~Rodríguez, F., Salvador~Bayarri, J.,
 {Universal Robots A/S} (2018).
 \newblock {\em UR e-series brochure}.
 
-\bibitem[{Universal Robots A/S}, 2024a]{Service_Manual_UR_e-series_2024}
-{Universal Robots A/S} (2024a).
+\bibitem[{Universal Robots A/S}, 2024]{Service_Manual_UR_e-series_2024}
+{Universal Robots A/S} (2024).
 \newblock {\em Service manual - e-Series}.
 \newblock Last modified on Nov 18, 2024.
-
-\bibitem[{Universal Robots A/S}, 2024b]{SoftwareHandbook_UR_Polyscope5_2024}
-{Universal Robots A/S} (2024b).
-\newblock {\em Software Handbook Polyscope 5}.
-
-\bibitem[{Universal Robots A/S}, 2024c]{SoftwareHandbook_UR_PolyscopeX_2024}
-{Universal Robots A/S} (2024c).
-\newblock {\em Software Handbook Polyscope X}.
 
 \bibitem[{Universal Robots A/S}, 2025a]{User_Manual_UR10e_2025}
 {Universal Robots A/S} (2025a).
@@ -371,33 +222,10 @@ Sánchez~Martín, F., Millán~Rodríguez, F., Salvador~Bayarri, J.,
 \newblock {\em User manual - UR5e e-Series - SW 5.20}.
 \newblock Last modified on Jan 13, 2025.
 
-\bibitem[Vega, 2021]{Vega19}
-Vega, J. (2021).
-\newblock Basic human–robot interaction system running on an embedded
-  platform.
-\newblock {\em Microprocessors and {M}icrosystems}, 8(11).
-
 \bibitem[Vega and Cañas, 2021]{Vega21}
 Vega, J. and Cañas, J.~M. (2021).
 \newblock Open {V}ision {S}ystem for {L}ow-{C}ost {R}obotics {E}ducation.
 \newblock {\em Electronics}, 85.
-
-\bibitem[Wang et~al., 2016]{Wang16}
-Wang, H., Lei, Z., Zhang, X., Zhou, B., and Peng, J. (2016).
-\newblock Machine learning basics.
-\newblock {\em Deep learning}, pages 98--164.
-
-\bibitem[Wirtz et~al., 2018]{Wirtz18}
-Wirtz, J., Patterson, P., Kunz, W., Gruber, T., Lu, V., Paluch, S., and
-  Martins, A. (2018).
-\newblock Brave new world: service robots in the frontline.
-\newblock {\em Journal of {S}ervice {M}anagement}, 29:1--25.
-
-\bibitem[Xiong et~al., 2020]{Xiong20}
-Xiong, Y., Ge, Y., Grimstad, L., and From, P.~J. (2020).
-\newblock An autonomous strawberry-harvesting robot: Design, development,
-  integration, and field evaluation.
-\newblock {\em Journal of Field Robotics}, 37:202--224.
 
 \bibitem[Xiong et~al., 2019]{Xiong19}
 Xiong, Y., Peng, C., Grimstad, L., From, P.~J., and Isler, V. (2019).

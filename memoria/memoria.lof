@@ -1,79 +1,75 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Primer robot industrial\relax }}{3}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Standford Arm\relax }}{4}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Robots utilizados para el desarrollo de ROS\relax }}{5}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces UR5 con su controladora\relax }}{6}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Robots de servicio\relax }}{7}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Robot Da Vinci\relax }}{9}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Robots médicos\relax }}{9}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Diagrama de Venn de la relación entre distintas áreas de la IA\relax }}{13}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Modelo biológico de una neurona genérica (izquierda) y el respectivo modelo matemático (derecha)\relax }}{14}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Arquitectura de una red neuronal\relax }}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Primer robot industrial\relax }}{3}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Standford Arm\relax }}{4}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Robots utilizados para el desarrollo de ROS\relax }}{5}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces UR5 con su controladora\relax }}{5}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Robots de servicio\relax }}{6}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Robots en medicina\relax }}{8}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Diagrama de Venn de la relación entre distintas áreas de la IA\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Redes Neuronales\relax }}{12}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Representación de varios tipos de robots agrícolas\relax }}{16}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ilustración global del rendimiento general de los robots revisados\relax }}{17}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Agrobot\relax }}{18}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Diseño conceptual del robot de recogida con sus componentes\relax }}{19}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Robot agrícola Dogtooth\relax }}{20}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Montaje del hardware en una explotación de fresas\relax }}{21}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Robot recolector de tomates\relax }}{23}{figure.caption.26}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ciclo de la metodología DMADV\relax }}{29}{figure.caption.27}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Cámara Logitech C270 HD$^{\ref {note:enlace16}}$\relax }}{32}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Soporte de brazo articulado$^{\ref {note:enlace17}}$\relax }}{33}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Soporte de impresión 3D en PLA\relax }}{34}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace22}}$\relax }}{35}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Pantalla principal de la interfaz de Polyscope 5\relax }}{37}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Pruebas realizadas con SocketTest para verificar la comunicación robot-servidor externo\relax }}{41}{figure.caption.34}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Montaje del sistema final con un UR5e\relax }}{43}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{44}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Plano pared generado en el UR\relax }}{47}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Detección de fresas maduras mediante deep learning\relax }}{48}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR5e\relax }}{49}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Ajustes de comunicación XMLRPC en el robot y ejecución de movimientos definidos en el programa\relax }}{52}{figure.caption.51}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Ajustes de red en el robot\relax }}{52}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Definición de la Instalación del efector final en el robot\relax }}{53}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Lanzamiento del servidor mediante el programa en Python en la terminal del ordenador\relax }}{54}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Programa \textit {xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp} para uso del sistema con efector final\relax }}{55}{figure.caption.55}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Pruebas en el plano vertical de detección con garra integrada\relax }}{55}{figure.caption.56}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representación de varios tipos de robots agrícolas\relax }}{14}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ilustración global del rendimiento general de los robots revisados\relax }}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Agrobot\relax }}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diseño conceptual del robot de recogida con sus componentes\relax }}{17}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Robot agrícola Dogtooth\relax }}{18}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Montaje del hardware en una explotación de fresas\relax }}{19}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Robot recolector de tomates\relax }}{21}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {I.1}{\ignorespaces Entrenamiento del algoritmo con TensorFlow\relax }}{63}{figure.caption.58}%
-\contentsline {figure}{\numberline {I.2}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{64}{figure.caption.59}%
-\contentsline {figure}{\numberline {I.3}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{65}{figure.caption.60}%
-\contentsline {figure}{\numberline {I.4}{\ignorespaces Pruebas de detección de fresas en imágenes con TensorFlow\relax }}{66}{figure.caption.61}%
-\contentsline {figure}{\numberline {I.5}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{67}{figure.caption.62}%
-\contentsline {figure}{\numberline {I.6}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{67}{figure.caption.63}%
-\contentsline {figure}{\numberline {I.7}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{67}{figure.caption.64}%
-\contentsline {figure}{\numberline {I.8}{\ignorespaces Detección de fresas en webcam con TensorFlow con modelos no preentrenados (ssd mobilenet v2 320x320)\relax }}{69}{figure.caption.65}%
-\contentsline {figure}{\numberline {I.9}{\ignorespaces Gráficas de la confianza de detección obtenida en las pruebas según la luminosidad para el modelo ssd mobilenet v2\relax }}{70}{figure.caption.66}%
-\contentsline {figure}{\numberline {I.10}{\ignorespaces Gráficas de la media de los porcentajes de confianza obtenidos en las pruebas de detección según la luminosidad para el modelo ssd mobilenet v2\relax }}{70}{figure.caption.67}%
-\contentsline {figure}{\numberline {I.11}{\ignorespaces Detección de fresas en Jupyter Notebook\relax }}{71}{figure.caption.68}%
-\contentsline {figure}{\numberline {I.12}{\ignorespaces Detección con Pytorch\relax }}{73}{figure.caption.69}%
-\contentsline {figure}{\numberline {I.13}{\ignorespaces Etiquetado de las imágenes con labelImg\relax }}{74}{figure.caption.70}%
-\contentsline {figure}{\numberline {I.14}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{75}{figure.caption.71}%
-\contentsline {figure}{\numberline {I.15}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{76}{figure.caption.72}%
-\contentsline {figure}{\numberline {I.16}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{76}{figure.caption.73}%
-\contentsline {figure}{\numberline {I.17}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{79}{figure.caption.76}%
-\contentsline {figure}{\numberline {I.18}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{80}{figure.caption.78}%
-\contentsline {figure}{\numberline {I.19}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{81}{figure.caption.79}%
-\contentsline {figure}{\numberline {I.20}{\ignorespaces Esquema de la rotación de la cámara\relax }}{82}{figure.caption.82}%
-\contentsline {figure}{\numberline {I.21}{\ignorespaces Cálculo de la distancia de la cámara a la detección\relax }}{83}{figure.caption.84}%
-\contentsline {figure}{\numberline {I.22}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{84}{figure.caption.85}%
-\contentsline {figure}{\numberline {I.23}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{85}{figure.caption.86}%
-\contentsline {figure}{\numberline {I.24}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{86}{figure.caption.87}%
-\contentsline {figure}{\numberline {I.25}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{90}{figure.caption.92}%
-\contentsline {figure}{\numberline {I.26}{\ignorespaces Representación de los sistemas de coordenadas que se había supuesto en un principio y del real obtenido\relax }}{92}{figure.caption.95}%
-\contentsline {figure}{\numberline {I.27}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{93}{figure.caption.96}%
-\contentsline {figure}{\numberline {I.28}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{94}{figure.caption.98}%
-\contentsline {figure}{\numberline {I.29}{\ignorespaces Programa recibir\_cadena\_socket.urp\relax }}{95}{figure.caption.99}%
-\contentsline {figure}{\numberline {I.30}{\ignorespaces Programa prueba\_visionsimple.urp\relax }}{96}{figure.caption.100}%
-\contentsline {figure}{\numberline {I.31}{\ignorespaces Programa xmlrpc\_example.urp\relax }}{99}{figure.caption.101}%
-\contentsline {figure}{\numberline {I.32}{\ignorespaces Pruebas funcionales con el programa pinhole.py y el robot real\relax }}{100}{figure.caption.102}%
-\contentsline {figure}{\numberline {I.33}{\ignorespaces Primeras pruebas detección de fresas y envío de las posiciones al UR\relax }}{100}{figure.caption.103}%
-\contentsline {figure}{\numberline {I.34}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR3e\relax }}{102}{figure.caption.104}%
-\contentsline {figure}{\numberline {I.35}{\ignorespaces Ejecución del programa en la terminal para un plano horizontal con un UR3e\relax }}{102}{figure.caption.105}%
-\contentsline {figure}{\numberline {I.36}{\ignorespaces Disposición de las detecciones para un plano vertical con un UR3e\relax }}{103}{figure.caption.106}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Sistema de visión\relax }}{26}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Soporte de impresión 3D en PLA\relax }}{27}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Gama e-series de Universal Robots$^{\ref {note:enlace23}}$\relax }}{28}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Pantalla principal de la interfaz de Polyscope 5\relax }}{30}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Pruebas realizadas con SocketTest para verificar la comunicación robot-servidor externo\relax }}{34}{figure.caption.30}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Montaje del sistema final con un UR5e\relax }}{36}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{37}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Plano pared generado en el UR\relax }}{40}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Detección de fresas maduras mediante deep learning\relax }}{41}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR5e\relax }}{42}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Ajustes de comunicación XMLRPC en el robot y ejecución de movimientos definidos en el programa\relax }}{45}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Ajustes de red en el robot\relax }}{46}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Definición de la Instalación del efector final en el robot\relax }}{47}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Programa \textit {xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp} para uso del sistema con efector final\relax }}{49}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Pruebas en el plano vertical de detección con garra integrada\relax }}{50}{figure.caption.51}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Ciclo de la metodología DMADV\relax }}{58}{figure.caption.52}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Resultado de la detección en imágenes con TensorFlow\relax }}{61}{figure.caption.54}%
+\contentsline {figure}{\numberline {II.2}{\ignorespaces Resultado del reentrenamiento de la detección en imágenes con TensorFlow\relax }}{62}{figure.caption.55}%
+\contentsline {figure}{\numberline {II.3}{\ignorespaces Pruebas de detección de fresas en imágenes con TensorFlow\relax }}{63}{figure.caption.56}%
+\contentsline {figure}{\numberline {II.4}{\ignorespaces Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8\relax }}{64}{figure.caption.57}%
+\contentsline {figure}{\numberline {II.5}{\ignorespaces Modelo efficientdet\_d4\_coco17\_tpu-32\relax }}{64}{figure.caption.58}%
+\contentsline {figure}{\numberline {II.6}{\ignorespaces Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 \relax }}{65}{figure.caption.59}%
+\contentsline {figure}{\numberline {II.7}{\ignorespaces Detección de fresas en webcam con TensorFlow con modelos no preentrenados (ssd mobilenet v2 320x320)\relax }}{66}{figure.caption.60}%
+\contentsline {figure}{\numberline {II.8}{\ignorespaces Gráficas de la confianza de detección obtenida en las pruebas según la luminosidad para el modelo ssd mobilenet v2\relax }}{67}{figure.caption.61}%
+\contentsline {figure}{\numberline {II.9}{\ignorespaces Gráficas de la media de los porcentajes de confianza obtenidos en las pruebas de detección según la luminosidad para el modelo ssd mobilenet v2\relax }}{68}{figure.caption.62}%
+\contentsline {figure}{\numberline {II.10}{\ignorespaces Detección de fresas en Jupyter Notebook\relax }}{68}{figure.caption.63}%
+\contentsline {figure}{\numberline {II.11}{\ignorespaces Detección con Pytorch\relax }}{71}{figure.caption.64}%
+\contentsline {figure}{\numberline {II.12}{\ignorespaces Etiquetado de las imágenes con labelImg\relax }}{72}{figure.caption.65}%
+\contentsline {figure}{\numberline {II.13}{\ignorespaces Calibración de la cámara C270 de Logitech\relax }}{73}{figure.caption.66}%
+\contentsline {figure}{\numberline {II.14}{\ignorespaces Medición del ángulo de rotación de la cámara mediante la aplicación de ERGONAUTAS RULER\relax }}{74}{figure.caption.67}%
+\contentsline {figure}{\numberline {II.15}{\ignorespaces Primeras pruebas de detección con PyTorch y Python\relax }}{75}{figure.caption.68}%
+\contentsline {figure}{\numberline {II.16}{\ignorespaces Primeras pruebas de la estimación de las coordenadas y la distancia de la detección a la cámara\relax }}{77}{figure.caption.71}%
+\contentsline {figure}{\numberline {II.17}{\ignorespaces Geometría basada en el modelo de cámara estenopeica\relax }}{78}{figure.caption.73}%
+\contentsline {figure}{\numberline {II.18}{\ignorespaces Pruebas para determinar la configuración del sistema de coordenadas de la cámara\relax }}{79}{figure.caption.74}%
+\contentsline {figure}{\numberline {II.19}{\ignorespaces Esquema de la rotación de la cámara\relax }}{81}{figure.caption.77}%
+\contentsline {figure}{\numberline {II.20}{\ignorespaces Detección y cálculo de las coordenadas y la distancia a la detección\relax }}{82}{figure.caption.79}%
+\contentsline {figure}{\numberline {II.21}{\ignorespaces Detección múltiple simultánea de post-it\relax }}{83}{figure.caption.80}%
+\contentsline {figure}{\numberline {II.22}{\ignorespaces Representación de las detecciones con OpenGL\relax }}{84}{figure.caption.81}%
+\contentsline {figure}{\numberline {II.23}{\ignorespaces Detección de fresas e integración con el sistema de cálculo de coordenadas y distancias\relax }}{85}{figure.caption.82}%
+\contentsline {figure}{\numberline {II.24}{\ignorespaces Proyección con OpenGL de las detecciones y el campo visual de la cámara\relax }}{89}{figure.caption.87}%
+\contentsline {figure}{\numberline {II.25}{\ignorespaces Representación de los sistemas de coordenadas que se había supuesto en un principio y del real obtenido\relax }}{91}{figure.caption.90}%
+\contentsline {figure}{\numberline {II.26}{\ignorespaces Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa\relax }}{92}{figure.caption.91}%
+\contentsline {figure}{\numberline {II.27}{\ignorespaces Representación básica de un programa de un sistema de visión externo\relax }}{93}{figure.caption.93}%
+\contentsline {figure}{\numberline {II.28}{\ignorespaces Programa recibir\_cadena\_socket.urp\relax }}{94}{figure.caption.94}%
+\contentsline {figure}{\numberline {II.29}{\ignorespaces Programa prueba\_visionsimple.urp\relax }}{95}{figure.caption.95}%
+\contentsline {figure}{\numberline {II.30}{\ignorespaces Programa xmlrpc\_example.urp\relax }}{98}{figure.caption.96}%
+\contentsline {figure}{\numberline {II.31}{\ignorespaces Pruebas funcionales con el programa pinhole.py y el robot real\relax }}{99}{figure.caption.97}%
+\contentsline {figure}{\numberline {II.32}{\ignorespaces Primeras pruebas detección de fresas y envío de las posiciones al UR\relax }}{100}{figure.caption.98}%
+\contentsline {figure}{\numberline {II.33}{\ignorespaces Disposición de las detecciones para un plano horizontal con un UR3e\relax }}{101}{figure.caption.99}%
+\contentsline {figure}{\numberline {II.34}{\ignorespaces Ejecución del programa en la terminal para un plano horizontal con un UR3e\relax }}{102}{figure.caption.100}%
+\contentsline {figure}{\numberline {II.35}{\ignorespaces Disposición de las detecciones para un plano vertical con un UR3e\relax }}{103}{figure.caption.101}%

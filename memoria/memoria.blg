@@ -8,50 +8,47 @@ I was expecting a `,' or a `}'---line 463 of file bibliografia.bib
  :   month = "Julio",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--there's a number but no volume in Abeliuk21
-Warning--empty booktitle in Bischoff10
-Warning--empty booktitle in Dechter86
 Warning--there's a number but no volume in Hardy01
 Warning--empty journal in Romero20
-You've used 70 entries,
+You've used 41 entries,
             1935 wiz_defined-function locations,
-            914 strings with 17107 characters,
-and the built_in function-call counts, 27142 in all, are:
-= -- 2553
-> -- 1283
-< -- 54
-+ -- 461
-- -- 440
-* -- 2218
-:= -- 4844
-add.period$ -- 213
-call.type$ -- 70
-change.case$ -- 552
-chr.to.int$ -- 65
-cite$ -- 75
-duplicate$ -- 1050
-empty$ -- 1778
-format.name$ -- 535
-if$ -- 5297
-int.to.chr$ -- 6
+            731 strings with 11542 characters,
+and the built_in function-call counts, 15184 in all, are:
+= -- 1428
+> -- 727
+< -- 30
++ -- 257
+- -- 248
+* -- 1235
+:= -- 2761
+add.period$ -- 123
+call.type$ -- 41
+change.case$ -- 320
+chr.to.int$ -- 38
+cite$ -- 43
+duplicate$ -- 580
+empty$ -- 974
+format.name$ -- 306
+if$ -- 2920
+int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 66
-newline$ -- 352
-num.names$ -- 210
-pop$ -- 521
+missing$ -- 35
+newline$ -- 206
+num.names$ -- 123
+pop$ -- 283
 preamble$ -- 1
-purify$ -- 567
+purify$ -- 327
 quote$ -- 0
-skip$ -- 819
+skip$ -- 462
 stack$ -- 0
-substring$ -- 1459
-swap$ -- 154
-text.length$ -- 14
+substring$ -- 775
+swap$ -- 71
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 400
-warning$ -- 5
-while$ -- 187
+type$ -- 238
+warning$ -- 2
+while$ -- 103
 width$ -- 0
-write$ -- 893
+write$ -- 518
 (There was 1 error message)

@@ -3,12 +3,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {myequation}{\numberline {5.1}{\ignorespaces Relación de fórmulas del modelo de cámara estenopeico\relax }}{45}{myequation.caption.38}%
-\contentsline {myequation}{\numberline {5.2}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{45}{myequation.caption.39}%
-\contentsline {myequation}{\numberline {5.3}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{45}{myequation.caption.40}%
-\contentsline {myequation}{\numberline {5.4}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{46}{myequation.caption.41}%
-\contentsline {myequation}{\numberline {5.5}{\ignorespaces Descomposición e inversión parcial del modelo de cámara pinhole para estimar las coordenadas tridimensionales de un punto conocido en imagen bajo la hipótesis suelo \(Z = Z_0\).\relax }}{46}{myequation.caption.42}%
-\contentsline {myequation}{\numberline {5.6}{\ignorespaces Fórmula del cálculo de la distancia de la cámara a las detecciones\relax }}{46}{myequation.caption.43}%
+\contentsline {myequation}{\numberline {5.1}{\ignorespaces Relación de fórmulas del modelo de cámara estenopeico\relax }}{38}{myequation.caption.34}%
+\contentsline {myequation}{\numberline {5.2}{\ignorespaces Matriz de parámetros intrínsecos de la cámara\relax }}{38}{myequation.caption.35}%
+\contentsline {myequation}{\numberline {5.3}{\ignorespaces Matrices de rotación \( R(\theta ) \) según el eje de rotación\relax }}{38}{myequation.caption.36}%
+\contentsline {myequation}{\numberline {5.4}{\ignorespaces Matriz de traslación de la cámara en coordenadas tridimensionales\relax }}{39}{myequation.caption.37}%
+\contentsline {myequation}{\numberline {5.5}{\ignorespaces Descomposición e inversión parcial del modelo de cámara pinhole para estimar las coordenadas tridimensionales de un punto conocido en imagen bajo la hipótesis suelo \(Z = Z_0\).\relax }}{39}{myequation.caption.38}%
+\contentsline {myequation}{\numberline {5.6}{\ignorespaces Fórmula del cálculo de la distancia de la cámara a las detecciones\relax }}{40}{myequation.caption.39}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {myequation}{\numberline {I.1}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{92}{myequation.caption.94}%
+\addvspace {10\p@ }
+\contentsline {myequation}{\numberline {II.1}{\ignorespaces Equivalencia entre las coordenadas supuestas y obtenidas\relax }}{91}{myequation.caption.89}%
