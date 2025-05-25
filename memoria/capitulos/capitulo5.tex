@@ -330,7 +330,7 @@ A partir de esta base, este apartado expone el proceso completo de integración 
 Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a escenarios reales más complejos, sentando las bases para su posible aplicación futura en entornos agrícolas reales o semiautomatizados. Para hacer funcionar el sistema completo y conseguir una correcta integración entre el sistema de visión y el brazo robótico UR, deben seguirse los siguientes pasos de forma ordenada.
 
 \begin{enumerate}
-  \item Conexión de red: Es fundamental asegurar que, tanto el robot como el ordenador que ejecuta el sistema de visión, están conectados a la misma red local y que ambos dispositivos pertenezcan a la misma subred, recomendándose el uso de cables ethernet para una mayor estabilidad. Por este motivo, es necesario comprobar que hay conectividad entre ambos dispositivos (por ejemplo, mediante el uso del comando \texttt{ping} a la IP del robot desde el ordenador), ya que la comunicación se establece a través del protocolo XML-RPC sobre una dirección IP y puerto determinados.
+  \item Conexión de red: Es fundamental asegurar que, tanto el robot como el ordenador que ejecuta el sistema de visión, están conectados a la misma red local y que ambos dispositivos pertenezcan a la misma subred, recomendándose el uso de cables Ethernet para una mayor estabilidad. Por este motivo, es necesario comprobar que hay conectividad entre ambos dispositivos (por ejemplo, mediante el uso del comando \texttt{ping} a la IP del robot desde el ordenador), ya que la comunicación se establece a través del protocolo XML-RPC sobre una dirección IP y puerto determinados.
     
       \begin{figure} [H]
         \begin{center}
@@ -356,7 +356,7 @@ Esta arquitectura permite un sistema modular, robusto y fácilmente escalable a 
   \pagebreak
   \item Creación del plano de trabajo: A continuación, se debe definir el plano de trabajo sobre el que se va a operar, en este caso un plano vertical, como se detalló en la Sección \ref{sec:HS_vertical}. 
   
-  \item Lanzamiento del sistema de comunicación: En este punto, se debe ejecutar el script en Python mediante la línea de comando que se muestra a continuación. Para este caso, es el programa \textit{xmlrpc\_deteccionfresas.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccionfresas.py}} el que ejerce de servidor, y tiene que ejecutarse desde la terminal del ordenador para poder ejecutar posteriormente mediante el botón de \textit{play} de la interfaz del robot, el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, que realiza la solicitud de datos al servidor remoto a través del protocolo XML-RPC, una vez que el servidor esté en marcha.
+  \item Lanzamiento del sistema de comunicación: En este punto, se debe ejecutar el script en Python mediante la línea de comando que se muestra a continuación. Para este caso, es el programa \verb|xmlrpc_deteccionfresas.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccionfresas.py}} el que ejerce de servidor, y tiene que ejecutarse desde la terminal del ordenador para poder ejecutar posteriormente mediante el botón de \textit{play} de la interfaz del robot, el programa \verb|xmlrpc_deteccion_fresas_vertical.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, que realiza la solicitud de datos al servidor remoto a través del protocolo XML-RPC, una vez que el servidor esté en marcha.
   
 \small
 \begin{verbatim}
@@ -374,7 +374,8 @@ python xmlrpc_deteccionfresas.py --model_def config/yolov3-custom.cfg
     %    \label{fig:ejecucion_python}
     %\end{figure} 
 
-  \item Ejecución: Una vez en marcha tanto el programa en el ordenador como en el robot, el sistema detectará automáticamente las fresas presentes en la escena, calculará sus coordenadas tridimensionales y las enviará al robot, que ejecutará el movimiento correspondiente según el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, para acercarse a la fresa y situarse encima de esta para una futura recolección.
+  \item Ejecución: Una vez en marcha tanto el programa en el ordenador como en el robot, el sistema detectará automáticamente las fresas presentes en la escena, calculará sus coordenadas tridimensionales y las enviará al robot, que ejecutará el movimiento correspondiente según el programa de robot, %\verb|xmlrpc_deteccion_fresas_vertical.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical.urp}}, 
+para acercarse a la fresa y situarse encima de esta para una futura recolección.
       
 %    \begin{figure}[H]
 %      \begin{center}
@@ -388,7 +389,7 @@ python xmlrpc_deteccionfresas.py --model_def config/yolov3-custom.cfg
 %    \end{figure}
 \end{enumerate}
 
-Para completar la evaluación del prototipo, a pesar de que no se llegó a implementar la acción de cierre o agarre de la pinza dentro del flujo automatizado del sistema, se realizaron pruebas complementarias utilizando una pinza industrial acoplada al robot en el programa de robot \textit{xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical_pinza.urp}} (Figura \ref{fig:Programa_UR_pinza}) con el objetivo de verificar la compatibilidad y robustez del programa desarrollado. Estas pruebas permitieron demostrar que el sistema era plenamente funcional y adaptable, y que se podía integrar sin inconvenientes cualquier herramienta de agarre que fuera adecuada para el manejo de fresas, dada su delicadeza. De este modo, se confirma que el sistema de detección, proyección y comunicación con el robot puede extenderse fácilmente para incluir un actuador final destinado a la recolección efectiva del fruto en un entorno real (Figura \ref{fig:UR5e_planopared_garra}).
+Para completar la evaluación del prototipo, a pesar de que no se llegó a implementar la acción de cierre o agarre de la pinza dentro del flujo automatizado del sistema, se realizaron pruebas complementarias utilizando una pinza industrial acoplada al robot en el programa de robot \verb|xmlrpc_deteccion_fresas_vertical_pinza.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_vertical_pinza.urp}} (Figura \ref{fig:Programa_UR_pinza}) con el objetivo de verificar la compatibilidad y robustez del programa desarrollado. Estas pruebas permitieron demostrar que el sistema era plenamente funcional y adaptable, y que se podía integrar sin inconvenientes cualquier herramienta de agarre que fuera adecuada para el manejo de fresas, dada su delicadeza. De este modo, se confirma que el sistema de detección, proyección y comunicación con el robot puede extenderse fácilmente para incluir un actuador final destinado a la recolección efectiva del fruto en un entorno real (Figura \ref{fig:UR5e_planopared_garra}).
 
    \begin{figure}[H]
       \begin{center}
@@ -397,7 +398,7 @@ Para completar la evaluación del prototipo, a pesar de que no se llegó a imple
         \hspace{1mm}
         \subfigure{\includegraphics[width=155mm]{figs/Movimiento UR Programa UR Pinza.png}}
       \end{center}
-      \caption{Programa \textit{xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp} para uso del sistema con efector final}
+      \caption{Programa \texttt{xmlrpc\_deteccion\_fresas\_vertical\_pinza.urp} para uso del sistema con efector final}
       \label{fig:Programa_UR_pinza}
    \end{figure}
    
