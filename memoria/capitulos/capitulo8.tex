@@ -11,7 +11,7 @@ Dada la finalidad del proyecto, se requería que la detección de objetos se die
 \subsection{Pruebas con imágenes}
 \label{sec:Pruebas_imgs_TF}
 
-En primer lugar, se creó un entorno de Anaconda para poder probar la detección de objetos en imágenes utilizando Tensorflow mediante el repositorio \textit{deteccion\_objetos}\footnote{\url{https://github.com/puigalex/deteccion_objetos}}, que estaba basado en la configuración \textit{faster rcnn resnet101 coco} como modelo de detección de objetos. Se llevó a cabo el etiquetado de imágenes, en este caso de tigres, mediante la herramienta labelImg\footnote{\url{https://github.com/HumanSignal/labelImg}}, y se prepararon las carpetas y archivos de configuración correspondientes para poder llevar a cabo el entrenamiento del modelo, siguiendo los pasos indicados en el repositorio; y utilizando una distribución de las imágenes utilizadas para el aprendizaje del modelo y su uso en la detección aproximadamente del 70:30 (73\% datos de entrenamiento y 27\% datos de prueba)(Cuadro \ref{tab:Imagenes_Entrenamiento}), a partir de los cuales se entrenó ese 70\% con uno de los algoritmos y los respectivos parámetros escogidos, y medimos su rendimiento usando el 30\% restante de los datos.\\
+En primer lugar, se creó un entorno de Anaconda para poder probar la detección de objetos en imágenes utilizando Tensorflow mediante el repositorio \verb|deteccion_objetos|\footnote{\url{https://github.com/puigalex/deteccion_objetos}}, que estaba basado en la configuración \verb|faster rcnn resnet101 coco| como modelo de detección de objetos. Se llevó a cabo el etiquetado de imágenes, en este caso de tigres, mediante la herramienta labelImg\footnote{\url{https://github.com/HumanSignal/labelImg}}, y se prepararon las carpetas y archivos de configuración correspondientes para poder llevar a cabo el entrenamiento del modelo, siguiendo los pasos indicados en el repositorio; y utilizando una distribución de las imágenes utilizadas para el aprendizaje del modelo y su uso en la detección aproximadamente del 70:30 (73\% datos de entrenamiento y 27\% datos de prueba)(Cuadro \ref{tab:Imagenes_Entrenamiento}), a partir de los cuales se entrenó ese 70\% con uno de los algoritmos y los respectivos parámetros escogidos, y medimos su rendimiento usando el 30\% restante de los datos.\\
 
   \begin{table}[H]
   \centering
@@ -106,7 +106,7 @@ A continuación, se procedió a ejecutar nuevamente el programa sobre las mismas
 \pagebreak
 Después de llevar a cabo estas pruebas con imágenes de tigres, se comprobó que el modelo funcionase también con fresas, por lo que, a través de la página Kaggle, se obtuvo un dataset de 262 frutas\footnote{\url{https://www.kaggle.com/datasets/aelchimminut/fruits262}}, de las cuales únicamente se utilizó el archivo de las fresas, que contenía 1002 imágenes.
 
-Una vez descargado el archivo, se comenzó a etiquetar una a una las imágenes mediante la herramienta \textit{labelImg} para obtener los archivos xml, tal y como se había hecho con el ejemplo anterior de los tigres, y antes de terminar de etiquetar el dataset entero, se probó este modelo utilizando las primeras 405 imágenes etiquetadas siguiendo una distribución de estas del 80:20 para su entrenamiento y usando el checkpoint guardado en el paso 3490 para congelar el modelo, y así poder utilizar varias imágenes aún por etiquetar para probarlo, obteniendo un resultado satisfactorio en cuanto a la detección y su confianza, tal y como se puede observar en la Figura \ref{fig:Deteccion_Fresas_Imagenes_TF}.
+Una vez descargado el archivo, se comenzó a etiquetar una a una las imágenes mediante la herramienta labelImg para obtener los archivos xml, tal y como se había hecho con el ejemplo anterior de los tigres, y antes de terminar de etiquetar el dataset entero, se probó este modelo utilizando las primeras 405 imágenes etiquetadas siguiendo una distribución de estas del 80:20 para su entrenamiento y usando el checkpoint guardado en el paso 3490 para congelar el modelo, y así poder utilizar varias imágenes aún por etiquetar para probarlo, obteniendo un resultado satisfactorio en cuanto a la detección y su confianza, tal y como se puede observar en la Figura \ref{fig:Deteccion_Fresas_Imagenes_TF}.
 
   \begin{figure}[H]
   \centering
@@ -149,7 +149,7 @@ Para la realización de estas pruebas, se utilizó tanto la cámara web integrad
       		\hspace{2mm}
       		\subfigure[Resultado del modelo en vídeo]{\includegraphics[height=50mm, width=70mm]{figs/webcam ssd_mobilenet_v2_320x320_coco17_tpu-8.png}}
     	\end{center}
-    	\caption{Modelo ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8}
+    	\caption{Modelo \texttt{ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8}}
     	\label{fig:modelo_ssd_mobilenet}
   	\end{figure}
   	
@@ -161,7 +161,7 @@ Para la realización de estas pruebas, se utilizó tanto la cámara web integrad
       		\hspace{2mm}
       		\subfigure[Resultado del modelo en vídeo]{\includegraphics[height=50mm, width=70mm]{figs/webcam efficientdet_d4_coco17_tpu-32.png}}
     	\end{center}
-    	\caption{Modelo efficientdet\_d4\_coco17\_tpu-32}
+    	\caption{Modelo \texttt{efficientdet\_d4\_coco17\_tpu-32}}
     	\label{fig:modelo_efficientdet_d4}
   	\end{figure}
 
@@ -172,15 +172,15 @@ Para la realización de estas pruebas, se utilizó tanto la cámara web integrad
       		\hspace{2mm}
       		\subfigure[Resultado del modelo en vídeo]{\includegraphics[height=50mm, width=70mm]{figs/webcam faster_rcnn_resnet50_v1_640x640_coco17_tpu-8.png}}
     	\end{center}
-    	\caption{Modelo faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 }
+    	\caption{Modelo \texttt{faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8 }}
     	\label{fig:modelo_faster_rcnn_resnet50}
   	\end{figure}	
 
-Después de haber llevado a cabo estas pruebas con los modelos de detección de objetos ssd\_mobilenet\_v2\_320x320\_coco17\_tpu-8, efficientdet\_d4\_coco17\_tpu-32 y faster\_rcnn\_resnet50\_v1\_640x640\_coco17\_tpu-8, y tras valorar que, el principal uso del modelo en la aplicación final sería la de llevar a cabo detecciones en tiempo real con una cámara, se escogió el modelo ssd\_mobilenet\_v2 para proseguir con los experimentos. 
+Después de haber llevado a cabo estas pruebas con los modelos de detección de objetos \verb|ssd_mobilenet_v2_320x320_coco17_tpu-8|, \verb|efficientdet_d4_coco17_tpu-32| y \verb|faster_rcnn_resnet50_v1_640x640_coco17_tpu-8|, y tras valorar que, el principal uso del modelo en la aplicación final sería la de llevar a cabo detecciones en tiempo real con una cámara, se escogió el modelo \verb|ssd_mobilenet_v2| para proseguir con los experimentos. 
 
 La elección de este modelo, incluso por delante de cualquiera de los otros dos, se llevó a cabo a pesar de tener menor precisión y calidad de detección, puesto que destacaba principalmente por su elevada velocidad de procesamiento y su bajo consumo de recursos, gracias a su arquitectura ligera basada en MobileNetV2 y su tamaño de entrada reducido, haciéndolo especialmente adecuado para aplicaciones en tiempo real sobre hardware con capacidades limitadas como el implementado.
 
-Una vez escogido el modelo, para poder llevar a cabo la detección de fresas, era necesario entrenarlo desde cero, para lo que se utilizó de guía el repositorio \textit{real\_time\_object\_detection\_cpu}\footnote{\url{https://github.com/haroonshakeel/real_time_object_detection_cpu/blob/main}}, creando y activando un nuevo entorno de Anaconda, en el cual se instalaron los paquetes y librerías necesarios para ello, junto al Object Detection API de TensorFlow y junto con Jupyter Notebook\footnote{\url{https://jupyter.org}}, un entorno computacional interactivo basado en web para crear cuadernos que contienen código en vivo, ecuaciones, visualizaciones y texto narrativo. 
+Una vez escogido el modelo, para poder llevar a cabo la detección de fresas, era necesario entrenarlo desde cero, para lo que se utilizó de guía el repositorio de GitHub \verb|real_time_object_detection_cpu|\footnote{\url{https://github.com/haroonshakeel/real_time_object_detection_cpu/blob/main}}, creando y activando un nuevo entorno de Anaconda, en el cual se instalaron los paquetes y librerías necesarios para ello, junto al Object Detection API de TensorFlow y junto con Jupyter Notebook\footnote{\url{https://jupyter.org}}, un entorno computacional interactivo basado en web para crear cuadernos que contienen código en vivo, ecuaciones, visualizaciones y texto narrativo. 
 
 \pagebreak
 Completada la configuración del entorno, la instalación de todos los componentes, y el entrenamiento del modelo, se realizó una primera prueba de detección utilizando el modelo entrenado para comprobar si funcionaba, obteniendo las primeras predicciones en tiempo real sobre vídeo con fresas reales. Estas primeras detecciones sirvieron de base para la batería de pruebas en las cuales se variaba tanto el número de fresas como las condiciones de luz, para poder conocer en qué condiciones se obtenía un mayor porcentaje de confianza en la detección (Figura \ref{fig:deteccion_Fresas_webcam_TF_ssdmobilenet}).
@@ -204,7 +204,7 @@ Completada la configuración del entorno, la instalación de todos los component
     \hspace{1mm}
     \subfigure[Varias fresas con luz artificial de noche]{\includegraphics[width=0.30\textwidth]{figs/Deteccion varias fresas luz artificial de noche JN.png}}
     
-    \caption{Detección de fresas en webcam con TensorFlow con modelos no preentrenados (ssd mobilenet v2 320x320)}
+    \caption{Detección de fresas en webcam con TensorFlow con modelos no preentrenados (\texttt{ssd mobilenet v2 320x320)}}
     \label{fig:deteccion_Fresas_webcam_TF_ssdmobilenet}
 \end{figure}
 
@@ -217,7 +217,7 @@ Después de verificar la viabilidad y funcionamiento de estas pruebas, y de dete
       \hspace{4mm}
       \subfigure[Resultados de las pruebas de detección con baja luminosidad]{\includegraphics[width=125mm]{figs/Grafica deteccion baja luminosidad.png}}
     \end{center}
-    \caption{Gráficas de la confianza de detección obtenida en las pruebas según la luminosidad para el modelo ssd mobilenet v2}
+    \caption{Gráficas de la confianza de detección obtenida en las pruebas según la luminosidad para el modelo \texttt{ssd mobilenet v2}}
     \label{fig:Pruebas_luminosidad}
   \end{figure}
   
@@ -228,7 +228,7 @@ Después de verificar la viabilidad y funcionamiento de estas pruebas, y de dete
       \hspace{4mm}
       \subfigure[Porcentaje medio de confianza para las detecciones con baja luminosidad]{\includegraphics[width=70mm]{figs/Deteccion media con baja luminosidad.png}}
     \end{center}
-    \caption{Gráficas de la media de los porcentajes de confianza obtenidos en las pruebas de detección según la luminosidad para el modelo ssd mobilenet v2}
+    \caption{Gráficas de la media de los porcentajes de confianza obtenidos en las pruebas de detección según la luminosidad para el modelo \texttt{ssd mobilenet v2}}
     \label{fig:Grafica_medias_luminosidad}
   \end{figure}
 
@@ -262,7 +262,7 @@ Para poder comprobar las diferencias en un ejemplo práctico a la hora de detect
 
 Después de realizar la lectura \textit{You Only Look Once: Unified, Real-Time Object Detection}\cite{Redmon16}, se replicó lo que se exponía en dicho artículo con la cámara integrada del ordenador portátil, mediante un programa en Python y usando la librería OpenCV mediante la biblioteca Pytorch. Este programa, partiendo del \textit{feed} de la propia webcam, descomponía el vídeo en imágenes o cuadros, alimentando a la red neuronal (en este caso YOLOv3), que recibía esta detección y se procesaba con OpenCV, dibujando los recuadros o \textit{bounding box} alrededor de los objetos que se detectaban en vivo.
 
-Para ello, se clonó el repositorio \textit{deteccion-objetos-video}\footnote{\url{https://github.com/puigalex/deteccion-objetos-video}} basado en el proyecto \textit{PyTorch-YOLOv3}\footnote{\url{https://github.com/eriklindernoren/PyTorch-YOLOv3}} para correr detección de objetos sobre vídeo y se siguieron los pasos detallados en el archivo README.
+Para ello, se clonó el repositorio \verb|deteccion-objetos-video|\footnote{\url{https://github.com/puigalex/deteccion-objetos-video}} basado en el proyecto \verb|PyTorch-YOLOv3|\footnote{\url{https://github.com/eriklindernoren/PyTorch-YOLOv3}} para correr detección de objetos sobre vídeo y se siguieron los pasos detallados en el archivo README.
 Una vez instalado todo, se probó a utilizar con varios objetos, y posteriormente con varias frutas simultáneamente, para verificar que el modelo las diferenciaba correctamente y las detectaba, tal y como se muestra en la Figura \ref{fig:Deteccion_Pytorch}.
 
   \begin{figure}[H]
@@ -281,7 +281,7 @@ Una vez instalado todo, se probó a utilizar con varios objetos, y posteriorment
 
 Conociendo las limitaciones de Jupyter Notebook, habiendo escogido llevar a cabo la elaboración del programa de detección en Python, y una vez comprobada la diferencia entre TensorFlow y Pytorch, se sustituyó TensorFlow por PyTorch como biblioteca de desarrollo del modelo de visión, basándose en que PyTorch ofrece una sintaxis más intuitiva y cercana a la programación en Python puro, lo que facilita su integración con scripts que deben ejecutarse en tiempo real junto con otros módulos, como los encargados de la comunicación con el robot, además de que PyTorch presenta una curva de aprendizaje más suave para depuración y prototipado rápido, y proporciona una mayor facilidad a la hora de exportar modelos, optimizarlos o ajustarlos dinámicamente durante la ejecución, resultando ser más adecuado para un sistema unificado, local y modular que debe ejecutarse de forma autónoma, sin depender de interfaces gráficas ni entornos web.
 
-Tras esta decisión, se tomaron como referencia y ayuda los repositorios \textit{Real Time Emotion Detection for Low Cost Robot in ROS}\footnote{\url{https://github.com/jamarma/emotion_detection_ros}} y \textit{Detección de objetos en vídeo}\footnote{\url{https://github.com/puigalex/deteccion-objetos-video}} y se creó un entorno de trabajo nuevo en Anaconda llamado \textit{deteccionobj} para llevar a cabo el entrenamiento del modelo de detección de fresas. Durante este entrenamiento, surgieron varios códigos de error relacionados con el etiquetado de las imágenes utilizadas, por lo que se decidió etiquetarlas de nuevo mediante el programa labelImg (Figura \ref{fig:labelImg_Fresas}), tal y como se había hecho anteriormente con TensorFlow.
+Tras esta decisión, se tomaron como referencia y ayuda los repositorios de GitHub \verb|emotion_detection_ros|\footnote{\url{https://github.com/jamarma/emotion_detection_ros}} y \verb|deteccion-objetos-video|\footnote{\url{https://github.com/puigalex/deteccion-objetos-video}} y se creó un entorno de trabajo nuevo en Anaconda llamado \verb|deteccionobj| para llevar a cabo el entrenamiento del modelo de detección de fresas. Durante este entrenamiento, surgieron varios códigos de error relacionados con el etiquetado de las imágenes utilizadas, por lo que se decidió etiquetarlas de nuevo mediante el programa labelImg (Figura \ref{fig:labelImg_Fresas}), tal y como se había hecho anteriormente con TensorFlow.
 
  \begin{figure}[H]
      \centering
@@ -299,7 +299,7 @@ Para el entrenamiento, se configuró el parámetro batch\_size con un valor de 2
 \subsection{Calibrado de la cámara}
 \label{sec:Calibrado_camara}
 
-De manera paralela al entrenamiento del modelo, con el fin de optimizar la detección de objetos mediante YOLOv3 y PyTorch, se procedió a la calibración de la cámara empleada, la Logitech C270, determinando sus parámetros intrínsecos y la transformación de su sistema de coordenadas respecto al entorno. Para ello, se utilizaron 20 imágenes de un patrón de tablero de ajedrez o \textit{chess board} en diferentes posiciones, tomadas con la cámara a calibrar, mediante las cuales, y a través del uso del programa \textit{PiCamCalibrator.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/piCamCalibrator/PiCamCalibration.py}} (tomado del artículo \cite{Vega21}), como muestra la Figura \ref{fig:calibracion_camara}, se obtenían estos valores de la matriz K (Ecuación \ref{ec:matriz_intrinsecos}). 
+De manera paralela al entrenamiento del modelo, con el fin de optimizar la detección de objetos mediante YOLOv3 y PyTorch, se procedió a la calibración de la cámara empleada, la Logitech C270, determinando sus parámetros intrínsecos y la transformación de su sistema de coordenadas respecto al entorno. Para ello, se utilizaron 20 imágenes de un patrón de tablero de ajedrez o \textit{chess board} en diferentes posiciones, tomadas con la cámara a calibrar, mediante las cuales, y a través del uso del programa \verb|PiCamCalibrator.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/piCamCalibrator/PiCamCalibration.py}} (tomado del artículo \cite{Vega21}), como muestra la Figura \ref{fig:calibracion_camara}, se obtenían estos valores de la matriz K (Ecuación \ref{ec:matriz_intrinsecos}). 
 
  \begin{figure}[H]
     \begin{center}
@@ -330,7 +330,7 @@ Para poder llevar a cabo las primeras pruebas después de la calibración, se in
 \subsection{Pruebas detección de fresas en tiempo real}
 \label{sec:Pruebas_Fresas_Pytorch}
 
-Una vez con el modelo entrenado y la cámara calibrada, se realizaron las primeras pruebas de detección de fresas en tiempo real utilizando Python, para las que se utilizó la cámara integrada del ordenador portátil e imágenes de fresas en el móvil mediante el programa \textit{deteccion\_video.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/deteccion_video.py}}, tal y como se muestra en la Figura \ref{fig:primerasdetecciones_Python}. A partir de estas primeras pruebas, se modificaron tanto el grosor del nombre de la clase a detectar como el \textit{threshold} de la detección mostrado en la ventana emergente con OpenCV, ajustándolo de tal manera que el argumento pudiera ser más legible.
+Una vez con el modelo entrenado y la cámara calibrada, se realizaron las primeras pruebas de detección de fresas en tiempo real utilizando Python, para las que se utilizó la cámara integrada del ordenador portátil e imágenes de fresas en el móvil mediante el programa \verb|deteccion_video.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/deteccion_video.py}}, tal y como se muestra en la Figura \ref{fig:primerasdetecciones_Python}. A partir de estas primeras pruebas, se modificaron tanto el grosor del nombre de la clase a detectar como el \textit{threshold} de la detección mostrado en la ventana emergente con OpenCV, ajustándolo de tal manera que el argumento pudiera ser más legible.
 
   \begin{figure}[H]
      \centering
@@ -383,7 +383,7 @@ Sobre esta primera versión se fue modificando el código para poder añadir má
     \label{cod:comparacion_duplicacion}
 \end{code} 
 
-Paralelamente a esto, con el fin de verificar los cálculos de las transformaciones entre sistemas de coordenadas, y poder obtener las distancias a las que se encontraban las detecciones de la cámara, se desarrolló el programa \textit{pos\_centroide.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/pos_centroide.py}} en Python. Este script utilizaba la biblioteca OpenCV para realizar la detección de un objeto a partir de un filtro por color, calculando su centroide y devolviendo el resultado en píxeles. A partir de estas coordenadas en píxeles, era posible obtener las coordenadas en el sistema óptico de la cámara y finalmente a partir de estas coordenadas bidimensionales, proyectar el punto en el espacio tridimensional utilizando los parámetros intrínsecos y extrínsecos de la cámara, permitiendo así obtener las coordenadas espaciales X,Y,Z que se mostraban en la terminal como salida del programa. 
+Paralelamente a esto, con el fin de verificar los cálculos de las transformaciones entre sistemas de coordenadas, y poder obtener las distancias a las que se encontraban las detecciones de la cámara, se desarrolló el programa \verb|pos_centroide.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/pos_centroide.py}} en Python. Este script utilizaba la biblioteca OpenCV para realizar la detección de un objeto a partir de un filtro por color, calculando su centroide y devolviendo el resultado en píxeles. A partir de estas coordenadas en píxeles, era posible obtener las coordenadas en el sistema óptico de la cámara y finalmente a partir de estas coordenadas bidimensionales, proyectar el punto en el espacio tridimensional utilizando los parámetros intrínsecos y extrínsecos de la cámara, permitiendo así obtener las coordenadas espaciales X,Y,Z que se mostraban en la terminal como salida del programa. 
 
 Por este motivo, se utilizó un cuadrado de un post-it subrayado con color amarillo fosforescente sobre una cartulina blanca para poder minimizar el error cometido por el programa al aplicar el filtro de color y poder calcular así de mejor manera las distancias y coordenadas del centroide de ese cuadrado. Para estas pruebas, se supuso un sistema de referencia cartesiano, donde el eje Z el perpendicular al plano de la mesa, es decir, la altura a la que se encontraba instalada la cámara a la hora de realizar las pruebas para poder seguir el principio de la hipótesis suelo, mientras que en un principio, se supuso el eje X como el eje longitudinal de la mesa y el eje Y el transversal de la misma. No obstante, se realizaron más mediciones desplazando el post-it en distintas direcciones para poder validar estas suposiciones sobre la configuración del sistema de coordenadas y ajustar su orientación a fin de asegurar la correspondencia entre los resultados estimados por el sistema y las coordenadas reales del entorno (Figura \ref{fig:primera_estimacion_postit}).
 
@@ -421,7 +421,7 @@ Ante estas discrepancias, se procedió a consultar bibliografía útil para este
     \label{fig:geometria_modelopinhole}
   \end{figure}
 
-Dado que los resultados experimentales mostraban una desviación considerable respecto a las distancias reales y no se lograba establecer una relación clara y precisa, se optó por adoptar un enfoque alternativo basado en un script preexistente denominado \textit{pinhole.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/cameraPibot/pinhole.py}}, que implementaba el modelo de cámara estenopeica para estimar coordenadas espaciales a partir de coordenadas de un imagen o vídeo. 
+Dado que los resultados experimentales mostraban una desviación considerable respecto a las distancias reales y no se lograba establecer una relación clara y precisa, se optó por adoptar un enfoque alternativo basado en un script preexistente denominado \verb|pinhole.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/cameraPibot/pinhole.py}}, que implementaba el modelo de cámara estenopeica para estimar coordenadas espaciales a partir de coordenadas de un imagen o vídeo. 
 
 Se ajustaron diversos parámetros globales fundamentales, tales como el ancho y alto de la imagen, la distancia focal y la posición del centro óptico de la cámara, datos obtenidos anteriormente en la calibración de la cámara, así como variables asociadas a la rotación de la misma, como el ángulo de inclinación de la cámara, y a la traslación o altura de la cámara respecto a la superficie de trabajo, con el fin de calcular adecuadamente las matrices de rotación y traslación necesarias para la proyección de puntos desde el espacio imagen al espacio real. 
 
@@ -462,7 +462,7 @@ A partir de los resultados obtenidos en estas pruebas, recogidos en los cuadros 
    \label{tab:pinhole_Zneg}
   \end{table}
 
-No obstante, a pesar de haber definido un sistema de coordenadas inicial, los resultados continuaban sin ajustarse adecuadamente a las distancias reales. Por ello, se decidió revisar con mayor detalle la lógica del script \textit{pinhole.py}, prestando especial atención a los comentarios incluidos en el código, en los que se indicaba que los ángulos utilizados para calcular la matriz de rotación se definían bajo la suposición de que la cámara, en orientación vertical, había sido sometida a una rotación previa de 90º sobre el eje Y. A partir de esta observación, se procedió a representar y analizar el sistema de coordenadas original de la cámara antes de aplicar dicha transformación, con el objetivo de comprender mejor la correspondencia entre los ejes del sistema imagen y del sistema mundo, y así ajustar de forma más precisa las transformaciones necesarias (Figura \ref{fig:esquema_rot_camara}). 
+No obstante, a pesar de haber definido un sistema de coordenadas inicial, los resultados continuaban sin ajustarse adecuadamente a las distancias reales. Por ello, se decidió revisar con mayor detalle la lógica del script \verb|pinhole.py|, prestando especial atención a los comentarios incluidos en el código, en los que se indicaba que los ángulos utilizados para calcular la matriz de rotación se definían bajo la suposición de que la cámara, en orientación vertical, había sido sometida a una rotación previa de 90º sobre el eje Y. A partir de esta observación, se procedió a representar y analizar el sistema de coordenadas original de la cámara antes de aplicar dicha transformación, con el objetivo de comprender mejor la correspondencia entre los ejes del sistema imagen y del sistema mundo, y así ajustar de forma más precisa las transformaciones necesarias (Figura \ref{fig:esquema_rot_camara}). 
 
   \begin{figure}[H]
      \centering
@@ -497,7 +497,7 @@ Una vez verificada y establecida la forma correcta de introducir los parámetros
     \label{fig:dist_camara}
   \end{figure}
 
-Dado que el programa \textit{pinhole.py} permitía inicialmente la detección de un único punto amarillo dentro de la escena, en línea con el enfoque de las pruebas preliminares, centradas en validar el funcionamiento del sistema y la precisión del cálculo de la posición y la distancia del objeto respecto a la cámara, surgía una limitación evidente al poder darse la posibilidad de trabajar con múltiples detecciones. Para permitir la detección simultánea, se modificó este programa, generando uno nuevo denominado \textit{pinhole\_deteccionmultiple.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/cameraPibot/pinhole_deteccionmultiple.py}}, y se procedió en primer lugar a ajustar los filtros de color del sistema, ya que en el entorno de pruebas existían varios elementos de madera cuyas tonalidades se confundían con el amarillo claro bajo determinadas condiciones de iluminación, generando falsas detecciones, por lo que, para mitigar este problema, se optó por reemplazar el color amarillo por el verde, lo que implicó también pintar los fragmentos de post-it utilizados en las pruebas con este nuevo color. Una vez realizada esta modificación, se implementaron mejoras adicionales, como la numeración de los objetos detectados para permitir identificar de forma unívoca cada detección dentro del mismo escenario, lo cual resultaba esencial para poder asociar correctamente las coordenadas espaciales y las distancias estimadas con cada objeto individual, ampliando la capacidad del sistema para trabajar en escenarios más complejos con múltiples puntos de interés (Figura \ref{fig:deteccion_multiple_ptos}).
+Dado que el programa \verb|pinhole.py| permitía inicialmente la detección de un único punto amarillo dentro de la escena, en línea con el enfoque de las pruebas preliminares, centradas en validar el funcionamiento del sistema y la precisión del cálculo de la posición y la distancia del objeto respecto a la cámara, surgía una limitación evidente al poder darse la posibilidad de trabajar con múltiples detecciones. Para permitir la detección simultánea, se modificó este programa, generando uno nuevo denominado \verb|pinhole_deteccionmultiple.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/cameraPibot/pinhole_deteccionmultiple.py}}, y se procedió en primer lugar a ajustar los filtros de color del sistema, ya que en el entorno de pruebas existían varios elementos de madera cuyas tonalidades se confundían con el amarillo claro bajo determinadas condiciones de iluminación, generando falsas detecciones, por lo que, para mitigar este problema, se optó por reemplazar el color amarillo por el verde, lo que implicó también pintar los fragmentos de post-it utilizados en las pruebas con este nuevo color. Una vez realizada esta modificación, se implementaron mejoras adicionales, como la numeración de los objetos detectados para permitir identificar de forma unívoca cada detección dentro del mismo escenario, lo cual resultaba esencial para poder asociar correctamente las coordenadas espaciales y las distancias estimadas con cada objeto individual, ampliando la capacidad del sistema para trabajar en escenarios más complejos con múltiples puntos de interés (Figura \ref{fig:deteccion_multiple_ptos}).
 
    \begin{figure}[H]
    \centering
@@ -511,7 +511,7 @@ Dado que el programa \textit{pinhole.py} permitía inicialmente la detección de
    \label{fig:deteccion_multiple_ptos}
   \end{figure}
   
-Una vez resueltas las limitaciones iniciales del programa \textit{pinhole.py} en cuanto a la detección de múltiples objetos, y tras haber conseguido proyectar correctamente los centroides de los objetos detectados junto con el cálculo de sus coordenadas espaciales y distancias respectivas, se avanzó en la representación visual de estos resultados modificando el script \textit{pinhole\_deteccionmultiple.py} para que, además de realizar la detección y proyección de múltiples detecciones de manera simultánea, se capturaran y representaran estos datos en una ventana adicional mediante OpenGL. Para ello, se reutilizaron y adaptaron las funcionalidades de navegación y visualización incluidas en el script \textit{scene\_navigation.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/openglhw/scene_navegation.py}}, que permitía representar escenas 3D de forma interactiva mediante el uso de \textit{multithreading}, una técnica de programación que permite ejecutar múltiples tareas concurrentemente dentro de un mismo proceso.
+Una vez resueltas las limitaciones iniciales del programa \verb|pinhole.py| en cuanto a la detección de múltiples objetos, y tras haber conseguido proyectar correctamente los centroides de los objetos detectados junto con el cálculo de sus coordenadas espaciales y distancias respectivas, se avanzó en la representación visual de estos resultados modificando el script \verb|pinhole_deteccionmultiple.py| para que, además de realizar la detección y proyección de múltiples detecciones de manera simultánea, se capturaran y representaran estos datos en una ventana adicional mediante OpenGL. Para ello, se reutilizaron y adaptaron las funcionalidades de navegación y visualización incluidas en el script \verb|scene_navigation.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/camera/openglhw/scene_navegation.py}}, que permitía representar escenas 3D de forma interactiva mediante el uso de \textit{multithreading}, una técnica de programación que permite ejecutar múltiples tareas concurrentemente dentro de un mismo proceso.
 
 Tras varias pruebas y ajustes en la integración de ambos scripts, se consiguió que los puntos detectados por la cámara se representaran correctamente en una ventana paralela con fondo negro utilizando OpenGL, mostrándose cada punto como una marca roja en el espacio tridimensional, pero para mejorar la visibilidad y el contraste de estos puntos, se modificó tanto el tamaño de los puntos como la selección del color para que fuera más perceptible frente al fondo y se añadieron líneas entre los puntos detectados, tal y como se muestra en la Figura \ref{fig:openGL_ventana}. Esta representación permitió verificar visualmente la coherencia de las coordenadas 3D calculadas a partir de la cámara, facilitando así la validación y comprensión de los resultados espaciales obtenidos durante las pruebas anteriores.
 
@@ -526,7 +526,7 @@ Tras varias pruebas y ajustes en la integración de ambos scripts, se consiguió
       \label{fig:openGL_ventana}
     \end{figure}
 
-Una vez validado el funcionamiento del sistema con fragmentos de post-it pintados, y comprobada la capacidad del programa para detectar múltiples puntos y calcular sus coordenadas espaciales, se consideró que el sistema estaba preparado para abordar el siguiente paso del proyecto: sustituir los objetos de prueba por el objeto real de estudio, las fresas, por lo que se inició una nueva fase centrada en la detección, localización y estimación de la distancia a estas detecciones de fresas en condiciones más próximas a las del entorno operativo final, recogida en el programa \textit{xmlrpc\_deteccionfresas.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/xmlrpc_deteccionfresas.py}}. Para ello, fue necesario modificar algunos parámetros del sistema y sustituir el método de detección basado en filtros de color, empleado durante las pruebas iniciales, por el modelo de detección entrenado específicamente para identificar fresas, que ya se encontraba integrado en el script \textit{deteccion\_video.py}, por lo que se reutilizó dicha lógica adaptándola al flujo de trabajo del sistema basado en \textit{pinhole.py}, obteniendo los resultados de la Figura \ref{fig:union_scripts_fresas}.
+Una vez validado el funcionamiento del sistema con fragmentos de post-it pintados, y comprobada la capacidad del programa para detectar múltiples puntos y calcular sus coordenadas espaciales, se consideró que el sistema estaba preparado para abordar el siguiente paso del proyecto: sustituir los objetos de prueba por el objeto real de estudio, las fresas, por lo que se inició una nueva fase centrada en la detección, localización y estimación de la distancia a estas detecciones de fresas en condiciones más próximas a las del entorno operativo final, recogida en el programa \verb|xmlrpc_deteccionfresas.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/xmlrpc_deteccionfresas.py}}. Para ello, fue necesario modificar algunos parámetros del sistema y sustituir el método de detección basado en filtros de color, empleado durante las pruebas iniciales, por el modelo de detección entrenado específicamente para identificar fresas, que ya se encontraba integrado en el script \verb|deteccion_video.py|, por lo que se reutilizó dicha lógica adaptándola al flujo de trabajo del sistema basado en \verb|pinhole.py|, obteniendo los resultados de la Figura \ref{fig:union_scripts_fresas}.
 
   \begin{figure}[H]
     \centering
@@ -537,14 +537,17 @@ Una vez validado el funcionamiento del sistema con fragmentos de post-it pintado
     \label{fig:union_scripts_fresas}
   \end{figure}
 
-Sin embargo, la integración del modelo de detección de fresas no fue un proceso directo, ya que el cambio de un método de detección basado en filtrado de color a uno basado en inteligencia artificial implicó importantes ajustes, ya que las características de la detección variaban considerablemente. Debido a esta modificación, fue necesario repetir las pruebas de estimación de coordenadas y distancias, con el fin de verificar nuevamente la orientación del sistema de coordenadas y asegurar que las nuevas detecciones proporcionadas por el modelo se proyectaran correctamente en el espacio tridimensional. Estas pruebas permitieron recalibrar el sistema en función del nuevo flujo de trabajo (ver cuadros \ref{tab:resultados_145mm_59grados}, \ref{tab:resultados_125mm_59grados} \ref{tab:resultados_225mm_69grados} y \ref{tab:resultados_180mm_58grados}).
+Sin embargo, la integración del modelo de detección de fresas no fue un proceso directo, ya que el cambio de un método de detección basado en filtrado de color a uno basado en inteligencia artificial implicó importantes ajustes, ya que las características de la detección variaban considerablemente. 
+
+\pagebreak
+Debido a esta modificación, fue necesario repetir las pruebas de estimación de coordenadas y distancias, con el fin de verificar nuevamente la orientación del sistema de coordenadas y asegurar que las nuevas detecciones proporcionadas por el modelo se proyectaran correctamente en el espacio tridimensional. Estas pruebas permitieron recalibrar el sistema en función del nuevo flujo de trabajo (ver cuadros \ref{tab:resultados_145mm_59grados}, \ref{tab:resultados_125mm_59grados} \ref{tab:resultados_225mm_69grados} y \ref{tab:resultados_180mm_58grados}).
 
    \begin{table}[H]
      \centering
      \begin{center}
        \includegraphics[width=155mm]{figs/Resultados 145 mm 59 grados.png}
      \end{center}
-     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados}
+     \caption{Resultados del programa \texttt{xmlrpc\_deteccionfresas.py} con la cámara situada a 145 mm de la mesa y la cámara rotada 59 grados}
      \label{tab:resultados_145mm_59grados}
   \end{table}
   
@@ -553,7 +556,7 @@ Sin embargo, la integración del modelo de detección de fresas no fue un proces
      \begin{center}
        \includegraphics[width=155mm]{figs/Resultados 125 mm 59 grados.png}
      \end{center}
-     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados}
+     \caption{Resultados del programa \texttt{xmlrpc\_deteccionfresas.py} con la cámara situada a 125 mm de la mesa y la cámara rotada 59 grados}
      \label{tab:resultados_125mm_59grados}
   \end{table}
 
@@ -562,7 +565,7 @@ Sin embargo, la integración del modelo de detección de fresas no fue un proces
      \begin{center}
        \includegraphics[width=155mm]{figs/Resultados 225 mm 69 grados.png}
      \end{center}
-     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados}
+     \caption{Resultados del programa \texttt{xmlrpc\_deteccionfresas.py} con la cámara situada a 225 mm de la mesa y la cámara rotada 69 grados}
      \label{tab:resultados_225mm_69grados}
   \end{table}  
   
@@ -571,13 +574,13 @@ Sin embargo, la integración del modelo de detección de fresas no fue un proces
      \begin{center}
        \includegraphics[width=155mm]{figs/Resultados 180 mm 58 grados.png}
      \end{center}
-     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados}
+     \caption{Resultados del programa \texttt{xmlrpc\_deteccionfresas.py} con la cámara situada a 180 mm de la mesa y la cámara rotada 58 grados}
      \label{tab:resultados_180mm_58grados}
   \end{table}
 
 En todas estas mediciones, en las que se realizaron variaciones tanto en la altura de la cámara como en su ángulo de inclinación de la misma, se analizó el impacto de estos ajustes sobre la precisión del sistema de proyección de coordenadas, observando un patrón consistente en el que las coordenadas obtenidas mediante el programa de las fresas situadas en los extremos del campo de visión (FoV) de la cámara presentaban valores anómalos o significativamente desviados con respecto a las posiciones reales y a la distancia total, y más concretamente, en aquellas fresas detectadas cerca de los bordes superior, inferior o laterales del encuadre. En contraste, los objetos ubicados en la zona central del campo de visión ofrecían una mayor precisión en los resultados obtenidos respecto a las medidas reales, siendo esta región la más fiable tanto para las coordenadas proyectadas en los ejes X e Y, asumidos como el eje longitudinal y transversal de la mesa respectivamente, como para la distancia al plano de referencia.
 
-A pesar de haber identificado una zona dentro del campo de visión de la cámara en la que los resultados obtenidos se aproximaban considerablemente a las coordenadas reales, persistían errores significativos, especialmente en el eje que se había supuesto como eje Y del sistema, donde se concentraban las mayores desviaciones entre las coordenadas supuestas y las estimadas. Con el fin de analizar más a fondo este problema y validar visualmente el comportamiento del sistema, se llevó a cabo la proyección en OpenGL de las detecciones junto con la representación del campo visual de la cámara en una ventana emergente paralela en la ejecución del programa \textit{xmlrpc\_deteccionfresas\_OpenGL.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/xmlrpc_deteccionfresas_OpenGL.py}}, permitiendo comprobar de manera más intuitiva y precisa si la transformación de puntos desde el espacio 2D al espacio 3D se estaba realizando correctamente, tal y como muestra la Figura \ref{fig:proy_OpenGL_deteccion}.
+A pesar de haber identificado una zona dentro del campo de visión de la cámara en la que los resultados obtenidos se aproximaban considerablemente a las coordenadas reales, persistían errores significativos, especialmente en el eje que se había supuesto como eje Y del sistema, donde se concentraban las mayores desviaciones entre las coordenadas supuestas y las estimadas. Con el fin de analizar más a fondo este problema y validar visualmente el comportamiento del sistema, se llevó a cabo la proyección en OpenGL de las detecciones junto con la representación del campo visual de la cámara en una ventana emergente paralela en la ejecución del programa \verb|xmlrpc_deteccionfresas_OpenGL.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/deteccion-objetos-video/xmlrpc_deteccionfresas_OpenGL.py}}, permitiendo comprobar de manera más intuitiva y precisa si la transformación de puntos desde el espacio 2D al espacio 3D se estaba realizando correctamente, tal y como muestra la Figura \ref{fig:proy_OpenGL_deteccion}.
 
    \begin{figure}[H]
     \centering
@@ -597,7 +600,7 @@ El objetivo de esta configuración era eliminar posibles efectos de inclinación
      \begin{center}
        \includegraphics[width=155mm]{figs/Resultados 225 mm 0 grados.png}
      \end{center}
-     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano}
+     \caption{Resultados del programa \texttt{xmlrpc\_deteccionfresas.py} con la cámara situada a 225 mm de la mesa y la cámara perpendicular al plano}
      \label{tab:resultados_180mm_58grados}
   \end{table}
 
@@ -633,7 +636,7 @@ Después de verificar que existía un problema en cuanto a la elección de los e
         \subcapcentertrue
         \subfigure[Montaje de la cámara para realizar las pruebas con la cámara perpendicular al plano mesa]{\includegraphics[height=58mm , width=49mm]{figs/Vista Ejes mediciones cámara perpendicular 343 mm.jpeg}}
         \hspace{1mm}
-        \subfigure[Ventana de la detección al ejecutar el programa xmlrpc\_deteccionfresas.py]{\includegraphics[width=65mm]{figs/Deteccion de Fresas_Ejes correctos.png}}
+        \subfigure[Ventana de la detección al ejecutar el programa \texttt{xmlrpc\_deteccionfresas.py}]{\includegraphics[width=65mm]{figs/Deteccion de Fresas_Ejes correctos.png}}
       \end{center}
       \caption{Representación del montaje y los sistemas de coordenadas obtenidos para las pruebas con la cámara perpendicular al plano de la mesa}
       \label{fig:deteccion_plano_perpendicular}
@@ -645,7 +648,7 @@ Después de verificar que existía un problema en cuanto a la elección de los e
      \begin{center}
        \includegraphics[width=155mm]{figs/Resultados 343 mm 0 grados.png}
      \end{center}
-     \caption{Resultados del programa xmlrpc\_deteccionfresas.py con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano}
+     \caption{Resultados del programa \texttt{xmlrpc\_deteccionfresas.py} con la cámara situada a 343 mm de la mesa y la cámara perpendicular al plano}
      \label{tab:resultados_343mm_0grados}
   \end{table}
 
@@ -655,12 +658,12 @@ Después de verificar que existía un problema en cuanto a la elección de los e
 
 Una vez decidido que la mejor opción para la detección de fresas era utilizar el modelo YOLOv3, implementado con PyTorch en Python, se procedió a realizar las primeras pruebas con el brazo robótico de Universal Robots. El objetivo principal de estas pruebas fue comprobar la correcta comunicación entre el sistema de detección y el robot y evaluar el funcionamiento del sistema en un entorno controlado antes de su aplicación conjunta.
 
-Para ello, en primer lugar, se programó en la Interfaz Gráfica de Usuario (IGR) del robot el programa \textit{visionsimple.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/visionsimple.urp}} para ir a una posición fija que simulaba una posición en el espacio determinada por un sistema de visión externo, tal y como se muestra en la Figura \ref{fig:visionsimple}, siendo esto la base del programa final del propio robot.
+Para ello, en primer lugar, se programó en la Interfaz Gráfica de Usuario (IGR) del robot el programa \verb|visionsimple.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/visionsimple.urp}} para ir a una posición fija que simulaba una posición en el espacio determinada por un sistema de visión externo, tal y como se muestra en la Figura \ref{fig:visionsimple}, siendo esto la base del programa final del propio robot.
 
    \begin{figure}[H]
       \begin{center}
         \subcapcentertrue
-        \subfigure[Programa visionsimple.urp]{\includegraphics[width=70mm]{figs/visionsimple.jpeg}}
+        \subfigure[Programa \texttt{visionsimple.urp}]{\includegraphics[width=70mm]{figs/visionsimple.jpeg}}
         \hspace{1mm}
         \subfigure[Representación de la transformada entre posiciones]{\includegraphics[width=78mm]{figs/pose_trans.png}}
       \end{center}
@@ -668,29 +671,29 @@ Para ello, en primer lugar, se programó en la Interfaz Gráfica de Usuario (IGR
       \label{fig:visionsimple}
     \end{figure}
 
-Después de este inicio, se desarrolló el programa \textit{recibir\_cadena\_socket}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/recibir_cadena_socket.urp}} con el objetivo de establecer una comunicación mediante sockets entre el robot y un servidor externo, donde el robot abría una conexión socket con el servidor y enviaba una cadena de caracteres tipo string con el contenido "listo", como señal de que la comunicación había sido establecida correctamente, para posteriormente esperar tres valores de tipo float de este servidor externo, que eran almacenados en variables internas antes de cerrar la conexión (Figura \ref{fig:recibir_cadena_socket}), todo esto, asegurando que ambos dispositivos se encontraban conectados a la misma red local.
+Después de este inicio, se desarrolló el programa \verb|recibir_cadena_socket|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/recibir_cadena_socket.urp}} con el objetivo de establecer una comunicación mediante sockets entre el robot y un servidor externo, donde el robot abría una conexión socket con el servidor y enviaba una cadena de caracteres tipo string con el contenido "listo", como señal de que la comunicación había sido establecida correctamente, para posteriormente esperar tres valores de tipo float de este servidor externo, que eran almacenados en variables internas antes de cerrar la conexión (Figura \ref{fig:recibir_cadena_socket}), todo esto, asegurando que ambos dispositivos se encontraban conectados a la misma red local.
 
    \begin{figure}[H]
      \centering
      \begin{center}
        \includegraphics[width=155mm]{figs/recibir_cadena_socket.png}
      \end{center}
-     \caption{Programa recibir\_cadena\_socket.urp}
+     \caption{Programa \texttt{recibir\_cadena\_socket.urp}}
      \label{fig:recibir_cadena_socket}
   \end{figure}
 
-Continuando con las pruebas iniciales del programa de robot \textit{visionsimple.urp} orientadas a enviar un brazo robótico a una posición en el espacio determinada por un sistema de visión externo, se desarrolló y amplió en el programa \textit{prueba\_visionsimple.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/prueba_visionsimple.urp}}, añadiendo las líneas necesarias para establecer la comunicación con el servidor mediante sockets, leer los datos recibidos, introducidos manualmente desde el programa SocketTest, calcular la posición de objetivo \textit{pos\_pick} correspondiente a la posición de recogida de la detección, y enviar estos datos al robot para que se desplazase a dicha posición (ver Figura \ref{fig:prueba_visionsimple}). Todo esto, en el modo de simulación que permite la interfaz del propio robot, ya que no se estaba seguro de hacía qué posición ni en qué dirección se iba a desplazar, pudiendo ocasionar alguna colisión de realizarse directamente. 
+Continuando con las pruebas iniciales del programa de robot \verb|visionsimple.urp| orientadas a enviar un brazo robótico a una posición en el espacio determinada por un sistema de visión externo, se desarrolló el programa \verb|prueba_visionsimple.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/prueba_visionsimple.urp}}, añadiendo las líneas necesarias para establecer la comunicación con el servidor mediante sockets, leer los datos recibidos, introducidos manualmente desde el programa SocketTest, calcular la posición de objetivo \textit{pos\_pick} correspondiente a la posición de recogida de la detección, y enviar estos datos al robot para que se desplazase a dicha posición (ver Figura \ref{fig:prueba_visionsimple}). Todo esto, en el modo de simulación que permite la interfaz del propio robot, ya que no se estaba seguro de hacía qué posición ni en qué dirección se iba a desplazar, pudiendo ocasionar alguna colisión de realizarse directamente. 
 
   \begin{figure}[H]
      \centering
      \begin{center}
        \includegraphics[width=155mm]{figs/prueba_visionsimple.png}
      \end{center}
-     \caption{Programa prueba\_visionsimple.urp}
+     \caption{Programa \texttt{prueba\_visionsimple.urp}}
      \label{fig:prueba_visionsimple}
   \end{figure}
   
-Paralelamente a estas pruebas, para conseguir alinear el robot de manera paralela respecto al plano base o cualquier otro plano, se realizó el cálculo de la posición de destino aplicando las rotaciones adecuadas definidas en el sistema de referencia RPY (Roll-Pitch-Yaw), puesto que el brazo robótico por defecto utiliza este sistema como vector de rotación, y se implementó en el programa \textit{Alinear\_en\_base.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/Alinear\%20en\%20base.urp}}, donde se hizo uso del script \textit{alinearRobot.script}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/alinearrobot.script}}. Puesto que este programa era posible usarlo con cualquier plano, se modificaron determinados parámetros en el script para que pudiera utilizarse para alinear el robot con un plano vertical como paso previo a la fase de recolección de fresas.
+Paralelamente a estas pruebas, para conseguir alinear el robot de manera paralela respecto al plano base o cualquier otro plano, se realizó el cálculo de la posición de destino aplicando las rotaciones adecuadas definidas en el sistema de referencia RPY (Roll-Pitch-Yaw), puesto que el brazo robótico por defecto utiliza este sistema como vector de rotación, y se implementó en el programa \verb|Alinear_en_base.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/Alinear\%20en\%20base.urp}}, donde se hizo uso del script \verb|alinearRobot.script|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/alinearrobot.script}}. Puesto que este programa era posible usarlo con cualquier plano, se modificaron determinados parámetros en el script para que pudiera utilizarse para alinear el robot con un plano vertical como paso previo a la fase de recolección de fresas.
 
 Una vez establecida la capacidad del robot para alinearse correctamente con distintos planos de trabajo, el siguiente paso consistió en definir el mecanismo de comunicación más adecuado para permitir el envío de posiciones desde un sistema de visión externo y lograr que el robot pudiera recibir en tiempo real las coordenadas de las fresas detectados y desplazarse a la posición de recogida. Para ello, se llevó a cabo un estudio general de las interfaces de cliente y protocolos de comunicación que ofrece UR, con el fin de determinar cuál de ellas se adaptaba mejor a los requerimientos del sistema, centrándose en las siguientes:
 
@@ -719,31 +722,31 @@ Una vez establecida la capacidad del robot para alinearse correctamente con dist
 
 En el contexto de este proyecto, se optó por utilizar la interfaz XML-RPC como método de comunicación entre el sistema de visión, encargado de detectar fresas y calcular sus coordenadas, y el robot UR basándose en varias ventajas que ofrece XML-RPC frente a otras alternativas como los sockets tradicionales o la interfaz RTDE. En primer lugar, permite la llamada directa a funciones remotas definidas en el servidor, lo que simplifica notablemente la integración, ya que el robot puede solicitar de forma estructurada las posiciones objetivo con una única instrucción, además, XML-RPC facilita el intercambio de datos complejos, como listas o vectores, y cuenta con soporte nativo tanto en URScript como en Python, el lenguaje utilizado en el sistema de visión, lo que reduce considerablemente la complejidad de la implementación y mejora la mantenibilidad del sistema. Asimismo, permite concentrar la lógica de decisión en el servidor externo, lo que resulta útil en sistemas escalables donde se pueden añadir más criterios o funcionalidades sin modificar el programa del robot, siendo la opción más adecuada para garantizar una comunicación robusta, eficiente y fácilmente ampliable entre ambos sistemas.
 
-Una vez seleccionado el procedimiento XML-RPC como método de comunicación más adecuado para el sistema, se llevaron a cabo las primeras pruebas básicas para validar su funcionamiento, consistentes en establecer la comunicación entre el robot y un servidor remoto simulado encargado de proporcionar las posiciones objetivo, donde el servidor, que actuaba como una cámara remota ficticia, fue implementado en Python mediante los script \textit{xmlrpc\_server.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server.py}}, \textit{xmlrpc\_server\_severalpos.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server_severalpos.py}} y \textit{xmlrpc\_server\_3positions.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server_3positions.py}}, en función de pequeñas variaciones aplicadas, mientras que el robot ejecutó el programa \textit{xmlrpc\_example.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/xmlrpc_example.urp}} para conectarse, solicitar la posición y moverse en consecuencia (Figura \ref{fig:prueba_xmlrpc}). Esto permitió verificar que el intercambio de datos y la ejecución remota de funciones se realizaban correctamente, sentando así las bases para la integración futura del sistema de visión real.
+Una vez seleccionado el procedimiento XML-RPC como método de comunicación más adecuado para el sistema, se llevaron a cabo las primeras pruebas básicas para validar su funcionamiento, consistentes en establecer la comunicación entre el robot y un servidor remoto simulado encargado de proporcionar las posiciones objetivo, donde el servidor, que actuaba como una cámara remota ficticia, fue implementado en Python mediante los script \verb|xmlrpc_server.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server.py}}, \verb|xmlrpc_server_severalpos.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server_severalpos.py}} y \verb|xmlrpc_server_3positions.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server_3positions.py}}, en función de pequeñas variaciones aplicadas, mientras que el robot ejecutó el programa \verb|xmlrpc_example.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/xmlrpc_example.urp}} para conectarse, solicitar la posición y moverse en consecuencia (Figura \ref{fig:prueba_xmlrpc}). Esto permitió verificar que el intercambio de datos y la ejecución remota de funciones se realizaban correctamente, sentando así las bases para la integración futura del sistema de visión real.
 
   \begin{figure}[H]
      \centering
      \begin{center}
        \includegraphics[width=155mm]{figs/xmlrpc_example.png}
      \end{center}
-     \caption{Programa xmlrpc\_example.urp}
+     \caption{Programa \texttt{xmlrpc\_example.urp}}
      \label{fig:prueba_xmlrpc}
   \end{figure}
 
-Después de lograr que el robot se desplazara a tres posiciones distintas definidas en una lista, se planteó una mejora en el comportamiento del sistema mediante una lista dinámica para evitar que estas posiciones se repitieran continuamente en bucle, de modo que el robot se desplazase a cada posición una única vez, en orden secuencial, y descartara las posiciones ya procesadas. Para ello, se modificó tanto el script del servidor, generando el programa \textit{xmlrpc\_server\_listadinamica.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server_listadinamica.py}} como el programa del robot, adaptando la lógica para gestionar la lista de forma dinámica.
+Después de lograr que el robot se desplazara a tres posiciones distintas definidas en una lista, se planteó una mejora en el comportamiento del sistema mediante una lista dinámica para evitar que estas posiciones se repitieran continuamente en bucle, de modo que el robot se desplazase a cada posición una única vez, en orden secuencial, y descartara las posiciones ya procesadas. Para ello, se modificó tanto el script del servidor, generando el programa \verb|xmlrpc_server_listadinamica.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/XMLR\%20PC/XMLRPC/python/xmlrpc_server_listadinamica.py}} como el programa del robot, adaptando la lógica para gestionar la lista de forma dinámica.
 
-Tras estas pruebas iniciales, se continuó empleando el script en Python encargado de detectar puntos de color verde, añadiendo en paralelo la tarea de ejecutar el servidor XML-RPC mediante el programa \textit{xmlrpc\_server.py} desde el terminal del ordenador, mientras que, de manera simultánea en el robot se ejecutaba el programa \textit{xmlrpc\_example.urp}, que había sido previamente modificado respecto a su versión original utilizada en las pruebas iniciales descritas anteriormente, incluyendo nuevas variables en el script en Python, y obteniendo una respuesta adecuada del sistema, puesto que el programa enviaba correctamente las coordenadas del punto detectado al robot, y, una vez alcanzada la posición, al detectar un nuevo punto en una ubicación distinta, el robot se desplazaba automáticamente hacia un nuevo destino (Figura \ref{fig:pinhole_UR}). 
+Tras estas pruebas iniciales, se continuó empleando el script en Python encargado de detectar puntos de color verde, añadiendo en paralelo la tarea de ejecutar el servidor XML-RPC mediante el programa \verb|xmlrpc_server.py| desde el terminal del ordenador, mientras que, de manera simultánea en el robot se ejecutaba el programa \verb|xmlrpc_example.urp|, que había sido previamente modificado respecto a su versión original utilizada en las pruebas iniciales descritas anteriormente, incluyendo nuevas variables en el script en Python, y obteniendo una respuesta adecuada del sistema, puesto que el programa enviaba correctamente las coordenadas del punto detectado al robot, y, una vez alcanzada la posición, al detectar un nuevo punto en una ubicación distinta, el robot se desplazaba automáticamente hacia un nuevo destino (Figura \ref{fig:pinhole_UR}). 
 
     \begin{figure}[H]
      \centering
      \begin{center}
        \includegraphics[width=155mm]{figs/Programa robot posetrans UR10e.png}
      \end{center}
-     \caption{Pruebas funcionales con el programa pinhole.py y el robot real}
+     \caption{Pruebas funcionales con el programa \texttt{pinhole.py} y el robot real}
      \label{fig:pinhole_UR}
   \end{figure}
 
-A continuación, se iniciaron las pruebas de envío de las coordenadas de detección de fresas al robot real, utilizando como base el programa \textit{xmlrpc\_deteccionfresas.py}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccionfresas.py}}, y logrando establecer con éxito la detección de fresas mediante visión artificial, la transmisión de las coordenadas al robot y la ejecución del movimiento correspondiente a través de la variable \textit{next\_pose} en el programa del robot, como se observa en la Figura \ref{fig:primeraspruebas_fresas_UR}.
+A continuación, se iniciaron las pruebas de envío de las coordenadas de detección de fresas al robot real, utilizando como base el programa \verb|xmlrpc_deteccionfresas.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccionfresas.py}}, y logrando establecer con éxito la detección de fresas mediante visión artificial, la transmisión de las coordenadas al robot y la ejecución del movimiento correspondiente a través de la variable \texttt{next\_pose} en el programa del robot, como se observa en la Figura \ref{fig:primeraspruebas_fresas_UR}.
 
   \begin{figure}[H]
      \centering
@@ -754,7 +757,7 @@ A continuación, se iniciaron las pruebas de envío de las coordenadas de detecc
      \label{fig:primeraspruebas_fresas_UR}
   \end{figure}
 
-Una vez verificado que el programa en Python \textit{xmlrpc\_deteccionfresas.py}, encargado de gestionar la detección de fresas mediante inteligencia artificial funcionaba correctamente, incluyendo el cálculo de las coordenadas y distancias a partir de la imagen de cámara, y habiendo confirmado previamente la validez de dichas coordenadas a través del análisis detallado del sistema de referencia y la correcta identificación del eje real de coordenadas, conociendo de igual manera que la comunicación con el robot UR a través de XML-RPC se realizaba de forma satisfactoria, se procedió a realizar pruebas en el entorno definitivo del sistema con un robot de Universal Robots modelo UR3e. Para ello se utilizó el programa de robot \textit{xmlrpc\_deteccion\_fresas\_v3.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_v3.urp}}, programado de tal manera que si no recibía ninguna detección que variase en un umbral definido previamente de la última detección, no se movía de la posición de \textit{Casa}. Estas pruebas comenzaron considerando el plano de la mesa como hipótesis suelo, y consistieron inicialmente en la detección y seguimiento de una única fresa para verificar la estabilidad del sistema en condiciones reales y, posteriormente, se avanzó hacia la detección múltiple de fresas, evaluando el comportamiento del sistema al identificar y gestionar varias coordenadas objetivo de forma secuencial (figuras \ref{fig:UR3e_planomesa} y \ref{fig:POV_Camara_UR3e_planomesa}).
+Una vez verificado que el programa en Python \verb|xmlrpc_deteccionfresas.py|, encargado de gestionar la detección de fresas mediante inteligencia artificial funcionaba correctamente, incluyendo el cálculo de las coordenadas y distancias a partir de la imagen de cámara, y habiendo confirmado previamente la validez de dichas coordenadas a través del análisis detallado del sistema de referencia y la correcta identificación del eje real de coordenadas, conociendo de igual manera que la comunicación con el robot UR a través de XML-RPC se realizaba de forma satisfactoria, se procedió a realizar pruebas en el entorno definitivo del sistema con un robot de Universal Robots modelo UR3e. Para ello se utilizó el programa de robot \verb|xmlrpc_deteccion_fresas_v3.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc_deteccion_fresas_v3.urp}}, programado de tal manera que si no recibía ninguna detección que variase en un umbral definido previamente de la última detección, no se movía de la posición de \texttt{Casa}. Estas pruebas comenzaron considerando el plano de la mesa como hipótesis suelo, y consistieron inicialmente en la detección y seguimiento de una única fresa para verificar la estabilidad del sistema en condiciones reales y, posteriormente, se avanzó hacia la detección múltiple de fresas, evaluando el comportamiento del sistema al identificar y gestionar varias coordenadas objetivo de forma secuencial (figuras \ref{fig:UR3e_planomesa} y \ref{fig:POV_Camara_UR3e_planomesa}).
 
    \begin{figure}[H]
       \begin{center}
@@ -792,7 +795,7 @@ generando el plano pared común a todos los elementos.
       \label{fig:UR3e_planopared}
    \end{figure}
 
-Una vez completadas las pruebas en el plano vertical y verificado el correcto funcionamiento del sistema en el entorno de huerto vertical, se repitieron los ensayos en el plano vertical utilizando un modelo distinto de robot con mayor alcance, concretamente un UR5e. Para esto, se creó el programa \textit{xmlrpc\_deteccion\_fresas\_vertical.urp}\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc\_deteccion\_fresas\_vertical.urp}}, ya que durante las pruebas iniciales en disposición vertical con el robot UR3e, este presentaba limitaciones físicas de movimiento que restringían su capacidad para alcanzar determinadas posiciones, como se puede observar en las imágenes correspondientes, por lo que al ampliar el rango de trabajo del brazo robótico, fue posible acceder a un mayor número de puntos dentro del entorno de prueba, lo que permitió validar de forma más completa el sistema y confirmar la fiabilidad de la detección, proyección y ejecución del movimiento, considerándolo válido para su uso destinado. Así mismo, para estas pruebas, se mejoró el método de sujeción de las fresas, pasando de sujetarlas con cinta adhesiva a una cartulina, que a su vez también estaba fijada a la pared con esa misma cinta, a llevarlo a cabo con alfileres que sujetaban las fresas sobre una plancha de espuma, sujeta por la presión que ejercía la propia mesa en la que se encontraba montado el robot contra la pared.
+Una vez completadas las pruebas en el plano vertical y verificado el correcto funcionamiento del sistema en el entorno de huerto vertical, se repitieron los ensayos en el plano vertical utilizando un modelo distinto de robot con mayor alcance, concretamente un UR5e. Para esto, se creó el programa \verb|xmlrpc_deteccion_fresas_vertical.urp|\footnote{\url{https://github.com/RoboticsURJC/tfg-dcampoamor/blob/main/src/robot/xmlrpc\_deteccion\_fresas\_vertical.urp}}, ya que durante las pruebas iniciales en disposición vertical con el robot UR3e, este presentaba limitaciones físicas de movimiento que restringían su capacidad para alcanzar determinadas posiciones, como se puede observar en las imágenes correspondientes, por lo que al ampliar el rango de trabajo del brazo robótico, fue posible acceder a un mayor número de puntos dentro del entorno de prueba, lo que permitió validar de forma más completa el sistema y confirmar la fiabilidad de la detección, proyección y ejecución del movimiento, considerándolo válido para su uso destinado. Así mismo, para estas pruebas, se mejoró el método de sujeción de las fresas, pasando de sujetarlas con cinta adhesiva a una cartulina, que a su vez también estaba fijada a la pared con esa misma cinta, a llevarlo a cabo con alfileres que sujetaban las fresas sobre una plancha de espuma, sujeta por la presión que ejercía la propia mesa en la que se encontraba montado el robot contra la pared.
 
 
 

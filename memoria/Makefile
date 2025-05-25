@@ -1,4 +1,4 @@
-DOCUMENTO = memoria
+DOCUMENTO = tfg-davidcampoamor
 TEMPORALES = *idx *aux *lof *log *lot *toc *bbl *blg *~ *out *rel *spl *loa *brf memoria.lomyequation memoria.locode
 HOY=$(shell date +"%Y-%m-%d")
 
