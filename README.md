@@ -1,5 +1,5 @@
-# Trabajo de Fin de Grado - David Campoamor
-## __BRAZO ROBOTICO CON CÁMARA ÚNICA PARA RECOLECTAR FRESAS MEDIANTE DEEP LEARNING__
+## Trabajo de Fin de Grado - David Campoamor
+# **BRAZO ROBOTICO CON CÁMARA ÚNICA PARA RECOLECTAR FRESAS MEDIANTE DEEP LEARNING**
 ### Resumen
 La robótica y la visión artifical han revolucionado numerosos sectores, incluida la agricultura, en la que, a pesar de los avances tecnológicos, la recolección manual de las frutas y verduras sigue siendo un proceso laborioso, exigente y sujeto a tareas repetitivas susceptibles de derivar en errores humanos.
 
